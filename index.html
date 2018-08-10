@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="renderer" content="webkit" />
+    <meta name="full-screen" content="yes" />
+    <meta name="x5-fullscreen" content="true" />
+    <meta name="format-detection" content="telphone=no, email=no" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <title>AKjs前端框架PC版</title>
+    <script type="text/javascript" language="javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" language="javascript" id="akjs_head">
+        document.write('<link rel="stylesheet" type="text/css" href="css/akjs.pc.min.css?akjs='+ Math.random() +'" />');<!--AKjs公共样式库引入-->
+        document.write('<link rel="stylesheet" type="text/css" href="css/style.css?akjs='+ Math.random() +'" />');<!--布局相关样式-->
+        document.write('<script type="text/javascript" language="javascript" src="js/akjs.pc.js?akjs='+ Math.random() +'"><\/script>');<!--AKjs引入-->
+        document.write('<script type="text/javascript" language="javascript" src="js/router.js?akjs='+ Math.random() +'"><\/script>');<!--AKjs的路由参数配置-->
+        $("#akjs_head").remove(); //通过随机参数解决移动端缓存问题（生成后删除该脚本代码）
+    </script>
+</head>
+<body>
+</body>
+<script type="text/javascript">
+    //以下js代码可删除
+    if (window.location.protocol == "file:") {
+        alert("AKjs仅支持http或https协议访问！不支持直接打开本地文件的方式访问！通过本地配置服务器访问或者使用WebStorm软件打开访问即可！");
+        throw new Error();
+    }
+</script>
+</html>

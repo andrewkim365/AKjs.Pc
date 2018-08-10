@@ -1,0 +1,45 @@
+<template>
+    <ak-title>AKjs前端框架</ak-title>
+    <div class="plug_scroll">
+        <div class="module mt_2 ml_1">
+            <section class="fl bg_white ml_1 mb_2 w_28 ovh rel">
+                <fieldset class="rel ovh bg_title_sub01">
+                    <h3 class="font_YouYuan text_16em c_black line_h_3em text_al_c">二维码插件</h3>
+                </fieldset>
+                <article class="rel ovh pa_2 h_22_em">
+                    <div class="text_al_c" id="qrcode"></div>
+                </article>
+            </section>
+        </div>
+    </div>
+</template>
+
+<script type="text/javascript">
+    //引入Andrew插件的区域
+    $("#qrcode").AKjs_QRcode({
+        width: 200, //宽度
+        height:200, //高度
+        background: "#ffffff", //背景色
+        foreground: "#f45862", //前景色
+        text: "http://m.baidu.com" //任意内容
+    });
+</script>
+
+<style type="text/css">
+    /*样式覆盖区域*/
+</style>
+
+<!--
+//注：template，ak-page-code，ak-title，ak-plugin，script，style等这些元素在页面中不能多个使用否则代码无效；
+路由页面的布局结构使用方法（必须用以下的结构使用）：
+<template>
+    <ak-page-code></ak-page-code>
+    <ak-title></ak-title>
+    <div></div>
+    <ak-plugin></ak-plugin>
+</template>
+<script>
+</script>
+<style>
+</style>
+-->

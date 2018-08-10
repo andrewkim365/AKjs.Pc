@@ -1,0 +1,105 @@
+<template>
+    <ak-title>AKjs前端框架</ak-title>
+    <div class="plug_scroll">
+        <div class="module mt_2 plug_for">
+            <section>
+                {{html ani_start}}
+                <fieldset class="rel ovh bg_title_sub01">
+                    <h3 class="font_YouYuan text_16em c_black line_h_3em text_al_c">
+                        ${ID}
+                        {{if Title}}
+                        ${$data.Title}
+                        {{else}}
+                        无标题
+                        {{/if}}
+                    </h3>
+                </fieldset>
+                <article class="rel ovh pa_2">
+                    <div class="h_18_em">
+                        <p>${$item.getContent(',')}</p>
+                        <p>{{each Content}} ${$index + 1}. ${$value}  {{/each}}</p>
+                    </div>
+                </article>
+                {{html ani_end}}
+            </section>
+        </div>
+    </div>
+</template>
+
+<script type="text/javascript">
+    //引入Andrew插件的区域
+    console.log(AKjs_DateFormat("2018/03/30 17:50","yyyy-MM-dd HH:mm"));
+    var list_data = [
+        {
+            ID: 1,
+            Title: "标题名称001",
+            ani_start: "<div class=\"fl bg_white ml_2 mb_2 ovh rel w_47\">",
+            ani_end: "</div>",
+            Content: ['Echart1', 'Echart2', 'Echart3', 'Echart4']
+        },
+        {
+            ID: 2,
+            Title: "标题名称002",
+            ani_start: "<div class=\"fl bg_white ml_2 mb_2 ovh rel w_47\">",
+            ani_end: "</div>",
+            Content: ['Echart1', 'Echart2', 'Echart3', 'Echart4']
+        },
+        {
+            ID: 3,
+            Title: "标题名称003",
+            ani_start: "<div class=\"fl bg_white ml_2 mb_2 ovh rel w_47\">",
+            ani_end: "</div>",
+            Content: ['Echart1', 'Echart2', 'Echart3', 'Echart4']
+        },
+        {
+            ID: 4,
+            Title: "标题名称004",
+            ani_start: "<div class=\"fl bg_white ml_2 mb_2 ovh rel w_47\">",
+            ani_end: "</div>",
+            Content: ['Echart1', 'Echart2', 'Echart3', 'Echart4']
+        },
+        {
+            ID: 5,
+            Title: "标题名称005",
+            ani_start: "<div class=\"fl bg_white ml_2 mb_2 ovh rel w_47\">",
+            ani_end: "</div>",
+            Content: ['Echart1', 'Echart2', 'Echart3', 'Echart4']
+        },
+        {
+            ID: 6,
+            Title: "标题名称006",
+            ani_start: "<div class=\"fl bg_white ml_2 mb_2 ovh rel w_47\">",
+            ani_end: "</div>",
+            Content: ['Echart1', 'Echart2', 'Echart3', 'Echart4']
+        }
+    ];
+    var str="";
+    for(var i=0;i<list_data.length;i++){
+        str+='<span>'+list_data[i].ID+'</span>';
+    }
+    //console.log("str:"+str);
+    $(".plug_for").AKjs_Template(list_data, {
+        getContent: function (con) {
+            return this.data.Content.join(con);
+        }
+    });
+</script>
+
+<style type="text/css">
+    /*样式覆盖区域*/
+</style>
+
+<!--
+//注：template，ak-page-code，ak-title，ak-plugin，script，style等这些元素在页面中不能多个使用否则代码无效；
+路由页面的布局结构使用方法（必须用以下的结构使用）：
+<template>
+    <ak-page-code></ak-page-code>
+    <ak-title></ak-title>
+    <div></div>
+    <ak-plugin></ak-plugin>
+</template>
+<script>
+</script>
+<style>
+</style>
+-->

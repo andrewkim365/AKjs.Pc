@@ -1,0 +1,310 @@
+﻿@charset "utf-8";
+/******基本样式配置******/
+@import url("./akjs.animate.css"); /*动画库样式引入*/
+@import url("./iconfont/iconfont.css"); /*Iconfont图标库样式引入 （http://www.iconfont.cn/collections/detail?cid=8740）*/
+
+/*********************常用颜色相关样式*********************/
+.c_pink {
+    color: #f63d8b !important;
+}
+.c_red {
+    color: #d71b1c !important;
+}
+.c_red-orange {
+    color: #fc3403 !important;
+}
+.c_orange {
+    color: #df3912 !important;
+}
+.c_orange-yellow {
+    color: #fccd05 !important;
+}
+.c_yellow {
+    color: #f9fc19 !important;
+}
+.c_yellow-green {
+    color: #94fc05 !important;
+}
+.c_green {
+    color: #349d05 !important;
+}
+.c_green-blue {
+    color: #22d2ae !important;
+}
+.c_blue {
+    color: #1495e9 !important;
+}
+.c_blue-violet {
+    color: #3504fd !important;
+}
+.c_violet {
+    color: #13305c !important;
+}
+
+.bg_pink {
+    background-color: #f63d8b !important;
+}
+.bg_red {
+    background-color: #d71b1c !important;
+}
+.bg_red-orange {
+    background-color: #fc3403 !important;
+}
+.bg_orange {
+    background-color: #df3912 !important;
+}
+.bg_orange-yellow {
+    background-color: #fccd05 !important;
+}
+.bg_yellow {
+    background-color: #f9fc19 !important;
+}
+.bg_yellow-green {
+    background-color: #94fc05 !important;
+}
+.bg_green {
+    background-color: #349d05 !important;
+}
+.bg_green-blue {
+    background-color: #22d2ae !important;
+}
+.bg_blue {
+    background-color: #1495e9 !important;
+}
+.bg_blue-violet {
+    background-color: #3504fd !important;
+}
+.bg_violet {
+    background-color: #13305c !important;
+}
+
+.bor_pink {
+    border-color: #f63d8b !important;
+}
+.bor_red {
+    border-color: #d71b1c !important;
+}
+.bor_red-orange {
+    border-color: #fc3403 !important;
+}
+.bor_orange {
+    border-color: #df3912 !important;
+}
+.bor_orange-yellow {
+    border-color: #fccd05 !important;
+}
+.bor_yellow {
+    border-color: #f9fc19 !important;
+}
+.bor_yellow-green {
+    border-color: #94fc05 !important;
+}
+.bor_green {
+    border-color: #349d05 !important;
+}
+.bor_green-blue {
+    border-color: #22d2ae !important;
+}
+.bor_blue {
+    border-color: #1495e9 !important;
+}
+.bor_blue-violet {
+    border-color: #3504fd !important;
+}
+.bor_violet {
+    border-color: #13305c !important;
+}
+
+/*********************常用第三方平台主色调*********************/
+.c_wechat {
+    color: #19d100 !important;
+}
+.c_weibo {
+    color: #d94945 !important;
+}
+.c_qq {
+    color: #4cafe9 !important;
+}
+.c_taobao {
+    color: #ff7e00 !important;
+}
+.c_alipay {
+    color: #0398e1 !important;
+}
+.c_jd {
+    color: #f10215 !important;
+}
+.bg_wechat {
+    background-color: #19d100 !important;
+}
+.bg_weibo {
+    background-color: #d94945 !important;
+}
+.bg_qq {
+    background-color: #4cafe9 !important;
+}
+.bg_taobao {
+    background-color: #ff7e00 !important;
+}
+.bg_alipay {
+    background-color: #0398e1 !important;
+}
+.bg_jd {
+    background-color: #f10215 !important;
+}
+.bor_wechat {
+    border-color: #19d100 !important;
+}
+.bor_weibo {
+    border-color: #d94945 !important;
+}
+.bor_qq {
+    border-color: #4cafe9 !important;
+}
+.bor_taobao {
+    border-color: #ff7e00 !important;
+}
+.bor_alipay {
+    border-color: #0398e1 !important;
+}
+.bor_jd {
+    border-color: #f10215 !important;
+}
+
+/*********************关闭和删除颜色样式*********************/
+.c_close {
+    color:#f16a6a !important;
+}
+.bg_close {
+    background-color:#f16a6a !important;
+}
+.bor_close {
+    border-color:#f16a6a !important;
+}
+.c_delete {
+    color:#e93234 !important;
+}
+.bg_delete {
+    background-color:#e93234 !important;
+}
+.bor_delete {
+    border-color:#e93234 !important;
+}
+
+/*********************按钮点击颜色变化效果*********************/
+button.bg_close:hover {
+    background-color: #f13a3a !important;
+}
+button.c_close.bor_close:hover {
+    background-color: #f16a6a !important;
+}
+button.bg_delete:hover {
+    background-color: #b73138 !important;
+}
+button.c_delete.bor_delete:hover {
+    background-color: #e93234 !important;
+}
+
+/*********************常用颜色鼠标滑动色调变化*********************/
+.hover_pink:hover {
+    background-color: #f63d8b !important;
+}
+.hover_red:hover {
+    background-color: #d71b1c !important;
+}
+.hover_red-orange:hover {
+    background-color: #fc3403 !important;
+}
+.hover_orange:hover {
+    background-color: #df3912 !important;
+}
+.hover_orange-yellow:hover {
+    background-color: #fccd05 !important;
+}
+.hover_yellow:hover {
+    background-color: #f9fc19 !important;
+}
+.hover_yellow-green:hover {
+    background-color: #94fc05 !important;
+}
+.hover_green:hover {
+    background-color: #349d05 !important;
+}
+.hover_green-blue:hover {
+    background-color: #22d2ae !important;
+}
+.hover_blue:hover {
+    background-color: #1495e9 !important;
+}
+.hover_blue-violet:hover {
+    background-color: #3504fd !important;
+}
+.hover_violet:hover {
+    background-color: #13305c !important;
+}
+.hover_wechat:hover {
+    background-color: #19d100 !important;
+}
+.hover_weibo:hover {
+    background-color: #d94945 !important;
+}
+.hover_qq:hover {
+    background-color: #4cafe9 !important;
+}
+.hover_taobao:hover {
+    background-color: #ff7e00 !important;
+}
+.hover_alipay:hover {
+    background-color: #0398e1 !important;
+}
+.hover_jd:hover {
+    background-color: #f10215 !important;
+}
+
+/*********************body区域颜色样式*********************/
+body {
+    background-color:#eeeeee;
+    color:#333333;
+}
+
+/*********************模块布局结构*********************/
+.module {
+    display: block;
+    overflow:hidden;
+    position:relative;
+}
+.module li {
+    position:relative;
+}
+.module li i {
+    line-height: inherit;
+}
+.module li input {
+    background-color: transparent !important;
+}
+.module li input.fr {
+    width: inherit;
+    height: inherit;
+    line-height: 100%;
+    text-align: right;
+    padding: 0;
+}
+.module li input.fl {
+    width: inherit;
+    height: inherit;
+    line-height: 100%;
+    text-align: left;
+}
+.module li input.fr + label {
+    text-align: right;
+    right: 0;
+}
+.module li input.fl + label {
+    text-align: left;
+    left: 0;
+}
+
+/*********************样式覆盖区域*********************/
+.ak-phonebox button.bor_white:hover{
+    background-color:rgba(255,255,255,0.1) !important;
+}
