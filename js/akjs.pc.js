@@ -477,8 +477,8 @@ function AKjs_HashSharp(form,key) {
         href_not_main.unbind('click');
         delegate = "click";
     }
-    href_main.bind("click", function (andrew) {
-        andrew.preventDefault();
+    href_main.bind("click", function (ak) {
+        ak.preventDefault();
         var _this = $(this);
         if (AKjs_getUrlParam('akjs') != null || hash_sharp.test(document.location.hash)) {
             data_href(_this);
@@ -486,8 +486,8 @@ function AKjs_HashSharp(form,key) {
             document.location.href= _this.attr("data-href");
         }
     });
-    href_not_main.bind(delegate, function (andrew) {
-        andrew.preventDefault();
+    href_not_main.bind(delegate, function (ak) {
+        ak.preventDefault();
         var _this = $(this);
         if (AKjs_getUrlParam('akjs') != null || hash_sharp.test(document.location.hash)) {
             data_href(_this);
