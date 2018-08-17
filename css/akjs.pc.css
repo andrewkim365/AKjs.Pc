@@ -1,4 +1,4 @@
-﻿/*! jquery.AKjs by Website Plugin v1.0.0 Stable --- Copyright Andrew.Kim | (c) 20170808 ~ 20180809 AKjs license */
+﻿/*! jquery.AKjs by Website Plugin v1.0.0 Stable --- Copyright Andrew.Kim | (c) 20170808 ~ 20180817 AKjs license */
 /*! Coding by Andrew.Kim (E-mail: andrewkim365@qq.com) https://github.com/andrewkim365/AKjs.Pc */
 
 /*-----------Base Style-----------*/
@@ -15,7 +15,7 @@ html, html * {
     font-size:12px;
 }
 .wrap {
-    width: 100%;
+    width: 1000px;
     margin: 0 auto;
     position: relative;
 }
