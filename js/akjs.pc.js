@@ -1,4 +1,4 @@
-/*! jquery.AKjs by Website Plugin v1.0.0 Stable --- Copyright Andrew.Kim | (c) 20170808 ~ 20180809 AKjs license */
+/*! jquery.AKjs by Website Plugin v1.0.0 Stable --- Copyright Andrew.Kim | (c) 20170808 ~ 20180819 AKjs license */
 /*! Coding by Andrew.Kim (E-mail: andrewkim365@qq.com) https://github.com/andrewkim365/AKjs.Pc */
 
 if ("undefined" == typeof jQuery) throw new Error("AKjs Plugin's JavaScript requires jQuery");
@@ -62,7 +62,7 @@ function AKjs_Router(setting) {
         });
         $(document).ready(function(){
             if (option.Animate) {
-                $("body").html("<animation>"+layout.responseText+"</animation>");
+                $("body").html("<div id='ak-animation'>"+layout.responseText+"</div>");
             } else {
                 $("body").html(layout.responseText);
             }
@@ -80,7 +80,10 @@ function AKjs_Router(setting) {
                 "left": 0,
                 "right": 0
             });
-            option.changePage(document.location.hash.substring(1),record);
+            if (IsIE8) {
+                var record = 0;
+            }
+            option.changePage(document.location.hash.substring(1), record);
         });
         function Router_Ajax(option,page) {
             AKjs_UserAgent();
@@ -95,7 +98,7 @@ function AKjs_Router(setting) {
                         }, 100);
                     }
                     $("#ak-scrollview").animate({"scrollTop": 0}, 100);
-                    $("body").children("div").remove();
+                    $("body").children("div").not("#ak-animation").remove();
                     setTimeout(function () {
                         $(".ak-mask").remove();
                     }, 500);
@@ -138,21 +141,32 @@ function AKjs_Router(setting) {
                     }
                 });
                 var htmlobj_text = $(htmlobj.responseText);
-                if (htmlobj_text.prop("localName") == "template") {
-                    main_tmpl = htmlobj_text.html().replace(/class=/g, 'data-temp='+new Date().getTime()+' class=');
+
+                if (htmlobj_text.prop("tagName") == "template" || htmlobj_text.prop("tagName") == "TEMPLATE") {
+                    main_tmpl = htmlobj_text.html();
                     var tmpl_scrollview = new RegExp("\\<ak-scrollview");
                     if (tmpl_scrollview.test(main_tmpl)) {
-                        main_tmpl = htmlobj_text.html().replace('<ak-scrollview', '<scrollview id="ak-scrollview"').replace('</ak-scrollview>', '</scrollview>').replace('<ak-main', '<div id="ak-main"').replace('</ak-main>', '</div>');
+                        main_tmpl = htmlobj_text.html().replace('<ak-scrollview', '<div id="ak-scrollview"').replace('</ak-scrollview>', '</div>').replace('<ak-main', '<div id="ak-main"').replace('</ak-main>', '</div>');
                     } else {
-                        main_tmpl = htmlobj_text.html().replace('<ak-main', '<div id="ak-main"><scrollview id="ak-scrollview"').replace('</ak-main>', '</scrollview></div>');
+                        main_tmpl = htmlobj_text.html().replace('<ak-main', '<div id="ak-main"><div id="ak-scrollview"').replace('</ak-main>', '</div></div>');
+                    }
+                    if (!IsIE8) {
+                        if (typeof(Storage) !== "undefined") {
+                            localStorage.setItem("Retrieve", $("body").html());
+                            record = localStorage.getItem("Retrieve");
+                        }
+                    } else {
+                        main_tmpl = main_tmpl.replace(/<AK-PAGE-CODE/g,'<span id="ak-page-code" class="dis_none_im"').replace('</AK-PAGE-CODE','</span');
+                        main_tmpl = main_tmpl.replace(/<AK-TITLE/g,'<span id="ak-title" class="dis_none_im"').replace('</AK-TITLE','</span');
                     }
 
-                    if (typeof(Storage) !== "undefined") {
-                        localStorage.setItem("Retrieve", $("body").html());
-                        record = localStorage.getItem("Retrieve");
-                    }
-                    main_tmpl = main_tmpl.replace(/class=/g,"data-temp="+new Date().getTime()+" class=");
                     $("main").html(main_tmpl);
+
+                    if (IsIE8) {
+                        $("#ak-page-code").remove();
+                        $("#ak-title").remove();
+                    }
+
                     if ($("#ak-main").parentsUntil("main").length > 0) {
                         $("#ak-main").remove();
                         throw new Error("Sorry! The outer layer of the \"<ak-main></ak-main>\" element can not have other elements!");
@@ -161,16 +175,26 @@ function AKjs_Router(setting) {
                     throw new Error("Sorry! The lack of \"<template></template>\" elements!");
                 }
                 if ($(htmlobj_text).next().length > 0 && $(htmlobj_text).next().next().length < 1) {
-                    if ($(htmlobj_text).next().prop("localName") == "script") {
+                    if ($(htmlobj_text).next().prop("tagName") == "script") {
                         var jsText = $(htmlobj_text).next().html();
-                    } else if ($(htmlobj_text).next().prop("localName") == "style") {
+                    } else if ($(htmlobj_text).next().prop("tagName") == "style") {
+                        var cssText = $(htmlobj_text).next().html();
+                    } else if ($(htmlobj_text).next().prop("tagName") == "SCRIPT") {
+                        var jsText = $(htmlobj_text).next().html();
+                    } else if ($(htmlobj_text).next().prop("tagName") == "STYLE") {
                         var cssText = $(htmlobj_text).next().html();
                     }
                 } else if ($(htmlobj_text).next().length > 0 && $(htmlobj_text).next().next().length > 0) {
-                    if ($(htmlobj_text).next().prop("localName") == "script" && $(htmlobj_text).next().next().prop("localName") == "style") {
+                    if ($(htmlobj_text).next().prop("tagName") == "script" && $(htmlobj_text).next().next().prop("tagName") == "style") {
                         var jsText = $(htmlobj_text).next().html();
                         var cssText = $(htmlobj_text).next().next().html();
-                    } else if ($(htmlobj_text).next().prop("localName") == "style" && $(htmlobj_text).next().next().prop("localName") == "script") {
+                    } else if ($(htmlobj_text).next().prop("tagName") == "style" && $(htmlobj_text).next().next().prop("tagName") == "script") {
+                        var cssText = $(htmlobj_text).next().html();
+                        var jsText = $(htmlobj_text).next().next().html();
+                    } else if ($(htmlobj_text).next().prop("tagName") == "SCRIPT" && $(htmlobj_text).next().next().prop("tagName") == "STYLE") {
+                        var jsText = $(htmlobj_text).next().html();
+                        var cssText = $(htmlobj_text).next().next().html();
+                    } else if ($(htmlobj_text).next().prop("tagName") == "STYLE" && $(htmlobj_text).next().next().prop("tagName") == "SCRIPT") {
                         var cssText = $(htmlobj_text).next().html();
                         var jsText = $(htmlobj_text).next().next().html();
                     }
@@ -285,12 +309,14 @@ function AKjs_Responsive(setting) {
 
 /*-----------------------------------------------AKjs_mainHeight--------------------------------------*/
 function AKjs_mainHeight() {
-    AKjs_Back.listen(function(){
-        if ($("animation").length > 0) {
-            $("animation").attr("data-router", "slideLeft");
-        }
-    });
     AKjs_UserAgent();
+    if (!IsIE8) {
+        AKjs_Back.listen(function(){
+            if ($("#ak-animation").length > 0) {
+                $("#ak-animation").attr("data-router", "slideLeft");
+            }
+        });
+    }
     $("form").each(function(){
         if ($(this).attr("data-submit") == "false") {
             $(this).attr("onsubmit","return false");
@@ -298,16 +324,18 @@ function AKjs_mainHeight() {
         $(this).removeAttr("data-submit");
     });
     if ($("main").children("#ak-main").length === 0) {
-        $("main").children().not("dialog").wrapAll("<div id=\"ak-main\"><scrollview id=\"ak-scrollview\"></scrollview></div>");
+        $("main").children().not("dialog").wrapAll("<div id=\"ak-main\"><div id=\"ak-scrollview\"></div></div>");
     } else {
         if ($("#ak-scrollview").length < 1) {
-            $("main").children("#ak-main").children().wrapAll("<scrollview id=\"ak-scrollview\"></scrollview>");
+            $("main").children("#ak-main").children().wrapAll("<div id=\"ak-scrollview\"></div>");
         }
     }
     setTimeout(function() {
-        $("#ak-scrollview").css({
-            "height": $(window).height() - $("#ak-scrollview").offset().top
-        });
+        if ($("#ak-scrollview").length > 0) {
+            $("#ak-scrollview").css({
+                "height": $(window).height() - $("#ak-scrollview").offset().top
+            });
+        }
     },300);
     if (IsMobile) {
         $("#ak-scrollview, textarea").removeClass("scrollbar");
@@ -497,14 +525,14 @@ function AKjs_HashSharp(form,key) {
     });
     function data_href(_this) {
         var $this = _this;
-        if ($("animation").length > 0) {
-            $("animation").attr("data-router","");
+        if ($("#ak-animation").length > 0) {
+            $("#ak-animation").attr("data-router","");
             if (_this.parents("footer")[0] != undefined) {
-                $("animation").attr("data-router","");
+                $("#ak-animation").attr("data-router","");
             } else if (_this.attr("data-back") === "true" || hash_script.test(_this.attr("data-href"))){
-                $("animation").attr("data-router","slideLeft");
+                $("#ak-animation").attr("data-router","slideLeft");
             } else {
-                $("animation").attr("data-router","slideRight");
+                $("#ak-animation").attr("data-router","slideRight");
             }
         }
         if (hash_sharp.test($this.attr("data-href"))) {
@@ -704,11 +732,11 @@ function AKjs_Location(url,setting) {
         setting);
     AKjs_UserAgent();
     function AniSetting() {
-        if ($("animation").length > 0) {
+        if ($("#ak-animation").length > 0) {
             if (option.router === "right") {
-                $("animation").attr("data-router","slideRight");
+                $("#ak-animation").attr("data-router","slideRight");
             } else if (option.router === "left") {
-                $("animation").attr("data-router","slideLeft");
+                $("#ak-animation").attr("data-router","slideLeft");
             }
         }
     }
@@ -735,8 +763,8 @@ function AKjs_Location(url,setting) {
         case 'history':
             if (option.time) {
                 setTimeout(function () {
-                    if ($("animation").length > 0) {
-                        $("animation").attr("data-router", "slideLeft");
+                    if ($("#ak-animation").length > 0) {
+                        $("#ak-animation").attr("data-router", "slideLeft");
                     }
                     if (IsIphone || IsIpad) {
                         history.back(url);
@@ -745,8 +773,8 @@ function AKjs_Location(url,setting) {
                     }
                 }, option.time);
             } else {
-                if ($("animation").length > 0) {
-                    $("animation").attr("data-router", "slideLeft");
+                if ($("#ak-animation").length > 0) {
+                    $("#ak-animation").attr("data-router", "slideLeft");
                 }
                 if (IsIphone || IsIpad) {
                     history.back(url);
@@ -1004,26 +1032,29 @@ js_folder = ak_scripts[ak_scripts.length - 1].src.substring(0, ak_scripts[ak_scr
 
 /*-----------------------------------------------AKjs_Back------------------------------------------*/
 (function(AKjs_Back){
-    var STATE = 'ak-back';
-    var element;
-    var onPopState = function(event){
-        event.state === STATE && fire();
-    };
-    var record = function(state){
-        history.pushState(state, null, location.href);
-    };
-    var fire = function(){
-        var event = document.createEvent('Events');
-        event.initEvent(STATE, false, false);
-        element.dispatchEvent(event);
-    };
-    var listen = function(listener){
-        element.addEventListener(STATE, listener, false);
-    };
-    !function(){
-        element = document.createElement('span');
-        window.addEventListener('popstate', onPopState);
-        this.listen = listen;
-        record(STATE);
-    }.call(window[AKjs_Back] = window[AKjs_Back] || {});
+    AKjs_UserAgent();
+    if (!IsIE8) {
+        var STATE = 'ak-back';
+        var element;
+        var onPopState = function(event){
+            event.state === STATE && fire();
+        };
+        var record = function(state){
+            history.pushState(state, null, location.href);
+        };
+        var fire = function(){
+            var event = document.createEvent('Events');
+            event.initEvent(STATE, false, false);
+            element.dispatchEvent(event);
+        };
+        var listen = function(listener){
+            element.addEventListener(STATE, listener, false);
+        };
+        !function(){
+            element = document.createElement('span');
+            window.addEventListener('popstate', onPopState);
+            this.listen = listen;
+            record(STATE);
+        }.call(window[AKjs_Back] = window[AKjs_Back] || {});
+    }
 }('AKjs_Back'));
