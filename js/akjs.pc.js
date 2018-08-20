@@ -1,4 +1,4 @@
-/*! jquery.AKjs by Website Plugin v1.0.0 Stable --- Copyright Andrew.Kim | (c) 20170808 ~ 20180819 AKjs license */
+/*! jquery.AKjs by Website Plugin v1.0.0 Stable --- Copyright Andrew.Kim | (c) 20170808 ~ 20180820 AKjs license */
 /*! Coding by Andrew.Kim (E-mail: andrewkim365@qq.com) https://github.com/andrewkim365/AKjs.Pc */
 
 if ("undefined" == typeof jQuery) throw new Error("AKjs Plugin's JavaScript requires jQuery");
@@ -1006,18 +1006,20 @@ function AKjs_DateFormat(date,format) {
 
 /*-----------------------------------------------AKjs_Plugin------------------------------------------*/
 function AKjs_Plugin(setting,css) {
-    $.ajax({
-        type:'GET',
-        url: js_folder+"plugin/"+setting+".js?akjs="+new Date().getTime(),
-        async: false,
-        cache: false,
-        dataType:'script'
+    $(function () {
+        $.ajax({
+            type:'GET',
+            url: js_folder+"plugin/"+setting+".js?akjs="+new Date().getTime(),
+            async: false,
+            cache: false,
+            dataType:'script'
+        });
+        if (css) {
+            var css_url = js_folder + "plugin/css/" + setting + ".css";
+            $("head").find("link").filter("#"+setting).remove();
+            $("head").find("link:first").before("<link rel='stylesheet' type='text/css' id='"+setting+"' href='"+css_url+"?akjs="+new Date().getTime()+"' />");
+        }
     });
-    if (css) {
-        var css_url = "'" + js_folder + "plugin/css/" + setting + ".css?akjs="+new Date().getTime()+"'";
-        $("head").find("link").filter("#"+setting).remove();
-        $("head").find("link:first").before("<link rel='stylesheet' type='text/css' id='"+setting+"' href=" + css_url + " />");
-    }
 }
 
 /*-----------------------------------------------AKjs_pathURL------------------------------------------*/
