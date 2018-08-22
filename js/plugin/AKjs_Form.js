@@ -1,5 +1,5 @@
 /*
-Modification Date: 2018-08-20
+Modification Date: 2018-08-22
 Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
 */
 /*-----------------------------------------------AKjs_Form--------------------------------------------*/
@@ -98,25 +98,24 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
         btn_password.each(function(){
             var pass_btn = $(this);
             pass_btn.parent().append("<button type=\"button\" class=\"press top_0 right_0 abs text_al_r text_18em c_gray_ccc\"></button>");
-
-            pass_btn.next("button").addClass(option.btn_password_ico_hide);
-            pass_btn.next("button").css({
+            pass_btn.parent().children("button").addClass(option.btn_password_ico_hide);
+            pass_btn.parent().children("button").css({
                 "height": pass_btn.outerHeight(),
-                "margin-left": pass_btn.width() - pass_btn.next("button").width()
+                "margin-left": pass_btn.width() - pass_btn.parent().children("button").width()
             });
             $(window).resize(function(){
-                pass_btn.next("button").css({
+                pass_btn.parent().children("button").css({
                     "height": pass_btn.outerHeight(),
-                    "margin-left": pass_btn.width() - pass_btn.next("button").width()
+                    "margin-left": pass_btn.width() - pass_btn.parent().children("button").width()
                 });
             });
-            $(this).next("button").unbind("click");
-            $(this).next("button").click(function() {
+            pass_btn.parent().children("button").unbind("click");
+            pass_btn.parent().children("button").click(function() {
                 $(this).toggleClass(option.btn_password_ico_hide+" "+option.btn_password_ico_show);
                 if ($(this).hasClass(option.btn_password_ico_show)) {
-                    $(this).prev("input").attr("type","text");
+                    $(this).parent().children("input").attr("type","text");
                 } else {
-                    $(this).prev("input").attr("type","password");
+                    $(this).parent().children("input").attr("type","password");
                 }
             });
         });
@@ -126,20 +125,18 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
                 var del_btn = $(this);
                 if ($(this).val() > 0) {
                     if ($(this).next("button[type=reset]").length < 1) {
-                        $(this).after("<button type=\"reset\" class='top_0 right_0 abs press'><i class='fr bg_gray_ccc c_white bor_rad_50 wh_18em line_h_18em text_08em text_al_c text_18em'></i></button>");
+                        $(this).after("<button type=\"reset\" class='press top_0 right_0 abs text_al_r text_18em c_gray_ccc'></button>");
                         $(this).next("button[type=reset]").css({
-                            "height": $(this).prev("input").outerHeight(),
-                            "margin-top": ($(this).height() - $(this).next("button[type=reset]").height()) / 2,
-                            "margin-left": $(this).width() - $(this).next("button[type=reset]").width()
+                            "height": del_btn.outerHeight(),
+                            "margin-left": del_btn.width() - del_btn.next("button").width()
                         });
                         $(window).resize(function () {
                             del_btn.next("button[type=reset]").css({
-                                "height": del_btn.prev("input").outerHeight(),
-                                "margin-top": (del_btn.height() - del_btn.next("button[type=reset]").height()) / 2,
-                                "margin-left": del_btn.width() - del_btn.next("button[type=reset]").width()
+                                "height": del_btn.outerHeight(),
+                                "margin-left": del_btn.width() - del_btn.next("button").width()
                             });
                         });
-                        $(this).next("button[type=reset]").children("i").addClass(option.btn_delete_ico);
+                        $(this).next("button[type=reset]").addClass(option.btn_delete_ico);
                     }
                     $(this).next("button[type=reset]").unbind("click");
                     $(this).next("button[type=reset]").click(function () {
