@@ -38,12 +38,15 @@ function AKjs_Config(setting) {
     if (IsIE6) {
         $("html").addClass("akjs_ie6");
         AKjs_placeholder();
+        AKjs_InputLineHeight();
     } else if (IsIE7) {
         $("html").addClass("akjs_ie7");
         AKjs_placeholder();
+        AKjs_InputLineHeight();
     } else if (IsIE8) {
         $("html").addClass("akjs_ie8");
         AKjs_placeholder();
+        AKjs_InputLineHeight();
     } else if (IsIE) {
         $("html").addClass("akjs_ie");
     }
@@ -288,6 +291,17 @@ function AKjs_RegsInput() {
     Regs_numAll = /"^\d+$/;
     Regs_userBefit = /^[a-z0-9]+$/i;
     Regs_pwdBefit = /^\w+$/;
+}
+
+/*-----------------------------------------------AKjs_InputLineHeight--------------------------------------*/
+function AKjs_InputLineHeight() {
+    AKjs_UserAgent();
+    $('input[type="text"],input[type="password"],input[type="number"], input[type="tel"], input[type="email"]').each(function(){
+        var inputs = $(this);
+        inputs.css({
+            "line-height": inputs.outerHeight()+"px"
+        });
+    });
 }
 
 /*-----------------------------------------------AKjs_Responsive------------------------------------------*/
