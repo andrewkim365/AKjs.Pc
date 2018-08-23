@@ -21,10 +21,6 @@
 */
 /*-----------------------------------------------AKjs_Router (路由全局设置）使用方法-------------------------------------------*/
 $(document).ready(function(){
-    AKjs_Include("css/theme.default.css"); //颜色相关样式文件引入（AKjs_Include是js文件中引入另一个js或css文件的功能）
-    AKjs_Include("js/data.js"); //Json数据文件引入（AKjs_Include是js文件中引入另一个js或css文件的功能）
-    AKjs_Include("js/plugin.js"); //功能插件按需引入（AKjs_Include是js文件中引入另一个js或css文件的功能）
-    AKjs_Include("http://libs.baidu.com/html5shiv/3.7/html5shiv.min.js"); //引入html5shiv插件（AKjs_Include是js文件中引入另一个js或css文件的功能）
     AKjs_Router({ //路由配置管理
         Router: true, //是否开启路由（开启路由URL中带#的路径访问页面不刷新页面形式跳转 (开启 true, 停用 false）
         FileFormat: ".html", //路由目录中的文件格式设置,该参数设置后data-href值里可以不写文件格式 （可设置html,php,aspx,jsp...等程序的文件名）
@@ -32,8 +28,7 @@ $(document).ready(function(){
         Animate:"fadeIn ani_05s", //切换页面时的动画效果设置（输入动画库样式中的动画名称以及动画毫秒的样式名，社为空值无动画效果）
         ErrorMsg: "很抱歉，您要访问的界面加载失败！请稍后再试。", //界面加载失败时提示的信息 （找不到相关页面或者网络环境不稳定时提示的信息）
         RouterPath:["router","layout/main.html"], //路由目录和界面布局文件设置（第1个参数是路由目录文件夹名，第2个参数是指定整个界面布局的文件）
-        changePage:function (hash,record) {  //路由初始化调用和页面变化时的回调（公共插件引入的区域）
-            //console.log(record) /*获取上一个页面的HTML代码（在路由hash模式跳页后才能有效）*/
+        changePage: function (hash,change) { //路由初始化调用和页面变化时的回调（公共插件引入的区域）
             if (!hash) { //首次访问的界面您要跳转到哪个界面？
                 if (IsMobile) { //判断是否通过移动设备访问的
                     AKjs_Location("/home");
@@ -41,77 +36,102 @@ $(document).ready(function(){
                     AKjs_Location("/home"); //location.replace 跳转模式
                 }
             }
+            if (!change) { //change是用于判断hash模式是否跳页
+                AKjs_Include("css/theme.default.css"); //颜色相关样式文件引入（AKjs_Include是js文件中引入另一个js或css文件的功能）
+                AKjs_Include("js/data.js"); //Json数据文件引入（AKjs_Include是js文件中引入另一个js或css文件的功能）
+                AKjs_Include("js/plugin.js"); //功能插件按需引入（AKjs_Include是js文件中引入另一个js或css文件的功能）
+                AKjs_Include("http://libs.baidu.com/html5shiv/3.7/html5shiv.min.js"); //引入html5shiv插件（AKjs_Include是js文件中引入另一个js或css文件的功能）
+            } else {
+                /*-----------------------------------------------AKjs_Loader 使用方法-------------------------------------------*/
+                if (location.hash.substring(1).split("?")[0].indexOf("/home") == -1) {
+                    $(function () {
+                        AKjs_Loader({
+                            ele: $("main").children("#ak-main"), //是否使用局部遮挡层，使用请设置指定的局部元素 （不设置任何参数代表使用全部遮挡层）
+                            autoMode: true, //是否开启指定的时间后自动消失功能 (开启 true, 关闭 false）
+                            timeToHide: 1000, //毫秒时间设置 (automode必须开启才能有效)
+                            iconColor:"#ffffff", //图标颜色设置
+                            maskBG: false, //是否开启遮挡背景 (开启 true, 关闭 false）
+                            Loader:"load_2" //loading效果选择（load_1~7）
+                        });
+                        $(document).on('click', '.ak-loading', function () {
+                            AKjs_Loader("destroy"); //关闭loading窗
+                        });
+                    });
+                }
+            }
+
             /*-----------------------------------------------AKjs_Config (全局设置）使用方法-------------------------------------------*/
-            AKjs_Config({ //环境配置管理
-                MaskStyle: ["style3","opacity07"], //1.所有弹窗背景图案选择（样式style1~8）、2.遮挡层背景的透明度（opacity01~09）
-                Responsive: true, //是否开启文字大小按屏幕尺寸自适应变化，考虑到兼容平板电脑建议开启 (开启 true, 停用 false）
-                ButtonLink: true, //通过元素中加data-href属性的方式跳转界面, 建议开启路由功能后使用。(使用button超链接 true,不使用button超链接 false）
-                animation: true //是否开启元素里加动画参数的功能？（例：data-animation="{name: 'zoomIn', duration:1, delay: 0}"） 动画库：akjs.animate.css
+            $(function () {
+                AKjs_Config({ //环境配置管理
+                    MaskStyle: ["style3", "opacity07"], //1.所有弹窗背景图案选择（样式style1~8）、2.遮挡层背景的透明度（opacity01~09）
+                    Responsive: true, //是否开启文字大小按屏幕尺寸自适应变化，考虑到兼容平板电脑建议开启 (开启 true, 停用 false）
+                    ButtonLink: true, //通过元素中加data-href属性的方式跳转界面, 建议开启路由功能后使用。(使用button超链接 true,不使用button超链接 false）
+                    animation: true //是否开启元素里加动画参数的功能？（例：data-animation="{name: 'zoomIn', duration:1, delay: 0}"） 动画库：akjs.animate.css
+                });
             });
 
-            /*-----------------------------------------------AKjs_Loader 使用方法-------------------------------------------*/
-            if (location.hash.substring(1).split("?")[0].indexOf("/home") == -1) {
-                AKjs_Loader({
-                    ele: $("main"), //是否使用局部遮挡层，使用请设置指定的局部元素 （不设置任何参数代表使用全部遮挡层）
-                    autoMode: true, //是否开启指定的时间后自动消失功能 (开启 true, 关闭 false）
-                    timeToHide: 500, //毫秒时间设置 (automode必须开启才能有效)
-                    iconColor: "#ffffff", //图标颜色设置
-                    maskBG: false, //是否开启遮挡背景 (开启 true, 关闭 false）
-                    Loader: "load_2" //loading效果选择（load_1~7）
-                });
-                $(document).on('click', '.ak-loading', function () {
-                    AKjs_Loader("destroy"); //关闭loading窗
-                });
-            }
             /*-----------------------------------------------AKjs_Scrollbar 使用方法-------------------------------------------*/
-            $("main").AKjs_Scrollbar({
-                children:".plug_scroll",
-                speed:25,
-                barOffTop:2,
-                barOffBottom:2,
-                barOffRight:2,
-                boxWidth:8,
-                barWidth:8,
-                barColor: "rgba(0,0,0,0.3)",
-                barMDColor: "rgba(0,0,0,0.5)",
-                boxColor: "rgba(0,0,0,1)",
-                isMaxHeight:true,
-                isBar:false
+            $(function () {
+                if (IsIE6 || IsIE7 || IsIE8) {
+                    $("aside").addClass("ovs_im scrollbar");
+                } else {
+                    $("aside").AKjs_Scrollbar({
+                        children: ".plug_scroll",
+                        speed: 25,
+                        barOffTop: 2,
+                        barOffBottom: 2,
+                        barOffRight: 2,
+                        boxWidth: 8,
+                        barWidth: 8,
+                        barColor: "rgba(0,0,0,0.3)",
+                        barMDColor: "rgba(0,0,0,0.5)",
+                        boxColor: "rgba(0,0,0,1)",
+                        isMaxHeight: true,
+                        isBar: false,
+                        callback: function (barele, bartop) { //通过回调获取当前滚动条的元素和实时变化的位置
+                            //console.log(barele) /*滚动条的元素*/
+                            //console.log(bartop) /*滚动条的位置*/
+                        }
+                    });
+                }
             });
             /*-----------------------------------------------AKjs_Menu (菜单控制插件）使用方法-------------------------------------------*/
-            $(".plug_nav li").AKjs_Menu({ //底部菜单的图标以及文字样式变化设置
-                icon_text: ["dt i","dt span"], //设置需要控制的菜单图标和文字元素
-                btn_color: "hover_gray_222 c_white", //未选中的文字和图标的颜色
-                active_color: "pointer bg_title_sub02 c_title_sub01", //被选中的文字和图标的颜色
-                Callback: function(ele,index) {
-                    console.log(ele, index);
-                }
+            $(function () {
+                $(".plug_nav li").AKjs_Menu({ //底部菜单的图标以及文字样式变化设置
+                    icon_text: ["dt i","dt span"], //设置需要控制的菜单图标和文字元素
+                    btn_color: "hover_gray_222 c_white", //未选中的文字和图标的颜色
+                    active_color: "pointer bg_title_sub02 c_title_sub01", //被选中的文字和图标的颜色
+                    Callback: function(ele,index) {
+                        console.log(ele, index);
+                    }
+                });
             });
             /*-----------------------------------------------AKjs_Lazyload 使用方法-------------------------------------------*/
-            $("*[data-animation]").AKjs_Lazyload({ //对所有带data-animation属性的元素进行懒加载，让滚动条位置到达该元素区域时动画播放；
-                scroll: $("main"), //滚动区域的容器
-                scrollTop: 100, //设置初始化滚动条位置（当滚动条滚动到当前设置的位置时所有效果将进行初始化）
-                Callback: function(ele) { //初始化回调入口
-                    //console.log(ele);
-                },
-                Scrollback: function(ele,scroll) { //页面滚动后的回调
-                    //console.log(scroll);
-                }
+            $(function () {
+                $("*[data-animation]").AKjs_Lazyload({ //对所有带data-animation属性的元素进行懒加载，让滚动条位置到达该元素区域时动画播放；
+                    scroll: $("main"), //滚动区域的容器
+                    scrollTop: 100, //设置初始化滚动条位置（当滚动条滚动到当前设置的位置时所有效果将进行初始化）
+                    Callback: function(ele) { //初始化回调入口
+                        //console.log(ele);
+                    },
+                    Scrollback: function(ele,scroll) { //页面滚动后的回调
+                        //console.log(scroll);
+                    }
+                });
+                $("img").AKjs_Lazyload({ //对所有的图片懒加载
+                    scroll: $("main"), //滚动区域的容器
+                    scrollTop: 100, //设置初始化滚动条位置（当滚动条滚动到当前设置的位置时所有效果将进行初始化）
+                    Img_Effect: "fadeIn", //图片加载动画效果
+                    Img_LoadStyle: "loading01", //图片加载之前显示的Loading效果 （loading01~05）注：Img_Effect，Img_LoadStyle，Img_Error 三个参数是图片懒加载专用参数；
+                    Img_Error: "./img/noimage.png", //图片加载失败时默认显示图片URL
+                    Callback: function(ele) { //初始化回调入口
+                        //console.log(ele);
+                    },
+                    Scrollback: function(ele,scroll) { //页面滚动后的回调
+                        //console.log(ele);
+                    }
+                });
             });
-            $("img").AKjs_Lazyload({ //对所有的图片懒加载
-                scroll: $("main"), //滚动区域的容器
-                scrollTop: 100, //设置初始化滚动条位置（当滚动条滚动到当前设置的位置时所有效果将进行初始化）
-                Img_Effect: "fadeIn", //图片加载动画效果
-                Img_LoadStyle: "loading01", //图片加载之前显示的Loading效果 （loading01~05）注：Img_Effect，Img_LoadStyle，Img_Error 三个参数是图片懒加载专用参数；
-                Img_Error: "./img/noimage.png", //图片加载失败时默认显示图片URL
-                Callback: function(ele) { //初始化回调入口
-                    //console.log(ele);
-                },
-                Scrollback: function(ele,scroll) { //页面滚动后的回调
-                    //console.log(ele);
-                }
-            });
-
             ak_mainHeight(); //重新设置main元素的高度
             /*
                  AKjs_Location 使用方法：

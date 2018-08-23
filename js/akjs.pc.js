@@ -81,10 +81,8 @@ function AKjs_Router(setting) {
             } else {
                 $("body").html(layout.responseText);
             }
-        });
-        $("main").ready(function(){
             Router_Ajax(option);
-            option.changePage(document.location.hash.substring(1));
+            option.changePage(document.location.hash.substring(1),false);
         });
         $(window).bind('hashchange', function () {
             var page = "hashchange";
@@ -95,10 +93,7 @@ function AKjs_Router(setting) {
                 "left": 0,
                 "right": 0
             });
-            if (IsIE8) {
-                var record = 0;
-            }
-            option.changePage(document.location.hash.substring(1), record);
+            option.changePage(document.location.hash.substring(1), true);
         });
         function Router_Ajax(option,page) {
             AKjs_UserAgent();
@@ -149,7 +144,8 @@ function AKjs_Router(setting) {
                         option.error(document.location.hash.substring(1));
                         $("header, aside, footer").removeClass("dis_block_im").addClass("dis_none_im");
                         setTimeout(function () {
-                            $("main").html('<div class="ak-ErrorPage"><i>&Chi;</i>'+option.ErrorMsg+'</div>');
+                            $(".ak-ErrorPage").remove();
+                            $("body").append('<div class="ak-ErrorPage"><i>&Chi;</i>'+option.ErrorMsg+'</div>');
                             AKjs_mainHeight();
                         }, 100);
                         throw new Error("Sorry! Document not found!");
@@ -387,7 +383,7 @@ function AKjs_placeholder() {
 /*-----------------------------------------------AKjs_mainHeight--------------------------------------*/
 function AKjs_mainHeight() {
     AKjs_UserAgent();
-    if (!IsIE8) {
+    if (!IsIE) {
         AKjs_Back.listen(function(){
             if ($("#ak-animation").length > 0) {
                 $("#ak-animation").attr("data-router", "slideLeft");
@@ -1086,11 +1082,16 @@ function AKjs_DateFormat(date,format) {
 
 /*-----------------------------------------------AKjs_Plugin------------------------------------------*/
 function AKjs_Plugin(setting,css) {
+    AKjs_UserAgent();
     $(function () {
-        if ($("html").attr("data-router") == "akjs") {
-            setTimeout(function() {
+        if (IsMobile) {
+            if ($("html").attr("data-router") == "akjs") {
+                setTimeout(function() {
+                    jscssSetting();
+                },500);
+            } else {
                 jscssSetting();
-            },500);
+            }
         } else {
             jscssSetting();
         }
@@ -1124,7 +1125,7 @@ js_folder = ak_scripts[ak_scripts.length - 1].src.substring(0, ak_scripts[ak_scr
 /*-----------------------------------------------AKjs_Back------------------------------------------*/
 (function(AKjs_Back){
     AKjs_UserAgent();
-    if (!IsIE8) {
+    if (!IsIE) {
         var STATE = 'ak-back';
         var element;
         var onPopState = function(event){
