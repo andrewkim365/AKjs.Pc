@@ -1,5 +1,5 @@
 /*
-Modification Date: 2018-08-22
+Modification Date: 2018-08-23
 Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
 */
 /*-----------------------------------------------AKjs_Form--------------------------------------------*/
@@ -47,11 +47,11 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
             mbf.keyup(function (event) {
             event.preventDefault();
             if (option.validate == true) {
-                var inputs = $(this).find(":required");
+                var inputs = $(this).find("input[required]");
                 var submits = $(this).find(":submit");
-                if (mbf.find("textarea:required").length > 0) {
+                if (mbf.find("textarea[required]").length > 0) {
                     // 取出回车字符
-                    var textareaVal = (mbf.find("textarea:required").val().replace(/<(.+?)>/gi,"&lt;$1&gt;")).replace(/\n/gi,"|");
+                    var textareaVal = (mbf.find("textarea[required]").val().replace(/<(.+?)>/gi,"&lt;$1&gt;")).replace(/\n/gi,"|");
                     // 不包含回车的数量
                     var strLen = textareaVal.split('|').join('').length;
                 } else {

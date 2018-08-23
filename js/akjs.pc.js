@@ -367,10 +367,12 @@ function AKjs_placeholder() {
                 $(this).parent("label").children("span").addClass("dis_none_im");
             });
             place.on('blur', function() {
-                $(this).parent("label").children("span").removeClass("dis_none_im");
+                if ($(this).val() == "") {
+                    $(this).parent("label").children("span").removeClass("dis_none_im");
+                }
             });
-            place.bind('input propertychange', function () {
-                if ($(this).val() > 0) {
+            place.keyup(function() {
+                if ($(this).val() != "") {
                     $(this).parent("label").children("span").addClass("dis_none_im");
                 } else {
                     $(this).parent("label").children("span").removeClass("dis_none_im");
@@ -691,7 +693,7 @@ function AKjs_HashSharp(key) {
 /*-----------------------------------------------AKjs_RegularExp------------------------------------------*/
 function AKjs_RegularExp() {
     $('input[data-type]').each(function(){
-        if ($(this).prop("dataset").type == "number") {
+        if ($(this).attr("data-type") == "number") {
             $(this).attr("pattern","[0-9]*");
             $(this).keyup(function() {
                 this.value = this.value.replace(/\D/g, '');
@@ -700,7 +702,7 @@ function AKjs_RegularExp() {
             }).bind("blur", function () {
                 this.value = this.value.replace(/\D/g, '');
             });
-        } else if ($(this).prop("dataset").type == "number_symbol") {
+        } else if ($(this).attr("data-type") == "number_symbol") {
             $(this).attr("pattern","(\\d{5}([-]\\d{4})?)");
             $(this).keyup(function() {
                 this.value = this.value.replace(/[^\0-9\.]/g,'');
@@ -709,7 +711,7 @@ function AKjs_RegularExp() {
             }).bind("blur", function () {
                 this.value = this.value.replace(/[^\0-9\.]/g,'');
             });
-        } else if ($(this).prop("dataset").type == "alpha") {
+        } else if ($(this).attr("data-type") == "alpha") {
             $(this).attr("pattern","[a-zA-Z]{1}");
             $(this).keyup(function() {
                 this.value = this.value.replace(/[^a-zA-Z]/g,'');
@@ -718,7 +720,7 @@ function AKjs_RegularExp() {
             }).bind("blur", function () {
                 this.value = this.value.replace(/[^a-zA-Z]/g,'');
             });
-        } else if ($(this).prop("dataset").type == "alpha_number") {
+        } else if ($(this).attr("data-type") == "alpha_number") {
             $(this).attr("pattern","[a-zA-Z0-9_]{4,19}");
             $(this).keyup(function() {
                 this.value = this.value.replace(/[^\w\.\/]/ig,'');
@@ -727,7 +729,7 @@ function AKjs_RegularExp() {
             }).bind("blur", function () {
                 this.value = this.value.replace(/[^\w\.\/]/ig,'');
             });
-        } else if ($(this).prop("dataset").type == "sino") {
+        } else if ($(this).attr("data-type") == "sino") {
             $(this).keyup(function() {
                 this.value = this.value.replace(/[^\u4E00-\u9FA5]/g,'');
             }).bind("paste", function () {
@@ -735,7 +737,7 @@ function AKjs_RegularExp() {
             }).bind("blur", function () {
                 this.value = this.value.replace(/[^\u4E00-\u9FA5]/g,'');
             });
-        } else if ($(this).prop("dataset").type == "sino_alpha") {
+        } else if ($(this).attr("data-type") == "sino_alpha") {
             $(this).keyup(function() {
                 this.value = this.value.replace(/[\d]/g,'');
             }).bind("paste", function () {
