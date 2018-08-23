@@ -1,4 +1,4 @@
-/*! jquery.AKjs by Website Plugin v1.0.0 Stable --- Copyright Andrew.Kim | (c) 20170808 ~ 20180822 AKjs license */
+/*! jquery.AKjs by Website Plugin v1.0.0 Stable --- Copyright Andrew.Kim | (c) 20170808 ~ 20180823 AKjs license */
 /*! Coding by Andrew.Kim (E-mail: andrewkim365@qq.com) https://github.com/andrewkim365/AKjs.Pc */
 
 if ("undefined" == typeof jQuery) throw new Error("AKjs Plugin's JavaScript requires jQuery");
@@ -22,7 +22,7 @@ function AKjs_Config(setting) {
         $("body").addClass("ak-screen");
     }
     if(option.ButtonLink == true) {
-        AKjs_HashSharp(false,false);
+        AKjs_HashSharp(false);
     } else {
         $("*").removeAttr("data-href");
     }
@@ -229,9 +229,9 @@ function AKjs_Router(setting) {
                 Router_Settings();
                 setTimeout(function() {
                     if (option.Parameter) {
-                        AKjs_HashSharp(true,true);
+                        AKjs_HashSharp(true);
                     } else {
-                        AKjs_HashSharp(true,false);
+                        AKjs_HashSharp(false);
                     }
                 },1000);
             }
@@ -250,6 +250,9 @@ function AKjs_Router(setting) {
                 $("ak-title").remove();
             }
         }
+        $("html").attr("data-router","akjs");
+    } else {
+        $("html").removeAttr("data-router");
     }
 }
 
@@ -517,7 +520,7 @@ function AKjs_Ajax(setting) {
                 $(option.to).html(htmlobj.responseText);
             }
             option.success(result);
-            AKjs_HashSharp(true,false);
+            AKjs_HashSharp(false);
             AKjs_Animation();
         },
         error: function (error) {
@@ -566,7 +569,7 @@ function AKjs_Animation() {
 }
 
 /*-----------------------------------------------AKjs_HashSharp------------------------------------------*/
-function AKjs_HashSharp(form,key) {
+function AKjs_HashSharp(key) {
     var hash_sharp = new RegExp("#");
     var hash_dot = new RegExp("./");
     var hash_sharps = new RegExp("\\?#");
@@ -675,16 +678,14 @@ function AKjs_HashSharp(form,key) {
             }
         }
     }
-    if (form == true) {
+    if ($("html").attr("data-router") == "akjs") {
         $('form[action]').each(function () {
             var hash_sharp = new RegExp("#");
-            if (AKjs_getUrlParam('akjs') && hash_sharp.test(document.location.hash)) {
-                if (!hash_sharp.test($(this).attr("action"))) {
-                    if (key) {
-                        $(this).attr("action", "#/" + $(this).attr("action") + '?akjs=' + new Date().getTime());
-                    } else {
-                        $(this).attr("action", "#/" + $(this).attr("action"));
-                    }
+            if (!hash_sharp.test($(this).attr("action"))) {
+                if (key) {
+                    $(this).attr("action", "#/" + $(this).attr("action") + '?akjs=' + new Date().getTime());
+                } else {
+                    $(this).attr("action", "#/" + $(this).attr("action"));
                 }
             }
         });
@@ -1086,7 +1087,7 @@ function AKjs_DateFormat(date,format) {
 /*-----------------------------------------------AKjs_Plugin------------------------------------------*/
 function AKjs_Plugin(setting,css) {
     $(function () {
-        if ($("html").attr("data-router")) {
+        if ($("html").attr("data-router") == "akjs") {
             setTimeout(function() {
                 jscssSetting();
             },500);
