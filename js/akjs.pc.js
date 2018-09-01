@@ -1,4 +1,4 @@
-/*! jquery.AKjs by Website Plugin v1.0.0 Stable --- Copyright Andrew.Kim | (c) 20170808 ~ 20180823 AKjs license */
+/*! jquery.AKjs by Website Plugin v1.0.0 Stable --- Copyright Andrew.Kim | (c) 20170808 ~ 20180829 AKjs license */
 /*! Coding by Andrew.Kim (E-mail: andrewkim365@qq.com) https://github.com/andrewkim365/AKjs.Pc */
 
 if ("undefined" == typeof jQuery) throw new Error("AKjs Plugin's JavaScript requires jQuery");
@@ -9,7 +9,8 @@ function AKjs_Config(setting) {
             MaskStyle: [],
             Responsive: true,
             ButtonLink: true,
-            animation:true
+            animation:true,
+            pluginPath: "js/plugin/"
         },
         setting);
     AKjs_UserAgent();
@@ -35,6 +36,15 @@ function AKjs_Config(setting) {
     $(window).resize(function(){
         AKjs_mainHeight();
     });
+    if(option.pluginPath) {
+        akPath = option.pluginPath.charAt(option.pluginPath.length - 1);
+        if (akPath === "/") {
+            plugPath = option.pluginPath.substring(0, option.pluginPath.length-1);
+        } else {
+            plugPath = option.pluginPath;
+        }
+        AKjs_pathURL(plugPath);
+    }
     if (IsIE6) {
         $("html").addClass("akjs_ie6");
         AKjs_placeholder();
@@ -750,54 +760,27 @@ function AKjs_RegularExp() {
 }
 
 /*-----------------------------------------------AKjs_Include------------------------------------------*/
-function AKjs_Include(url,important) {
-    AKjs_pathURL();
+function AKjs_Include(url) {
     var type_js = new RegExp(".js");
     var type_css = new RegExp(".css");
-    var type_remote = new RegExp("http");
-    if(type_js.test(url)){
-        var fileref = document.createElement('script');
-        fileref.setAttribute("type","text/javascript");
-        fileref.setAttribute("data-akjs",new Date().getTime());
-        if (type_remote.test(url)) {
-            fileref.setAttribute("src",url);
-        } else {
-            fileref.setAttribute("src",AKjsPath+"/"+url+"?akjs="+new Date().getTime());
+    $(function () {
+        if(type_js.test(url)) {
+            $.ajax({
+                type: 'GET',
+                url: url + "?akjs=" + new Date().getTime(),
+                async: false,
+                cache: true,
+                dataType: 'script'
+            });
+        } else if(type_css.test(url)) {
+            var valarr = url.split(".css");
+            valarr = valarr.join();
+            valarr = valarr.substring(0, valarr.length-1);
+            valarr = valarr.substring(valarr.lastIndexOf('/') + 1, valarr.length).replace(".","_");
+            $("head").children("style").filter("#include_"+valarr).remove();
+            $("head").append("<style type='text/css' id='include_"+valarr+"'>@import url('"+url+"?akjs="+new Date().getTime()+"');</style>");
         }
-    }else if(type_css.test(url)){
-        var fileref = document.createElement('link');
-        fileref.setAttribute("rel","stylesheet");
-        fileref.setAttribute("type","text/css");
-        fileref.setAttribute("data-akjs",new Date().getTime());
-        if (type_remote.test(url)) {
-            fileref.setAttribute("href",url);
-        } else {
-            fileref.setAttribute("href",AKjsPath+"/"+url+"?akjs="+new Date().getTime());
-        }
-    }
-    if(typeof fileref != "undefined"){
-        if(type_js.test(url)){
-            var type ="script";
-            var type_url = "src";
-        }else if(type_css.test(url)){
-            var type ="link";
-            var type_url = "href";
-        }
-        $("head").find(type).each(function(){
-            if ($(this).data("akjs")) {
-                if ($(this).attr(type_url).indexOf(url) != -1) {
-                    $(this).remove();
-                }
-            }
-        });
-        if (important) {
-            $("head").find("title").after(fileref);
-        } else {
-            $(fileref).appendTo($("head"));
-        }
-    }else{
-        console.info("load include {"+url+"} file method error!");
-    }
+    });
 }
 
 /*-----------------------------------------------AKjs_Location-------------------------------------------*/
@@ -818,23 +801,27 @@ function AKjs_Location(url,setting) {
             }
         }
     }
+    var sharp = "";
+    if ($("html").attr("data-router") == "akjs") {
+        sharp = "#";
+    }
     switch (option.type) {
         case 'href':
             if (option.time) {
                 setTimeout(function () {
                     AniSetting();
                     if (IsIphone || IsIpad) {
-                        document.location.href="#"+url;
+                        document.location.href=sharp+url;
                     } else {
-                        window.location.href="#"+url;
+                        window.location.href=sharp+url;
                     }
                 }, option.time);
             } else {
                 AniSetting();
                 if (IsIphone || IsIpad) {
-                    document.location.href="#"+url;
+                    document.location.href=sharp+url;
                 } else {
-                    window.location.href="#"+url;
+                    window.location.href=sharp+url;
                 }
             }
             break;
@@ -883,17 +870,17 @@ function AKjs_Location(url,setting) {
                 setTimeout(function () {
                     AniSetting();
                     if (IsIphone || IsIpad) {
-                        document.location.replace("#"+url);
+                        document.location.replace(sharp+url);
                     } else {
-                        window.location.replace("#"+url);
+                        window.location.replace(sharp+url);
                     }
                 }, option.time);
             } else {
                 AniSetting();
                 if (IsIphone || IsIpad) {
-                    document.location.replace("#"+url);
+                    document.location.replace(sharp+url);
                 } else {
-                    window.location.replace("#"+url);
+                    window.location.replace(sharp+url);
                 }
             }
             break;
@@ -976,23 +963,88 @@ function AKjs_delCookie(name) {
 
 /*-----------------------------------------------AKjs_Unicode------------------------------------------*/
 function AKjs_Unicode(str) {
-    var out, i, len, c;
-    out = "";
-    len = str.length;
-    for(i = 0; i < len; i++) {
-        c = str.charCodeAt(i);
-        if ((c >= 0x0001) && (c <= 0x007F)) {
-            out += str.charAt(i);
-        } else if (c > 0x07FF) {
-            out += String.fromCharCode(0xE0 | ((c >> 12) & 0x0F));
-            out += String.fromCharCode(0x80 | ((c >>  6) & 0x3F));
-            out += String.fromCharCode(0x80 | ((c >>  0) & 0x3F));
-        } else {
-            out += String.fromCharCode(0xC0 | ((c >>  6) & 0x1F));
-            out += String.fromCharCode(0x80 | ((c >>  0) & 0x3F));
-        }
+    var s = escape(str);
+    var sa = s.split("%");
+    var retV ="";
+    if(sa[0] != "") {
+        retV = sa[0];
     }
-    return out;
+    for(var i = 1; i < sa.length; i ++) {
+        if(sa[i].substring(0,1) == "u") {
+            retV += Hex2Utf8(Str2Hex(sa[i].substring(1,5)));
+        }
+        else retV += "%" + sa[i];
+    }
+    return retV;
+    function Str2Hex(s) {
+        var c = "";
+        var n;
+        var ss = "0123456789ABCDEF";
+        var digS = "";
+        for(var i = 0; i < s.length; i ++)
+        {
+            c = s.charAt(i);
+            n = ss.indexOf(c);
+            digS += Dec2Dig(eval(n));
+
+        }
+        //return value;
+        return digS;
+    }
+    function Dec2Dig(n1) {
+        var s = "";
+        var n2 = 0;
+        for(var i = 0; i < 4; i++)
+        {
+            n2 = Math.pow(2,3 - i);
+            if(n1 >= n2)
+            {
+                s += '1';
+                n1 = n1 - n2;
+            }
+            else
+                s += '0';
+
+        }
+        return s;
+
+    }
+    function Dig2Dec(s) {
+        var retV = 0;
+        if(s.length == 4)
+        {
+            for(var i = 0; i < 4; i ++)
+            {
+                retV += eval(s.charAt(i)) * Math.pow(2, 3 - i);
+            }
+            return retV;
+        }
+        return -1;
+    }
+    function Hex2Utf8(s) {
+        var retS = "";
+        var tempS = "";
+        var ss = "";
+        if(s.length == 16)
+        {
+            tempS = "1110" + s.substring(0, 4);
+            tempS += "10" + s.substring(4, 10);
+            tempS += "10" + s.substring(10,16);
+            var sss = "0123456789ABCDEF";
+            for(var i = 0; i < 3; i ++)
+            {
+                retS += "%";
+                ss = tempS.substring(i * 8, (eval(i)+1)*8);
+
+
+
+                retS += sss.charAt(Dig2Dec(ss.substring(0,4)));
+                retS += sss.charAt(Dig2Dec(ss.substring(4,8)));
+            }
+            return retS;
+        }
+        return "";
+    }
 }
 
 /*-----------------------------------------------AKjs_htmlEncode------------------------------------------*/
@@ -1100,13 +1152,13 @@ function AKjs_Plugin(setting,css) {
         function jscssSetting() {
             $.ajax({
                 type:'GET',
-                url: js_folder+"plugin/"+setting+".js?akjs="+new Date().getTime(),
+                url: AKjsPath+"/"+setting+".js?akjs="+new Date().getTime(),
                 async: false,
                 cache: true,
                 dataType:'script'
             });
             if (css) {
-                var css_url = js_folder + "plugin/css/" + setting + ".css";
+                var css_url = AKjsPath + "/css/" + setting + ".css";
                 $("head").children("style").filter("#"+setting).remove();
                 $("head").append("<style type='text/css' id='"+setting+"'>@import url('"+css_url+"?akjs="+new Date().getTime()+"');</style>");
             }
@@ -1115,14 +1167,14 @@ function AKjs_Plugin(setting,css) {
 }
 
 /*-----------------------------------------------AKjs_pathURL------------------------------------------*/
-function AKjs_pathURL() {
-    var js_index = js_folder.lastIndexOf("\/");
-    var js_Path = js_folder.substring(0, js_index);
-    var real_index = js_Path.lastIndexOf("\/");
-    AKjsPath = js_Path.substring(0, real_index);
+function AKjs_pathURL(path) {
+    AKjsPath = path;
+    var akjsStr = location.href;
+    var akjsArr = akjsStr.split("/");
+    delete akjsArr[akjsArr.length-1];
+    AKjsUrl = akjsArr.join("/");
+    AKjsFile = akjsStr.substr(akjsStr.lastIndexOf('/')+1);
 }
-ak_scripts = document.scripts;
-js_folder = ak_scripts[ak_scripts.length - 1].src.substring(0, ak_scripts[ak_scripts.length - 1].src.lastIndexOf("/") + 1);
 
 /*-----------------------------------------------AKjs_Back------------------------------------------*/
 (function(AKjs_Back){
