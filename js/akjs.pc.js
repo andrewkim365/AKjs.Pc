@@ -404,112 +404,114 @@ function AKjs_placeholder() {
 
 /*-----------------------------------------------AKjs_mainHeight--------------------------------------*/
 function AKjs_mainHeight() {
-    AKjs_UserAgent();
-    if (!IsIE) {
-        AKjs_Back.listen(function(){
-            if ($("#ak-animation").length > 0) {
-                $("#ak-animation").attr("data-router", "slideLeft");
+    $(function () {
+        AKjs_UserAgent();
+        if (!IsIE) {
+            AKjs_Back.listen(function(){
+                if ($("#ak-animation").length > 0) {
+                    $("#ak-animation").attr("data-router", "slideLeft");
+                }
+            });
+        }
+        $("form").each(function(){
+            if ($(this).attr("data-submit") == "false") {
+                $(this).attr("onsubmit","return false");
+            }
+            $(this).removeAttr("data-submit");
+        });
+        if ($("main").children("#ak-main").length === 0) {
+            $("main").children().not("dialog").wrapAll("<div id=\"ak-main\"><div id=\"ak-scrollview\"></div></div>");
+        } else {
+            if ($("#ak-scrollview").length < 1) {
+                $("main").children("#ak-main").children().wrapAll("<div id=\"ak-scrollview\"></div>");
+            }
+        }
+        $(function () {
+            if ($("#ak-scrollview").length > 0) {
+                $("#ak-scrollview").css({
+                    "height": $(window).height() - $("#ak-scrollview").offset().top
+                });
+                $(".h_main").each(function(){
+                    $(this).css({
+                        "height": $("#ak-scrollview").height() - $(this).offset().top + $("#ak-scrollview").offset().top
+                    });
+                });
             }
         });
-    }
-    $("form").each(function(){
-        if ($(this).attr("data-submit") == "false") {
-            $(this).attr("onsubmit","return false");
+        if (IsMobile) {
+            $("#ak-scrollview, textarea").removeClass("scrollbar");
+            $(".bar_hide").removeClass("scrollbar_hide");
+            $("body").addClass("fix_full");
+            document.oncontextmenu = function(){
+                event.returnValue = false;
+                return false;
+            };
+        } else {
+            $("#ak-scrollview, textarea").addClass("scrollbar");
+            $(".bar_hide").addClass("scrollbar_hide");
+            $("body").removeClass("fix_full");
+            document.oncontextmenu = function(){
+                event.returnValue = true;
+                return true;
+            };
         }
-        $(this).removeAttr("data-submit");
-    });
-    if ($("main").children("#ak-main").length === 0) {
-        $("main").children().not("dialog").wrapAll("<div id=\"ak-main\"><div id=\"ak-scrollview\"></div></div>");
-    } else {
-        if ($("#ak-scrollview").length < 1) {
-            $("main").children("#ak-main").children().wrapAll("<div id=\"ak-scrollview\"></div>");
-        }
-    }
-    $(function () {
-        if ($("#ak-scrollview").length > 0) {
-            $("#ak-scrollview").css({
-                "height": $(window).height() - $("#ak-scrollview").offset().top
-            });
-            $(".h_main").each(function(){
-                $(this).css({
-                    "height": $("#ak-scrollview").height() - $(this).offset().top + $("#ak-scrollview").offset().top
-                });
-            });
-        }
-    });
-    if (IsMobile) {
-        $("#ak-scrollview, textarea").removeClass("scrollbar");
-        $(".bar_hide").removeClass("scrollbar_hide");
-        $("body").addClass("fix_full");
-        document.oncontextmenu = function(){
-            event.returnValue = false;
-            return false;
-        };
-    } else {
-        $("#ak-scrollview, textarea").addClass("scrollbar");
-        $(".bar_hide").addClass("scrollbar_hide");
-        $("body").removeClass("fix_full");
-        document.oncontextmenu = function(){
-            event.returnValue = true;
-            return true;
-        };
-    }
-    $("*[data-bounce=true]").on({
-        touchstart: function (ak) {
-            touchStartY = ak.originalEvent.touches[0].clientY;
-            touchStartX = ak.originalEvent.touches[0].clientX;
-        },
-        touchmove: function (ak) {
-            var touchEndY = ak.originalEvent.changedTouches[0].clientY,
-                touchEndX = ak.originalEvent.changedTouches[0].clientX,
-                yDiff = touchStartY - touchEndY,
-                xDiff = touchStartX - touchEndX;
-            if (Math.abs(xDiff) < Math.abs(yDiff)) {
-                if ($(this).scrollTop() === 0) {
-                    if (yDiff < 5) {
-                        $(this).css({
-                            "transform": "translate3d(0," + Math.abs(yDiff) / 4 + "px,0)"
-                        });
-                    }
-                } else if ($(this).scrollTop() === $(this).prop("scrollHeight") - $(this).height()) {
-                    if (yDiff > 5) {
-                        $(this).css({
-                            "transform": "translate3d(0,-" + Math.abs(yDiff) / 4 + "px,0)"
-                        });
+        $("*[data-bounce=true]").on({
+            touchstart: function (ak) {
+                touchStartY = ak.originalEvent.touches[0].clientY;
+                touchStartX = ak.originalEvent.touches[0].clientX;
+            },
+            touchmove: function (ak) {
+                var touchEndY = ak.originalEvent.changedTouches[0].clientY,
+                    touchEndX = ak.originalEvent.changedTouches[0].clientX,
+                    yDiff = touchStartY - touchEndY,
+                    xDiff = touchStartX - touchEndX;
+                if (Math.abs(xDiff) < Math.abs(yDiff)) {
+                    if ($(this).scrollTop() === 0) {
+                        if (yDiff < 5) {
+                            $(this).css({
+                                "transform": "translate3d(0," + Math.abs(yDiff) / 4 + "px,0)"
+                            });
+                        }
+                    } else if ($(this).scrollTop() === $(this).prop("scrollHeight") - $(this).height()) {
+                        if (yDiff > 5) {
+                            $(this).css({
+                                "transform": "translate3d(0,-" + Math.abs(yDiff) / 4 + "px,0)"
+                            });
+                        }
                     }
                 }
+            },
+            touchend: function (ak) {
+                $(this).css({
+                    "transform": "translate3d(0,0,0)"
+                });
             }
-        },
-        touchend: function (ak) {
-            $(this).css({
-                "transform": "translate3d(0,0,0)"
+        });
+        $("main").click(function(){
+            $('[class^="defer_"]').addClass("defer_none");
+            $('[class*=" defer_"]').addClass("defer_none");
+        });
+        $("#ak-scrollview").scroll(function(){
+            $('[class^="defer_"]').addClass("defer_none");
+            $('[class*=" defer_"]').addClass("defer_none");
+        });
+        setTimeout(function() {
+            $("main").css({
+                "left": 0,
+                "right": 0,
+                "top": 0,
+                "bottom": 0
             });
-        }
+            $(".h_fill").css({
+                "height": $(window).height()
+            });
+            $(".ud_text_c").wrap("<text />");
+        },100);
+        setTimeout(function() {
+            $('[class^="defer_"]').addClass("defer_none");
+            $('[class*=" defer_"]').addClass("defer_none");
+        },10000);
     });
-    $("main").click(function(){
-        $('[class^="defer_"]').addClass("defer_none");
-        $('[class*=" defer_"]').addClass("defer_none");
-    });
-    $("#ak-scrollview").scroll(function(){
-        $('[class^="defer_"]').addClass("defer_none");
-        $('[class*=" defer_"]').addClass("defer_none");
-    });
-    setTimeout(function() {
-        $("main").css({
-            "left": 0,
-            "right": 0,
-            "top": 0,
-            "bottom": 0
-        });
-        $(".h_fill").css({
-            "height": $(window).height()
-        });
-        $(".ud_text_c").wrap("<text />");
-    },100);
-    setTimeout(function() {
-        $('[class^="defer_"]').addClass("defer_none");
-        $('[class*=" defer_"]').addClass("defer_none");
-    },10000);
 }
 
 /*-----------------------------------------------AKjs_Ajax--------------------------------------------*/
@@ -1171,27 +1173,29 @@ function AKjs_Plugin(setting,css) {
 (function(AKjs_Back){
     AKjs_UserAgent();
     if (!IsIE) {
-        var STATE = 'ak-back';
-        var element;
-        var onPopState = function(event){
-            event.state === STATE && fire();
-        };
-        var record = function(state){
-            history.pushState(state, null, location.href);
-        };
-        var fire = function(){
-            var event = document.createEvent('Events');
-            event.initEvent(STATE, false, false);
-            element.dispatchEvent(event);
-        };
-        var listen = function(listener){
-            element.addEventListener(STATE, listener, false);
-        };
-        !function(){
-            element = document.createElement('span');
-            window.addEventListener('popstate', onPopState);
-            this.listen = listen;
-            record(STATE);
-        }.call(window[AKjs_Back] = window[AKjs_Back] || {});
+        $(function () {
+            var STATE = 'ak-back';
+            var element;
+            var onPopState = function(event){
+                event.state === STATE && fire();
+            };
+            var record = function(state){
+                history.pushState(state, null, location.href);
+            };
+            var fire = function(){
+                var event = document.createEvent('Events');
+                event.initEvent(STATE, false, false);
+                element.dispatchEvent(event);
+            };
+            var listen = function(listener){
+                element.addEventListener(STATE, listener, false);
+            };
+            !function(){
+                element = document.createElement('span');
+                window.addEventListener('popstate', onPopState);
+                this.listen = listen;
+                record(STATE);
+            }.call(window[AKjs_Back] = window[AKjs_Back] || {});
+        });
     }
 }('AKjs_Back'));
