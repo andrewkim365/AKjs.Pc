@@ -31,7 +31,6 @@ $(document).ready(function(){
 
     AKjs_Include("css/theme.default.css"); //颜色相关样式文件引入（AKjs_Include是js文件中引入另一个js或css文件的功能）
     AKjs_Include("js/data.js"); //Json数据文件引入（AKjs_Include是js文件中引入另一个js或css文件的功能）
-    AKjs_Include("js/plugin.js"); //功能插件按需引入（AKjs_Include是js文件中引入另一个js或css文件的功能）
 
     /*-----------------------------------------------AKjs_Router (路由全局设置）使用方法-------------------------------------------*/
     AKjs_Router({ //路由配置管理
@@ -50,7 +49,7 @@ $(document).ready(function(){
                         AKjs_Location("/page1"); //location.replace 跳转模式
                     }
                 }
-
+                AKjs_Include("js/plugin.js"); //功能插件按需引入（AKjs_Include是js文件中引入另一个js或css文件的功能）
                 if (change) { //change是用于判断hash模式是否跳页
                     /*-----------------------------------------------AKjs_Loader 使用方法-------------------------------------------*/
                     AKjs_Loader({
