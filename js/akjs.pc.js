@@ -201,7 +201,9 @@ function AKjs_Router(setting) {
                         throw new Error("Sorry! The outer layer of the \"<ak-main></ak-main>\" element can not have other elements!");
                     }
                 } else {
-                    throw new Error("Sorry! The lack of \"<template></template>\" elements!");
+                    if ($("html").attr("data-router") != "error") {
+                        throw new Error("Sorry! The lack of \"<template></template>\" elements!");
+                    }
                 }
                 if ($(htmlobj_text).next().length > 0 && $(htmlobj_text).next().next().length < 1) {
                     if ($(htmlobj_text).next().prop("tagName") == "script") {
