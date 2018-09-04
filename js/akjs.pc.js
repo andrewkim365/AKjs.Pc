@@ -1,4 +1,4 @@
-/*! jquery.AKjs by Website Plugin v1.0.0 Stable --- Copyright Andrew.Kim | (c) 20170808 ~ 20180829 AKjs license */
+/*! jquery.AKjs by Website Plugin v1.0.0 Stable --- Copyright Andrew.Kim | (c) 20170808 ~ 20180904 AKjs license */
 /*! Coding by Andrew.Kim (E-mail: andrewkim365@qq.com) https://github.com/andrewkim365/AKjs.Pc */
 
 if ("undefined" == typeof jQuery) throw new Error("AKjs Plugin's JavaScript requires jQuery");
@@ -32,7 +32,9 @@ function AKjs_Config(setting) {
     } else {
         $("*").removeAttr("data-animation");
     }
-    AKjs_mainHeight();
+    if (!$("html").attr("data-router")) {
+        AKjs_mainHeight();
+    }
     $(window).resize(function(){
         AKjs_mainHeight();
     });
@@ -43,7 +45,7 @@ function AKjs_Config(setting) {
         } else {
             plugPath = option.pluginPath;
         }
-        AKjs_pathURL(plugPath);
+        localStorage.AKjsPath = plugPath;
     }
     if (IsIE6) {
         $("html").addClass("akjs_ie6");
@@ -92,6 +94,7 @@ function AKjs_Router(setting) {
                 $("body").html(layout.responseText);
             }
             Router_Ajax(option);
+            AKjs_mainHeight();
             option.changePage(document.location.hash.substring(1),false);
         });
         $(window).bind('hashchange', function () {
@@ -99,6 +102,7 @@ function AKjs_Router(setting) {
             var PrevScrollTop = $("#ak-scrollview").scrollTop();
             Router_Ajax(option,page);
             AKjs_mainHeight();
+            option.changePage(document.location.hash.substring(1), true);
             $("header, main, footer").css({
                 "left": 0,
                 "right": 0
@@ -110,6 +114,7 @@ function AKjs_Router(setting) {
             AKjs_RegsInput();
             AKjs_RegularExp();
             if (document.location.hash.substring(1) != "") {
+                $("#ak-animation").find("img").hide().show();
                 if (page == "hashchange") {
                     if (option.Animate) {
                         $("#ak-main").addClass("dis_opa_0").removeClass("animated " + option.Animate);
@@ -148,16 +153,20 @@ function AKjs_Router(setting) {
                     async: false,
                     cache: false,
                     success: function () {
-                        option.success(document.location.hash.substring(1));
+                        $("html").attr("data-router","akjs");
+                        $(function () {
+                            option.success(document.location.hash.substring(1));
+                        });
                     },
                     error: function () {
-                        option.error(document.location.hash.substring(1));
+                        $("html").attr("data-router","error");
                         $("header, aside, footer").removeClass("dis_block_im").addClass("dis_none_im");
-                        setTimeout(function () {
-                            $(".ak-ErrorPage").remove();
-                            $("body").append('<div class="ak-ErrorPage"><i>&Chi;</i>'+option.ErrorMsg+'</div>');
-                            AKjs_mainHeight();
-                        }, 100);
+                        $(".ak-ErrorPage").remove();
+                        $("body").append('<div class="ak-ErrorPage"><i>&Chi;</i>'+option.ErrorMsg+'</div>');
+                        AKjs_mainHeight();
+                        $(function () {
+                            option.error(document.location.hash.substring(1));
+                        });
                         throw new Error("Sorry! Document not found!");
                     }
                 });
@@ -223,23 +232,23 @@ function AKjs_Router(setting) {
                 }
                 $("html").children("script").html("").remove();
                 $("html").children("style").html("").remove();
-                setTimeout(function () {
-                    if (jsText != undefined) {
-                        $("<script id='akjs_script' data-temp='"+new Date().getTime()+"' type=\"text/javascript\">"+jsText+"</script>").appendTo($("html"));
-                    }
-                    if (cssText != undefined) {
-                        $("<style id='akjs_style' data-temp='"+new Date().getTime()+"' type=\"text/css\">"+cssText+"</style>").appendTo($("html"));
-                    }
-                }, 1000);
 
-                Router_Settings();
-                setTimeout(function() {
-                    if (option.Parameter) {
-                        AKjs_HashSharp(true);
-                    } else {
-                        AKjs_HashSharp(false);
-                    }
-                },1000);
+                $(function() {
+                    Router_Settings();
+                    setTimeout(function () {
+                        if (jsText != undefined) {
+                            $("<script id='akjs_script' data-temp='"+new Date().getTime()+"' type=\"text/javascript\">"+jsText+"</script>").appendTo($("html"));
+                        }
+                        if (cssText != undefined) {
+                            $("<style id='akjs_style' data-temp='"+new Date().getTime()+"' type=\"text/css\">"+cssText+"</style>").appendTo($("html"));
+                        }
+                        if (option.Parameter) {
+                            AKjs_HashSharp(true);
+                        } else {
+                            AKjs_HashSharp(false);
+                        }
+                    }, 1000);
+                });
             }
         }
         function Router_Settings() {
@@ -415,7 +424,7 @@ function AKjs_mainHeight() {
             $("main").children("#ak-main").children().wrapAll("<div id=\"ak-scrollview\"></div>");
         }
     }
-    setTimeout(function() {
+    $(function () {
         if ($("#ak-scrollview").length > 0) {
             $("#ak-scrollview").css({
                 "height": $(window).height() - $("#ak-scrollview").offset().top
@@ -426,7 +435,7 @@ function AKjs_mainHeight() {
                 });
             });
         }
-    },300);
+    });
     if (IsMobile) {
         $("#ak-scrollview, textarea").removeClass("scrollbar");
         $(".bar_hide").removeClass("scrollbar_hide");
@@ -763,24 +772,22 @@ function AKjs_RegularExp() {
 function AKjs_Include(url) {
     var type_js = new RegExp(".js");
     var type_css = new RegExp(".css");
-    $(function () {
-        if(type_js.test(url)) {
-            $.ajax({
-                type: 'GET',
-                url: url + "?akjs=" + new Date().getTime(),
-                async: false,
-                cache: true,
-                dataType: 'script'
-            });
-        } else if(type_css.test(url)) {
-            var valarr = url.split(".css");
-            valarr = valarr.join();
-            valarr = valarr.substring(0, valarr.length-1);
-            valarr = valarr.substring(valarr.lastIndexOf('/') + 1, valarr.length).replace(".","_");
-            $("head").children("style").filter("#include_"+valarr).remove();
-            $("head").append("<style type='text/css' id='include_"+valarr+"'>@import url('"+url+"?akjs="+new Date().getTime()+"');</style>");
-        }
-    });
+    if(type_js.test(url)) {
+        $.ajax({
+            type: 'GET',
+            url: url + "?akjs=" + new Date().getTime(),
+            async: false,
+            cache: true,
+            dataType: 'script'
+        });
+    } else if(type_css.test(url)) {
+        var valarr = url.split(".css");
+        valarr = valarr.join();
+        valarr = valarr.substring(0, valarr.length-1);
+        valarr = valarr.substring(valarr.lastIndexOf('/') + 1, valarr.length).replace(".","_");
+        $("head").children("style").filter("#include_"+valarr).remove();
+        $("head").append("<style type='text/css' id='include_"+valarr+"'>@import url('"+url+"?akjs="+new Date().getTime()+"');</style>");
+    }
 }
 
 /*-----------------------------------------------AKjs_Location-------------------------------------------*/
@@ -932,6 +939,14 @@ function AKjs_Params(number) {
         params.push(hash_arr[i].split("/"));
     }
     return params[0][number];
+}
+
+/*-----------------------------------------------AKjs_Pathname------------------------------------------*/
+function AKjs_Pathname() {
+    var strUrl=window.location.href;
+    var arrUrl=strUrl.split("/");
+    var strPage=arrUrl[arrUrl.length-1];
+    return strPage.split("?")[0];
 }
 
 /*-----------------------------------------------AKjs_setCookie------------------------------------------*/
@@ -1136,44 +1151,19 @@ function AKjs_DateFormat(date,format) {
 
 /*-----------------------------------------------AKjs_Plugin------------------------------------------*/
 function AKjs_Plugin(setting,css) {
-    AKjs_UserAgent();
-    $(function () {
-        if (IsMobile) {
-            if ($("html").attr("data-router") == "akjs") {
-                setTimeout(function() {
-                    jscssSetting();
-                },500);
-            } else {
-                jscssSetting();
-            }
-        } else {
-            jscssSetting();
-        }
-        function jscssSetting() {
-            $.ajax({
-                type:'GET',
-                url: AKjsPath+"/"+setting+".js?akjs="+new Date().getTime(),
-                async: false,
-                cache: true,
-                dataType:'script'
-            });
-            if (css) {
-                var css_url = AKjsPath + "/css/" + setting + ".css";
-                $("head").children("style").filter("#"+setting).remove();
-                $("head").append("<style type='text/css' id='"+setting+"'>@import url('"+css_url+"?akjs="+new Date().getTime()+"');</style>");
-            }
-        }
+    var AKjsPath = localStorage.AKjsPath;
+    $.ajax({
+        type:'GET',
+        url: AKjsPath+"/"+setting+".js?akjs="+new Date().getTime(),
+        async: false,
+        cache: true,
+        dataType:'script'
     });
-}
-
-/*-----------------------------------------------AKjs_pathURL------------------------------------------*/
-function AKjs_pathURL(path) {
-    AKjsPath = path;
-    var akjsStr = location.href;
-    var akjsArr = akjsStr.split("/");
-    delete akjsArr[akjsArr.length-1];
-    AKjsUrl = akjsArr.join("/");
-    AKjsFile = akjsStr.substr(akjsStr.lastIndexOf('/')+1);
+    if (css) {
+        var css_url = AKjsPath + "/css/" + setting + ".css";
+        $("head").children("style").filter("#"+setting).remove();
+        $("head").append("<style type='text/css' id='"+setting+"'>@import url('"+css_url+"?akjs="+new Date().getTime()+"');</style>");
+    }
 }
 
 /*-----------------------------------------------AKjs_Back------------------------------------------*/
