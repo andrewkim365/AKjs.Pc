@@ -167,7 +167,6 @@ function AKjs_Router(setting) {
                         $(function () {
                             option.error(document.location.hash.substring(1));
                         });
-                        throw new Error("Sorry! Document not found!");
                     }
                 });
                 var htmlobj_text = $(htmlobj.responseText);
