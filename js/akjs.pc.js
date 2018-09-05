@@ -540,6 +540,9 @@ function AKjs_Ajax(setting) {
         async: option.async,
         cache: option.cache,
         success: function (result) {
+            if ($(option.to)) {
+                $(option.to).html(htmlobj.responseText);
+            }
             option.success(result);
             AKjs_HashSharp();
             AKjs_Animation();
@@ -548,9 +551,6 @@ function AKjs_Ajax(setting) {
             option.error(error);
         }
     });
-    if ($(option.to)) {
-        $(option.to).html(htmlobj.responseText);
-    }
 }
 
 /*-----------------------------------------------AKjs_Animation------------------------------------------*/
