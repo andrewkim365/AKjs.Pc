@@ -1,4 +1,4 @@
-/*! jquery.AKjs by Website Plugin v1.0.0 Stable --- Copyright Andrew.Kim | (c) 20170808 ~ 20180905 AKjs license */
+/*! jquery.AKjs by Website Plugin v1.0.0 Stable --- Copyright Andrew.Kim | (c) 20170808 ~ 20180906 AKjs license */
 /*! Coding by Andrew.Kim (E-mail: andrewkim365@qq.com) https://github.com/andrewkim365/AKjs.Pc */
 
 if ("undefined" == typeof jQuery) throw new Error("AKjs Plugin's JavaScript requires jQuery");
@@ -410,7 +410,7 @@ function AKjs_placeholder() {
 function AKjs_mainHeight() {
     $(function () {
         AKjs_UserAgent();
-        if (!IsIE) {
+        if (IsMobile) {
             AKjs_Back.listen(function(){
                 if ($("#ak-animation").length > 0) {
                     $("#ak-animation").attr("data-router", "slideLeft");
@@ -778,6 +778,7 @@ function AKjs_RegularExp() {
 
 /*-----------------------------------------------AKjs_Include------------------------------------------*/
 function AKjs_Include(url) {
+    AKjs_UserAgent();
     var type_js = new RegExp(".js");
     var type_css = new RegExp(".css");
     if(type_js.test(url)) {
@@ -794,7 +795,11 @@ function AKjs_Include(url) {
         valarr = valarr.substring(0, valarr.length-1);
         valarr = valarr.substring(valarr.lastIndexOf('/') + 1, valarr.length).replace(".","_");
         if ($("head").children("style").filter("#include_"+valarr).length == 0) {
-            $("head").append("<style type='text/css' id='include_" + valarr + "'>@import url('" + url + "?akjs=" + new Date().getTime() + "');</style>");
+            if (IsIE8 || IsIE7 || IsIE6) {
+                $("head").append("<link rel='stylesheet' type='text/css' id='include_" + valarr + "' href='" + url + "?akjs=" + new Date().getTime() + "' />");
+            } else {
+                $("head").append("<style type='text/css' id='include_" + valarr + "'>@import url('" + url + "?akjs=" + new Date().getTime() + "');</style>");
+            }
         }
     }
 }
@@ -1197,7 +1202,11 @@ function AKjs_Plugin(setting,css) {
                 }
                 var css_source = localStorage.getItem(setting+"_css");
             }
-            $("head").append("<style type='text/css' id='" + setting + "_css'>"+css_source+"</style>");
+            if (IsIE8 || IsIE7 || IsIE6) {
+                $("head").append("<link rel='stylesheet' type='text/css'  id='" + setting + "_css' href='" + AKjsPath + "/css/" + setting + ".css?akjs=" + new Date().getTime() + "' />");
+            } else {
+                $("head").append("<style type='text/css' id='" + setting + "_css'>"+css_source+"</style>");
+            }
         }
     }
     if ($("head").children("script").filter("#"+setting+"_js").length == 0) {
@@ -1230,7 +1239,7 @@ function AKjs_Plugin(setting,css) {
 /*-----------------------------------------------AKjs_Back------------------------------------------*/
 (function(AKjs_Back){
     AKjs_UserAgent();
-    if (!IsIE) {
+    if (IsMobile) {
         $(function () {
             var STATE = 'ak-back';
             var element;
