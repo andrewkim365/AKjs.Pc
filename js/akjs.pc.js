@@ -817,33 +817,40 @@ function AKjs_Location(url,setting) {
             }
         }
     }
-    var sharp = "";
-    if ($("html").attr("data-router") == "akjs") {
-        sharp = "#";
-    }
-    switch (option.type) {
-        case 'href':
-            if (option.time) {
-                setTimeout(function () {
+    $(function () {
+        switch (option.type) {
+            case 'href':
+                if (option.time) {
+                    setTimeout(function () {
+                        AniSetting();
+                        if (IsIphone || IsIpad) {
+                            document.location.href="#"+url;
+                        } else {
+                            window.location.href="#"+url;
+                        }
+                    }, option.time);
+                } else {
                     AniSetting();
                     if (IsIphone || IsIpad) {
-                        document.location.href=sharp+url;
+                        document.location.href="#"+url;
                     } else {
-                        window.location.href=sharp+url;
+                        window.location.href="#"+url;
                     }
-                }, option.time);
-            } else {
-                AniSetting();
-                if (IsIphone || IsIpad) {
-                    document.location.href=sharp+url;
-                } else {
-                    window.location.href=sharp+url;
                 }
-            }
-            break;
-        case 'history':
-            if (option.time) {
-                setTimeout(function () {
+                break;
+            case 'history':
+                if (option.time) {
+                    setTimeout(function () {
+                        if ($("#ak-animation").length > 0) {
+                            $("#ak-animation").attr("data-router", "slideLeft");
+                        }
+                        if (IsIphone || IsIpad) {
+                            history.back(url);
+                        } else {
+                            window.back(url);
+                        }
+                    }, option.time);
+                } else {
                     if ($("#ak-animation").length > 0) {
                         $("#ak-animation").attr("data-router", "slideLeft");
                     }
@@ -852,55 +859,46 @@ function AKjs_Location(url,setting) {
                     } else {
                         window.back(url);
                     }
-                }, option.time);
-            } else {
-                if ($("#ak-animation").length > 0) {
-                    $("#ak-animation").attr("data-router", "slideLeft");
                 }
-                if (IsIphone || IsIpad) {
-                    history.back(url);
+                break;
+            case 'reload':
+                if (option.time) {
+                    setTimeout(function () {
+                        if (IsIphone || IsIpad) {
+                            document.location.reload();
+                        } else {
+                            window.location.reload();
+                        }
+                    }, option.time);
                 } else {
-                    window.back(url);
-                }
-            }
-            break;
-        case 'reload':
-            if (option.time) {
-                setTimeout(function () {
                     if (IsIphone || IsIpad) {
                         document.location.reload();
                     } else {
                         window.location.reload();
                     }
-                }, option.time);
-            } else {
-                if (IsIphone || IsIpad) {
-                    document.location.reload();
-                } else {
-                    window.location.reload();
                 }
-            }
-            break;
-        default:
-            if (option.time) {
-                setTimeout(function () {
+                break;
+            default:
+                if (option.time) {
+                    setTimeout(function () {
+                        AniSetting();
+                        if (IsIphone || IsIpad) {
+                            document.location.replace("#"+url);
+                        } else {
+                            window.location.replace("#"+url);
+                        }
+                    }, option.time);
+                } else {
                     AniSetting();
                     if (IsIphone || IsIpad) {
-                        document.location.replace(sharp+url);
+                        document.location.replace("#"+url);
                     } else {
-                        window.location.replace(sharp+url);
+                        window.location.replace("#"+url);
                     }
-                }, option.time);
-            } else {
-                AniSetting();
-                if (IsIphone || IsIpad) {
-                    document.location.replace(sharp+url);
-                } else {
-                    window.location.replace(sharp+url);
                 }
-            }
-            break;
-    }
+                break;
+        }
+    });
 }
 
 /*-----------------------------------------------AKjs_getUrlParam-------------------------------------------*/
