@@ -1,5 +1,5 @@
 ﻿/*
-Modification Date: 2018-08-30
+Modification Date: 2018-09-08
 Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
 */
 /*-----------------------------------------------AKjs_Spinner-------------------------------------------*/
@@ -55,8 +55,11 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
                 }
                 $(this).bind('input propertychange', function (e) {
                     e.preventDefault();
-                    var lengthNum= parseInt(it.val());
-                    option.changeBack(lengthNum);
+                    var lengthNum=0;
+                    if(it.val()!=''&& it.val()!=null && it.val()!=undefined){
+                        lengthNum=parseInt(it.val());;
+                    }
+                    option.changeBack(lengthNum,$(this));
                 });
                 $(this).parent().children(".plus").unbind("click");
                 $(this).parent().children(".plus").on('click', function (e) {
@@ -80,7 +83,7 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
                     } else {
                         $(this).attr("disabled", 'disabled');
                     }
-                    option.clickBack(lengthNum+parseInt(option.spacing));
+                    option.clickBack(lengthNum+parseInt(option.spacing), $(this).parent().children("input"));
                 });
                 $(this).parent().children(".minus").unbind("click");
                 $(this).parent().children(".minus").on('click', function (e) {
@@ -105,7 +108,7 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
                         it.val(parseInt(1));
                         $(this).attr("disabled",'disabled');
                     }
-                    option.clickBack(lengthNum-parseInt(option.spacing));
+                    option.clickBack(lengthNum-parseInt(option.spacing), $(this).parent().children("input"));
                 })
             });
         }
