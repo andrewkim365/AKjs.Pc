@@ -11,7 +11,7 @@ function AKjs_Config(setting) {
             ButtonLink: true,
             animation:true,
             pluginPath: "js/plugin/",
-            pluginVersion: 0
+            pluginClear: {days: 0, hours: 0, minutes: 0, seconds: 0}
         },
         setting);
     AKjs_UserAgent();
@@ -23,8 +23,16 @@ function AKjs_Config(setting) {
     if(!option.Responsive) {
         $("body").addClass("ak-screen");
     }
-    if(option.pluginVersion) {
-        localStorage.setItem("pluginVersion", option.pluginVersion);
+    if(option.pluginClear) {
+        if (option.pluginClear.days != undefined && option.pluginClear.days != 0) {
+            localStorage.setItem("pluginClear_days", option.pluginClear.days);
+        } else if (option.pluginClear.hours != undefined && option.pluginClear.hours != 0) {
+            localStorage.setItem("pluginClear_hours", option.pluginClear.hours);
+        } else if (option.pluginClear.minutes != undefined && option.pluginClear.minutes != 0) {
+            localStorage.setItem("pluginClear_minutes", option.pluginClear.minutes);
+        } else if (option.pluginClear.seconds != undefined && option.pluginClear.seconds != 0) {
+            localStorage.setItem("pluginClear_seconds", option.pluginClear.seconds);
+        }
     }
     if(option.ButtonLink== true) {
         if (!$("html").attr("data-router")) {
@@ -787,7 +795,7 @@ function AKjs_Include(url) {
             type: 'GET',
             url: url + "?akjs=" + new Date().getTime(),
             async: false,
-            cache: true,
+            cache: false,
             dataType: 'script'
         });
     } else if(type_css.test(url)) {
@@ -1182,11 +1190,33 @@ function AKjs_DateFormat(date,format) {
 function AKjs_Plugin(setting,css) {
     AKjs_UserAgent();
     var AKjsPath = localStorage.AKjsPath;
+
     if (!IsIE8 && !IsIE7 && !IsIE6) {
-        if (localStorage.getItem("pluginVersion") != sessionStorage.getItem("pluginVersion")) {
+        if (localStorage.getItem("pluginDate") === null) {
+            var StartDate = new Date().getTime();
+        } else {
+            var StartDate = localStorage.getItem("pluginDate");
+        }
+        var EndDate = new Date().getTime() - StartDate;
+        var leave1=EndDate%(24*3600*1000);
+        var leave2=leave1%(3600*1000);
+        var leave3=leave2%(60*1000);
+        if (localStorage.getItem("pluginClear_days") != null && localStorage.getItem("pluginClear_days") != 0) {
+            var plugTime = localStorage.getItem("pluginClear_days");
+            var plugType = Math.floor(EndDate/(24*3600*1000));
+        } else if (localStorage.getItem("pluginClear_hours") != null && localStorage.getItem("pluginClear_hours") != 0) {
+            var plugTime = localStorage.getItem("pluginClear_hours");
+            var plugType = Math.floor(leave1/(3600*1000));
+        } else if (localStorage.getItem("pluginClear_minutes") != null && localStorage.getItem("pluginClear_minutes") != 0) {
+            var plugTime = localStorage.getItem("pluginClear_minutes");
+            var plugType = Math.floor(leave2/(60*1000));
+        } else if (localStorage.getItem("pluginClear_seconds") != null && localStorage.getItem("pluginClear_seconds") != 0) {
+            var plugTime = localStorage.getItem("pluginClear_seconds");
+            var plugType = Math.round(leave3/1000);
+        }
+        if (plugType > plugTime) {
             sessionStorage.clear();
             js_css_Setting();
-            sessionStorage.setItem("pluginVersion", localStorage.getItem("pluginVersion"));
         } else {
             js_css_Setting();
         }
@@ -1208,6 +1238,7 @@ function AKjs_Plugin(setting,css) {
                             dataType: 'text'
                         });
                         sessionStorage.setItem(setting + "_css", css_plugobj.responseText);
+
                     }
                     $("head").append("<style type='text/css' id='" + setting + "_css'>"+sessionStorage.getItem(setting+"_css")+"</style>");
                 }
@@ -1231,6 +1262,7 @@ function AKjs_Plugin(setting,css) {
                         cache: false,
                         dataType: 'text'
                     });
+                    localStorage.setItem("pluginDate",new Date().getTime());
                     sessionStorage.setItem(setting + "_js", js_plugobj.responseText);
                 }
                 $("head").append("<script type='text/javascript' language='javascript' id='" + setting + "_js'>" + sessionStorage.getItem(setting + "_js") + "</script>");
