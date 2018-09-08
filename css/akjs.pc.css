@@ -1,4 +1,4 @@
-﻿/*! jquery.AKjs by Website Plugin v1.0.0 Stable --- Copyright Andrew.Kim | (c) 20170808 ~ 20180905 AKjs license */
+﻿/*! jquery.AKjs by Website Plugin v1.0.0 Stable --- Copyright Andrew.Kim | (c) 20170808 ~ 20180908 AKjs license */
 /*! Coding by Andrew.Kim (E-mail: andrewkim365@qq.com) https://github.com/andrewkim365/AKjs.Pc */
 
 /*-----------Base Style-----------*/
@@ -13257,6 +13257,7 @@ animation, #ak-animation, #ak-main, scrollview, #ak-scrollview, #ak-aside, #ak-m
     display: block !important;
     margin: 0 auto !important;
     width: auto !important;
+    min-width: auto !important;
     height: inherit !important;
 }
 

@@ -1,4 +1,4 @@
-/*! jquery.AKjs by Website Plugin v1.0.0 Stable --- Copyright Andrew.Kim | (c) 20170808 ~ 20180906 AKjs license */
+/*! jquery.AKjs by Website Plugin v1.0.0 Stable --- Copyright Andrew.Kim | (c) 20170808 ~ 20180908 AKjs license */
 /*! Coding by Andrew.Kim (E-mail: andrewkim365@qq.com) https://github.com/andrewkim365/AKjs.Pc */
 
 if ("undefined" == typeof jQuery) throw new Error("AKjs Plugin's JavaScript requires jQuery");
@@ -10,7 +10,8 @@ function AKjs_Config(setting) {
             Responsive: true,
             ButtonLink: true,
             animation:true,
-            pluginPath: "js/plugin/"
+            pluginPath: "js/plugin/",
+            pluginVersion: 0
         },
         setting);
     AKjs_UserAgent();
@@ -21,6 +22,9 @@ function AKjs_Config(setting) {
     }
     if(!option.Responsive) {
         $("body").addClass("ak-screen");
+    }
+    if(option.pluginVersion) {
+        localStorage.setItem("pluginVersion", option.pluginVersion);
     }
     if(option.ButtonLink== true) {
         if (!$("html").attr("data-router")) {
@@ -75,6 +79,7 @@ function AKjs_Router(setting) {
             Animate:"",
             ErrorMsg: "Current Page loading failure!",
             RouterPath:[],
+            startPage: "",
             success:function () {
             },
             error:function () {
@@ -97,6 +102,9 @@ function AKjs_Router(setting) {
             }
             Router_Ajax(option);
             AKjs_mainHeight();
+            if (!document.location.hash.substring(1) && option.startPage) {
+                AKjs_Location(option.startPage);
+            }
             option.changePage(document.location.hash.substring(1),false);
         });
         $(window).bind('hashchange', function () {
@@ -816,23 +824,28 @@ function AKjs_Location(url,setting) {
         }
     }
     $(function () {
+        if ($("html").attr("data-router")) {
+            var ak_location = "#"+url;
+        } else {
+            var ak_location = url;
+        }
         switch (option.type) {
             case 'href':
                 if (option.time) {
                     setTimeout(function () {
                         AniSetting();
                         if (IsIphone || IsIpad) {
-                            document.location.href="#"+url;
+                            document.location.href = ak_location;
                         } else {
-                            window.location.href="#"+url;
+                            window.location.href = ak_location;
                         }
                     }, option.time);
                 } else {
                     AniSetting();
                     if (IsIphone || IsIpad) {
-                        document.location.href="#"+url;
+                        document.location.href = ak_location;
                     } else {
-                        window.location.href="#"+url;
+                        window.location.href = ak_location;
                     }
                 }
                 break;
@@ -881,15 +894,15 @@ function AKjs_Location(url,setting) {
                     setTimeout(function () {
                         AniSetting();
                         if (IsIphone || IsIpad) {
-                            document.location.replace("#"+url);
+                            document.location.replace(ak_location);
                         } else {
-                            window.location.replace("#"+url);
+                            window.location.replace(ak_location);
                         }
                     }, option.time);
                 } else {
                     AniSetting();
                     if (IsIphone || IsIpad) {
-                        document.location.replace("#"+url);
+                        document.location.replace(ak_location);
                     } else {
                         window.location.replace("#"+url);
                     }
@@ -1169,62 +1182,59 @@ function AKjs_DateFormat(date,format) {
 function AKjs_Plugin(setting,css) {
     AKjs_UserAgent();
     var AKjsPath = localStorage.AKjsPath;
-    if (css) {
-        if ($("head").children("style").filter("#" + setting + "_css").length == 0) {
-            if (IsIE8 || IsIE7 || IsIE6) {
-                css_plugobj = $.ajax({
-                    type: 'GET',
-                    url: AKjsPath + "/css/" + setting + ".css?akjs=" + new Date().getTime(),
-                    async: false,
-                    cache: true,
-                    dataType: 'text'
-                });
-                var css_source = css_plugobj;
-            } else {
-                if (localStorage.getItem(setting + "_css") === null) {
-                    css_plugobj = $.ajax({
-                        type: 'GET',
-                        url: AKjsPath + "/css/" + setting + ".css?akjs=" + new Date().getTime(),
-                        async: false,
-                        cache: true,
-                        dataType: 'text'
-                    });
-                    localStorage.setItem(setting + "_css", css_plugobj.responseText);
+    if (!IsIE8 && !IsIE7 && !IsIE6) {
+        if (localStorage.getItem("pluginVersion") != sessionStorage.getItem("pluginVersion")) {
+            sessionStorage.clear();
+            js_css_Setting();
+            sessionStorage.setItem("pluginVersion", localStorage.getItem("pluginVersion"));
+        } else {
+            js_css_Setting();
+        }
+    } else {
+        js_css_Setting();
+    }
+    function js_css_Setting() {
+        if (css) {
+            if ($("head").children("style").filter("#" + setting + "_css").length == 0) {
+                if (IsIE8 || IsIE7 || IsIE6) {
+                    $("head").append("<link rel='stylesheet' type='text/css'  id='" + setting + "_css' href='" + AKjsPath + "/css/" + setting + ".css?akjs=" + new Date().getTime() + "' />");
                 } else {
-                    localStorage.setItem(setting + "_css", localStorage.getItem(setting + "_css"));
+                    if (sessionStorage.getItem(setting + "_css") === null) {
+                        css_plugobj = $.ajax({
+                            type: 'GET',
+                            url: AKjsPath + "/css/" + setting + ".css?akjs=" + new Date().getTime(),
+                            async: false,
+                            cache: false,
+                            dataType: 'text'
+                        });
+                        sessionStorage.setItem(setting + "_css", css_plugobj.responseText);
+                    }
+                    $("head").append("<style type='text/css' id='" + setting + "_css'>"+sessionStorage.getItem(setting+"_css")+"</style>");
                 }
-                var css_source = localStorage.getItem(setting+"_css");
-            }
-            if (IsIE8 || IsIE7 || IsIE6) {
-                $("head").append("<link rel='stylesheet' type='text/css'  id='" + setting + "_css' href='" + AKjsPath + "/css/" + setting + ".css?akjs=" + new Date().getTime() + "' />");
-            } else {
-                $("head").append("<style type='text/css' id='" + setting + "_css'>"+css_source+"</style>");
             }
         }
-    }
-    if ($("head").children("script").filter("#"+setting+"_js").length == 0) {
-        if (IsIE8 || IsIE7 || IsIE6) {
-            $.ajax({
-                type: 'GET',
-                url: AKjsPath + "/" + setting + ".js?akjs=" + new Date().getTime(),
-                async: false,
-                cache: true,
-                dataType: 'script'
-            });
-        } else {
-            if (localStorage.getItem(setting + "_js") === null) {
-                js_plugobj = $.ajax({
+        if ($("head").children("script").filter("#"+setting+"_js").length == 0) {
+            if (IsIE8 || IsIE7 || IsIE6) {
+                $.ajax({
                     type: 'GET',
                     url: AKjsPath + "/" + setting + ".js?akjs=" + new Date().getTime(),
                     async: false,
-                    cache: true,
-                    dataType: 'text'
+                    cache: false,
+                    dataType: 'script'
                 });
-                localStorage.setItem(setting + "_js", js_plugobj.responseText);
             } else {
-                localStorage.setItem(setting + "_js", localStorage.getItem(setting + "_js"));
+                if (sessionStorage.getItem(setting + "_js") === null) {
+                    js_plugobj = $.ajax({
+                        type: 'GET',
+                        url: AKjsPath + "/" + setting + ".js?akjs=" + new Date().getTime(),
+                        async: false,
+                        cache: false,
+                        dataType: 'text'
+                    });
+                    sessionStorage.setItem(setting + "_js", js_plugobj.responseText);
+                }
+                $("head").append("<script type='text/javascript' language='javascript' id='" + setting + "_js'>" + sessionStorage.getItem(setting + "_js") + "</script>");
             }
-            $("head").append("<script type='text/javascript' language='javascript' id='" + setting + "_js'>"+localStorage.getItem(setting + "_js")+"</script>");
         }
     }
 }

@@ -28,19 +28,12 @@ $(document).ready(function(){
         Animate:"fadeIn ani_05s", //切换页面时的动画效果设置（输入动画库样式中的动画名称以及动画毫秒的样式名，社为空值无动画效果）
         ErrorMsg: "很抱歉，您要访问的界面加载失败！请稍后再试。", //界面加载失败时提示的信息 （找不到相关页面或者网络环境不稳定时提示的信息）
         RouterPath:["router","layout/main.html"], //路由目录和界面布局文件设置（第1个参数是路由目录文件夹名，第2个参数是指定整个界面布局的文件）
+        startPage: "/page1", //首次访问的界面您要跳转到哪个界面？
         changePage: function (hash,change) { //路由初始化调用和页面变化时的回调（公共插件引入的区域）
-            if (!hash) { //首次访问的界面您要跳转到哪个界面？
-                if (IsMobile) { //判断是否通过移动设备访问的
-                    AKjs_Location("/page1"); //location.replace 跳转模式
-                } else {
-                    AKjs_Location("/page1"); //location.replace 跳转模式
-                }
-            }
             if (!change) { //change是用于判断hash模式是否跳页
                 AKjs_Include("css/theme.default.css"); //颜色相关样式文件引入（AKjs_Include是js文件中引入另一个js或css文件的功能）
                 AKjs_Include("js/data.js"); //Json数据文件引入（AKjs_Include是js文件中引入另一个js或css文件的功能）
             }
-
             AKjs_Include("js/plugin.js"); //功能插件按需引入（为了正常运行功能插件通过AKjs_Include方式引入）
 
             /*-----------------------------------------------AKjs_Loader 使用方法-------------------------------------------*/
