@@ -1,4 +1,4 @@
-/*! jquery.AKjs by Website Plugin v1.0.0 Stable --- Copyright Andrew.Kim | (c) 20170808 ~ 20180908 AKjs license */
+/*! jquery.AKjs by Website Plugin v1.0.0 Stable --- Copyright Andrew.Kim | (c) 20170808 ~ 20180911 AKjs license */
 /*! Coding by Andrew.Kim (E-mail: andrewkim365@qq.com) https://github.com/andrewkim365/AKjs.Pc */
 
 if ("undefined" == typeof jQuery) throw new Error("AKjs Plugin's JavaScript requires jQuery");
@@ -432,8 +432,11 @@ function AKjs_mainHeight() {
             }
             $(this).removeAttr("data-submit");
         });
+        if ($("main").length === 0) {
+            $("body").children().not("header").not("footer").not("aside").wrapAll("<main />");
+        }
         if ($("main").children("#ak-main").length === 0) {
-            $("main").children().not("dialog").wrapAll("<div id=\"ak-main\"><div id=\"ak-scrollview\"></div></div>");
+            $("main").children().not("header").not("footer").not("aside").not("dialog").wrapAll("<div id=\"ak-main\"><div id=\"ak-scrollview\"></div></div>");
         } else {
             if ($("#ak-scrollview").length < 1) {
                 $("main").children("#ak-main").children().wrapAll("<div id=\"ak-scrollview\"></div>");
@@ -507,6 +510,9 @@ function AKjs_mainHeight() {
         $("#ak-scrollview").scroll(function(){
             $('[class^="defer_"]').addClass("defer_none");
             $('[class*=" defer_"]').addClass("defer_none");
+            $("#ak-scrollview").find(".ak-mask").css({
+                "height": $("#ak-scrollview").prop("scrollHeight")
+            });
         });
         setTimeout(function() {
             $("main").css({
