@@ -164,18 +164,17 @@ $(document).ready(function(){
 
 //main元素自定义设置高度-----------------------------------------------------------------------------------------//
 function ak_mainHeight() {
-    var header_h = $("header").outerHeight();
-    var footer_h = $("footer").outerHeight()+10;
-    $("main").css({
-        "margin-top": header_h,
-        "margin-bottom": footer_h,
-        "max-height": $(window).height() - header_h - footer_h
-    });
+    header_footer();
     $(window).resize(function(){
+        header_footer();
+    });
+    function header_footer() {
+        var header_h = $("header").outerHeight();
+        var footer_h = $("footer").outerHeight()+10;
         $("main").css({
             "margin-top": header_h,
             "margin-bottom": footer_h,
             "max-height": $(window).height() - header_h - footer_h
         });
-    });
+    }
 }
