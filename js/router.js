@@ -40,15 +40,21 @@ $(document).ready(function(){
             $(function() {
                 AKjs_Loader({
                     ele: $("main").children("#ak-main"), //是否使用局部遮挡层，使用请设置指定的局部元素 （不设置任何参数代表使用全部遮挡层）
-                    autoMode: true, //是否开启指定的时间后自动消失功能 (开启 true, 关闭 false）
+                    autoMode: false, //是否开启指定的时间后自动消失功能 (开启 true, 关闭 false）
                     timeToHide: 1000, //毫秒时间设置 (automode必须开启才能有效)
-                    iconColor:"#ffffff", //图标颜色设置
+                    iconColor: "#ffffff", //图标颜色设置
                     maskBG: false, //是否开启遮挡背景 (开启 true, 关闭 false）
-                    Loader:"load_2" //loading效果选择（load_1~7）
+                    Loader: "load_2", //loading效果选择（load_1~7），在PC端使用时请填写load_0,让IE8也兼容。
+                    //text: "内容加载中", //Loading时显示的文字
+                    boxsize: "3em", //Loading框大小设置
+                    class: "animated fadeIn fix zindex_6 c_gray_333", //Loading的ele区域的样式设置
+                    callback:function (ele) { //回调入口
+                        console.log(ele);
+                        setTimeout(function() { //页面加载完2秒后执行
+                            AKjs_Loader("destroy"); //关闭loading窗（使用该功能autoMode参数设为false，并且timeToHide参数不需要设置值）
+                        },2000);
+                    }
                 });
-            });
-            $(document).on('click', '.ak-loading', function () {
-                AKjs_Loader("destroy"); //关闭loading窗
             });
 
             /*-----------------------------------------------AKjs_Scrollbar 使用方法-------------------------------------------*/
