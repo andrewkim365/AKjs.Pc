@@ -1,4 +1,9 @@
-﻿var akjs = akjs || {};
+﻿/*
+Modification Date: 2018-09-17
+Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
+*/
+/*-----------------------------------------------AKjs_MediaElement--------------------------------------*/
+var akjs = akjs || {};
 akjs.meIndex = 0,
 akjs.plugins = {
     silverlight: [{

@@ -1,4 +1,4 @@
-﻿/*! jquery.AKjs by Website Plugin v1.0.0 Stable --- Copyright Andrew.Kim | (c) 20170808 ~ 20180911 AKjs license */
+﻿/*! jquery.AKjs by Website Plugin v1.0.0 Stable --- Copyright Andrew.Kim | (c) 20170808 ~ 20180917 AKjs license */
 /*! Coding by Andrew.Kim (E-mail: andrewkim365@qq.com) https://github.com/andrewkim365/AKjs.Pc */
 
 /*-----------Base Style-----------*/
@@ -13164,7 +13164,7 @@ filter_gray_0 {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
-.ak-for >*:first-child, ak-header, ak-footer, ak-title, ak-menu-code, ak-page-code, ak-plugin  {
+.ak-for, .ak-for >*:first-child, ak-header, ak-footer, ak-title, ak-menu-code, ak-page-code, ak-plugin  {
     display: none !important;
 }
 animation, #ak-animation {

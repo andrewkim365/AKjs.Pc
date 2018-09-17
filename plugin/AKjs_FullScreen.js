@@ -1,4 +1,8 @@
-﻿/*-----------------------------------------------AKjs_FullScreen------------------------------------------*/
+﻿/*
+Modification Date: 2018-09-17
+Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
+*/
+/*-----------------------------------------------AKjs_FullScreen------------------------------------------*/
 (function($){
     $.fn.AKjs_FullScreen = function(setting) {
         var option = $.extend({
@@ -12,7 +16,7 @@
             Click_FullScreen();
         });
 
-        function Click_FullScreen() { //启动全屏
+        function Click_FullScreen() {
             var element = document.documentElement;
             if (element.requestFullscreen) {
                 element.requestFullscreen();
@@ -25,7 +29,7 @@
             }
             option.clickCallback(full);
         }
-        function Exit_FullScreen() { //退出全屏
+        function Exit_FullScreen() {
             if (document.exitFullscreen) {
                 document.exitFullscreen();
             } else if (document.mozCancelFullScreen) {
@@ -40,7 +44,7 @@
         }
 
         document.addEventListener("keydown", function (evt) {
-            if (evt.keyCode == 122) { //F11
+            if (evt.keyCode == 122) {
                 evt.preventDefault();
                 Click_FullScreen();
             }

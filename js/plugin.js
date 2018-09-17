@@ -88,6 +88,4 @@ $(function () {
     AKjs_Plugin("AKjs_GoTop"); //返回页面顶部插件
     AKjs_Plugin("AKjs_ImgSubject"); //图片列表滑动效果
     AKjs_Plugin("AKjs_SelectOption","css"); //select下拉框插件
-
-//AKjs_Plugin("AKjs_Validate"); //表单验证功能 （已停用：被AKjs_Form合并）
 });

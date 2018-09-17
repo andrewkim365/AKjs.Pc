@@ -1,12 +1,12 @@
 ﻿/*
-Modification Date: 2018-06-04
+Modification Date: 2018-09-17
 Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
 */
 /*-----------------------------------------------AKjs_NavMenu-------------------------------------------*/
 (function($){
     $.fn.AKjs_NavMenu = function(setting) {
         var option = $.extend({
-                curDisplay: 3, //当前被选中哪个？
+                curDisplay: 3,
                 activeText: "",
                 LinePosition: "",
                 LineClass: "",

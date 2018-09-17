@@ -1,4 +1,8 @@
-﻿/*-----------------------------------------------AKjs_ElementControl--------------------------------------------*/
+﻿/*
+Modification Date: 2018-09-17
+Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
+*/
+/*-----------------------------------------------AKjs_ElementControl--------------------------------------------*/
 (function($){
     var Plugin = function(ele, options) {
         this.$ele = ele;
