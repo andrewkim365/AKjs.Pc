@@ -47,12 +47,15 @@ $(document).ready(function(){
                     Loader: "load_2", //loading效果选择（load_1~7），在PC端使用时请填写load_0,让IE8也兼容。
                     //text: "内容加载中", //Loading时显示的文字
                     boxsize: "3em", //Loading框大小设置
-                    class: "animated fadeIn fix zindex_6 c_gray_333", //Loading的ele区域的样式设置
+                    eleclass: "animated fadeIn zindex_6 c_gray_333", //Loading的ele区域的样式设置
                     callback:function (ele) { //回调入口
                         console.log(ele);
                         setTimeout(function() { //页面加载完2秒后执行
                             AKjs_Loader("destroy"); //关闭loading窗（使用该功能autoMode参数设为false，并且timeToHide参数不需要设置值）
                         },2000);
+                        /*if($("#ak-scrollview").css('display') == 'block'){
+                            $("#ak-scrollview").animate({scrollTop:0},0); //指定元素区域的滚动条返回到最顶部
+                        }*/
                     }
                 });
             });
