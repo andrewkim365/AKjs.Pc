@@ -48,10 +48,10 @@ $(document).ready(function(){
                     //text: "内容加载中", //Loading时显示的文字
                     boxsize: "3em", //Loading框大小设置
                     eleclass: "animated fadeIn zindex_6 c_gray_333", //Loading的ele区域的样式设置
-                    callback:function (ele) { //回调入口
+                    callback:function (ele,destroy) { //回调入口 （ele：元素，destroy：摧毁开关控制）
                         console.log(ele);
                         setTimeout(function() { //页面加载完2秒后执行
-                            AKjs_Loader("destroy"); //关闭loading窗（使用该功能autoMode参数设为false，并且timeToHide参数不需要设置值）
+                            destroy(true); //关闭loading窗 [true:关闭loading效果，false:重新显示或不关闭loading效果]（使用该功能autoMode参数设为false，并且timeToHide参数不需要设置值）
                         },2000);
                         /*if($("#ak-scrollview").css('display') == 'block'){
                             $("#ak-scrollview").animate({scrollTop:0},0); //指定元素区域的滚动条返回到最顶部
@@ -173,6 +173,8 @@ $(document).ready(function(){
 
 //main元素自定义设置高度-----------------------------------------------------------------------------------------//
 function ak_mainHeight() {
+    $("body").fadeIn();
+    $("header").removeClass("dis_none_im");
     header_footer();
     $(window).resize(function(){
         header_footer();
