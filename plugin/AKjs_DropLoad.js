@@ -1,5 +1,5 @@
 /*
-Modification Date: 2018-09-17
+Modification Date: 2018-09-20
 Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
 */
 /*-----------------------------------------------AKjs_DropLoad------------------------------------------*/
@@ -268,9 +268,11 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
         }
     };
     function fnTransition(dom, num) {
-        dom.css({
-            "-webkit-transition": "all " + num + "ms",
-            "transition": "all " + num + "ms"
-        })
+        if (dom != undefined) {
+            dom.css({
+                "-webkit-transition": "all " + num + "ms",
+                "transition": "all " + num + "ms"
+            });
+        }
     }
 } (jQuery));
