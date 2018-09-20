@@ -551,21 +551,28 @@ function AKjs_Ajax(setting) {
             data:{},
             async:false,
             cache: false,
+            dataType: "",
+            complete:function () {
+            },
             success:function () {
             },
             error:function () {
             }
         },
         setting);
-    htmlobj = $.ajax({
+    AjaxObj = $.ajax({
         type: option.type,
         url: option.url,
         data: option.data,
         async: option.async,
         cache: option.cache,
+        dataType: option.dataType,
+        complete: function(response) {
+            option.complete(response);
+        },
         success: function (result) {
-            if ($(option.to)) {
-                $(option.to).html(htmlobj.responseText);
+            if ($(option.to).length>0) {
+                $(option.to).html(AjaxObj.responseText);
             }
             option.success(result);
             AKjs_HashSharp();
