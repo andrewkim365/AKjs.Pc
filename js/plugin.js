@@ -72,6 +72,7 @@ $(function () {
     AKjs_Plugin("AKjs_TouchDelete","css"); //列表滑动删除功能
     AKjs_Plugin("AKjs_Typeahead","css"); //模糊搜索功能
     AKjs_Plugin("AKjs_TypeIt","css"); //文字打字效果（！！！！！！！！！！样式有改动）
+    AKjs_Plugin("AKjs_Validate"); //表单校验插件
     AKjs_Plugin("AKjs_Viewer","css"); //图片放大预览功能
     AKjs_Plugin("AKjs_Vticker"); //列表垂直滚动插件
     AKjs_Plugin("AKjs_WebToast","css"); //提示框效果
