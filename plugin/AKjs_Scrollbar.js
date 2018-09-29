@@ -1,5 +1,5 @@
 /*
-Modification Date: 2018-09-17
+Modification Date: 2018-09-29
 Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
 */
 /*-----------------------------------------------AKjs_Scrollbar--------------------------------------------*/
@@ -8,17 +8,13 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
         var setting = {
             children: "",
             speed: 25,
-            isMaxHeight: false,
-            barOffTop: 2,
-            barOffBottom: 2,
-            barOffRight: 2,
-            boxWidth: 8,
+            barMargin: 2,
             barWidth: 8,
-            barColor: "rgba(0,0,0,0.3)",
-            barMDColor: "rgba(0,0,0,0.5)",
-            boxColor: "rgba(0,0,0,1)",
-            isBox: false,
-            isBar: false,
+            barColor: "rgba(0,0,0,0.5)",
+            barMDColor: "rgba(0,0,0,0.7)",
+            boxColor: "rgba(0,0,0,0.3)",
+            isBox: true,
+            isBar: true,
             callback: function() {}
         };
         var opts = $.extend({},
@@ -30,84 +26,81 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
         };
         var w = {};
         var sMouseWheel = "mousewheel";
-        if (! ("onmousewheel" in document)) {
-            sMouseWheel = "DOMMouseScroll"
+        if (!("onmousewheel" in document)) {
+            sMouseWheel = "DOMMouseScroll";
         }
         var hash = this;
-        $(hash).each(function() {
-            var elem = $(this);
-            elem.css({
-                "overflow": "hidden"
-            });
-            var elChild = elem.children(opts.children);
-            elChild.css({
-                "position": "absolute",
-                "width": "100%",
-                "left": "0"
-            });
-            $(window).resize(function() {
-                var ScrollBox = $("<div style='position:absolute;opacity:" + (opts.isBox ? 1 : 0) + ";width:" + opts.boxWidth + "px;top:" + opts.barOffTop + "px;right:" + opts.barOffRight + "px;bottom:" + opts.barOffBottom + "px;border-radius: 5px;background: " + color.box + ";'></div>");
-                var ScrollBars = $("<div style='position:absolute;opacity:" + (opts.isBar ? 1 : 0) + ";width:" + opts.barWidth + "px;top:" + opts.barOffTop + "px;right:" + opts.barOffRight + "px;border-radius: 5px;background: " + color.bar + ";'></div>");
+        $(function () {
+            $(hash).each(function() {
+                var elem = $(this);
+                elem.css({
+                    "overflow": "hidden"
+                });
+                if (elem.find("#ak-scrollbar").length < 1) {
+                    elem.children().wrapAll("<div id='ak-scrollbar' />");
+                }
+                var elChild = elem.children("#ak-scrollbar");
+                elChild.css({
+                    "position": "absolute",
+                    "width": "100%",
+                    "left": "0"
+                });
+                $(window).resize(function() {
+                    var ScrollBox = elem.find("#ak-scrollbar-ScrollBox");
+                    var ScrollBars = elem.find("#ak-scrollbar-ScrollBars");
+                    var iRate = elem.innerHeight() / elChild.outerHeight();
+                    var iScrollBoxHeight = ScrollBox.innerHeight();
+                    var iScrollBarHeight = Math.round(iRate * iScrollBoxHeight);
+                    if (iRate >= 1) {
+                        ScrollBox.hide();
+                        ScrollBars.css("height", 0)
+                    } else {
+                        ScrollBars.css("height", iScrollBarHeight);
+                    }
+                });
+                var sham = $("<div id='ak-scrollbar-sham' style='position:relative;background:transparent;z-index:-1;height:" + elChild.outerHeight() + "px'></div>");
+                var ScrollBox = $("<div id='ak-scrollbar-ScrollBox' style='position:absolute;opacity:" + (opts.isBox ? 1 : 0) + ";width:" + opts.barWidth + "px;top:" + opts.barMargin + "px;right:" + opts.barMargin + "px;bottom:" + opts.barMargin + "px;border-radius: 5px;background: " + color.box + ";'></div>");
+                var ScrollBars = $("<div id='ak-scrollbar-ScrollBars' style='position:absolute;opacity:" + (opts.isBar ? 1 : 0) + ";width:" + opts.barWidth + "px;top:" + opts.barMargin + "px;right:" + opts.barMargin + "px;border-radius: 5px;background: " + color.bar + ";'></div>");
+                if (elem.find("#ak-scrollbar-ScrollBox").length < 1) {
+                    sham.appendTo(elem);
+                    ScrollBox.appendTo(elem);
+                    ScrollBars.appendTo(elem);
+                }
                 var iRate = elem.innerHeight() / elChild.outerHeight();
                 var iScrollBoxHeight = ScrollBox.innerHeight();
                 var iScrollBarHeight = Math.round(iRate * iScrollBoxHeight);
                 if (iRate >= 1) {
                     ScrollBox.hide();
-                    ScrollBars.css("height", 0)
+                    ScrollBars.css("height", 0);
                 } else {
-                    ScrollBars.css("height", iScrollBarHeight)
+                    ScrollBars.css("height", iScrollBarHeight);
                 }
-            });
-            var sham = $("<div style='position:relative;background:transparent;z-index:-1;height:" + elChild.outerHeight() + "px'></div>");
-            var ScrollBox = $("<div style='position:absolute;opacity:" + (opts.isBox ? 1 : 0) + ";width:" + opts.boxWidth + "px;top:" + opts.barOffTop + "px;right:" + opts.barOffRight + "px;bottom:" + opts.barOffBottom + "px;border-radius: 5px;background: " + color.box + ";'></div>");
-            var ScrollBars = $("<div style='position:absolute;opacity:" + (opts.isBar ? 1 : 0) + ";width:" + opts.barWidth + "px;top:" + opts.barOffTop + "px;right:" + opts.barOffRight + "px;border-radius: 5px;background: " + color.bar + ";'></div>");
-            if ($(".ak-Scrollbar").length < 1) {
-                if (opts.isMaxHeight) {
-                    sham.appendTo(elem)
-                }
-                ScrollBox.appendTo(elem);
-                ScrollBars.appendTo(elem)
-            }
-            var iRate = elem.innerHeight() / elChild.outerHeight();
-            var iScrollBoxHeight = ScrollBox.innerHeight();
-            var iScrollBarHeight = Math.round(iRate * iScrollBoxHeight);
-            if (iRate >= 1) {
-                ScrollBox.hide();
-                ScrollBars.css("height", 0)
-            } else {
-                ScrollBars.css("height", iScrollBarHeight)
-            }
-            var iMinTop = elem.innerHeight() - elChild.outerHeight();
-            var sMaxTop = iScrollBoxHeight - iScrollBarHeight + opts.barOffTop;
-            elem.on("mouseenter",
-                function() {
+                var iMinTop = elem.innerHeight() - elChild.outerHeight();
+                var sMaxTop = iScrollBoxHeight - iScrollBarHeight + opts.barMargin;
+                elem.on("mouseenter", function() {
                     w.MouseInScroll = true;
                     ScrollBars.css({
                         "opacity": 1
                     });
-                    fnContentResize()
+                    fnContentResize();
                 });
-            elem.on("mouseleave",
-                function() {
+                elem.on("mouseleave", function() {
                     if (!opts.isBar) {
                         ScrollBars.css({
                             "opacity": 0
                         })
                     }
-                    w.MouseInScroll = false
+                    w.MouseInScroll = false;
                 });
-            elem.on("mouseup",
-                function() {
+                elem.on("mouseup", function() {
                     ScrollBars.css({
                         "opacity": 1
                     });
                     setTimeout(function() {
-                            fnContentResize()
-                        },
-                        200)
+                        fnContentResize();
+                    }, 200);
                 });
-            elem.on(sMouseWheel,
-                function(ev) {
+                elem.on(sMouseWheel, function(ev) {
                     ev = ev.originalEvent;
                     if (iRate >= 1) {
                         return
@@ -120,19 +113,18 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
                     iMinTop = elem.innerHeight() - elChild.outerHeight();
                     if (iMinTop > 0) {
                         elChild.css("top", 0);
-                        return
+                        return;
                     }
                     var iTop = parseInt(elChild.css("top"));
                     var iTop = iTop + opts.speed * iWheelDelta;
                     iTop = iTop > 0 ? 0 : iTop;
                     iTop = iTop < iMinTop ? iMinTop: iTop;
                     elChild.css("top", iTop);
-                    fnScrollContent(elem, elChild, ScrollBox, ScrollBars, opts.barOffTop)
+                    fnScrollContent(elem, elChild, ScrollBox, ScrollBars, opts.barMargin);
                 });
-            var isS_B = false,
-                doc_py, barTop, conTop;
-            ScrollBars.on("mousedown",
-                function(ev) {
+                var isS_B = false,
+                    doc_py, barTop, conTop;
+                ScrollBars.on("mousedown", function(ev) {
                     isS_B = true;
                     elem.css({
                         "-moz-user-select": "none",
@@ -143,31 +135,28 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
                         "background": color.barMD
                     });
                     barTop = parseInt(ScrollBars.css("top"));
-                    conTop = parseInt(elChild.css("top"))
+                    conTop = parseInt(elChild.css("top"));
                 });
-            $(document).on("mousedown",
-                function(ev) {
+                $(document).on("mousedown", function(ev) {
                     if (isS_B) {
-                        doc_py = ev.pageY
+                        doc_py = ev.pageY;
                     }
                 });
-            $(document).on("mousemove",
-                function(ev) {
+                $(document).on("mousemove", function(ev) {
                     if (isS_B) {
                         var rate = ev.pageY - doc_py;
                         var sTop = barTop + rate;
-                        sTop = sTop < opts.barOffTop ? opts.barOffTop: sTop;
+                        sTop = sTop < opts.barMargin ? opts.barMargin: sTop;
                         sTop = sTop > sMaxTop ? sMaxTop: sTop;
                         ScrollBars.css("top", sTop);
-                        var jqCon_rate = elChild.outerHeight() * (rate / iScrollBoxHeight) * -1;
-                        var iTop = conTop + jqCon_rate;
+                        var ak_Con_rate = elChild.outerHeight() * (rate / iScrollBoxHeight) * -1;
+                        var iTop = conTop + ak_Con_rate;
                         iTop = iTop > 0 ? 0 : iTop;
                         iTop = iTop < iMinTop ? iMinTop: iTop;
-                        elChild.css("top", iTop)
+                        elChild.css("top", iTop);
                     }
                 });
-            $(document).on("mouseup",
-                function(ev) {
+                $(document).on("mouseup", function(ev) {
                     elem.css({
                         "-moz-user-select": "",
                         "-khtml-user-select": "",
@@ -176,55 +165,49 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
                     ScrollBars.css({
                         "background": color.bar
                     });
-                    isS_B = false
+                    isS_B = false;
                 });
-            elChild.bind("DOMNodeInserted",
-                function(e) {
+                elChild.bind("DOMNodeInserted", function(e) {
                     setTimeout(function() {
-                            fnContentResize()
-                        },
-                        100)
+                        fnContentResize();
+                    }, 100);
                 });
-            elChild.bind("DOMNodeRemoved",
-                function(e) {
+                elChild.bind("DOMNodeRemoved", function(e) {
                     setTimeout(function() {
-                            fnContentResize()
-                        },
-                        100)
+                        fnContentResize();
+                    }, 100);
                 });
-            function fnContentResize() {
-                if (opts.isMaxHeight) {
+                function fnContentResize() {
                     sham.css({
                         "height": elChild.outerHeight() + "px"
-                    })
+                    });
+                    iRate = elem.innerHeight() / elChild.outerHeight();
+                    if (iRate >= 1) {
+                        ScrollBox.hide();
+                        ScrollBars.css("height", 0);
+                        elChild.css("top", 0);
+                        return;
+                    }
+                    ScrollBox.show();
+                    iScrollBoxHeight = ScrollBox.outerHeight();
+                    iScrollBarHeight = Math.round(iRate * iScrollBoxHeight);
+                    ScrollBars.css("height", iScrollBarHeight);
+                    iMinTop = elem.innerHeight() - elChild.outerHeight();
+                    sMaxTop = iScrollBoxHeight - iScrollBarHeight;
+                    var nowConTop = parseInt(elChild.css("top"));
+                    fnScrollContent(elem, elChild, ScrollBox, ScrollBars, 0, 0);
+                    if (nowConTop < iMinTop) {
+                        elChild.css("top", iMinTop);
+                        ScrollBars.css("top", sMaxTop);
+                    }
                 }
-                iRate = elem.innerHeight() / elChild.outerHeight();
-                if (iRate >= 1) {
-                    ScrollBox.hide();
-                    ScrollBars.css("height", 0);
-                    elChild.css("top", 0);
-                    return
-                }
-                ScrollBox.show();
-                iScrollBoxHeight = ScrollBox.outerHeight();
-                iScrollBarHeight = Math.round(iRate * iScrollBoxHeight);
-                ScrollBars.css("height", iScrollBarHeight);
-                iMinTop = elem.innerHeight() - elChild.outerHeight();
-                sMaxTop = iScrollBoxHeight - iScrollBarHeight;
-                var nowConTop = parseInt(elChild.css("top"));
-                fnScrollContent(elem, elChild, ScrollBox, ScrollBars, 0, 0);
-                if (nowConTop < iMinTop) {
-                    elChild.css("top", iMinTop);
-                    ScrollBars.css("top", sMaxTop)
-                }
-            }
+            });
         });
-        function fnScrollContent(jqWrapper, jqContent, jqFollowWrapper, jqFlollowContent, iOffset) {
-            var rate = parseInt(jqContent.css("top")) / (jqContent.outerHeight() - jqWrapper.innerHeight());
-            var iTop = (jqFlollowContent.outerHeight() - jqFollowWrapper.innerHeight()) * rate + iOffset;
-            jqFlollowContent.addClass("ak-Scrollbar");
-            jqFlollowContent.css("top", iTop);
-            opts.callback(jqFlollowContent, iTop)
+        function fnScrollContent(ak_Wrapper, ak_Content, ak_FollowWrapper, ak_FlollowContent, iOffset) {
+            var rate = parseInt(ak_Content.css("top")) / (ak_Content.outerHeight() - ak_Wrapper.innerHeight());
+            var iTop = (ak_FlollowContent.outerHeight() - ak_FollowWrapper.innerHeight()) * rate + iOffset;
+            ak_FlollowContent.css("top", iTop);
+            opts.callback(ak_FlollowContent, iTop);
         }
     }
 })(jQuery);

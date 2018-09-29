@@ -1,10 +1,10 @@
 ﻿/*
-Modification Date: 2018-06-04
+Modification Date: 2018-09-29
 Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
 */
-/*-----------------------------------------------AKjs_Menu--------------------------------------------*/
+/*-----------------------------------------------AKjs_MenuList--------------------------------------------*/
 (function($){
-    $.fn.AKjs_Menu = function(setting) {
+    $.fn.AKjs_MenuList = function(setting) {
         var option = $.extend({
                 icon_text: [],
                 btn_color: "",

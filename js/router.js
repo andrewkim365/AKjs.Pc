@@ -61,33 +61,29 @@ $(document).ready(function(){
             });
 
             /*-----------------------------------------------AKjs_Scrollbar 使用方法-------------------------------------------*/
-            if (IsIE6 || IsIE7 || IsIE8) {
-                $("aside").addClass("ovs_im scrollbar");
-            } else {
-                $(function() {
-                    $("aside").AKjs_Scrollbar({
-                        children: ".plug_scroll",
-                        speed: 25,
-                        barOffTop: 2,
-                        barOffBottom: 2,
-                        barOffRight: 2,
-                        boxWidth: 8,
-                        barWidth: 8,
-                        barColor: "rgba(0,0,0,0.3)",
-                        barMDColor: "rgba(0,0,0,0.5)",
-                        boxColor: "rgba(0,0,0,1)",
-                        isMaxHeight: true,
-                        isBar: false,
+            $(function () {
+                if (IsIE6 || IsIE7 || IsIE8) {
+                    $("aside").addClass("ovs_im scrollbar");
+                } else {
+                    $(".plug_scroll").AKjs_Scrollbar({
+                        speed: 25, // 滚动速度
+                        barMargin: 2, //滚动条外间距 (单位px)
+                        barWidth: 8, //滚动条宽度 (单位px)
+                        barColor: "rgba(0,0,0,0.5)", //滚动条颜色
+                        barMDColor: "rgba(0,0,0,0.7)", //滚动条长按时颜色
+                        boxColor: "rgba(0,0,0,0.3)", //滚动条轨道颜色
+                        isBar: true, //是否默认显示滚动条(true,false)
+                        isBox: false, //是否默认显示滚动条轨道(true,false)
                         callback: function (barele, bartop) { //通过回调获取当前滚动条的元素和实时变化的位置
                             //console.log(barele) /*滚动条的元素*/
                             //console.log(bartop) /*滚动条的位置*/
                         }
                     });
-                });
-            }
-            /*-----------------------------------------------AKjs_Menu (菜单控制插件）使用方法-------------------------------------------*/
+                }
+            });
+            /*-----------------------------------------------AKjs_MenuList (菜单控制插件）使用方法-------------------------------------------*/
             $(function() {
-                $(".plug_nav li").AKjs_Menu({ //底部菜单的图标以及文字样式变化设置
+                $(".plug_nav li").AKjs_MenuList({ //底部菜单的图标以及文字样式变化设置
                     icon_text: ["dt i","dt span"], //设置需要控制的菜单图标和文字元素
                     btn_color: "hover_gray_222 c_white", //未选中的文字和图标的颜色
                     active_color: "pointer bg_title_sub02 c_title_sub01", //被选中的文字和图标的颜色
@@ -163,7 +159,7 @@ $(document).ready(function(){
         error:function (hash) { //请求加载页面失败后的回调 （可删除该回调入口）
             if (hash) { //获取hash的参数值，当前的判断是hash有值的情况
                 AKjs_Plugin("AKjs_WebToast", "css"); //提示框效果
-                ak_webToast("您访问的界面加载失败,请稍后再试!","middle",3000); //(提示文字，显示位置 [top ，middle ，bottom ]，遮挡背景[加mask即可用]，耗时)
+                AKjs_WebToast("您访问的界面加载失败,请稍后再试!","middle",3000); //(提示文字，显示位置 [top ，middle ，bottom ]，遮挡背景[加mask即可用]，耗时)
                 AKjs_Location("/page1",{time:3000}); //location.replace 跳转模式 (延迟跳转)
             }
         }

@@ -50,11 +50,10 @@
                 </li>
             </ul>
         </div>
-
-        <div class="plug_PopupWin dis_none w_40"> <!--中间位置显示的弹窗-->
-            <div class="plug_progress4 h_3em bg_white"></div>
-        </div>
     </ak-main>
+    <dialog class="plug_PopupWin dis_none w_40"> <!--中间位置显示的弹窗-->
+        <div class="plug_progress4 h_3em bg_white"></div>
+    </dialog>
 </template>
 
 <script type="text/javascript">
@@ -70,27 +69,29 @@
                 effectOut: "fadeOut", //弹窗消失效果
                 maskPosition:"11", //Mask的z-index数值
                 closeBtn: ".ak-mask", //关闭弹窗按钮的Class名
-                callback :function (ele) { //通过回调获取弹窗显示后的以上参数
-                    //console.log($(ele[0].dom)); //获取当前的弹窗元素
-                    $(".plug_progress4").AKjs_Progress({
-                        goalAmount: 100, //总进度数值
-                        currentAmount: 100, //当前进度数值
-                        milestoneNumber: 100, //数字达到当前设置的参数后进度条的颜色变化
-                        speed: 5000, //动画速度
-                        milestoneClass:"gradient_red-orange", //milestoneNumber参数背景颜色
-                        ColorStyle: "gradient_blue-green c_white font_agency", //进度条样式设置
-                        textBefore: "当前下载进度：", //当前进度文字
-                        textAfter: "%", //当前进度百分比文字
-                        callback: function() { //通过回调获取元素
-                            //console.log(this);
-                            setTimeout(function() {
-                                $(".ak-mask").click();
-                            }, 5000);
-                            setTimeout(function() {
-                                ak_webToast("恭喜您，成功下载数据！","middle","mask",5000); //(提示文字，显示位置 [top ，middle ，bottom ]，遮挡背景[加mask即可用]，耗时)
-                            }, 6000);
-                        }
-                    });
+                callback:function (ele,toggle) { //通过回调获取弹窗显示后的以上参数
+                    if (toggle) { //判断是否弹出弹窗
+                        //console.log($(ele[0].dom)); //获取当前的弹窗元素
+                        $(".plug_progress4").AKjs_Progress({
+                            goalAmount: 100, //总进度数值
+                            currentAmount: 100, //当前进度数值
+                            milestoneNumber: 100, //数字达到当前设置的参数后进度条的颜色变化
+                            speed: 5000, //动画速度
+                            milestoneClass: "bg_title", //milestoneNumber参数背景颜色
+                            ColorStyle: "bg_title c_white font_agency", //进度条样式设置
+                            textBefore: "当前下载进度：", //当前进度文字
+                            textAfter: "%", //当前进度百分比文字
+                            callback: function () { //通过回调获取元素
+                                //console.log(this);
+                                setTimeout(function () {
+                                    $(".ak-mask").click();
+                                }, 5000);
+                                setTimeout(function () {
+                                    AKjs_WebToast("恭喜您，成功下载数据！", "middle", "mask", 5000); //(提示文字，显示位置 [top ，middle ，bottom ]，遮挡背景[加mask即可用]，耗时)
+                                }, 6000);
+                            }
+                        });
+                    }
                 }
             })
         })
@@ -118,7 +119,7 @@
             milestoneNumber: 90, //数字达到当前设置的参数后进度条的颜色变化
             speed: 3000, //动画速度
             milestoneClass:"bg_orange", //milestoneNumber参数背景颜色
-            ColorStyle: "gradient_red-orange c_white font_agency", //进度条样式设置
+            ColorStyle: "bg_title c_white font_agency", //进度条样式设置
             textBefore: "", //当前进度文字
             textAfter: "%", //当前进度百分比文字
             callback: function() { //通过回调获取元素
@@ -132,8 +133,8 @@
             currentAmount: 85,  //当前进度数值 （也可以元素里加data-to参数设置, 初始化开始参数设置属性为元素里加data-form即可）
             milestoneNumber: 90, //数字达到当前设置的参数后进度条的颜色变化
             speed: 3000, //动画速度
-            milestoneClass:"gradient_red-orange", //milestoneNumber参数背景颜色
-            ColorStyle: "gradient_blue-green c_white font_agency", //进度条样式设置
+            milestoneClass:"bg_title", //milestoneNumber参数背景颜色
+            ColorStyle: "bg_title c_white font_agency", //进度条样式设置
             textBefore: "", //当前进度文字
             textAfter: "%", //当前进度百分比文字
             callback: function() { //通过回调获取元素
@@ -147,8 +148,8 @@
             currentAmount: 91,  //当前进度数值 （也可以元素里加data-to参数设置, 初始化开始参数设置属性为元素里加data-form即可）
             milestoneNumber: 80, //数字达到当前设置的参数后进度条的颜色变化
             speed: 3000, //动画速度
-            milestoneClass:"gradient_red-orange", //milestoneNumber参数背景颜色
-            ColorStyle: "gradient_blue-green c_white font_agency", //进度条样式设置
+            milestoneClass:"bg_title", //milestoneNumber参数背景颜色
+            ColorStyle: "bg_title c_white font_agency", //进度条样式设置
             textBefore: "", //当前进度文字
             textAfter: "%", //当前进度百分比文字
             callback: function() { //通过回调获取元素

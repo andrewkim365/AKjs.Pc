@@ -77,7 +77,7 @@ $(function () {
     AKjs_Plugin("AKjs_Vticker"); //列表垂直滚动插件
     AKjs_Plugin("AKjs_WebToast","css"); //提示框效果
 
-    AKjs_Plugin("AKjs_Menu"); //导航状态控制功能
+    AKjs_Plugin("AKjs_MenuList"); //导航状态控制功能
     AKjs_Plugin("AKjs_NavMenu"); //导航菜单效果插件
     AKjs_Plugin("AKjs_Scrollbar"); //滚动条美化
     AKjs_Plugin("AKjs_MediaElement","css"); //视频播放器
@@ -88,5 +88,4 @@ $(function () {
     AKjs_Plugin("AKjs_HoverBorder"); //布局边框动画插件
     AKjs_Plugin("AKjs_GoTop"); //返回页面顶部插件
     AKjs_Plugin("AKjs_ImgSubject"); //图片列表滑动效果
-    AKjs_Plugin("AKjs_SelectOption","css"); //select下拉框插件
 });
