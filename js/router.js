@@ -170,7 +170,7 @@ $(document).ready(function(){
 //main元素自定义设置高度-----------------------------------------------------------------------------------------//
 function ak_mainHeight() {
     $("body").fadeIn();
-    $("header").removeClass("dis_none_im");
+    $("header, aside, footer").removeClass("dis_none_im");
     header_footer();
     $(window).resize(function(){
         header_footer();
