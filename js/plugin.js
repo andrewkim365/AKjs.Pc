@@ -35,6 +35,7 @@ $(function () {
     AKjs_Plugin("AKjs_DropLoad","css"); //上拉刷新和下拉加载更多功能
     AKjs_Plugin("AKjs_DropUpDown"); //列表展开和收起功能
     AKjs_Plugin("AKjs_Favorite"); //点赞或收藏功能
+    AKjs_Plugin("AKjs_Filterizr"); //筛选及排序插件
     AKjs_Plugin("AKjs_Form"); //表单提交相关效果
     AKjs_Plugin("AKjs_GetVerifyCode"); //手机短信验证码认证功能
     AKjs_Plugin("AKjs_IntlTelInput","css"); //国际区号选择功能
