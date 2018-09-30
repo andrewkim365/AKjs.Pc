@@ -57,7 +57,6 @@ $(function () {
     AKjs_Plugin("AKjs_Radio","css"); //单选框美化
     AKjs_Plugin("AKjs_Range","css"); //滑块功能插件
     AKjs_Plugin("AKjs_Ratyli"); //星级评价功能
-    AKjs_Plugin("AKjs_ScrollFixed"); //当屏幕滑动时把指定元素固定到页面顶部的功能
     AKjs_Plugin("AKjs_Select","css"); //下拉菜单功能
     AKjs_Plugin("AKjs_SelectOption","css"); //pc端专用select下拉框插件
     AKjs_Plugin("AKjs_Slider","css"); //欢迎页和联播图功能
