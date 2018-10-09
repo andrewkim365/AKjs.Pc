@@ -1,4 +1,4 @@
-/*! jquery.AKjs by Website Plugin v1.0.0 Stable --- Copyright Andrew.Kim | (c) 20170808 ~ 20180929 AKjs license */
+/*! jquery.AKjs by Website Plugin v1.0.0 Stable --- Copyright Andrew.Kim | (c) 20170808 ~ 20181009 AKjs license */
 /*! Coding by Andrew.Kim (E-mail: andrewkim365@qq.com) https://github.com/andrewkim365/AKjs.Pc */
 
 if ("undefined" == typeof jQuery) throw new Error("AKjs Plugin's JavaScript requires jQuery");
@@ -296,6 +296,7 @@ function AKjs_Router(setting) {
 }
 
 /*-----------------------------------------------AKjs_UserAgent------------------------------------------*/
+/*-----------------------------------------------AKjs_UserAgent------------------------------------------*/
 function AKjs_UserAgent() {
     var terminal = navigator.userAgent.toLowerCase();
     var browser = window.navigator.userAgent;
@@ -314,10 +315,12 @@ function AKjs_UserAgent() {
     IsChrome = /Chrom/gi.test(browser);
     IsFirefox = /firefox/gi.test(browser);
     IsOpera = /opera/gi.test(browser);
-    IsIE = !!document.all;
+    isEdge = browser.indexOf("Edge") > -1;
     IsIE6 = !!document.all && !window.XMLHttpRequest;
     IsIE7 = !!document.all && /msie 7.0/gi.test(explorer);
     IsIE8 = !!document.all && /msie 8.0/gi.test(explorer);
+    IsIE9 = !!document.all && /msie 9.0/gi.test(explorer);
+    IsIE = IsIE6 || IsIE7 || IsIE8;
     Oslanguage = (navigator.browserLanguage || navigator.language).toLowerCase();
 }
 
