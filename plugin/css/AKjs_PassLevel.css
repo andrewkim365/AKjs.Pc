@@ -1,0 +1,3 @@
+﻿/*-----------------------------------------------AKjs_PassLevel-------------------------------------------*/
+.ak-PassLevel {overflow: hidden;position: absolute;}
+.ak-PassLevel li {float: left;width: 2.4em;height: 2.4em;text-align: center;line-height: 2.4em;margin-right: 0.2em;color: #ffffff;}

@@ -49,9 +49,11 @@ $(function () {
     AKjs_Plugin("AKjs_NavScroll"); //导航滑动功能（今日头条）
     AKjs_Plugin("AKjs_NowTime"); //获取当前时间的功能
     AKjs_Plugin("AKjs_Paginator","css"); //分页插件
+    AKjs_Plugin("AKjs_PassLevel","css"); //密码安全等级插件
     AKjs_Plugin("AKjs_Popupwin"); //弹窗功能
     AKjs_Plugin("AKjs_PortraitImage","css"); //头像上传功能
     AKjs_Plugin("AKjs_PreviewImage","css"); //同时上传多个图片的功能
+    AKjs_Plugin("AKjs_ProductPhoto","css"); //产品联播图功能
     AKjs_Plugin("AKjs_Progress","css"); //进度条插件
     AKjs_Plugin("AKjs_QRcode"); //二维码生成插件
     AKjs_Plugin("AKjs_Radio","css"); //单选框美化
@@ -76,7 +78,6 @@ $(function () {
     AKjs_Plugin("AKjs_Viewer","css"); //图片放大预览功能
     AKjs_Plugin("AKjs_Vticker"); //列表垂直滚动插件
     AKjs_Plugin("AKjs_WebToast","css"); //提示框效果
-
     AKjs_Plugin("AKjs_MenuList"); //导航状态控制功能
     AKjs_Plugin("AKjs_NavMenu"); //导航菜单效果插件
     AKjs_Plugin("AKjs_Scrollbar"); //滚动条美化
