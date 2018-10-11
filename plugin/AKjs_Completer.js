@@ -1,5 +1,5 @@
 ﻿/*
-Modification Date: 2018-10-10
+Modification Date: 2018-10-11
 Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
 */
 /*-----------------------------------------------AKjs_Completer-------------------------------------------*/
@@ -44,13 +44,9 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
         init: function () {
             var options = this.options,
                 data = toArray(options.source);
-
             if (data.length > 0) {
                 this.data = data;
                 this.regexp = toRegexp(options.separator);
-                this.$completer = $("<ul class='ak-Completer list'></ul>");
-                this.$completer.hide().appendTo('body');
-                this.place();
                 this.$element.attr('autocomplete', 'off').on({
                     focus: $.proxy(this.enable, this),
                     blur: $.proxy(this.disable, this)
@@ -63,6 +59,17 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
         enable: function () {
             if (!this.active) {
                 this.active = true;
+                this.$completer = $("<ul class='ak-Completer list'></ul>");
+                if ($('#ak-scrollview').length > 0) {
+                    if (this.$element.parents("dialog")[0] != undefined) {
+                        this.$completer.hide().appendTo('main');
+                    } else {
+                        this.$completer.hide().appendTo('#ak-scrollview');
+                    }
+                } else {
+                    this.$completer.hide().appendTo('body');
+                }
+                this.place();
                 this.$element.on({
                     keydown: $.proxy(this.keydown, this),
                     keyup: $.proxy(this.keyup, this)
@@ -84,6 +91,7 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
                     mousedown: this.mousedown,
                     mouseover: this.mouseover
                 });
+                $(".ak-Completer").remove();
             }
         },
         attach: function (val) {
@@ -194,12 +202,12 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
         },
         setValue: function (val) {
             this.$element.val(val);
-            this.options.complete();
             this.hide();
+            this.options.itemSelected(val, this.$element, this.$completer);
         },
         toggle: function (keyCode) {
             var selectedClass = this.options.selectedClass;
-            var $selected = this.$completer.find('.' + selectedClass);
+            var $selected = this.$completer.find('.' + selectedClass.replace(" ","."));
             switch (keyCode) {
                 case 40:
                     $selected.removeClass(selectedClass);
@@ -222,31 +230,27 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
         place: function () {
             var $element = this.$element;
             var offset = $element.offset();
-            var left = offset.left;
-            var top = offset.top;
             var height = $element.outerHeight();
             var width = $element.outerWidth();
+            if ($('#ak-scrollview').length > 0) {
+                var left = offset.left - $("#ak-scrollview").offset().left;
+                var top = offset.top - $("#ak-scrollview").offset().top + $("#ak-scrollview").scrollTop();
+                var bottom = $window.innerHeight() - top - $("#ak-scrollview").offset().top;
+            } else {
+                var left = offset.left;
+                var top = offset.top;
+                var bottom = $window.innerHeight() - top;
+            }
             var styles = {
                 minWidth: width,
                 zIndex: this.options.zIndex
             };
 
             switch (this.options.position) {
-                case 'right':
-                    styles.left = left + width;
-                    styles.top = top;
-                    break;
-
-                case 'left':
-                    styles.right = $window.innerWidth() - left;
-                    styles.top = top;
-                    break;
-
                 case 'top':
                     styles.left = left;
-                    styles.bottom = $window.innerHeight() - top;
+                    styles.bottom = bottom;
                     break;
-
                 default:
                     styles.left = left;
                     styles.top = top + height;
@@ -259,6 +263,7 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
             this.$completer.slideDown();
             $window.on($event_resize, $.proxy(this.place, this));
             $document.on($event_mousedown, $.proxy(this.hide, this));
+            this.options.showCallBack(this.$element.val(), this.$element, this.$completer);
         },
 
         hide: function () {
@@ -289,9 +294,14 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
         separator: '',
         suggest: false,
         zIndex: 10,
-        complete: $.noop,
         filter: function (val) {
             return val;
+        },
+        showCallBack: function() {
+
+        },
+        itemSelected: function() {
+
         }
     };
 

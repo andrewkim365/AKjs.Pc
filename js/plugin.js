@@ -28,6 +28,7 @@ $(function () {
     AKjs_Plugin("AKjs_ChooseList"); //按钮模式复选和单选功能
     AKjs_Plugin("AKjs_Circliful"); //圆形统计插件
     AKjs_Plugin("AKjs_Codeval","css"); //图片验证功能
+    AKjs_Plugin("AKjs_Completer","css"); //自动完成输入功能
     AKjs_Plugin("AKjs_CountDown"); //倒计时功能
     AKjs_Plugin("AKjs_CountTo"); //数字动画效果
     AKjs_Plugin("AKjs_DateTime","css"); //日期和时间插件
