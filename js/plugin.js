@@ -51,6 +51,7 @@ $(function () {
     AKjs_Plugin("AKjs_NowTime"); //获取当前时间的功能
     AKjs_Plugin("AKjs_Paginator","css"); //分页插件
     AKjs_Plugin("AKjs_PassLevel","css"); //密码安全等级插件
+    AKjs_Plugin("AKjs_PickupTime","css"); //选择时间插件
     AKjs_Plugin("AKjs_Popupwin"); //弹窗功能
     AKjs_Plugin("AKjs_PortraitImage","css"); //头像上传功能
     AKjs_Plugin("AKjs_PreviewImage","css"); //同时上传多个图片的功能
