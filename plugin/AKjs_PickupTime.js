@@ -1,5 +1,5 @@
 ﻿/*
-Modification Date: 2018-10-14
+Modification Date: 2018-10-16
 Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
 */
 /*-----------------------------------------------AKjs_PickupTime-------------------------------------*/
@@ -9,6 +9,7 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
                 dateleng: 6,
                 width: "200px",
                 boxheight: 5,
+                minute: 0,
                 speed: 500,
                 dateflag: true,
                 mouse: "click",
@@ -65,11 +66,13 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
                 list.push(Hours);
                 return list
             },
-            todoble: function(hours) {
+            todoble: function(hours,half) {
+                var minTmp = parseInt(option.minute.toString());
+                var mins = half*minTmp<10?"0"+half*minTmp:half*minTmp;
                 if (hours < 10) {
-                    hours = "0" + hours + ":00"
+                    hours = "0" + hours + ":"+mins;
                 } else {
-                    hours = hours + ":00"
+                    hours = hours + ":"+mins;
                 }
                 return hours
             },
@@ -77,21 +80,37 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
                 var marketgetTime = this.marketgetTime();
                 var li = "";
                 for (var i = 0; i < 24; i++) {
-                    if (i <= marketgetTime[option.dateleng]) {
-                        li += "<li class='disabled dis_none_im'>" + this.todoble(i) + "</li>"
-                    } else {
-                        if (i == Number(marketgetTime[option.dateleng]) + 1) {
-                            li += "<li class='"+option.selectedClass+"'>" + this.todoble(i) + "</li>"
+                    if(parseInt(option.minute.toString()) === 0){
+                        j = 0;
+                        if (i <= marketgetTime[option.dateleng]) {
+                            li += "<li class='disabled dis_none_im'>" + this.todoble(i,j) + "</li>"
                         } else {
-                            li += "<li>" + this.todoble(i) + "</li>"
+                            if (i == Number(marketgetTime[option.dateleng]) + 1) {
+                                li += "<li>" + this.todoble(i,j) + "</li>"
+                            } else {
+                                li += "<li>" + this.todoble(i,j) + "</li>"
+                            }
+                        }
+                    }else{
+                        for(var j = 0; j < 60/option.minute; j++){
+                            if (i <= marketgetTime[option.dateleng]) {
+                                li += "<li class='disabled dis_none_im'>" + this.todoble(i,j) + "</li>"
+                            } else {
+                                if (i == Number(marketgetTime[option.dateleng]) + 1) {
+                                    li += "<li>" + this.todoble(i,j) + "</li>"
+                                } else {
+                                    li += "<li>" + this.todoble(i,j) + "</li>"
+                                }
+                            }
                         }
                     }
+
                 }
                 var template = "<div class='ak-PickupTime'>" +
                     "<ol class='scrollbar'>" ;
                 for (var i = 0; i < option.dateleng; i++) {
                     if (i == 0) {
-                        template += "<li class='"+option.selectedClass+"'>" + marketgetTime[i] + "</li>";
+                        template += "<li>" + marketgetTime[i] + "</li>";
                     } else {
                         template += "<li>" + marketgetTime[i] + "</li>";
                     }
