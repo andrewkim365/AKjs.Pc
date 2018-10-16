@@ -110,7 +110,7 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
                     "<ol class='scrollbar'>" ;
                 for (var i = 0; i < option.dateleng; i++) {
                     if (i == 0) {
-                        template += "<li>" + marketgetTime[i] + "</li>";
+                        template += "<li class='"+option.selectedClass+"'>" + marketgetTime[i] + "</li>";
                     } else {
                         template += "<li>" + marketgetTime[i] + "</li>";
                     }
