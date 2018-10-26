@@ -1,5 +1,5 @@
 ﻿/*
-Modification Date: 2018-10-09
+Modification Date: 2018-10-26
 Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
 */
 /*-----------------------------------------------AKjs_ProductPhoto-------------------------------------*/
@@ -7,8 +7,10 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
     $.fn.AKjs_ProductPhoto = function(setting) {
         var option = $.extend({
                 data: [],
-                large_size: [],
-                small_size: "",
+                large_height: "20em",
+                small_size: "5em",
+                btn_width: "3em",
+                btn_height: "",
                 state: "bor_title",
                 vis: 5,
                 autoPlay: true,
@@ -19,58 +21,60 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
             setting);
         return this.each(function() {
             var $this = $(this);
-            $this.html("<div class=\"ak-large_box\"><ul></ul></div>" +
-                "<div class=\"ak-small_box\"><button class=\"ak-is_prev\"><i class=\"icon-ln_fanhui_a\"></i></button><div><ol></ol></div><button class=\"ak-is_next\"><i class=\"icon-ln_qianjin_a\"></i></button></div>");
+            if (option.data.length > 0) {
+                $this.html("<div class=\"ak-large_box\"><ul></ul></div>" +
+                    "<div class=\"ak-small_box\">" +
+                    "<button class=\"ak-is_prev\"><i class=\"icon-ln_fanhui_a\"></i></button>" +
+                    "<div>" +
+                    "<ol></ol>" +
+                    "</div>" +
+                    "<button class=\"ak-is_next\"><i class=\"icon-ln_qianjin_a\"></i></button>" +
+                    "</div>");
+            }
             var $large_elem = $(this).children(".ak-large_box");
             var $large_list = $(this).children(".ak-large_box").children("ul");
             var $small_elem = $(this).children(".ak-small_box");
             var $small_list = $(this).children(".ak-small_box").children("div");
-            var large_tmp = "";
-            var small_tmp = "";
-            for (var i = 0; i < option.data.length; i++) {
-                large_tmp += '<li data-id="' + option.data[i].id + '"><img src="' + option.data[i].small + '" /></li>';
-                small_tmp += '<li data-id="' + option.data[i].id + '"><figure><img src="' + option.data[i].small + '" /></figure></li>';
+            if (option.data.length > 0) {
+                var large_tmp = "";
+                var small_tmp = "";
+                for (var i = 0; i < option.data.length; i++) {
+                    large_tmp += '<li data-id="' + option.data[i].id + '"><img src="' + option.data[i].small + '" /></li>';
+                    small_tmp += '<li data-id="' + option.data[i].id + '"><figure><img src="' + option.data[i].small + '" /></figure></li>';
+                }
+                $large_list.html(large_tmp);
+                $small_list.children("ol").html(small_tmp);
             }
-            $large_list.html(large_tmp);
-            $small_list.children("ol").html(small_tmp);
-
             $(window).resize(function () {
                 var w = $small_list.find("li").outerWidth();
                 var ChangeBtn = $small_elem.children("button");
-                $small_elem.css({
-                    "width":$large_elem.outerWidth(),
-                    "height":option.small_size
-                });
                 $small_list.css({
                     "width":w * option.vis
                 });
                 ChangeBtn.css({
-                    "width":($small_elem.outerWidth() - $small_list.outerWidth()) /2,
-                    "max-width": "2.8em"
+                    "width": option.btn_width,
+                    "height": option.btn_height
                 });
                 $small_list.css({
                     "width":w * option.vis,
                     "margin-left": ChangeBtn.outerWidth()
                 });
+                $small_elem.css({
+                    "width": $small_list.outerWidth() + (ChangeBtn.outerWidth()*2),
+                    "height": option.small_size
+                });
+                $large_elem.css({
+                    "width":$small_elem.outerWidth(),
+                    "height":option.large_height
+                });
             });
             var t = 0;
-            if (option.large_size) {
-                $large_elem.css({
-                    "width":option.large_size[0],
-                    "height":option.large_size[1]
-                });
-            } else {
-                $large_elem.css({
-                    "width": "100%",
-                    "height": "100%"
-                });
-            }
             $large_list.children("li").eq(0).show();
             $small_list.find("li").css({
                 "width":option.small_size
             });
             $small_list.find("li").eq(0).addClass("ak-is_active");
-            $small_list.find("li").eq(0).children("figure").addClass(option.state);
+            $small_list.find("li").eq(0).children().addClass(option.state);
             option.callback($large_list.children("li").eq(0), $small_list.find("li").eq(0), 0);
             var l = $small_list.find("li").length;
             var l_mean;
@@ -83,10 +87,6 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
             }
             var w = $small_list.find("li").outerWidth();
             var ChangeBtn = $small_elem.children("button");
-            $small_elem.css({
-                "width":$large_elem.outerWidth(),
-                "height":option.small_size
-            });
             $small_list.css({
                 "width":w * option.vis
             });
@@ -94,23 +94,32 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
                 "width": l * w
             });
             ChangeBtn.css({
-                "width":($small_elem.outerWidth() - $small_list.outerWidth()) /2,
-                "max-width": "2.8em"
+                "width": option.btn_width,
+                "height": option.btn_height
             });
             $small_list.css({
                 "width":w * option.vis,
-                "margin-left": ChangeBtn.outerWidth()
+                "margin-left": option.btn_width
             });
-            $small_list.find("li").children("figure").css({
-                "height":$small_list.find("li").outerHeight() - ($small_list.find("li").children("figure").outerHeight() - $small_list.find("li").outerHeight())
+            $small_elem.css({
+                "width": $small_list.outerWidth() + (ChangeBtn.outerWidth()*2),
+                "height": option.small_size
             });
+            $large_elem.css({
+                "width":$small_elem.outerWidth(),
+                "height":option.large_height
+            });
+            $small_list.find("li").children().css({
+                "height":$small_list.outerHeight()-4
+            });
+            $this.removeClass("dis_none dis_none_im");
             $small_list.find("li").unbind("click");
             $small_list.find("li").click(function() {
                 $(this).addClass("ak-is_active").siblings().removeClass("ak-is_active");
                 t = $(this).index();
                 Img($(this).index());
-                $small_list.find("li").children("figure").removeClass(option.state);
-                $(this).children("figure").addClass(option.state);
+                $small_list.find("li").children().removeClass(option.state);
+                $(this).children().addClass(option.state);
                 option.changeback($large_list.children("li").eq($(this).index()), $(this), $(this).index());
             });
             $small_elem.children(".ak-is_prev").unbind("click");
@@ -119,9 +128,9 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
                 $small_list.find("li").each(function(index) {
                     if ($(this).hasClass("ak-is_active")) {
                         i = index;
-                        $(this).children("figure").addClass(option.state);
+                        $(this).children().addClass(option.state);
                     } else {
-                        $(this).children("figure").removeClass(option.state);
+                        $(this).children().removeClass(option.state);
                     }
                 });
                 i--;
@@ -138,9 +147,9 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
                 $small_list.find("li").each(function(index) {
                     if ($(this).hasClass("ak-is_active")) {
                         i = index;
-                        $(this).children("figure").addClass(option.state);
+                        $(this).children().addClass(option.state);
                     } else {
-                        $(this).children("figure").removeClass(option.state);
+                        $(this).children().removeClass(option.state);
                     }
                 });
                 i++;
@@ -154,8 +163,8 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
             function Img(i) {
                 $large_list.children("li").eq(i).fadeIn().siblings().hide();
                 $small_list.find("li").eq(i).addClass("ak-is_active").siblings().removeClass("ak-is_active");
-                $small_list.find("li").children("figure").removeClass(option.state);
-                $small_list.find("li").eq(i).children("figure").addClass(option.state);
+                $small_list.find("li").children().removeClass(option.state);
+                $small_list.find("li").eq(i).children().addClass(option.state);
                 var ml = i * w;
                 if (ml <= l_mean * w) {
                     $small_list.children("ol").stop().animate({
