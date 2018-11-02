@@ -1,4 +1,4 @@
-/*! jquery.AKjs by Website Plugin v1.0.0 Stable --- Copyright Andrew.Kim | (c) 20170808 ~ 20181009 AKjs license */
+/*! jquery.AKjs by Website Plugin v1.0.0 Stable --- Copyright Andrew.Kim | (c) 20170808 ~ 20181102 AKjs license */
 /*! Coding by Andrew.Kim (E-mail: andrewkim365@qq.com) https://github.com/andrewkim365/AKjs.Pc */
 
 if ("undefined" == typeof jQuery) throw new Error("AKjs Plugin's JavaScript requires jQuery");
@@ -296,7 +296,6 @@ function AKjs_Router(setting) {
 }
 
 /*-----------------------------------------------AKjs_UserAgent------------------------------------------*/
-/*-----------------------------------------------AKjs_UserAgent------------------------------------------*/
 function AKjs_UserAgent() {
     var terminal = navigator.userAgent.toLowerCase();
     var browser = window.navigator.userAgent;
@@ -466,7 +465,7 @@ function AKjs_mainHeight() {
                 });
                 $(".h_main").each(function(){
                     $(this).css({
-                        "height": $("#ak-scrollview").height() - $(this).offset().top + $("#ak-scrollview").offset().top
+                        "min-height": $("#ak-scrollview").height() - $(this).offset().top + $("#ak-scrollview").offset().top
                     });
                 });
             }
@@ -539,7 +538,7 @@ function AKjs_mainHeight() {
                 "bottom": 0
             });
             $(".h_fill").css({
-                "height": $(window).height()
+                "min-height": $(window).height()
             });
             $(".ud_text_c").wrap("<text />");
         },100);
@@ -762,11 +761,11 @@ function AKjs_RegularExp() {
         if ($(this).attr("data-type") == "number") {
             $(this).attr("pattern","[0-9]*");
             $(this).keyup(function() {
-                this.value = this.value.replace(/\D/g, '');
+                this.value = this.value.replace(/[^\d]/g,'');
             }).bind("paste", function () {
-                this.value = this.value.replace(/\D/g, '');
+                this.value = this.value.replace(/[^\d]/g,'');
             }).bind("blur", function () {
-                this.value = this.value.replace(/\D/g, '');
+                this.value = this.value.replace(/[^\d]/g,'');
             });
         } else if ($(this).attr("data-type") == "number_symbol") {
             $(this).attr("pattern","(\\d{5}([-]\\d{4})?)");
@@ -954,12 +953,10 @@ function AKjs_Location(url,setting) {
 function AKjs_getUrlParam(name) {
     var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
     var u = document.location.search.substr(1);
-    //if(u == ''){
     var temp = document.location.hash.split('?');
     if(temp.length == 2){
         u = temp[1];
     }
-    //}
     var r = u.match(reg);
     if (r != null) return unescape(r[2]); return null;
 }
