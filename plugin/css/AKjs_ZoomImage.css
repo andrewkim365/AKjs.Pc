@@ -1,0 +1,14 @@
+.ak-ZoomImage{
+    position: absolute;
+    z-index: 2;
+    overflow: hidden;
+    background: #ffffff;
+    display: none;
+}
+
+.ak-ZoomImage img{
+    width: 160% !important;
+    position: absolute;
+    display: block;
+    cursor: Crosshair;
+}

@@ -1,5 +1,5 @@
 ﻿/*
-Modification Date: 2018-09-21
+Modification Date: 2018-11-04
 Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
 */
 /*-----------------------------------------------AKjs_Slider------------------------------------------*/
@@ -19,6 +19,7 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
                 arrShow: true,
                 dotClass:"",
                 arrClass:"",
+                arrIcon: [],
                 CustomHeight: false,
                 ActiveClass: "bg_title",
                 afterSlider: function() {}
@@ -42,9 +43,17 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
             var styleSetting = function() {
                 if (self.options.arrShow) {
                     if (self.options.UpDown) {
-                        var arrElement = '<button type="button" class="ak-arr_prev">&and;</button><button type="button" class="ak-arr_next">&or;</button>';
+                        if (self.options.arrIcon) {
+                            var arrElement = '<button type="button" class="ak-arr_prev">'+self.options.arrIcon[0]+'</button><button type="button" class="ak-arr_next">'+self.options.arrIcon[1]+'</button>';
+                        } else {
+                            var arrElement = '<button type="button" class="ak-arr_prev">&and;</button><button type="button" class="ak-arr_next">&or;</button>';
+                        }
                     } else {
-                        var arrElement = '<button type="button" class="ak-arr_prev">&lt;</button><button type="button" class="ak-arr_next">&gt;</button>';
+                        if (self.options.arrIcon) {
+                            var arrElement = '<button type="button" class="ak-arr_prev">'+self.options.arrIcon[0]+'</button><button type="button" class="ak-arr_next">'+self.options.arrIcon[1]+'</button>';
+                        } else {
+                            var arrElement = '<button type="button" class="ak-arr_prev">&lt;</button><button type="button" class="ak-arr_next">&gt;</button>';
+                        }
                     }
                     if ($(ele).children("button").length < 1) {
                         ele.append(arrElement);
@@ -146,6 +155,8 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
                 ele.find(".ak-arr_next").on("click",
                     function(event) {
                         event.preventDefault();
+                        var $_this = $(this);
+                        $_this.attr("disabled","disabled");
                         if (self.clickable) {
                             if (index >= SliderSize) {
                                 index = 1;
@@ -153,12 +164,17 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
                                 index += 1;
                             }
                             self.moveTo(index, "ak-arr_next");
+                            setTimeout(function () {
+                                $_this.removeAttr("disabled");
+                            },self.options.speed);
                         }
                     });
                 ele.find(".ak-arr_prev").unbind("click");
                 ele.find(".ak-arr_prev").on("click",
                     function(event) {
                         event.preventDefault();
+                        var $_this = $(this);
+                        $_this.attr("disabled","disabled");
                         if (self.clickable) {
                             if (index == 1) {
                                 index = SliderSize;
@@ -166,6 +182,9 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
                                 index -= 1;
                             }
                             self.moveTo(index, "ak-arr_prev");
+                            setTimeout(function () {
+                                $_this.removeAttr("disabled");
+                            },self.options.speed);
                         }
                     })
             }

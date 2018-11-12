@@ -1,4 +1,4 @@
-/*! jquery.AKjs by Website Plugin v1.0.0 Stable --- Copyright Andrew.Kim | (c) 20170808 ~ 20181102 AKjs license */
+/*! jquery.AKjs by Website Plugin v1.0.0 Stable --- Copyright Andrew.Kim | (c) 20170808 ~ 20181112 AKjs license */
 /*! Coding by Andrew.Kim (E-mail: andrewkim365@qq.com) https://github.com/andrewkim365/AKjs.Pc */
 
 if ("undefined" == typeof jQuery) throw new Error("AKjs Plugin's JavaScript requires jQuery");
@@ -135,7 +135,7 @@ function AKjs_Router(setting) {
                             $("#ak-main").removeClass("dis_opa_0").addClass("animated " + option.Animate);
                         }, 100);
                     }
-                    $("#ak-scrollview").animate({"scrollTop": 0}, 100);
+                    $("#ak-scrollview").animate({scrollTop: 0}, 100);
                     $("body").children("div").not("#ak-animation").remove();
                     setTimeout(function () {
                         $(".ak-mask").remove();
@@ -638,7 +638,6 @@ function AKjs_HashSharp() {
     var href_main = $("main *[data-href]");
     var href_not_main = $('*[data-href]').not("main *[data-href]");
     AKjs_UserAgent();
-    $('*[data-href]').addClass("pointer");
     if (IsIphone || IsIpad) {
         href_not_main.unbind('touchstart');
         delegate = "touchstart";

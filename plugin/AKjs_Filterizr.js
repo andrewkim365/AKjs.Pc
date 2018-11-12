@@ -1,5 +1,5 @@
 ﻿/*
-Modification Date: 2018-09-29
+Modification Date: 2018-11-06
 Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
 */
 /*-----------------------------------------------AKjs_Filterizr----------------------------------------*/
@@ -95,10 +95,12 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
                 filter: 'all',
                 filterOutCss: {
                     'opacity': 0,
+                    'z-index': -1,
                     'transform': 'scale(0.5)'
                 },
                 filterInCss: {
                     'opacity': 1,
+                    'z-index': 1,
                     'transform': 'scale(1)'
                 },
                 layout: 'sameSize',
@@ -308,6 +310,18 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
         },
         _setupEvents: function() {
             var self = this;
+            $(setTimeout(function () {
+                self._delayEvent(function() {
+                        self.trigger('resizeFiltrContainer');
+                    },
+                    250, self._uID);
+            }),200);
+            $(document).scroll(function () {
+                self._delayEvent(function() {
+                        self.trigger('resizeFiltrContainer');
+                    },
+                    250, self._uID);
+            });
             $(window).resize(function() {
                 self._delayEvent(function() {
                         self.trigger('resizeFiltrContainer');

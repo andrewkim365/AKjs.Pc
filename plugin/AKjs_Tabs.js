@@ -1,5 +1,5 @@
 /*
-Modification Date: 2018-09-21
+Modification Date: 2018-11-04
 Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
 */
 /*-----------------------------------------------AKjs_Tabs--------------------------------------------*/
@@ -38,7 +38,6 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
             if (!IsMobile) {
                 $(window).resize(function() {
                     self.setData();
-                    self.tabInital()
                 })
             }
             this.$tab_list = this.$wrapper.children("nav").children("ul").children("li");
@@ -214,7 +213,7 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
                 case "opacity":
                     this.$tab_cont.css({
                         display:
-                            "none"
+                            "block"
                     });
                     break;
                 default:
@@ -350,10 +349,9 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
                     }
                     break;
                 case "opacity":
-                    this.$tab_cont.removeClass("rel").addClass("abs");
-                    this.$tab_cont.eq(index).removeClass("abs").addClass("rel");
-                    this.$tab_cont.stop().fadeOut();
-                    this.$tab_cont.eq(index).stop().fadeIn();
+                    this.$tab_cont.addClass("animated");
+                    this.$tab_cont.removeClass("rel fadeIn zindex_2").addClass("abs fadeOut");
+                    this.$tab_cont.eq(index).removeClass("abs fadeOut").addClass("rel fadeIn zindex_2");
                     if (this.opts.boxheight) {
                         this.$tabCont_wrap.parent().css({
                             height:
