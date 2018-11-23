@@ -1,4 +1,4 @@
-/*! jquery.AKjs by Website Plugin v1.0.0 Stable --- Copyright Andrew.Kim | (c) 20170808 ~ 20181116 AKjs license */
+/*! jquery.AKjs by Website Plugin v1.0.0 Stable --- Copyright Andrew.Kim | (c) 20170808 ~ 20181123 AKjs license */
 /*! Coding by Andrew.Kim (E-mail: andrewkim365@qq.com) https://github.com/andrewkim365/AKjs.Pc */
 
 if ("undefined" == typeof jQuery) throw new Error("AKjs Plugin's JavaScript requires jQuery");
@@ -362,8 +362,8 @@ function AKjs_Responsive(setting) {
         },
         setting);
     function ak_WindowSize() {
-        var device_width = window.screen.width;
-        var device_height = window.screen.height;
+        device_width = window.screen.width;
+        device_height = window.screen.height;
         if (window.innerWidth)
             viewport_width = window.innerWidth;
         else if ((document.body) && (document.body.clientWidth))
@@ -376,10 +376,12 @@ function AKjs_Responsive(setting) {
             viewport_height = document.documentElement.clientHeight;
             viewport_width = document.documentElement.clientWidth;
         }
-        option.resizeCallback(device_width,device_height,viewport_width,viewport_height);
     }
+    ak_WindowSize();
+    option.resizeCallback(false,device_width,device_height,viewport_width,viewport_height);
     window.onresize = function() {
         ak_WindowSize();
+        option.resizeCallback(true,device_width,device_height,viewport_width,viewport_height);
     };
 }
 
