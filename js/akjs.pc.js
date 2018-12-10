@@ -651,7 +651,7 @@ function AKjs_HashSharp() {
         ak.preventDefault();
         var _this = $(this);
         var _HashSharp = localStorage.HashSharp;
-        if (AKjs_getUrlParam('akjs') != null && hash_sharp.test(document.location.hash) && $("html").attr("data-router") == "akjs") {
+        if (hash_sharp.test(document.location.hash) && $("html").attr("data-router") == "akjs") {
             data_href(_this,_HashSharp);
         } else {
             document.location.href= _this.attr("data-href");
@@ -661,7 +661,7 @@ function AKjs_HashSharp() {
         ak.preventDefault();
         var _this = $(this);
         var _HashSharp = localStorage.HashSharp;
-        if (AKjs_getUrlParam('akjs') != null && hash_sharp.test(document.location.hash) && $("html").attr("data-router") == "akjs") {
+        if (hash_sharp.test(document.location.hash) && $("html").attr("data-router") == "akjs") {
             data_href(_this,_HashSharp);
         } else {
             document.location.href= _this.attr("data-href");
