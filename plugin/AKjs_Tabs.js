@@ -1,5 +1,5 @@
 /*
-Modification Date: 2018-11-04
+Modification Date: 2018-12-02
 Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
 */
 /*-----------------------------------------------AKjs_Tabs--------------------------------------------*/
@@ -228,6 +228,7 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
             var curNum = this.opts.curDisplay - 1;
             this.$tab_list.removeClass(this.opts.fullclass);
             this.$tab_list.eq(curNum).addClass(this.opts.fullclass);
+            this.$tab_cont.eq(curNum).nextAll().addClass("dis_none_im");
             this.opts.callback(this.$tab_cont.eq(curNum), curNum);
             if (this.opts.changeMethod != "vertical") {
                 this.$tab_cont.css({
@@ -270,6 +271,7 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
         changeTab: function(index) {
             this.$tab_list.removeClass(this.opts.fullclass).addClass(this.opts.emptyclass).removeAttr("style");
             this.$tab_list.eq(index).removeClass(this.opts.emptyclass).addClass(this.opts.fullclass);
+            this.$tab_cont.removeClass("dis_none_im");
             this.opts.changeback(this.$tab_cont.eq(index), index);
             if (this.opts.changeMethod != "vertical") {
                 var that = this;

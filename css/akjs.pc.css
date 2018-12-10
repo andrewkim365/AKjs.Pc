@@ -1,4 +1,4 @@
-﻿/*! jquery.AKjs by Website Plugin v1.0.0 Stable --- Copyright Andrew.Kim | (c) 20170808 ~ 20181116 AKjs license */
+﻿/*! jquery.AKjs by Website Plugin v1.0.0 Stable --- Copyright Andrew.Kim | (c) 20170808 ~ 20181210 AKjs license */
 /*! Coding by Andrew.Kim (E-mail: andrewkim365@qq.com) https://github.com/andrewkim365/AKjs.Pc */
 
 /*-----------Base Style-----------*/
@@ -60,7 +60,7 @@ html, html * {
         position: relative;
     }
 }
-@media screen and (min-width:1440px) {
+@media screen and (min-width:1400px) {
     html, html * {
         font-size:13px;
     }
@@ -346,6 +346,23 @@ legend {
     -webkit-user-select: none;
     user-select: none;
 }
+.img_press {
+    position: relative;
+}
+.img_press:before {
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 99;
+    background-color: transparent;
+}
+.img_press_none:before {
+    content: '';
+    z-index: -1 !important;
+}
 .disabled {
     pointer-events:none;
     opacity: 0.5 !important;
@@ -370,7 +387,7 @@ legend {
     cursor: zoom-out;
 }
 .pointer, .touchstart, *[data-href] {
-    cursor: pointer;
+    cursor: pointer !important;
 }
 .touchstart:active {
     -o-transition-duration: 0s;
@@ -1302,230 +1319,230 @@ legend {
     border-right: 20px solid;
 }
 .bor_dashed {
-    border:1px dashed;
+    border:1px dashed !important;
 }
 .bor_dashed2 {
-    border:2px dashed;
+    border:2px dashed !important;
 }
 .bor_dashed3 {
-    border:3px dashed;
+    border:3px dashed !important;
 }
 .bor_dashed4 {
-    border:4px dashed;
+    border:4px dashed !important;
 }
 .bor_dashed5 {
-    border:5px dashed;
+    border:5px dashed !important;
 }
 .bor_dashed6 {
-    border:6px dashed;
+    border:6px dashed !important;
 }
 .bor_dashed7 {
-    border:7px dashed;
+    border:7px dashed !important;
 }
 .bor_dashed8 {
-    border:8px dashed;
+    border:8px dashed !important;
 }
 .bor_dashed9 {
-    border:9px dashed;
+    border:9px dashed !important;
 }
 .bor_dashed10 {
-    border:10px dashed;
+    border:10px dashed !important;
 }
 .bor_dashed12 {
-    border:12px dashed;
+    border:12px dashed !important;
 }
 .bor_dashed14 {
-    border:14px dashed;
+    border:14px dashed !important;
 }
 .bor_dashed16 {
-    border:16px dashed;
+    border:16px dashed !important;
 }
 .bor_dashed18 {
-    border:18px dashed;
+    border:18px dashed !important;
 }
 .bor_dashed20 {
-    border:20px dashed;
+    border:20px dashed !important;
 }
 
 .bor_bottom_dashed {
-    border-bottom:1px dashed;
+    border-bottom:1px dashed !important;
 }
 .bor_top_dashed {
-    border-top:1px dashed;
+    border-top:1px dashed !important;
 }
 .bor_left_dashed {
-    border-left:1px dashed;
+    border-left:1px dashed !important;
 }
 .bor_right_dashed {
-    border-right:1px dashed;
+    border-right:1px dashed !important;
 }
 .bor_bottom_dashed2 {
-    border-bottom: 2px dashed;
+    border-bottom: 2px dashed !important;
 }
 .bor_top_dashed2 {
-    border-top: 2px dashed;
+    border-top: 2px dashed !important;
 }
 .bor_left_dashed2 {
-    border-left: 2px dashed;
+    border-left: 2px dashed !important;
 }
 .bor_right_dashed2 {
-    border-right: 2px dashed;
+    border-right: 2px dashed !important;
 }
 .bor_bottom_dashed3 {
-    border-bottom: 3px dashed;
+    border-bottom: 3px dashed !important;
 }
 .bor_top_dashed3 {
-    border-top: 3px dashed;
+    border-top: 3px dashed !important;
 }
 .bor_left_dashed3 {
-    border-left: 3px dashed;
+    border-left: 3px dashed !important;
 }
 .bor_right_dashed3 {
-    border-right: 3px dashed;
+    border-right: 3px dashed !important;
 }
 .bor_bottom_dashed4 {
-    border-bottom: 4px dashed;
+    border-bottom: 4px dashed !important;
 }
 .bor_top_dashed4 {
-    border-top: 4px dashed;
+    border-top: 4px dashed !important;
 }
 .bor_left_dashed4 {
-    border-left: 4px dashed;
+    border-left: 4px dashed !important;
 }
 .bor_right_dashed4 {
-    border-right: 4px dashed;
+    border-right: 4px dashed !important;
 }
 .bor_bottom_dashed5 {
-    border-bottom: 5px dashed;
+    border-bottom: 5px dashed !important;
 }
 .bor_top_dashed5 {
-    border-top: 5px dashed;
+    border-top: 5px dashed !important;
 }
 .bor_left_dashed5 {
-    border-left: 5px dashed;
+    border-left: 5px dashed !important;
 }
 .bor_right_dashed5 {
-    border-right: 5px dashed;
+    border-right: 5px dashed !important;
 }
 .bor_bottom_dashed6 {
-    border-bottom: 6px dashed;
+    border-bottom: 6px dashed !important;
 }
 .bor_top_dashed6 {
-    border-top: 6px dashed;
+    border-top: 6px dashed !important;
 }
 .bor_left_dashed6 {
-    border-left: 6px dashed;
+    border-left: 6px dashed !important;
 }
 .bor_right_dashed6 {
-    border-right: 6px dashed;
+    border-right: 6px dashed !important;
 }
 .bor_bottom_dashed7 {
-    border-bottom: 7px dashed;
+    border-bottom: 7px dashed !important;
 }
 .bor_top_dashed7 {
-    border-top: 7px dashed;
+    border-top: 7px dashed !important;
 }
 .bor_left_dashed7 {
-    border-left: 7px dashed;
+    border-left: 7px dashed !important;
 }
 .bor_right_dashed7 {
-    border-right: 7px dashed;
+    border-right: 7px dashed !important;
 }
 .bor_bottom_dashed8 {
-    border-bottom: 8px dashed;
+    border-bottom: 8px dashed !important;
 }
 .bor_top_dashed8 {
-    border-top: 8px dashed;
+    border-top: 8px dashed !important;
 }
 .bor_left_dashed8 {
-    border-left: 8px dashed;
+    border-left: 8px dashed !important;
 }
 .bor_right_dashed8 {
-    border-right: 8px dashed;
+    border-right: 8px dashed !important;
 }
 .bor_bottom_dashed9 {
-    border-bottom: 9px dashed;
+    border-bottom: 9px dashed !important;
 }
 .bor_top_dashed9 {
-    border-top: 9px dashed;
+    border-top: 9px dashed !important;
 }
 .bor_left_dashed9 {
-    border-left: 9px dashed;
+    border-left: 9px dashed !important;
 }
 .bor_right_dashed9 {
-    border-right: 9px dashed;
+    border-right: 9px dashed !important;
 }
 .bor_bottom_dashed10 {
-    border-bottom: 10px dashed;
+    border-bottom: 10px dashed !important;
 }
 .bor_top_dashed10 {
-    border-top: 10px dashed;
+    border-top: 10px dashed !important;
 }
 .bor_left_dashed10 {
-    border-left: 10px dashed;
+    border-left: 10px dashed !important;
 }
 .bor_right_dashed10 {
-    border-right: 10px dashed;
+    border-right: 10px dashed !important;
 }
 .bor_bottom_dashed12 {
-    border-bottom: 12px dashed;
+    border-bottom: 12px dashed !important;
 }
 .bor_top_dashed12 {
-    border-top: 12px dashed;
+    border-top: 12px dashed !important;
 }
 .bor_left_dashed12 {
-    border-left: 12px dashed;
+    border-left: 12px dashed !important;
 }
 .bor_right_dashed12 {
-    border-right: 12px dashed;
+    border-right: 12px dashed !important;
 }
 .bor_bottom_dashed14 {
-    border-bottom: 14px dashed;
+    border-bottom: 14px dashed !important;
 }
 .bor_top_dashed14 {
-    border-top: 14px dashed;
+    border-top: 14px dashed !important;
 }
 .bor_left_dashed14 {
-    border-left: 14px dashed;
+    border-left: 14px dashed !important;
 }
 .bor_right_dashed14 {
-    border-right: 14px dashed;
+    border-right: 14px dashed !important;
 }
 .bor_bottom_dashed16 {
-    border-bottom: 16px dashed;
+    border-bottom: 16px dashed !important;
 }
 .bor_top_dashed16 {
-    border-top: 16px dashed;
+    border-top: 16px dashed !important;
 }
 .bor_left_dashed16 {
-    border-left: 16px dashed;
+    border-left: 16px dashed !important;
 }
 .bor_right_dashed16 {
-    border-right: 16px dashed;
+    border-right: 16px dashed !important;
 }
 .bor_bottom_dashed18 {
-    border-bottom: 18px dashed;
+    border-bottom: 18px dashed !important;
 }
 .bor_top_dashed18 {
-    border-top: 18px dashed;
+    border-top: 18px dashed !important;
 }
 .bor_left_dashed18 {
-    border-left: 18px dashed;
+    border-left: 18px dashed !important;
 }
 .bor_right_dashed18 {
-    border-right: 18px dashed;
+    border-right: 18px dashed !important;
 }
 .bor_bottom_dashed20 {
-    border-bottom: 20px dashed;
+    border-bottom: 20px dashed !important;
 }
 .bor_top_dashed20 {
-    border-top: 20px dashed;
+    border-top: 20px dashed !important;
 }
 .bor_left_dashed20 {
-    border-left: 20px dashed;
+    border-left: 20px dashed !important;
 }
 .bor_right_dashed20 {
-    border-right: 20px dashed;
+    border-right: 20px dashed !important;
 }
 .bor_none, .bor_ab_none:after, .bor_ab_none:before, .bor_cd_none > *, .bor_abcd_none > *:after, .bor_abcd_none > *:before {
     border:none !important;
@@ -1817,17 +1834,20 @@ text {
 .text_09em {
     font-size:.9em !important;
 }
-.text_08em {
-    font-size:.8em !important;
+.text_14px {
+    font-size: 14px !important;
 }
-.text_07em {
-    font-size:.7em !important;
+.text_13px {
+    font-size: 13px !important;
 }
-.text_06em {
-    font-size:.6em !important;
+.text_12px {
+    font-size: 12px !important;
 }
-.text_05em {
-    font-size:.5em !important;
+.text_11px {
+    font-size: 11px !important;
+}
+.text_9pt {
+    font-size: 9pt !important;
 }
 .text_in {
     font-size:inherit !important;
@@ -12150,6 +12170,44 @@ text {
 }
 .bg_black01, .bg_ab_black01:after, .bg_ab_black01:before, .bg_cd_black01 > *, .bg_abcd_black01 > *:after, .bg_abcd_black01 > *:before {
     background-color: rgba(0,0,0,0.1) !important;
+}
+
+/*background setting*/
+.bg_size_w_100 {
+    background-size: 100% auto !important;
+}
+.bg_size_h_100 {
+    background-size: auto 100% !important;
+}
+.bg_size_wh_100 {
+    background-size: 100% 100% !important;
+}
+.bg_size_au {
+    background-size: auto auto !important;
+}
+.bg_pos_t {
+    background-position: top !important;
+}
+.bg_pos_c {
+    background-position: center !important;
+}
+.bg_pos_b {
+    background-position: bottom !important;
+}
+.bg_fix {
+    background-attachment: fixed !important;
+}
+.bg_repeat {
+    background-repeat: repeat !important;
+}
+.bg_repeat_x {
+    background-repeat: repeat-x !important;
+}
+.bg_repeat_y {
+    background-repeat: repeat-y !important;
+}
+.bg_repeat_no {
+    background-repeat: no-repeat !important;
 }
 
 /*color setting*/

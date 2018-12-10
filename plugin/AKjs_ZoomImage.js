@@ -1,5 +1,5 @@
 /*
-Modification Date: 2018-11-06
+Modification Date: 2018-11-30
 Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
 */
 /*-----------------------------------------------AKjs_ZoomImage-------------------------------------------*/
@@ -24,7 +24,6 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
     function getoffset(what, offsettype){
         return (what.offsetParent)? what[offsettype]+getoffset(what.offsetParent, offsettype) : what[offsettype]
     }
-
     function AKjs_ZoomImage($img, settings){
         var s = settings || defaults;
         var trigger = 'mouseenter';
@@ -56,12 +55,17 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
             }
             zoomdfd.done(function(){
                 var imgdimensions = getDimensions($img);
+                if ($('#ak-scrollview').length > 0) {
+                    var _ths_h = $("#ak-scrollview").scrollTop();
+                } else {
+                    var _ths_h = 0;
+                }
                 $ak_zoomimage.css({
                     display:'block',
                     width:$img.parent().outerWidth(),
                     height:$img.parent().outerHeight()-4,
                     left:$img.parent().offset().left,
-                    top:$img.parent().offset().top
+                    top:$img.parent().offset().top - $("html").scrollTop() - _ths_h
                 });
                 var ak_ZoomImage_containerdimensions = getDimensions($ak_zoomimage);
                 var zoomimgdimensions = getDimensions($zoomimage);
@@ -69,7 +73,7 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
                 currentzoominfo = {$zoomimage:$zoomimage, offset:offset, settings:s, multiplier:[zoomimgdimensions.w/ak_ZoomImage_containerdimensions.w, zoomimgdimensions.h/ak_ZoomImage_containerdimensions.h]}
             });
             jqueryevt.stopPropagation();
-        })
+        });
     }
     $.fn.AKjs_ZoomImage = function(options){
         var s = $.extend({}, defaults, options);
@@ -100,6 +104,9 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
                         display:'none'
                     });
                 });
+            });
+            $ak_zoomimage.on('mousewheel DOMMouseScroll', function (e) {
+                e.preventDefault();
             });
         });
     };

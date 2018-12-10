@@ -1,0 +1,270 @@
+/*-----------------------------------------------AKjs_HotspotMap-------------------------------------------*/
+.ak-Hotspot-object {
+    position: absolute;
+    cursor: pointer;
+    z-index: 100;
+}
+.ak-Hotspot-object.visible-tooltip {
+    z-index: 9999;
+}
+.ak-Hotspot.visible .ak-Hotspot-shape {
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    background: black;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    opacity: 0.15;
+    z-index: 0;
+    border: 1px solid #ffffff;
+}
+.ak-Hotspot.visible .ak-Hotspot-shape-inner {
+    background: #da0606;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 60%;
+    height: 60%;
+    margin: -30% 0 0 -30%;
+    z-index: 1;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+}
+.ak-Hotspot.visible:hover .ak-Hotspot-shape-inner {
+    width: 80%;
+    height: 80%;
+    margin: -40% 0 0 -40%;
+}
+.ak-Hotspot-rect {
+    position: absolute;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+    z-index: 99;
+    border: none;
+}
+.ak-Hotspot-rect.visible .ak-Hotspot-shape {
+    position: absolute;
+    left: -3px;
+    top: -3px;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: none;
+    border: 3px solid;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+}
+.ak-Hotspot-rect.visible .ak-Hotspot-shape-inner {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    background: none;
+    border: 6px solid;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    left: -6px;
+    top: -6px;
+    opacity: 0.15;
+}
+.ak-Hotspot-rect.visible:hover .ak-Hotspot-shape {
+    border-width: 3px;
+    left: -3px;
+    top: -3px;
+}
+.ak-Hotspot-rect.visible:hover .ak-Hotspot-shape-inner {
+    border-width: 5px;
+    left: -5px;
+    top: -5px;
+}
+.ak-Hotspot-object .ak-Hotspot-tooltip-outer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.ak-Hotspot-ToolTip-wrap {
+    position: absolute;
+}
+.ak-Hotspot-ToolTip {
+    display: block;
+    background: #181818;
+    color: #ffffff;
+    padding: 0.5em;
+    position: relative;
+    min-height: 1.6em;
+    border-radius: 0.3em;
+    -moz-border-radius: 0.3em;
+    -webkit-border-radius: 0.3em;
+}
+.ak-Hotspot-ToolTip * {
+    color: #ffffff !important;
+}
+.ak-HotspotMrap {
+    position: relative !important;
+    display: inline-block !important;
+}
+.ak-HotspotMrap img {
+    width: 100% !important;
+}
+.ak-HotspotMrap.mouseover .ak-Hotspot-object.left .ak-Hotspot-tooltip-outer, .ak-HotspotMrap.click .ak-Hotspot-object.left .ak-Hotspot-tooltip-outer {
+    position: absolute;
+    top: 0;
+    left: -30px;
+    z-index: 98;
+}
+.ak-Hotspot-object.left .ak-Hotspot-ToolTip-wrap {
+    right: 100%;
+    top: 0;
+    padding-right: 16px;
+}
+.ak-Hotspot.left .ak-Hotspot-ToolTip-wrap {
+    top: -12px;
+}
+.ak-Hotspot-object.left .ak-Hotspot-ToolTip:before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    right: -8px;
+    top: 8px;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid #181818;
+}
+.ak-Hotspot.left .ak-Hotspot-ToolTip:before {
+    top: 16px;
+}
+.ak-HotspotMrap.mouseover .ak-Hotspot-object.top .ak-Hotspot-tooltip-outer, .ak-HotspotMrap.click .ak-Hotspot-object.top .ak-Hotspot-tooltip-outer {
+    position: absolute;
+    left: 0;
+    top: -30px;
+}
+.ak-Hotspot-object.top .ak-Hotspot-ToolTip-wrap {
+    bottom: 100%;
+    left: 0;
+    padding-bottom: 16px;
+}
+.ak-Hotspot.top .ak-Hotspot-ToolTip-wrap {
+    left: -1px;
+}
+.ak-Hotspot-object.top .ak-Hotspot-ToolTip:before {
+    position: absolute;
+    content: "";
+    display: block;
+    left: 8px;
+    bottom: -8px;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #181818;
+}
+.ak-HotspotMrap.mouseover .ak-Hotspot-object.right .ak-Hotspot-tooltip-outer, .ak-HotspotMrap.click .ak-Hotspot-object.right .ak-Hotspot-tooltip-outer {
+    position: absolute;
+    top: 0;
+    left: 30px;
+}
+.ak-Hotspot-object.right .ak-Hotspot-ToolTip-wrap {
+    left: 100%;
+    top: 0;
+    padding-left: 16px;
+}
+.ak-Hotspot.right .ak-Hotspot-ToolTip-wrap {
+    top: -12px;
+}
+.ak-Hotspot-object.right .ak-Hotspot-ToolTip:before {
+    position: absolute;
+    content: "";
+    display: block;
+    left: -8px;
+    top: 8px;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 8px solid #181818;
+}
+.ak-Hotspot.right .ak-Hotspot-ToolTip:before {
+    top: 16px;
+}
+
+.ak-HotspotMrap.mouseover .ak-Hotspot-object.bottom .ak-Hotspot-tooltip-outer, .ak-HotspotMrap.click .ak-Hotspot-object.bottom .ak-Hotspot-tooltip-outer {
+    position: absolute;
+    left: 0;
+    top: 30px;
+}
+.ak-Hotspot-object.bottom .ak-Hotspot-ToolTip-wrap {
+    top: 100%;
+    left: 0;
+    padding-top: 16px;
+}
+.ak-Hotspot.bottom .ak-Hotspot-ToolTip-wrap {
+    left: -1px;
+}
+.ak-Hotspot-object.bottom .ak-Hotspot-ToolTip:before {
+    position: absolute;
+    content: "";
+    display: block;
+    top: -8px;
+    left: 8px;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid black;
+}
+.ak-Hotspot-ToolTip :last-child {
+    margin-bottom: 0;
+}
+.ak-HotspotMrap.always .ak-Hotspot-tooltip-outer {
+    opacity: 1;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+.ak-HotspotMrap.always .ak-Hotspot-ToolTip, .ak-HotspotMrap.always .ak-Hotspot-ToolTip-wrap {
+    display: block;
+}
+.ak-Hotspot-object .ak-Hotspot-tooltip-outer {
+    opacity: 0;
+    width: 0 !important;
+    height: 0 !important;
+    -moz-transition: left 0.25s ease-out, top 0.25s ease-out, opacity 0.25s ease-out;
+    -webkit-transition: left 0.25s ease-out, top 0.25s ease-out, opacity 0.25s ease-out;
+    transition: left 0.25s ease-out, top 0.25s ease-out, opacity 0.25s ease-out;
+}
+.ak-Hotspot-object .ak-Hotspot-ToolTip, .ak-Hotspot-object .ak-Hotspot-ToolTip-wrap {
+    display: none;
+}
+.ak-Hotspot-object.visible-tooltip .ak-Hotspot-tooltip-outer {
+    opacity: 1;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+.ak-Hotspot-object.visible-tooltip .ak-Hotspot-ToolTip, .ak-Hotspot-object.visible-tooltip .ak-Hotspot-ToolTip-wrap {
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
