@@ -12233,7 +12233,6 @@ text {
     background-color:#ffffff !important;
 }
 .hover_none:hover {
-    color: inherit !important;
     background-color: transparent !important;
 }
 .hover_line:hover {
