@@ -1,116 +1,225 @@
-﻿/*********************主题颜色定义(默认风格)*********************/
+﻿/*********************主题颜色定义*********************/
 .c_title {
-    color: #1F55A7 !important;
+    color: #e12e63 !important;
 }
 .c_title09 {
-    color: rgba(121,195,74,0.9);
+    color: rgba(225,46,99,0.9);
 }
 .c_title08 {
-    color: rgba(121,195,74,0.8);
+    color: rgba(225,46,99,0.8);
 }
 .c_title07 {
-    color: rgba(121,195,74,0.7);
+    color: rgba(225,46,99,0.7);
 }
 .c_title06 {
-    color: rgba(121,195,74,0.6);
+    color: rgba(225,46,99,0.6);
 }
 .c_title05 {
-    color: rgba(121,195,74,0.5);
+    color: rgba(225,46,99,0.5);
 }
 .c_title04 {
-    color: rgba(121,195,74,0.4);
+    color: rgba(225,46,99,0.4);
 }
 .c_title03 {
-    color: rgba(121,195,74,0.3);
+    color: rgba(225,46,99,0.3);
 }
 .c_title02 {
-    color: rgba(121,195,74,0.2);
+    color: rgba(225,46,99,0.2);
 }
 .c_title01 {
-    color: rgba(121,195,74,0.1);
+    color: rgba(225,46,99,0.1);
 }
 .bg_title {
-    background-color: #1F55A7 !important;
+    background-color: #e12e63 !important;
 }
 .bg_title09 {
-    background-color: rgba(121,195,74,0.9);
+    background-color: rgba(225,46,99,0.9);
 }
 .bg_title08 {
-    background-color: rgba(121,195,74,0.8);
+    background-color: rgba(225,46,99,0.8);
 }
 .bg_title07 {
-    background-color: rgba(121,195,74,0.7);
+    background-color: rgba(225,46,99,0.7);
 }
 .bg_title06 {
-    background-color: rgba(121,195,74,0.6);
+    background-color: rgba(225,46,99,0.6);
 }
 .bg_title05 {
-    background-color: rgba(121,195,74,0.5);
+    background-color: rgba(225,46,99,0.5);
 }
 .bg_title04 {
-    background-color: rgba(121,195,74,0.4);
+    background-color: rgba(225,46,99,0.4);
 }
 .bg_title03 {
-    background-color: rgba(121,195,74,0.3);
+    background-color: rgba(225,46,99,0.3);
 }
 .bg_title02 {
-    background-color: rgba(121,195,74,0.2);
+    background-color: rgba(225,46,99,0.2);
 }
 .bg_title01 {
-    background-color: rgba(121,195,74,0.1);
+    background-color: rgba(225,46,99,0.1);
 }
 .bor_title {
-    border-color: #1F55A7 !important;
+    border-color: #e12e63 !important;
 }
-.bor_title09 {
-    border-color: #85c75a;
+.c_title_blue {
+    color: #2a468d !important;
 }
-.bor_title08 {
-    border-color: #91cc6b;
+.c_title_blue09 {
+    color: rgba(42,70,141,0.9);
 }
-.bor_title07 {
-    border-color: #9cd07c;
+.c_title_blue08 {
+    color: rgba(42,70,141,0.8);
 }
-.bor_title06 {
-    border-color: #a9d58c;
+.c_title_blue07 {
+    color: rgba(42,70,141,0.7);
 }
-.bor_title05 {
-    border-color: #b4d99d;
+.c_title_blue06 {
+    color: rgba(42,70,141,0.6);
 }
-.bor_title04 {
-    border-color: #c0deae;
+.c_title_blue05 {
+    color: rgba(42,70,141,0.5);
 }
-.bor_title03 {
-    border-color: #cce2be;
+.c_title_blue04 {
+    color: rgba(42,70,141,0.4);
 }
-.bor_title02 {
-    border-color: #d8e7cf;
+.c_title_blue03 {
+    color: rgba(42,70,141,0.3);
 }
-.bor_title01 {
-    border-color: #e4ebdf;
+.c_title_blue02 {
+    color: rgba(42,70,141,0.2);
 }
-
-a:hover, *[data-href]:hover {
-    color: #5aa42c !important;
+.c_title_blue01 {
+    color: rgba(42,70,141,0.1);
 }
-.hover_title:hover {
-    background-color: #1F55A7 !important;
+.c_title_blue_sub {
+    color: #a6bdf5 !important;
+}
+.bg_title_blue {
+    background-color: #2a468d !important;
+}
+.bg_title_blue09 {
+    background-color: rgba(42,70,141,0.9);
+}
+.bg_title_blue08 {
+    background-color: rgba(42,70,141,0.8);
+}
+.bg_title_blue07 {
+    background-color: rgba(42,70,141,0.7);
+}
+.bg_title_blue06 {
+    background-color: rgba(42,70,141,0.6);
+}
+.bg_title_blue05 {
+    background-color: rgba(42,70,141,0.5);
+}
+.bg_title_blue04 {
+    background-color: rgba(42,70,141,0.4);
+}
+.bg_title_blue03 {
+    background-color: rgba(42,70,141,0.3);
+}
+.bg_title_blue02 {
+    background-color: rgba(42,70,141,0.2);
+}
+.bg_title_blue01 {
+    background-color: rgba(42,70,141,0.1);
+}
+.bg_title_blue_sub {
+    background-color: #062267 !important;
+}
+.bor_title_blue {
+    border-color: #2a468d !important;
+}
+.bor_title_blue_sub {
+    border-color: #062267 !important;
+}
+.c_title_black {
+    color: #323641 !important;
+}
+.bg_title_black {
+    background-color: #323641 !important;
+}
+.bg_title_black09 {
+    background-color: rgba(50,54,65,0.9);
+}
+.bg_title_black08 {
+    background-color: rgba(50,54,65,0.8);
+}
+.bg_title_black07 {
+    background-color: rgba(50,54,65,0.7);
+}
+.bg_title_black06 {
+    background-color: rgba(50,54,65,0.6);
+}
+.bg_title_black05 {
+    background-color: rgba(50,54,65,0.5);
+}
+.bg_title_black04 {
+    background-color: rgba(50,54,65,0.4);
+}
+.bg_title_black03 {
+    background-color: rgba(50,54,65,0.3);
+}
+.bg_title_black02 {
+    background-color: rgba(50,54,65,0.2);
+}
+.bg_title_black01 {
+    background-color: rgba(50,54,65,0.1);
+}
+.bor_title_black {
+    border-color: #323641 !important;
+}
+.c_title_gray {
+    color: #8c92a4 !important;
+}
+.bg_title_gray {
+    background-color: #8c92a4 !important;
+}
+.bg_title_gray_sub {
+    background-color: #f5f8fc !important;
+}
+.bor_title_gray {
+    border-color: #8c92a4 !important;
+}
+.c_title_gray_auction {
+    color: #c9cdd6 !important;
+}
+.bor_title_gray_auction {
+    border-color: #c9cdd6 !important;
+}
+a:hover, nav *[data-href]:hover {
+    color: #c01346;
 }
 button.bg_white:hover {
     background-color: #f5f5f5 !important;
 }
 button.bg_title:hover {
-    background-color: #5aa42c !important;
+    background-color: #c01346 !important;
+    color:#ffffff !important;
 }
-button.bor_title.c_title:hover {
-    background-color: #1F55A7 !important;
+button.bg_title:hover * {
+    color:#ffffff !important;
+}
+.hover_title:hover {
+    background-color: #e12e63 !important;
     color: #ffffff !important;
 }
+.hover_title:hover * {
+    color: #ffffff !important;
+}
+.hover_title_blue:hover {
+    background-color: #062267 !important;
+    color: #ffffff !important;
+}
+
 button.bg_title[disabled] {
-    border-color: #9cd07c;
+    border-color: #f25180;
+    color:#ffffff !important;
 }
 button.bg_title[disabled]:hover {
-    background-color: #1F55A7 !important;
+    background-color: #e12e63 !important;
+    color:#ffffff !important;
 }
 
 button.bg_title01:hover,
@@ -122,52 +231,319 @@ button.bg_title06:hover,
 button.bg_title07:hover,
 button.bg_title08:hover,
 button.bg_title09:hover {
-    background-color: #1F55A7 !important;
+    background-color: #c01346 !important;
+    color:#ffffff !important;
 }
 
-.c_title_sub01 {
-    color: #5e8396;
+::selection{
+    color:#ffffff !important;
+    background-color:#e12e63 !important;
 }
-.c_title_sub02 {
-    color: #c1cad9;
+::-moz-selection {
+    color:#ffffff !important;
+    background-color:#e12e63 !important;
 }
-.c_title_sub03 {
-    color: #2d6ac4;
+
+.scrollbar::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(225,46,99,0.5);
 }
-.c_title_sub04 {
-    color: #f2f4f5;
+.scrollbar::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(225,46,99,0.5);
+    background-color: rgba(225,46,99,0.7);
 }
-.bg_title_sub01 {
-    background-color: #cad2d7;
+
+/*********************常用颜色相关样式*********************/
+.c_brown {
+    color: #dab8a0 !important;
 }
-.bg_title_sub02 {
-    background-color: #e5edf2;
+.c_pink {
+    color: #f63d8b !important;
 }
-.bg_title_sub03 {
-    background-color: #cce1f6;
+.c_red {
+    color: #d71b1c !important;
 }
-.bg_title_sub04 {
-    background-color: #f2f4f5;
+.c_red-orange {
+    color: #fc3403 !important;
 }
-.bor_title_sub01 {
-    border-color: #cad2d7;
+.c_orange {
+    color: #df3912 !important;
 }
-.bor_title_sub02 {
-    border-color: #e5edf2;
+.c_orange-yellow {
+    color: #fccd05 !important;
 }
-.bor_title_sub03 {
-    border-color: #cce1f6;
+.c_yellow {
+    color: #f9fc19 !important;
 }
-.bor_title_sub04 {
-    border-color: #f2f4f5;
+.c_yellow_white {
+    color: #fffbf0 !important;
 }
-.hover_title_sub02:hover {
-    background-color: #e5edf2 !important;
-    color: #5e8396 !important;
+.c_yellow-green {
+    color: #94fc05 !important;
 }
-.bg_title_black01 {
-    background-color: #1d1f22;
+.c_green {
+    color: #349d05 !important;
 }
-.bg_title_black02 {
-    background-color: #323435;
+.c_green-blue {
+    color: #22d2ae !important;
+}
+.c_blue {
+    color: #1495e9 !important;
+}
+.c_blue-violet {
+    color: #3504fd !important;
+}
+.c_violet {
+    color: #13305c !important;
+}
+
+.bg_brown {
+    background-color: #dab8a0 !important;
+}
+.bg_pink {
+    background-color: #f63d8b !important;
+}
+.bg_red {
+    background-color: #d71b1c !important;
+}
+.bg_red-orange {
+    background-color: #fc3403 !important;
+}
+.bg_orange {
+    background-color: #df3912 !important;
+}
+.bg_orange-yellow {
+    background-color: #fccd05 !important;
+}
+.bg_yellow {
+    background-color: #f9fc19 !important;
+}
+.bg_yellow_white {
+    background-color: #fffbf0 !important;
+}
+.bg_yellow-green {
+    background-color: #94fc05 !important;
+}
+.bg_green {
+    background-color: #349d05 !important;
+}
+.bg_green-blue {
+    background-color: #22d2ae !important;
+}
+.bg_blue {
+    background-color: #1495e9 !important;
+}
+.bg_blue-violet {
+    background-color: #3504fd !important;
+}
+.bg_violet {
+    background-color: #13305c !important;
+}
+
+.bor_brown {
+    border-color: #dab8a0 !important;
+}
+.bor_pink {
+    border-color: #f63d8b !important;
+}
+.bor_red {
+    border-color: #d71b1c !important;
+}
+.bor_red-orange {
+    border-color: #fc3403 !important;
+}
+.bor_orange {
+    border-color: #df3912 !important;
+}
+.bor_orange-yellow {
+    border-color: #fccd05 !important;
+}
+.bor_yellow {
+    border-color: #f9fc19 !important;
+}
+.bor_yellow_white {
+    border-color: #fffbf0 !important;
+}
+.bor_yellow-green {
+    border-color: #94fc05 !important;
+}
+.bor_green {
+    border-color: #349d05 !important;
+}
+.bor_green-blue {
+    border-color: #22d2ae !important;
+}
+.bor_blue {
+    border-color: #1495e9 !important;
+}
+.bor_blue-violet {
+    border-color: #3504fd !important;
+}
+.bor_violet {
+    border-color: #13305c !important;
+}
+
+/*********************常用第三方平台主色调*********************/
+.c_wechat {
+    color: #19d100 !important;
+}
+.c_weibo {
+    color: #d94945 !important;
+}
+.c_qq {
+    color: #4cafe9 !important;
+}
+.c_taobao {
+    color: #ff7e00 !important;
+}
+.c_alipay {
+    color: #0398e1 !important;
+}
+.c_jd {
+    color: #f10215 !important;
+}
+.bg_wechat {
+    background-color: #19d100 !important;
+}
+.bg_weibo {
+    background-color: #d94945 !important;
+}
+.bg_qq {
+    background-color: #4cafe9 !important;
+}
+.bg_taobao {
+    background-color: #ff7e00 !important;
+}
+.bg_alipay {
+    background-color: #0398e1 !important;
+}
+.bg_jd {
+    background-color: #f10215 !important;
+}
+.bor_wechat {
+    border-color: #19d100 !important;
+}
+.bor_weibo {
+    border-color: #d94945 !important;
+}
+.bor_qq {
+    border-color: #4cafe9 !important;
+}
+.bor_taobao {
+    border-color: #ff7e00 !important;
+}
+.bor_alipay {
+    border-color: #0398e1 !important;
+}
+.bor_jd {
+    border-color: #f10215 !important;
+}
+
+/*********************关闭和删除颜色样式*********************/
+.c_close {
+    color:#f16a6a !important;
+}
+.bg_close {
+    background-color:#f16a6a !important;
+}
+.bor_close {
+    border-color:#f16a6a !important;
+}
+.c_delete {
+    color:#e93234 !important;
+}
+.bg_delete {
+    background-color:#e93234 !important;
+}
+.bor_delete {
+    border-color:#e93234 !important;
+}
+
+/*********************按钮点击颜色变化效果*********************/
+button.bg_close:hover {
+    background-color: #f13a3a !important;
+}
+button.c_close.bor_close:hover {
+    background-color: #f16a6a !important;
+}
+button.bg_delete:hover {
+    background-color: #b73138 !important;
+}
+button.c_delete.bor_delete:hover {
+    background-color: #e93234 !important;
+}
+
+/*********************常用颜色鼠标滑动色调变化*********************/
+.hover_pink:hover {
+    background-color: #f63d8b !important;
+}
+.hover_red:hover {
+    background-color: #d71b1c !important;
+}
+.hover_red-orange:hover {
+    background-color: #fc3403 !important;
+}
+.hover_orange:hover {
+    background-color: #df3912 !important;
+}
+.hover_orange-yellow:hover {
+    background-color: #fccd05 !important;
+}
+.hover_yellow:hover {
+    background-color: #f9fc19 !important;
+}
+.hover_yellow-green:hover {
+    background-color: #94fc05 !important;
+}
+.hover_green:hover {
+    background-color: #349d05 !important;
+}
+.hover_green-blue:hover {
+    background-color: #22d2ae !important;
+}
+.hover_blue:hover {
+    background-color: #1495e9 !important;
+}
+.hover_blue-violet:hover {
+    background-color: #3504fd !important;
+}
+.hover_violet:hover {
+    background-color: #13305c !important;
+}
+.hover_wechat:hover {
+    background-color: #19d100 !important;
+}
+.hover_weibo:hover {
+    background-color: #d94945 !important;
+}
+.hover_qq:hover {
+    background-color: #4cafe9 !important;
+}
+.hover_taobao:hover {
+    background-color: #ff7e00 !important;
+}
+.hover_alipay:hover {
+    background-color: #0398e1 !important;
+}
+.hover_jd:hover {
+    background-color: #f10215 !important;
+}
+
+/*********************公用布局样式覆盖区域*********************/
+.select_title:after {
+    border-top: 0.6em solid #ffffff !important;
+}
+.select_title.ak-open:after {
+    border-bottom: 0.6em solid #ffffff !important;
+}
+.select_title:before {
+    content: "";
+    position: absolute;
+    width: 25%;
+    height: inherit;
+    right: 0;
+    top:0;
+    background-color: #e12e63;
+}
+.ak-controls .ak-time-rail .ak-time-loaded {
+    background: #e12e63 !important;
 }
