@@ -5,7 +5,7 @@ $(function () {
         Responsive: true, //是否开启文字大小按屏幕尺寸自适应变化，考虑到兼容平板电脑建议开启 (开启 true, 停用 false）
         ButtonLink: true, //通过元素中加data-href属性的方式跳转界面, 建议开启路由功能后使用。(使用button超链接 true,不使用button超链接 false）
         animation: true, //是否开启元素里加动画参数的功能？（例：data-animation="{name: 'zoomIn', duration:1, delay: 0}"） 动画库：akjs.animate.css
-        pluginPath: "./plugin/", //功能插件文件所在的目录设置
+        pluginPath: "./compress/", //功能插件文件所在的目录设置
         pluginClear: { //定期清理功能插件的缓存 【days=天数, hours=小时, minutes=分钟，seconds=秒数 （当前提供的四个参数中任意抽选一个设置时间清理功能插件的缓存。四个参数不能同时设置）】
             /*使用帮助：项目开发阶段建议使用秒数间隔清理缓存，项目正式上线后不经常改动插件所以建议使用天数间隔清理缓存。*/
             /*注意：清理缓存时按需引入的功能插件将重新网络请求所以会影响到页面加载速度。*/
@@ -20,6 +20,11 @@ $(function () {
 * 做项目时不必要的插件可以注释处理。
 * 注：调用插件的地方在router目录里的相关html文件中的最底部。
 */
+
+/*-----------------------------------------------AKjs_Plugin 插件按需引入区域-------------------------------------------*/
+AKjs_Plugin("AKjs_Plugin.pc.min","css"); //引入压缩版的全部功能插件
+
+/*
 $(function () {
     AKjs_Plugin("AKjs_AllChecked"); //全选功能
     AKjs_Plugin("AKjs_ChangeIcon"); //图标切换功能
@@ -92,4 +97,4 @@ $(function () {
     AKjs_Plugin("AKjs_HoverBorder"); //布局边框动画插件
     AKjs_Plugin("AKjs_GoTop"); //返回页面顶部插件
     AKjs_Plugin("AKjs_ImgSubject"); //图片列表滑动效果
-});
+});*/
