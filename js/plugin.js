@@ -22,7 +22,7 @@ $(function () {
 */
 
 /*-----------------------------------------------AKjs_Plugin 插件按需引入区域-------------------------------------------*/
-AKjs_Plugin("AKjs_Plugin.pc.min","css"); //引入压缩版的全部功能插件
+AKjs_Plugin("AKjs_plugin.pc.min","css"); //引入压缩版的全部功能插件
 
 /*
 $(function () {
