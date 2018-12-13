@@ -1,3 +1,0 @@
-/*-----------------------------------------------AKjs_ToolTip-------------------------------------------*/
-.ak-tooltip{border:1px solid #000000;max-width:20em;font-size:1.2em;padding:1em;position:absolute;z-index:100;text-shadow:none;border-radius:0.3em;-moz-border-radius:0.3em;-webkit-border-radius:0.3em}
-.ak-tooltip:after{display:block;content:"";position:absolute;top:100%;left:50%;pointer-events:none;margin-left:-0.6em;border-top:0.6em solid #000000;border-right:0.6em solid transparent;border-left:0.6em solid transparent}

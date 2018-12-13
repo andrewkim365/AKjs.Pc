@@ -1,9 +1,7 @@
-﻿///<jscompress sourcefile="AKjs_AllChecked.js" />
-/*
-Modification Date: 2018-09-17
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_AllChecked--------------------------------------*/
+﻿/*! jquery.AKjs by Website Plugin v1.0.0 Stable --- Copyright Andrew.Kim | (c) 20170808 ~ 20181213 AKjs license */
+/*! Coding by Andrew.Kim (E-mail: andrewkim365@qq.com) https://github.com/andrewkim365/AKjs.Pc */
+
+/*-----------------------------------------------AKjs_AllChecked (2018-12-13)--------------------------------------------*/
 (function($) {
     $.fn.AKjs_AllChecked = function(settings) {
         var ele = $(this);
@@ -57,13 +55,9 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
             option.callback(checks);
         })
     }
-} (jQuery));;
-///<jscompress sourcefile="AKjs_ButtonSubmit.js" />
-/*
-Modification Date: 2018-09-17
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_ButtonSubmit--------------------------------------------*/
+} (jQuery));
+
+/*-----------------------------------------------AKjs_ButtonSubmit (2018-12-13)--------------------------------------------*/
 (function($) {
     $.fn.AKjs_ButtonSubmit = function(msg, setting) {
         var option = $.extend({
@@ -123,14 +117,9 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
         }
     }
 } (jQuery));
-;
-///<jscompress sourcefile="AKjs_ChangeIcon.js" />
-/*
-Modification Date: 2018-09-17
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_ChangeIcon--------------------------------------*/
-(function($){
+
+/*-----------------------------------------------AKjs_ChangeIcon (2018-12-13)--------------------------------------------*/
+(function($) {
     $.fn.AKjs_ChangeIcon = function(setting) {
         var option = $.extend({
                 multi_icon: false,
@@ -180,14 +169,10 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
             }
         });
     };
-}(jQuery));;
-///<jscompress sourcefile="AKjs_ChangeInput.js" />
-/*
-Modification Date: 2018-08-09
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_ChangeInput-------------------------------------*/
-(function($){
+} (jQuery));
+
+/*-----------------------------------------------AKjs_ChangeInput (2018-12-13)--------------------------------------------*/
+(function($) {
     $.fn.AKjs_ChangeInput = function(setting) {
         var option = $.extend({
                 text_input: new Array(),
@@ -208,13 +193,9 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
             option.onChange(right_input_value,tmp);
         });
     };
-}(jQuery));;
-///<jscompress sourcefile="AKjs_Checkbox.js" />
-/*
-Modification Date: 2018-09-17
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_Checkbox--------------------------------------*/
+} (jQuery));
+
+/*-----------------------------------------------AKjs_Checkbox (2018-12-13)--------------------------------------------*/
 (function($) {
     $.fn.AKjs_Checkbox = function(settings) {
         var _defaults = {
@@ -290,13 +271,8 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
         })
     }
 } (jQuery));
-;
-///<jscompress sourcefile="AKjs_ChooseList.js" />
-/*
-Modification Date: 2018-09-17
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_ChooseList--------------------------------------*/
+
+/*-----------------------------------------------AKjs_ChooseList (2018-12-13)--------------------------------------------*/
 (function($) {
     var defaults = {
         itemWidth: null,
@@ -491,13 +467,9 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
             return this
         }
     }
-} (jQuery));;
-///<jscompress sourcefile="AKjs_Circliful.js" />
-/*
-Modification Date: 2018-10-10
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_Circliful-------------------------------------------*/
+} (jQuery));
+
+/*-----------------------------------------------AKjs_Circliful (2018-12-13)--------------------------------------------*/
 (function($) {
     $.fn.AKjs_Circliful = function(setting) {
         var option = $.extend({
@@ -750,13 +722,8 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
         })
     }
 } (jQuery));
-;
-///<jscompress sourcefile="AKjs_CitySelect.js" />
-/*
-Modification Date: 2018-11-23
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_CitySelect-------------------------------------------*/
+
+/*-----------------------------------------------AKjs_CitySelect (2018-12-13)--------------------------------------------*/
 (function($) {
     $.fn.AKjs_CitySelect = function(setting) {
         var option = $.extend({
@@ -919,13 +886,9 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
             areaLayer.removeClass("ak-open").remove();
         }
     }
-} (jQuery));;
-///<jscompress sourcefile="AKjs_Codeval.js" />
-/*
-Modification Date: 2018-09-17
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_Codeval-----------------------------------------*/
+} (jQuery));
+
+/*-----------------------------------------------AKjs_Codeval (2018-12-13)--------------------------------------------*/
 (function($) {
     var settings = {
         codeView: "",
@@ -1014,13 +977,9 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
         }
         return code
     }
-} (jQuery));;
-///<jscompress sourcefile="AKjs_Completer.js" />
-/*
-Modification Date: 2018-10-11
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_Completer-------------------------------------------*/
+} (jQuery));
+
+/*-----------------------------------------------AKjs_Completer (2018-12-13)--------------------------------------------*/
 (function($) {
     var $window = $(window);
     var $document = $(document);
@@ -1366,14 +1325,10 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
     $(function () {
         $('[data-toggle="completer"]').AKjs_Completer();
     });
-} (jQuery));;
-///<jscompress sourcefile="AKjs_CountDown.js" />
-/*
-Modification Date: 2018-09-17
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_CountDown---------------------------------------*/
-function AKjs_CountDown(ele,setting){
+} (jQuery));
+
+/*-----------------------------------------------AKjs_CountDown  (2018-12-13)--------------------------------------------*/
+function AKjs_CountDown(ele,setting) {
     var option = $.extend({
             wait: 10,
             Start_text: "",
@@ -1404,13 +1359,9 @@ function AKjs_CountDown(ele,setting){
             })
         }, 1000);
     }
-};
-///<jscompress sourcefile="AKjs_CountTo.js" />
-/*
-Modification Date: 2018-09-17
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_CountTo-------------------------------------------*/
+}
+
+/*-----------------------------------------------AKjs_CountTo (2018-12-13)--------------------------------------------*/
 (function($) {
     $.fn.AKjs_CountTo = function(options) {
         options = options || {};
@@ -1472,1037 +1423,9 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
     function formatter(value, settings) {
         return value.toFixed(settings.decimals)
     }
-} (jQuery));;
-///<jscompress sourcefile="AKjs_DateTime.js" />
-/*
-Modification Date: 2018-09-17
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_DateTime-------------------------------------------*/
-(function($) {
-    $.fn.AKjs_DateTime = function(opt) {
-        function cPlugin(o, emlnum) {
-            var sjObj = o;
-            sjObj.defaults = {
-                type: "time",
-                Format: "yyyy-mm-dd",
-                timeFormat: "h:m:s",
-                width: 60,
-                height: 40,
-                Year: true,
-                Month: true,
-                Day: true,
-                Hour: true,
-                Minute: true,
-                Seconds: false,
-                yyArr: [],
-                mmArr: [],
-                ddArr: [],
-                hArr: [],
-                mArr: [],
-                sArr: [],
-                yyyy: "2000",
-                mm: "01",
-                dd: "01",
-                h: "01",
-                m: "01",
-                s: "01",
-                val: null,
-                yearText: "Y",
-                monthText: "M",
-                dayText: "D",
-                hourText: "H",
-                minuteText: "M",
-                secondsText: "S",
-                okText: "OK",
-                cancelText: "CANCEL",
-                thisElm: null,
-                showNowTime: true,
-                alwaysShow: false,
-                timeElm: null,
-                isparseInt: false,
-                finalshow: true,
-                boxClassName: "",
-                onfun: function(sjObj) {},
-                okfun: function(sjObj) {},
-                t_box: null,
-                df_persp: function() {
-                    return $("<div class='ak-datetime'><div class='ak-mask'></div>")
-                },
-                df_box: function() {
-                    return $("</div><div class='jdt_box animated slideInUp " + (sjObj.opt.alwaysShow ? "alwaysShow": "") + " " + sjObj.opt.boxClassName + "' style='line-height:" + sjObj.opt.height + "px;'></div>")
-                },
-                df_main: function() {
-                    return $("<div class='jdt_main'>")
-                },
-                df_btn: function() {
-                    if (sjObj.opt.alwaysShow) {
-                        return
-                    }
-                    return $("<div class='jdt_btn'><button type='button' class='jdt_no bg_white c_gray_777'>" + sjObj.opt.cancelText + "</button><button type='button' class='jdt_ok bg_white c_title'>" + sjObj.opt.okText + "</button></div>")
-                },
-                df_wrap: function() {
-                    return $("<div class='jdt_wrap'><table><tbody><tr></tr></tbody></table><div class='jdt_active' style='height:" + sjObj.opt.height + "px; margin-top:-" + sjObj.opt.height * 3 + "px;'></div></div>")
-                },
-                df_final: function() {
-                    return $("<div class='jdt_final c_title'></div>")
-                },
-                getArr: function() {
-                    for (var i = 0; i < 61; i++) {
-                        if (i < 12) {
-                            this.mmArr[i] = (i + 1)
-                        }
-                        if (i < 31) {
-                            this.ddArr[i] = (i + 1)
-                        }
-                        if (i < 24) {
-                            this.hArr[i] = i
-                        }
-                        if (i < 60) {
-                            this.mArr[i] = i;
-                            this.sArr[i] = i
-                        }
-                        if (i < 61 && !sjObj.opt.Year && !sjObj.opt.Month && !sjObj.opt.Day && !sjObj.opt.Hour) {
-                            this.mArr[i] = i
-                        }
-                    }
-                },
-                y: 10,
-                nowTime: new Date(),
-                startYear: null,
-                endYear: null,
-                ampmText: null,
-                dataNum: 0,
-                strStart: function(text, c) {
-                    var df = this;
-                    var str;
-                    var text = text || "";
-                    if (df.width) {
-                        str = '<div class="jdt_class">' + text + '</div><div class="jdt_item " style="height:' + (df.height * 5 - 1) + "px;min-width:" + df.width + 'px"><ul class="jdt_ul" data-class=' + c + ">"
-                    } else {
-                        str = '<div class="jdt_class">' + text + '</div><div class="jdt_item " style="height:' + (df.height * 5 - 1) + 'px"><ul class="jdt_ul" data-class=' + c + ">"
-                    }
-                    sjObj.opt.dataNum++;
-                    return str
-                },
-                strEnd: function() {
-                    var df = this;
-                    return "</ul><div class='jdt_bg'><div class='jdt_top' style='height:" + (df.height * 2) + "px'></div><div class='jdt_mid' style='height:" + df.height + "px'></div><div class='jdt_btm' style='height:" + (df.height * 2) + "px'></div></div></div>"
-                },
-                fillZero: function(x) {
-                    if (x < 10) {
-                        return x = "0" + x
-                    } else {
-                        return "" + x
-                    }
-                },
-                getYear: function() {
-                    if (!this.startYear) {
-                        var y = sjObj.opt.y || 10;
-                        var nowTime = new Date();
-                        for (var x = this.y,
-                                 i = 0; x != 0; y > 0 ? x--:x++, i++) {
-                            if (y < 0) {
-                                sjObj.opt.yyArr[i] = nowTime.getFullYear() + x + 1
-                            } else {
-                                sjObj.opt.yyArr[i] = nowTime.getFullYear() + i
-                            }
-                        }
-                        sjObj.opt.getArr()
-                    } else {
-                        if (sjObj.opt.yyArr.length > 1) {
-                            return
-                        }
-                        var endYear = this.endYear || parseInt(sjObj.opt.y) + parseInt(this.startYear);
-                        var y = -(endYear - parseInt(this.startYear));
-                        nowTime = new Date(endYear + "/01/01");
-                        for (var x = y,
-                                 i = 0; y > 0 ? x != 0 : x < 1; y > 0 ? x--:x++, i++) {
-                            if (y < 0) {
-                                sjObj.opt.yyArr[i] = nowTime.getFullYear() + x
-                            } else {
-                                sjObj.opt.yyArr[i] = nowTime.getFullYear() + i
-                            }
-                        }
-                        sjObj.opt.getArr()
-                    }
-                },
-                setCenter: function() {
-                    var wid = $(window).width();
-                    var tabWid = null;
-                    var mWid = 0;
-                    $(".jdt_wrap table").each(function() {
-                        tabWid += parseFloat($(this).width())
-                    });
-                    if (tabWid > wid) {
-                        $(".jdt_wrap table").each(function() {
-                            mWid = parseFloat($(this).width()) > mWid ? parseFloat($(this).width()) : mWid
-                        });
-                        $(".jdt_box").width(mWid)
-                    } else {
-                        $(".jdt_box").width(tabWid + 10)
-                    }
-                },
-                buildArrStr: function(Arr, txt, c) {
-                    var str = this.strStart(txt, c);
-                    $.each(Arr,
-                        function() {
-                            str += '<li class="jdt_li jdt_show"  data-val=' + sjObj.opt.fillZero(this) + ' style="line-height:' + sjObj.opt.height + "px;height:" + sjObj.opt.height + 'px">' + sjObj.opt.fillZero(this) + "</li>"
-                        });
-                    str += sjObj.opt.strEnd();
-                    return str
-                },
-                buildHTml: function() {
-                    var wrap = sjObj.opt.df_wrap();
-                    sjObj.opt.t_box = sjObj.opt.df_box();
-                    var main = sjObj.opt.df_main();
-                    var persp = sjObj.opt.df_persp();
-                    if (sjObj.opt.alwaysShow) {
-                        sjObj.opt.timeElm = eval(sjObj.opt.timeElm);
-                        sjObj.opt.timeElm.append(sjObj.opt.t_box.append(main.append(wrap)))
-                    } else {
-                        sjObj.opt.timeElm = $("<div class='ak-datetime'><div class='ak-mask'></div>");
-                        sjObj.opt.timeElm.append(sjObj.opt.t_box.append(sjObj.opt.finalshow ? sjObj.opt.df_final: "").append(main.append(wrap)).append(sjObj.opt.df_btn));
-                        $("body").append(sjObj.opt.timeElm);
-                        document.activeElement.blur();
-                        $("#ak-scrollview").removeClass("scrolling_touch");
-                        sjObj.opt.timeElm.find(".ak-mask").bind({
-                            touchmove: function(e) {
-                                e.preventDefault()
-                            }
-                        })
-                    }
-                    if (sjObj.opt.ampmText) {
-                        main.append("<div class='jdt_wrap'><table><tbody><tr><td>" + sjObj.opt.buildAmPmStr() + "</tr></tbody></table></div>")
-                    }
-                    if (sjObj.opt.Format == "dd-mm-yyyy") {
-                        if (sjObj.opt.Day) {
-                            $(sjObj.opt.timeElm.find(".jdt_wrap")[0]).find("tr").append("<td>" + sjObj.opt.buildArrStr(sjObj.opt.ddArr, sjObj.opt.dayText, "dd") + "</td>")
-                        }
-                        if (sjObj.opt.Month) {
-                            $(sjObj.opt.timeElm.find(".jdt_wrap")[0]).find("tr").append("<td>" + sjObj.opt.buildArrStr(sjObj.opt.mmArr, sjObj.opt.monthText, "mm") + "</td>")
-                        }
-                        if (sjObj.opt.Year) {
-                            $(sjObj.opt.timeElm.find("jdt_wrap")[0]).find("tr").append("<td>" + sjObj.opt.buildArrStr(sjObj.opt.yyArr, sjObj.opt.yearText, "yyyy") + "</td>")
-                        }
-                    } else {
-                        if (sjObj.opt.Format == "mm-dd-yyyy") {
-                            if (sjObj.opt.Month) {
-                                $(sjObj.opt.timeElm.find(".jdt_wrap")[0]).find("tr").append("<td>" + sjObj.opt.buildArrStr(sjObj.opt.mmArr, sjObj.opt.monthText, "mm") + "</td>")
-                            }
-                            if (sjObj.opt.Day) {
-                                $(sjObj.opt.timeElm.find(".jdt_wrap")[0]).find("tr").append("<td>" + sjObj.opt.buildArrStr(sjObj.opt.ddArr, sjObj.opt.dayText, "dd") + "</td>")
-                            }
-                            if (sjObj.opt.Year) {
-                                $(sjObj.opt.timeElm.find(".jdt_wrap")[0]).find("tr").append("<td>" + sjObj.opt.buildArrStr(sjObj.opt.yyArr, sjObj.opt.yearText, "yyyy") + "</td>")
-                            }
-                        } else {
-                            if (sjObj.opt.Format == "yyyy-mm") {
-                                if (sjObj.opt.Year) {
-                                    $(sjObj.opt.timeElm.find(".jdt_wrap")[0]).find("tr").append("<td>" + sjObj.opt.buildArrStr(sjObj.opt.yyArr, sjObj.opt.yearText, "yyyy") + "</td>")
-                                }
-                                if (sjObj.opt.Month) {
-                                    $(sjObj.opt.timeElm.find(".jdt_wrap")[0]).find("tr").append("<td>" + sjObj.opt.buildArrStr(sjObj.opt.mmArr, sjObj.opt.monthText, "mm") + "</td>")
-                                }
-                            } else {
-                                if (sjObj.opt.Format == "yyyy") {
-                                    if (sjObj.opt.Year) {
-                                        $(sjObj.opt.timeElm.find(".jdt_wrap")[0]).find("tr").append("<td>" + sjObj.opt.buildArrStr(sjObj.opt.yyArr, sjObj.opt.yearText, "yyyy") + "</td>")
-                                    }
-                                } else {
-                                    if (sjObj.opt.Year) {
-                                        $(sjObj.opt.timeElm.find(".jdt_wrap")[0]).find("tr").append("<td>" + sjObj.opt.buildArrStr(sjObj.opt.yyArr, sjObj.opt.yearText, "yyyy") + "</td>")
-                                    }
-                                    if (sjObj.opt.Month) {
-                                        $(sjObj.opt.timeElm.find(".jdt_wrap")[0]).find("tr").append("<td>" + sjObj.opt.buildArrStr(sjObj.opt.mmArr, sjObj.opt.monthText, "mm") + "</td>")
-                                    }
-                                    if (sjObj.opt.Day) {
-                                        $(sjObj.opt.timeElm.find(".jdt_wrap")[0]).find("tr").append("<td>" + sjObj.opt.buildArrStr(sjObj.opt.ddArr, sjObj.opt.dayText, "dd") + "</td>")
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    if (sjObj.opt.Hour || sjObj.opt.Minute || sjObj.opt.Seconds) {
-                        var eml = sjObj.opt.df_wrap();
-                        main.append(eml)
-                    }
-                    if (sjObj.opt.Hour) {
-                        $(eml).find("tr").append("<td>" + sjObj.opt.buildArrStr(sjObj.opt.hArr, sjObj.opt.hourText, "h") + "</td>")
-                    }
-                    if (sjObj.opt.Minute) {
-                        $(eml).find("tr").append("<td>" + sjObj.opt.buildArrStr(sjObj.opt.mArr, sjObj.opt.minuteText, "m") + "</td>")
-                    }
-                    if (sjObj.opt.Seconds) {
-                        $(eml).find("tr").append("<td>" + sjObj.opt.buildArrStr(sjObj.opt.sArr, sjObj.opt.secondsText, "s") + "</td>")
-                    }
-                    if (sjObj.opt.showNowTime) {
-                        if (emlnum) {
-                            var val = sjObj.value,
-                                sjeml = sjObj
-                        } else {
-                            var val = sjObj[0].value,
-                                sjeml = sjObj[0]
-                        }
-                        if (val) {
-                            if (val.indexOf("/") != -1) {
-                                val = val.replace(/\//g, "-")
-                            }
-                            if (val.indexOf(" ") != -1) {
-                                var valarr = val.split(" ")
-                            } else {
-                                var valarr = [val]
-                            }
-                            var nyr, sfm;
-                            var str = "";
-                            if (valarr.length == 2) {
-                                nyr = valarr[0];
-                                sfm = valarr[1];
-                                str += getnyrstr(nyr) + " " + getsfmstr(sfm)
-                            } else {
-                                if (valarr.length == 1 && (valarr.indexOf("-") != -1 || valarr.indexOf("/") != -1)) {
-                                    str += getnyrstr(valarr[0]) + " " + getsfmstr("")
-                                } else {
-                                    if (sjObj.opt.Year || sjObj.opt.Month || sjObj.opt.Day) {
-                                        str += getnyrstr(valarr[0]) + " " + getsfmstr("")
-                                    } else {
-                                        str += getnyrstr("") + " " + getsfmstr(valarr[0])
-                                    }
-                                }
-                            }
-                            data = new Date(str.replace(/-/g, "/"))
-                        } else {
-                            var data = new Date()
-                        }
-                        var year = data.getFullYear();
-                        var month = data.getMonth() + 1;
-                        var day = data.getDate();
-                        var hours = data.getHours();
-                        var Minutes = data.getMinutes();
-                        var Seconds = data.getSeconds();
-                        sjObj.opt.yyyy = fillZero(year);
-                        sjObj.opt.mm = fillZero(month);
-                        sjObj.opt.dd = fillZero(day);
-                        sjObj.opt.h = fillZero(hours);
-                        sjObj.opt.m = fillZero(Minutes);
-                        sjObj.opt.s = fillZero(Seconds);
-                        if (sjObj.opt.Year) {
-                            sjObj.opt.timeElm.find("[data-class='yyyy'] .jdt_li").each(function() {
-                                if (parseInt($(this).attr("data-val")) == parseInt(year)) {
-                                    var pY = -($(this).index() - 2) * sjObj.opt.height;
-                                    $(this).parent().css({
-                                        "transform": "translate(0," + pY + "px)"
-                                    })
-                                }
-                            })
-                        }
-                        if (sjObj.opt.Month) {
-                            sjObj.opt.timeElm.find("[data-class='mm'] .jdt_li").each(function() {
-                                if (parseInt($(this).attr("data-val")) == parseInt(month)) {
-                                    var pY = -($(this).index() - 2) * sjObj.opt.height;
-                                    $(this).parent().css({
-                                        "transform": "translate(0," + pY + "px)"
-                                    })
-                                }
-                            })
-                        }
-                        if (sjObj.opt.Day) {
-                            sjObj.opt.timeElm.find("[data-class='dd'] .jdt_li").each(function() {
-                                if (parseInt($(this).attr("data-val")) == parseInt(day)) {
-                                    var pY = -($(this).index() - 2) * sjObj.opt.height;
-                                    $(this).parent().css({
-                                        "transform": "translate(0," + pY + "px)"
-                                    })
-                                }
-                            })
-                        }
-                        if (sjObj.opt.Hour) {
-                            sjObj.opt.timeElm.find("[data-class='h'] .jdt_li").each(function() {
-                                if (parseInt($(this).attr("data-val")) == parseInt(hours)) {
-                                    var pY = -($(this).index() - 2) * sjObj.opt.height;
-                                    $(this).parent().css({
-                                        "transform": "translate(0," + pY + "px)"
-                                    })
-                                }
-                            })
-                        }
-                        if (sjObj.opt.Minute) {
-                            sjObj.opt.timeElm.find("[data-class='m'] .jdt_li").each(function() {
-                                if (parseInt($(this).attr("data-val")) == parseInt(Minutes)) {
-                                    var pY = -($(this).index() - 2) * sjObj.opt.height;
-                                    $(this).parent().css({
-                                        "transform": "translate(0," + pY + "px)"
-                                    })
-                                }
-                            })
-                        }
-                        if (sjObj.opt.Seconds) {
-                            sjObj.opt.timeElm.find("[data-class='m'] .jdt_li").each(function() {
-                                if (parseInt($(this).attr("data-val")) == parseInt(Seconds)) {
-                                    var pY = -($(this).index() - 2) * sjObj.opt.height;
-                                    $(this).parent().css({
-                                        "transform": "translate(0," + pY + "px)"
-                                    })
-                                }
-                            })
-                        }
-                    } else {
-                        if (sjObj.opt.Year) {
-                            sjObj.opt.timeElm.find("[data-class='yyyy'] .jdt_li").each(function() {
-                                if (parseInt($(this).attr("data-val")) == parseInt(sjObj.opt.yyyy)) {
-                                    var pY = -($(this).index() - 2) * sjObj.opt.height;
-                                    $(this).parent().css({
-                                        "transform": "translate(0," + pY + "px)"
-                                    })
-                                }
-                            })
-                        }
-                        if (sjObj.opt.Month) {
-                            sjObj.opt.timeElm.find("[data-class='mm'] .jdt_li").each(function() {
-                                if (parseInt($(this).attr("data-val")) == parseInt(sjObj.opt.mm)) {
-                                    var pY = -($(this).index() - 2) * sjObj.opt.height;
-                                    $(this).parent().css({
-                                        "transform": "translate(0," + pY + "px)"
-                                    })
-                                }
-                            })
-                        }
-                        if (sjObj.opt.Day) {
-                            sjObj.opt.timeElm.find("[data-class='dd'] .jdt_li").each(function() {
-                                if (parseInt($(this).attr("data-val")) == parseInt(sjObj.opt.dd)) {
-                                    var pY = -($(this).index() - 2) * sjObj.opt.height;
-                                    $(this).parent().css({
-                                        "transform": "translate(0," + pY + "px)"
-                                    })
-                                }
-                            })
-                        }
-                        if (sjObj.opt.Hour) {
-                            sjObj.opt.timeElm.find("[data-class='h'] .jdt_li").each(function() {
-                                if (parseInt($(this).attr("data-val")) == parseInt(sjObj.opt.h)) {
-                                    var pY = -($(this).index() - 2) * sjObj.opt.height;
-                                    $(this).parent().css({
-                                        "transform": "translate(0," + pY + "px)"
-                                    })
-                                }
-                            })
-                        }
-                        if (sjObj.opt.Minute) {
-                            sjObj.opt.timeElm.find("[data-class='m'] .jdt_li").each(function() {
-                                if (parseInt($(this).attr("data-val")) == parseInt(sjObj.opt.m)) {
-                                    var pY = -($(this).index() - 2) * sjObj.opt.height;
-                                    $(this).parent().css({
-                                        "transform": "translate(0," + pY + "px)"
-                                    })
-                                }
-                            })
-                        }
-                        if (sjObj.opt.Seconds) {
-                            sjObj.opt.timeElm.find("[data-class='m'] .jdt_li").each(function() {
-                                if (parseInt($(this).attr("data-val")) == parseInt(sjObj.opt.s)) {
-                                    var pY = -($(this).index() - 2) * sjObj.opt.height;
-                                    $(this).parent().css({
-                                        "transform": "translate(0," + pY + "px)"
-                                    })
-                                }
-                            })
-                        }
-                    }
-                    sjObj.opt.fillData();
-                    sjObj.opt.setCenter();
-                    sjObj.opt.bindFun()
-                },
-                bindFun: function() {
-                    sjObj.opt.timeElm.find(".jdt_no").unbind("click");
-                    sjObj.opt.timeElm.find(".jdt_no").on("click",
-                        function() {
-                            $(this).parent().parent().parent().find(".jdt_box").addClass("animated slideOutDown");
-                            setTimeout(function() {
-                                    sjObj.opt.timeElm.remove()
-                                },
-                                500);
-                            sjObj.opt.onfun(sjObj);
-                            $("#ak-scrollview").addClass("scrolling_touch")
-                        });
-                    sjObj.opt.timeElm.find(".ak-mask").unbind("click");
-                    sjObj.opt.timeElm.find(".ak-mask").on("click",
-                        function() {
-                            $(this).parent().find(".jdt_box").addClass("animated slideOutDown");
-                            setTimeout(function() {
-                                    sjObj.opt.timeElm.remove()
-                                },
-                                500);
-                            sjObj.opt.onfun(sjObj);
-                            $("#ak-scrollview").addClass("scrolling_touch")
-                        });
-                    sjObj.opt.timeElm.find(".jdt_ok").unbind("click");
-                    sjObj.opt.timeElm.find(".jdt_ok").on("click",
-                        function() {
-                            var str = "";
-                            if (sjObj.opt.Year) {
-                                str = sjObj.opt.Format.replace("yyyy", sjObj.opt.yyyy)
-                            }
-                            if (sjObj.opt.Month) {
-                                str = str.replace("mm", sjObj.opt.mm)
-                            } else {
-                                str = str.replace("-mm", "")
-                            }
-                            if (sjObj.opt.Day) {
-                                str = str.replace("dd", sjObj.opt.dd)
-                            } else {
-                                str = str.replace("-dd", "")
-                            }
-                            if (sjObj.opt.Day && sjObj.opt.Hour) {
-                                str += " "
-                            }
-                            if (sjObj.opt.Hour) {
-                                str += sjObj.opt.h
-                            }
-                            if (sjObj.opt.Minute && sjObj.opt.Hour) {
-                                str += ":"
-                            }
-                            if (sjObj.opt.Minute) {
-                                str += sjObj.opt.m
-                            }
-                            if (sjObj.opt.Minute && sjObj.opt.Seconds) {
-                                str += ":"
-                            }
-                            if (sjObj.opt.Seconds) {
-                                str += sjObj.opt.s
-                            }
-                            sjObj.opt.val = sjObj.opt.isparseInt ? parseInt(str) : str;
-                            $(sjObj.opt.thisElm).next("label").hide();
-                            $(sjObj.opt.thisElm).val(sjObj.opt.val);
-                            $(this).parent().parent().parent().find(".jdt_box").addClass("animated slideOutDown");
-                            setTimeout(function() {
-                                    sjObj.opt.timeElm.remove()
-                                },
-                                500);
-                            sjObj.opt.okfun(sjObj);
-                            $("#ak-scrollview").addClass("scrolling_touch")
-                        });
-                    sjObj.opt.moveElm(sjObj.opt.timeElm.find(".jdt_bg"))
-                },
-                fillData: function() {
-                    var str = "";
-                    if (sjObj.opt.Year) {
-                        str += sjObj.opt.yyyy
-                    }
-                    if (sjObj.opt.Month) {
-                        str += "-" + sjObj.opt.mm
-                    }
-                    if (sjObj.opt.Day) {
-                        str += "-" + sjObj.opt.dd
-                    }
-                    if (sjObj.opt.Hour) {
-                        str += " " + sjObj.opt.h
-                    }
-                    if (sjObj.opt.Minute) {
-                        str += ":" + sjObj.opt.m
-                    }
-                    if (sjObj.opt.Seconds) {
-                        str += sjObj.opt.s
-                    }
-                    if (!sjObj.opt.alwaysShow) {
-                        if (sjObj.opt.isparseInt) {
-                            sjObj.opt.timeElm.find(".jdt_final").html(parseInt(str))
-                        } else {
-                            sjObj.opt.timeElm.find(".jdt_final").html(str)
-                        }
-                    } else {
-                        $(sjObj.opt.thisElm).html(str).val(str)
-                    }
-                },
-                vardata: function(name, val) {
-                    if (!val) {
-                        return
-                    }
-                    if (sjObj.opt[name] != val) {
-                        sjObj.opt[name] = val;
-                        sjObj.opt.fillData()
-                    }
-                },
-                getFinal: function() {
-                    var currentY = 0;
-                    var str = "";
-                    if (sjObj.opt.showNowTime) {
-                        sjObj.opt.timeElm.find(".jdt_ul").each(function() {
-                            currentY = getTranslateY(this);
-                            var dataClass = $(this).attr("data-class");
-                            var val = $($(this).find(".jdt_li")[Math.round(currentY / sjObj.opt.height) + 2]).attr("data-val");
-                            sjObj.opt.vardata(dataClass, val);
-                            $(this).unbind("webkitTransitionEnd").on("webkitTransitionEnd",
-                                function() {
-                                    currentY = getTranslateY(this);
-                                    var val = $($(this).find(".jdt_li")[Math.round(currentY / sjObj.opt.height) + 2]).attr("data-val");
-                                    dataClass = $(this).attr("data-class");
-                                    sjObj.opt.vardata(dataClass, val);
-                                    sjObj.opt.daysJudge(dataClass)
-                                })
-                        })
-                    } else {
-                        sjObj.opt.timeElm.find(".jdt_ul").each(function() {
-                            currentY = getTranslateY(this);
-                            var dataClass = $(this).attr("data-class");
-                            var val = $($(this).find(".jdt_li")[Math.round(currentY / sjObj.opt.height) + 2]).attr("data-val");
-                            sjObj.opt.vardata(dataClass, val);
-                            $(this).unbind("webkitTransitionEnd").on("webkitTransitionEnd",
-                                function() {
-                                    currentY = getTranslateY(this);
-                                    var val = $($(this).find(".jdt_li")[Math.round(currentY / sjObj.opt.height) + 2]).attr("data-val");
-                                    dataClass = $(this).attr("data-class");
-                                    sjObj.opt.vardata(dataClass, val);
-                                    sjObj.opt.daysJudge(dataClass)
-                                })
-                        })
-                    }
-                },
-                daysJudge: function(name) {
-                    if (name == "mm" || name == "yyyy") {
-                        var day = new Date(sjObj.opt.yyyy, sjObj.opt.mm, 0).getDate();
-                        var l = sjObj.opt.timeElm.find('[data-class="dd"]').find(".jdt_show").length;
-                        var mubiao = day - l;
-                        if (mubiao > 0) {
-                            for (var i = 0; i < mubiao; i++) {
-                                $(sjObj.opt.timeElm.find('[data-class="dd"]').find(".jdt_li")[l + i]).removeClass("jdt_hide").addClass("jdt_show")
-                            }
-                        } else {
-                            var naomovey = getTranslateY(sjObj.opt.timeElm.find('[data-class="dd"]'));
-                            for (var i = 0; i > mubiao; i--) {
-                                $(sjObj.opt.timeElm.find('[data-class="dd"]').find(".jdt_li")[l - 1 + i]).removeClass("jdt_show").addClass("jdt_hide")
-                            }
-                            if (naomovey > (day - 1 - 2) * sjObj.opt.height) {
-                                sjObj.opt.timeElm.find('[data-class="dd"]').css({
-                                    "transition": "all .5s"
-                                });
-                                sjObj.opt.timeElm.find('[data-class="dd"]').css({
-                                    "transform": "translate(0," + -(day - 1 - 2) * sjObj.opt.height + "px)"
-                                })
-                            }
-                        }
-                    }
-                },
-                moveElm: function(eml) {
-                    return $(eml).each(function() {
-                        var sX = null,
-                            sY = null,
-                            mX = null,
-                            mY = null,
-                            eX = null,
-                            eY = null,
-                            sTime = null,
-                            eTime = null,
-                            mTime = null,
-                            nTime = null,
-                            nY = 0,
-                            drt = null,
-                            nowElm = null,
-                            canStart = true,
-                            canMove = false,
-                            canEnd = false,
-                            emlLang = null,
-                            maxY = null,
-                            minY = null,
-                            lastY = null,
-                            nowY = null,
-                            moveY = null,
-                            stopInertiaMove = false,
-                            SE = null,
-                            ME = null,
-                            EE = null,
-                            moveCy = 0;
-                        var stop = function(e) {
-                            if (e.preventDefault) {
-                                e.preventDefault()
-                            }
-                            e.returnValue = false
-                        };
-                        var moveStart = function(e) {
-                            stop(e);
-                            if (!canStart) {
-                                return
-                            }
-                            if (e.originalEvent.touches) {
-                                SE = e.originalEvent.targetTouches[0]
-                            } else {
-                                SE = e
-                            }
-                            sX = SE.pageX;
-                            sY = SE.pageY;
-                            nowElm = $(this).prev(".jdt_ul");
-                            emlLang = nowElm.find(".jdt_show").length;
-                            lastY = sY;
-                            nY = getTranslateY(nowElm);
-                            sTime = new Date().getTime();
-                            if (!canMove && canEnd) {
-                                return false
-                            }
-                            canStart = false;
-                            canMove = false;
-                            stopInertiaMove = true;
-                            $(window).on("touchmove",
-                                function(e) {
-                                    if (stopInertiaMove) {
-                                        e.preventDefault()
-                                    }
-                                })
-                        };
-                        var moveing = function(e) {
-                            stop(e);
-                            if (e.originalEvent.touches) {
-                                ME = e.originalEvent.targetTouches[0]
-                            } else {
-                                ME = e
-                            }
-                            mTime = new Date().getTime();
-                            mX = ME.pageX;
-                            mY = ME.pageY;
-                            drt = GetSlideDirection(sX, sY, mX, mY);
-                            if ((drt == 1 || drt == 2) && !canStart) {
-                                canMove = true;
-                                canEnd = true;
-                                stopInertiaMove = true
-                            }
-                            if (canMove) {
-                                nowElm.css({
-                                    "transition": "none"
-                                });
-                                nowElm.css({
-                                    "transform": "translate(0," + -(nY - (mY - sY)) + "px)"
-                                });
-                                sjObj.opt.getFinal()
-                            }
-                            if (mTime - sTime > 300) {
-                                sTime = mTime;
-                                lastY = mY
-                            }
-                        };
-                        var moveEnd = function(e) {
-                            stop(e);
-                            if (e.originalEvent.touches) {
-                                EE = e.originalEvent.changedTouches[0]
-                            } else {
-                                EE = e
-                            }
-                            eX = EE.pageX;
-                            eY = EE.pageY;
-                            maxY = sjObj.opt.height * 2;
-                            minY = -(emlLang - 3) * sjObj.opt.height;
-                            if (canEnd) {
-                                canMove = false;
-                                canEnd = false;
-                                canStart = true;
-                                nY = -(nY - (mY - sY));
-                                nowY = eY;
-                                if (nY > maxY) {
-                                    nowElm.css({
-                                        "transition": "all .5s"
-                                    });
-                                    nowElm.css({
-                                        "transform": "translate(0," + maxY + "px)"
-                                    })
-                                } else {
-                                    if (nY < minY) {
-                                        nowElm.css({
-                                            "transition": "all .5s"
-                                        });
-                                        nowElm.css({
-                                            "transform": "translate(0," + minY + "px)"
-                                        })
-                                    } else {
-                                        eTime = new Date().getTime();
-                                        var speed = ((nowY - lastY) / (eTime - sTime));
-                                        stopInertiaMove = false; (function(v, startTime, contentY) {
-                                            var dir = v > 0 ? -1 : 1;
-                                            var deceleration = dir * 0.001;
-                                            function inertiaMove() {
-                                                if (stopInertiaMove) {
-                                                    return
-                                                }
-                                                var nowTime = new Date().getTime();
-                                                var t = nowTime - startTime;
-                                                var nowV = v + t * deceleration;
-                                                var moveY = (v + nowV) / 2 * t;
-                                                if (dir * nowV > 0) {
-                                                    if (moveCy > sjObj.opt.maxY) {
-                                                        nowElm.css({
-                                                            "transition": "all .5s"
-                                                        });
-                                                        sjObj.opt.nowElm.css({
-                                                            "transform": "translate(0," + sjObj.opt.maxY + "px)"
-                                                        })
-                                                    } else {
-                                                        if (moveCy < sjObj.opt.minY) {
-                                                            nowElm.css({
-                                                                "transition": "all .5s"
-                                                            });
-                                                            nowElm.css({
-                                                                "transform": "translate(0," + sjObj.opt.minY + "px)"
-                                                            })
-                                                        } else {
-                                                            var MC = Math.round(moveCy / sjObj.opt.height);
-                                                            if (MC > 2) {
-                                                                MC = 2
-                                                            } else {
-                                                                if (MC < -(emlLang - 1) + 2) {
-                                                                    MC = -(emlLang - 1) + 2
-                                                                }
-                                                            }
-                                                            nowElm.css({
-                                                                "transition": "all .4s"
-                                                            });
-                                                            nowElm.css({
-                                                                "transform": "translate(0," + sjObj.opt.height * MC + "px)"
-                                                            })
-                                                        }
-                                                    }
-                                                    sjObj.opt.getFinal();
-                                                    return
-                                                }
-                                                moveCy = (contentY + moveY);
-                                                if (moveCy > (maxY + (sjObj.opt.height * 2))) {
-                                                    nowElm.css({
-                                                        "transition": "all .5s"
-                                                    });
-                                                    nowElm.css({
-                                                        "transform": "translate(0," + maxY + "px)"
-                                                    });
-                                                    return
-                                                } else {
-                                                    if (moveCy < (minY - (sjObj.opt.height * 2))) {
-                                                        nowElm.css({
-                                                            "transition": "all .5s"
-                                                        });
-                                                        nowElm.css({
-                                                            "transform": "translate(0," + minY + "px)"
-                                                        });
-                                                        return
-                                                    }
-                                                }
-                                                nowElm.css({
-                                                    "transform": "translate(0," + moveCy + "px)"
-                                                });
-                                                sjObj.opt.getFinal();
-                                                var timers = setTimeout(inertiaMove, 10)
-                                            }
-                                            inertiaMove()
-                                        })(speed, eTime, nY)
-                                    }
-                                }
-                            }
-                        };
-                        $(this).unbind("touchstart mousedown").on("touchstart mousedown", moveStart);
-                        $(this).unbind("touchmove").on("touchmove", moveing);
-                        $(this).unbind("touchend").on("touchend", moveEnd);
-                        $(document).on("mousemove", moveing);
-                        $(document).on("mouseup", moveEnd)
-                    })
-                }
-            };
-            sjObj.opt = $.extend({},
-                sjObj.defaults, opt);
-            var GetSlideAngle = function(dx, dy) {
-                return Math.atan2(dy, dx) * 180 / Math.PI
-            };
-            function getnyrstr(str) {
-                var r = sjObj.opt.Format;
-                var valarr = str.split("-");
-                if (valarr.length == 3) {
-                    r = r.replace("yyyy", valarr[0]);
-                    r = r.replace("mm", valarr[1]);
-                    r = r.replace("dd", valarr[2])
-                } else {
-                    if (valarr.length == 2) {
-                        if (sjObj.opt.Year && !sjObj.opt.Month) {
-                            r = r.replace("yyyy", valarr[0]);
-                            r = r.replace("mm", sjObj.opt.mm);
-                            r = r.replace("dd", valarr[1])
-                        } else {
-                            if (sjObj.opt.Year && !sjObj.opt.Day) {
-                                r = r.replace("yyyy", valarr[0]);
-                                r = r.replace("mm", valarr[1]);
-                                r = r.replace("dd", sjObj.opt.dd)
-                            } else {
-                                if (!sjObj.opt.Year) {
-                                    r = r.replace("yyyy", sjObj.opt.yyyy);
-                                    r = r.replace("mm", valarr[0]);
-                                    r = r.replace("dd", valarr[1])
-                                }
-                            }
-                        }
-                    } else {
-                        if (valarr.length == 1) {
-                            if (sjObj.opt.Year) {
-                                r = r.replace("yyyy", valarr[0]);
-                                r = r.replace("mm", sjObj.opt.mm);
-                                r = r.replace("dd", sjObj.opt.dd)
-                            } else {
-                                if (sjObj.opt.Month) {
-                                    r = r.replace("yyyy", sjObj.opt.yyyy);
-                                    r = r.replace("mm", valarr[0]);
-                                    r = r.replace("dd", sjObj.opt.dd)
-                                } else {
-                                    if (sjObj.opt.Day) {
-                                        r = r.replace("yyyy", sjObj.opt.yyyy);
-                                        r = r.replace("mm", sjObj.opt.mm);
-                                        r = r.replace("dd", valarr[0])
-                                    } else {
-                                        r = r.replace("yyyy", sjObj.opt.yyyy);
-                                        r = r.replace("mm", sjObj.opt.mm);
-                                        r = r.replace("dd", sjObj.opt.dd)
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-                return r
-            }
-            function getsfmstr(str) {
-                var r = sjObj.opt.timeFormat;
-                var valarr = str.split(":");
-                if (valarr.length == 3) {
-                    r = r.replace("h", valarr[0]);
-                    r = r.replace("m", valarr[1]);
-                    r = r.replace("s", valarr[2])
-                } else {
-                    if (valarr.length == 2) {
-                        if (sjObj.opt.Hour && !sjObj.opt.Minute) {
-                            r = r.replace("h", valarr[0]);
-                            r = r.replace("m", sjObj.opt.m);
-                            r = r.replace("s", valarr[1])
-                        } else {
-                            if (sjObj.opt.Hour && !sjObj.opt.Seconds) {
-                                r = r.replace("h", valarr[0]);
-                                r = r.replace("m", valarr[1]);
-                                r = r.replace("s", sjObj.opt.s)
-                            } else {
-                                if (!sjObj.opt.Hour) {
-                                    r = r.replace("h", sjObj.opt.h);
-                                    r = r.replace("m", valarr[0]);
-                                    r = r.replace("s", valarr[1])
-                                }
-                            }
-                        }
-                    } else {
-                        if (valarr.length == 1) {
-                            if (sjObj.opt.Hour) {
-                                r = r.replace("h", valarr[0]);
-                                r = r.replace("m", sjObj.opt.m);
-                                r = r.replace("s", sjObj.opt.s)
-                            } else {
-                                if (sjObj.opt.Minute) {
-                                    r = r.replace("h", sjObj.opt.h);
-                                    r = r.replace("m", valarr[0]);
-                                    r = r.replace("s", sjObj.opt.s)
-                                } else {
-                                    if (sjObj.opt.Hour) {
-                                        r = r.replace("h", sjObj.opt.h);
-                                        r = r.replace("m", sjObj.opt.m);
-                                        r = r.replace("s", valarr[0])
-                                    } else {
-                                        r = r.replace("h", sjObj.opt.h);
-                                        r = r.replace("m", sjObj.opt.m);
-                                        r = r.replace("s", sjObj.opt.s)
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-                return r
-            }
-            var GetSlideDirection = function(startX, startY, endX, endY) {
-                var dy = startY - endY;
-                var dx = endX - startX;
-                var result = 0;
-                if (Math.abs(dx) < 2 && Math.abs(dy) < 2) {
-                    return result
-                }
-                var angle = GetSlideAngle(dx, dy);
-                if (angle >= -45 && angle < 45) {
-                    result = 4
-                } else {
-                    if (angle >= 45 && angle < 135) {
-                        result = 1
-                    } else {
-                        if (angle >= -135 && angle < -45) {
-                            result = 2
-                        } else {
-                            if ((angle >= 135 && angle <= 180) || (angle >= -180 && angle < -135)) {
-                                result = 3
-                            }
-                        }
-                    }
-                }
-                return result
-            };
-            var getTranslateY = function(eml) {
-                var matrix = $(eml).css("transform");
-                var T;
-                if (matrix == "none") {
-                    T = 0
-                } else {
-                    var arr = matrix.split(",");
-                    T = -(arr[5].split(")")[0])
-                }
-                return T
-            };
-            sjObj.innt = function() {
-                if (!sjObj.opt.alwaysShow) {
-                    $(this).unbind("click");
-                    $(this).on("click",
-                        function(e) {
-                            e.stopPropagation();
-                            sjObj.opt.thisElm = this;
-                            switch (sjObj.opt.type) {
-                                case "time":
-                                    $(this).blur();
-                                    sjObj.opt.getYear();
-                                    sjObj.opt.buildHTml();
-                                    sjObj.opt.getFinal();
-                                    break
-                            }
-                        })
-                } else {
-                    sjObj.opt.thisElm = this;
-                    sjObj.opt.getYear();
-                    sjObj.opt.buildHTml()
-                }
-                $(window).on("resize",
-                    function() {
-                        sjObj.opt.setCenter()
-                    })
-            };
-            sjObj.innt();
-            return sjObj
-        }
-        if (this.length > 1) {
-            var arr = [];
-            $.each(this,
-                function() {
-                    arr.push(cPlugin(this, true))
-                });
-            return arr
-        } else {
-            var obj = cPlugin(this);
-            return obj
-        }
-    };
-    function fillZero(x) {
-        if (x < 10) {
-            return x = "0" + x
-        } else {
-            return "" + x
-        }
-    }
-} (jQuery));;
-///<jscompress sourcefile="AKjs_Dialog.js" />
-/*
-Modification Date: 2018-10-10
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_Dialog------------------------------------------*/
+} (jQuery));
+
+/*-----------------------------------------------AKjs_Dialog  (2018-12-13)--------------------------------------------*/
 (function($) {
     var ak = {};
     var AKjs_Dialog = {};
@@ -2743,13 +1666,9 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
         });
     };
     $ak = AKjs_Dialog;
-} (jQuery));;
-///<jscompress sourcefile="AKjs_DownCountTime.js" />
-/*
-Modification Date: 2018-11-15
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_DownCountTime-------------------------------------------*/
+} (jQuery));
+
+/*-----------------------------------------------AKjs_DownCountTime (2018-12-13)--------------------------------------------*/
 (function($) {
     $.fn.AKjs_DownCountTime = function(options, callback) {
         var settings = $.extend({
@@ -2819,294 +1738,10 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
         }
         var interval = setInterval(countdown, 1000);
     };
-} (jQuery));;
-///<jscompress sourcefile="AKjs_DropLoad.js" />
-/*
-Modification Date: 2018-09-20
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_DropLoad------------------------------------------*/
-(function($) {
-    var _absMoveY = 0;
-    var win = window;
-    var doc = document;
-    var $win = $(win);
-    var $doc = $(doc);
-    $.fn.AKjs_DropLoad = function(options) {
-        return new ak_DropLoad(this, options)
-    };
-    var ak_DropLoad = function(element, options) {
-        var ak = this;
-        ak.$element = element;
-        ak.upInsertDOM = false;
-        ak.loading = false;
-        ak.isLockUp = false;
-        ak.isLockDown = false;
-        ak.isData = true;
-        ak._scrollTop = 0;
-        ak._threshold = 0;
-        ak.init(options)
-    };
-    ak_DropLoad.prototype.init = function(options) {
-        var ak = this;
-        ak.opts = $.extend(true, {}, {
-            scrollArea: ak.$element,
-            domUp: {
-                domClass: "ak-dropload-up",
-                domRefresh: "↓ refresh",
-                domUpdate: "↑ update",
-                domLoad: "loading..."
-            },
-            domDown: {
-                domClass: "ak-dropload-down",
-                domRefresh: "↑ refresh",
-                domLoad: "loading...",
-                domNoData: "noData"
-            },
-            autoLoad: true,
-            distance: 50,
-            threshold: "",
-            loadUpFn: "",
-            loadDownFn: ""
-        }, options);
-        setTimeout(function() {
-            $("main").removeClass("ak-scrollbar");
-            $("main").unbind("touchmove");
-        }, 500);
-        if (ak.opts.loadDownFn != "") {
-            $("." + ak.opts.domDown.domClass).remove();
-            ak.$element.append('<div class="' + ak.opts.domDown.domClass + '"><div class="ak-dropload-refresh defer_03">' + ak.opts.domDown.domRefresh + "</div></div>");
-            ak.$domDown = $("." + ak.opts.domDown.domClass);
-        }
-        if ( !! ak.$domDown && ak.opts.threshold === "") {
-            ak._threshold = Math.floor(ak.$domDown.height() * 1 / 3);
-        } else {
-            ak._threshold = ak.opts.threshold;
-        }
-        if (ak.opts.scrollArea == win) {
-            ak.$scrollArea = $win;
-            ak._scrollContentHeight = ak.$element[0].scrollHeight;
-            ak._scrollWindowHeight = doc.documentElement.clientHeight;
-        } else {
-            ak.$scrollArea = ak.opts.scrollArea;
-            ak._scrollContentHeight = ak.$element[0].scrollHeight;
-            ak._scrollWindowHeight = ak.$element.height();
-        }
-        fnAutoLoad(ak);
-        $win.on("resize",
-            function() {
-                if (ak.opts.scrollArea == win) {
-                    ak._scrollWindowHeight = win.innerHeight;
-                } else {
-                    ak._scrollWindowHeight = ak.$element.height();
-                }
-            });
-        ak.$element.on("touchstart",
-            function(e) {
-                if (!ak.loading) {
-                    fnTouches(e);
-                    fnTouchstart(e, ak);
-                }
-            });
-        ak.$element.on("touchmove",
-            function(e) {
-                if (!ak.loading) {
-                    fnTouches(e, ak);
-                    fnTouchmove(e, ak);
-                }
-            });
-        ak.$element.on("touchend",
-            function() {
-                if (!ak.loading) {
-                    fnTouchend(ak);
-                }
-            });
-        ak.$element.on("scroll",
-            function() {
-                ak._scrollTop = ak.$scrollArea.scrollTop();
-                if (ak.opts.loadDownFn != "" && !ak.loading && !ak.isLockDown && (ak._scrollContentHeight - ak._threshold) <= (ak._scrollWindowHeight + ak._scrollTop)) {
-                    loadDown(ak);
-                }
-            })
-    };
-    function fnTouches(e) {
-        if (!e.touches) {
-            e.touches = e.originalEvent.touches;
-        }
-    }
-    function fnTouchstart(e, ak) {
-        ak._startY = e.touches[0].pageY;
-        ak.touchScrollTop = ak.$scrollArea.scrollTop();
-    }
-    function fnTouchmove(e, ak) {
-        ak._curY = e.touches[0].pageY;
-        ak._moveY = ak._curY - ak._startY;
-        if (ak._moveY > 0) {
-            ak.direction = "down";
-        } else {
-            if (ak._moveY < 0) {
-                ak.direction = "up";
-            }
-        }
-        _absMoveY = Math.abs(ak._moveY);
-        if (ak.$element.offset().top >= 0) {
-            if (ak.opts.loadUpFn != "" && ak.touchScrollTop <= 0 && ak.direction == "down" && !ak.isLockUp) {
-                e.preventDefault();
-                ak.$domUp = $("." + ak.opts.domUp.domClass);
-                if (!ak.upInsertDOM) {
-                    $("." + ak.opts.domUp.domClass).remove();
-                    ak.$element.prepend('<div class="' + ak.opts.domUp.domClass + '"></div>');
-                    ak.upInsertDOM = true;
-                }
-                fnTransition(ak.$domUp, 0);
-                if (_absMoveY <= ak.opts.distance) {
-                    ak._offsetY = _absMoveY;
-                    ak.$domUp.html('<div class="ak-dropload-refresh defer_03">' + ak.opts.domUp.domRefresh + "</div>")
-                } else {
-                    if (_absMoveY > ak.opts.distance && _absMoveY <= ak.opts.distance * 2) {
-                        ak._offsetY = ak.opts.distance + (_absMoveY - ak.opts.distance) * 0.5;
-                        ak.$domUp.html('<div class="ak-dropload-update defer_03">' + ak.opts.domUp.domUpdate + "</div>");
-                    } else {
-                        ak._offsetY = ak.opts.distance + ak.opts.distance * 0.5 + (_absMoveY - ak.opts.distance * 2) * 0.2;
-                    }
-                }
-                ak.$domUp.css({
-                    "height": ak._offsetY
-                })
-            }
-        }
-    }
-    function fnTouchend(ak) {
-        var _absMoveY = Math.abs(ak._moveY);
-        if (ak.opts.loadUpFn != "" && ak.touchScrollTop <= 0 && ak.direction == "down" && !ak.isLockUp) {
-            if (ak.$element.offset().top >= 0) {
-                fnTransition(ak.$domUp, 300);
-                if (_absMoveY > ak.opts.distance) {
-                    ak.$domUp.css({
-                        "height": ak.$domUp.children().height()
-                    });
-                    ak.$domUp.html('<div class="ak-dropload-load defer_03"><span class="loading"></span>' + ak.opts.domUp.domLoad + "</div>");
-                    ak.loading = true;
-                    ak.opts.loadUpFn(ak);
-                } else {
-                    ak.$domUp.css({
-                        "height": "0"
-                    }).on("webkitTransitionEnd mozTransitionEnd transitionend",
-                        function() {
-                            ak.upInsertDOM = false;
-                            $(this).remove();
-                        })
-                }
-                ak._moveY = 0
-            }
-        } else {
-            ak._scrollTop = ak.$scrollArea.scrollTop();
-            if (ak.opts.loadDownFn != "" && !ak.loading && !ak.isLockDown && (ak._scrollWindowHeight + ak._scrollTop) >= (ak._scrollContentHeight + ak.$element.offset().top - ak._threshold)) {
-                loadDown(ak);
-            }
-        }
-    }
-    function fnAutoLoad(ak) {
-        if (ak.opts.autoLoad) {
-            if ((ak._scrollContentHeight - ak._threshold) <= ak._scrollWindowHeight) {
-                loadDown(ak);
-            }
-        }
-    }
-    function fnRecoverContentHeight(ak) {
-        ak._scrollContentHeight = ak.$element[0].scrollHeight - _absMoveY;
-    }
-    function loadDown(ak) {
-        ak.direction = "up";
-        if (ak.$domDown) {
-            ak.$domDown.html('<div class="ak-dropload-load defer_03"><span class="loading"></span>' + ak.opts.domDown.domLoad + "</div>");
-            ak.loading = true;
-            ak.opts.loadDownFn(ak);
-        }
-    }
-    ak_DropLoad.prototype.lock = function(direction) {
-        var ak = this;
-        if (direction === undefined) {
-            if (ak.direction == "up") {
-                ak.isLockDown = true;
-            } else {
-                if (ak.direction == "down") {
-                    ak.isLockUp = true;
-                } else {
-                    ak.isLockUp = true;
-                    ak.isLockDown = true;
-                }
-            }
-        } else {
-            if (direction == "up") {
-                ak.isLockUp = true
-            } else {
-                if (direction == "down") {
-                    ak.isLockDown = true;
-                    ak.direction = "up";
-                }
-            }
-        }
-    };
-    ak_DropLoad.prototype.unlock = function() {
-        var ak = this;
-        ak.isLockUp = false;
-        ak.isLockDown = false;
-        ak.direction = "up";
-    };
-    ak_DropLoad.prototype.noData = function(flag) {
-        var ak = this;
-        if (flag === undefined || flag == true) {
-            ak.isData = false;
-        } else {
-            if (flag == false) {
-                ak.isData = true;
-            }
-        }
-    };
-    ak_DropLoad.prototype.resetload = function() {
-        var ak = this;
-        if (ak.direction == "down" && ak.upInsertDOM) {
-            ak.$domUp.css({
-                "height": "0"
-            }).on("webkitTransitionEnd mozTransitionEnd transitionend",
-                function() {
-                    ak.loading = false;
-                    ak.upInsertDOM = false;
-                    $(this).remove();
-                });
-            fnRecoverContentHeight(ak);
-            fnAutoLoad(ak);
-        } else {
-            if (ak.direction == "up") {
-                ak.loading = false;
-                if (ak.isData) {
-                    ak.$domDown.html('<div class="ak-dropload-refresh defer_03">' + ak.opts.domDown.domRefresh + "</div>");
-                    fnRecoverContentHeight(ak);
-                    fnAutoLoad(ak);
-                } else {
-                    ak.$domDown.html('<div class="ak-dropload-noData defer_03">' + ak.opts.domDown.domNoData + "</div>");
-                }
-            }
-        }
-    };
-    function fnTransition(dom, num) {
-        if (dom != undefined) {
-            dom.css({
-                "-webkit-transition": "all " + num + "ms",
-                "transition": "all " + num + "ms"
-            });
-        }
-    }
 } (jQuery));
-;
-///<jscompress sourcefile="AKjs_DropUpDown.js" />
-/*
-Modification Date: 2018-08-09
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_DropUpDown--------------------------------------*/
-(function($){
+
+/*-----------------------------------------------AKjs_DropUpDown (2018-12-13)--------------------------------------------*/
+(function($) {
     $.fn.AKjs_DropUpDown = function(setting) {
         var option = $.extend({
                 curDisplay: "",
@@ -3158,14 +1793,10 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
         };
         var drop = new DropDown($(this).children("li"));
     };
-}(jQuery));;
-///<jscompress sourcefile="AKjs_EchartsRun.js" />
-/*
-Modification Date: 2018-08-09
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_EchartsRun--------------------------------------*/
-(function($){
+} (jQuery));
+
+/*-----------------------------------------------AKjs_EchartsRun (2018-12-13)--------------------------------------------*/
+(function($) {
     $.fn.AKjs_EchartsRun = function(setting) {
         var opt = $.extend({
                 width: 0,
@@ -3193,14 +1824,10 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
         };
         new Echarts($(this));
     };
-}(jQuery));;
-///<jscompress sourcefile="AKjs_ElementControl.js" />
-/*
-Modification Date: 2018-09-30
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_ElementControl--------------------------------------------*/
-(function($){
+} (jQuery));
+
+/*-----------------------------------------------AKjs_ElementControl (2018-12-13)--------------------------------------------*/
+(function($) {
     var Plugin = function(_this, setting) {
         this.$_this = _this;
         this.defaults = {
@@ -3274,13 +1901,9 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
         var ak_ElemControl = new Plugin(this, setting);
         return ak_ElemControl.inital();
     };
-}(jQuery));;
-///<jscompress sourcefile="AKjs_Favorite.js" />
-/*
-Modification Date: 2018-12-08
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_Favorite-------------------------------------------*/
+} (jQuery));
+
+/*-----------------------------------------------AKjs_Favorite (2018-12-13)--------------------------------------------*/
 (function($) {
     $.fn.AKjs_Favorite = function(setting) {
         var options = $.extend({
@@ -3390,14 +2013,10 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
                 }
             })
     }
-} (jQuery));;
-///<jscompress sourcefile="AKjs_Filterizr.js" />
-/*
-Modification Date: 2018-11-06
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_Filterizr----------------------------------------*/
-(function($){
+} (jQuery));
+
+/*-----------------------------------------------AKjs_Filterizr (2018-12-13)--------------------------------------------*/
+(function($) {
     var ak_Filter = function(w) {
         this.init(w);
     };
@@ -4033,13 +2652,9 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
             self.css(filterInCss);
         }
     };
-}(jQuery));;
-///<jscompress sourcefile="AKjs_Flying.js" />
-/*
-Modification Date: 2018-10-19
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_Flying--------------------------------------*/
+} (jQuery));
+
+/*-----------------------------------------------AKjs_Flying (2018-12-13)--------------------------------------------*/
 (function($) {
     $.AKjs_Flying = function (element, options) {
         var defaults = {
@@ -4126,13 +2741,8 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
         });
     };
 } (jQuery));
-;
-///<jscompress sourcefile="AKjs_Form.js" />
-/*
-Modification Date: 2018-09-17
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_Form--------------------------------------------*/
+
+/*-----------------------------------------------AKjs_Form (2018-12-13)--------------------------------------------*/
 (function($) {
     $.fn.AKjs_Form = function(setting) {
         var option = $.extend({
@@ -4329,14 +2939,9 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
         }
     }
 } (jQuery));
-;
-///<jscompress sourcefile="AKjs_FullPage.js" />
-/*
-Modification Date: 2018-11-13
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_FullPage------------------------------------------*/
-(function ($) {
+
+/*-----------------------------------------------AKjs_FullPage (2018-12-13)--------------------------------------------*/
+(function($) {
     $.fn.AKjs_FullPage = function (options) {
         return this.each(function () {
             var _this = $(this),
@@ -4525,14 +3130,10 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
         }
         return AKjs_FullPage
     })();
-}(jQuery));;
-///<jscompress sourcefile="AKjs_FullScreen.js" />
-/*
-Modification Date: 2018-09-17
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_FullScreen------------------------------------------*/
-(function($){
+} (jQuery));
+
+/*-----------------------------------------------AKjs_FullScreen (2018-12-13)--------------------------------------------*/
+(function($) {
     $.fn.AKjs_FullScreen = function(setting) {
         var option = $.extend({
                 clickCallback: function() {},
@@ -4612,14 +3213,9 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
             option.fullCallback(full_flag,full);
         }
     };
-}(jQuery));
-;
-///<jscompress sourcefile="AKjs_GetVerifyCode.js" />
-/*
-Modification Date: 2018-09-17
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_GetVerifyCode-----------------------------------*/
+} (jQuery));
+
+/*-----------------------------------------------AKjs_GetVerifyCode (2018-12-13)--------------------------------------------*/
 (function($) {
     function AKjs_GetVerifyCode() {}
     AKjs_GetVerifyCode.prototype.SecondCountDown = function(options) {
@@ -4753,14 +3349,10 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
         }
     };
     window.AKjs_GetVerifyCode = new AKjs_GetVerifyCode()
-} (jQuery));;
-///<jscompress sourcefile="AKjs_GoTop.js" />
-/*
-Modification Date: 2018-09-17
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_GoTop--------------------------------------*/
-function AKjs_GoTop (setting){
+} (jQuery));
+
+/*-----------------------------------------------AKjs_GoTop (2018-12-13)--------------------------------------------*/
+function AKjs_GoTop (setting) {
     option = $.extend({
         dom: $(window),
         hide: false,
@@ -4884,13 +3476,9 @@ function AKjs_GoTop (setting){
             }
         }
     });
-};
-///<jscompress sourcefile="AKjs_HotspotMap.js" />
-/*
-Modification Date: 2018-12-04
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_HotspotMap------------------------------------------*/
+}
+
+/*-----------------------------------------------AKjs_HotspotMap (2018-12-13)--------------------------------------------*/
 (function($) {
     function Plugin(setting, option) {
         this.options = option;
@@ -4973,14 +3561,10 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
             (new Plugin($(this), option)).init();
         });
     }
-})(jQuery);;
-///<jscompress sourcefile="AKjs_HoverBorder.js" />
-/*
-Modification Date: 2018-05-23
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_HoverBorder-------------------------------------------*/
-(function($){
+} (jQuery));
+
+/*-----------------------------------------------AKjs_HoverBorder (2018-12-13)--------------------------------------------*/
+(function($) {
     $.fn.AKjs_HoverBorder = function(setting) {
         var option = $.extend({
                 start_delay: 300,
@@ -5045,14 +3629,10 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
             });
         });
     };
-}(jQuery));;
-///<jscompress sourcefile="AKjs_ImgSubject.js" />
-/*
-Modification Date: 2018-07-02
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_ImgSubject-------------------------------------------*/
-(function($){
+} (jQuery));
+
+/*-----------------------------------------------AKjs_ImgSubject (2018-12-13)--------------------------------------------*/
+(function($) {
     $.fn.AKjs_ImgSubject = function(setting) {
         var option = $.extend({
                 delay: 400,
@@ -5117,13 +3697,9 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
             });
         }
     };
-}(jQuery));;
-///<jscompress sourcefile="AKjs_IntlTelInput.js" />
-/*
-Modification Date: 2018-09-30
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_IntlTelInput------------------------------------*/
+} (jQuery));
+
+/*-----------------------------------------------AKjs_IntlTelInput (2018-12-13)--------------------------------------------*/
 (function($) {
     $.fn.AKjs_IntlTelInput = function(setting) {
         var option = $.extend({
@@ -5333,158 +3909,9 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
         var el = new TelInput($(this));
     }
 } (jQuery));
-;
-///<jscompress sourcefile="AKjs_Keyboard.js" />
-/*
-Modification Date: 2018-08-09
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_Keyboard--------------------------------------*/
+
+/*-----------------------------------------------AKjs_Lazyload (2018-12-13)--------------------------------------------*/
 (function($) {
-    $.AKjs_Keyboard = function(options) {
-        var defaults = {
-            num: 6,
-            title: "",
-            msg: "",
-            cancel: "",
-            callback: function(data) {}
-        };
-        var val = $.extend(defaults, options);
-        function fn(n) {
-            var array = new Array();
-            for(var i= 0; i<n; i++) {
-                var rnd = Math.floor(Math.random()* (10));
-                if(isIncluded(rnd, array)) {
-                    i--;
-                } else {
-                    array.push(rnd);
-                }
-            }
-            return array;
-        }
-        function isIncluded(element, array) {
-            for (var i = 0, len = array.length; i < len; i++) {
-                if(array[i] == element) {
-                    return true;
-                }
-            }
-            return false;
-        }
-        var html  = "<div class='ak-keyboard'>";
-            html += "	<div class='ak-mask'></div>";
-            html += "	<section>";
-            html += "	    <h3><i class='c_title icon-mn_dunpai_fill'></i>" + val.title + "</h3>";
-            html += "       <ul>";
-            for (i = 0; i < val.num; i++) {
-            html += "	        <li><span></span></li>";
-            }
-            html += "	    </ul>";
-            html += "	    <blockquote></blockquote>";
-            html += "		<ol>";
-            html += "           <li class='cancel'>" + val.cancel + "</li>" +
-                    "           <li class='delete'><i class='icon-im_huige text_14em line_h_22em'></i></li>";
-            html += "		</ol>";
-            html += "	</section>";
-            html += "	<figure></figure>";
-            html += "</div>";
-        var obj = {};
-        var dom = $(html);
-        var nowNo = 0;
-        var calldata = [];
-        obj.akjs_showKeyBoard = function() {
-            document.activeElement.blur();
-            dom.bind({
-                touchmove: function (andrew) {
-                    andrew.preventDefault();
-                    andrew.stopPropagation();
-                }
-            });
-            if ($(".ak-keyboard").length == 0) {
-                $("body").append(dom);
-            }
-            dom.find("figure").html("<p><span><img src='data:image/gif;base64,R0lGODlhgACAAPICAN3d3bu7u////5mZmf///wAAAAAAAAAAACH5BAUFAAQAIf8LTkVUU0NBUEUyLjADAQAAACwAAAAAgACAAAAD/ki63P4wykmrvTjrzbv/oCaMQmieaEaSaeu66/rOdBezda5P97j/wEWvFCzmhsbkDKlsEgBQwIfZGVgHTk006qFurtfsZbu19argsJhC5nK8mbR6LWm7Reev3Eqf2O8YcBZ7c30Qf1J4N3p7hmx/ijEahFiOfpAqeRiUlo92mYubhJ2enxeCEpSVpHWYFqgRnKyXrhSwD6qzpWSnmhSyurRtr76po8G7ZRW3DcDIraY8xRDOzxGIiRLMCrnWyYAQ2wTV3oeI0qGx5OUP5+g4xo10AfQBIe7a8OryH2Af9fVA4AuxLk6aDgATfqgF4hgafhkSSuzAsB9EgwUpSNzI/mFYCjkcVBXCsJHjBmUt/DESibDkRHbURI7U4NIkTG4yZ3Ko+bJcTp0eeCr09pOPC6EAkRVdNQNpQFJLfzil1ylqkKmOijZBmlXmGp5dMyapGfbivJ6GzDpKChXozbdw48qdS7eu3bt48+rdy7cv36XdfAJ2yGBw4GeGqyU+rGuxM8eEG0MGuWAyZaWWVeLMbBQzZ6bjOAvOjMsyTNJ+U6tezbq169ewY8ueTbv2DM2WcFe9nJZ3H8ZigDth2VsskJxljdfQWtxrEKvJieuAnps5DeqssJ/QLvnnR+tEwXvgHt77ePNzxYtyPsmtxc4YpcdXHlM3wYMr6ZfWvx+/0onI6wE4iIAB2neeb+2pNaCB8zEYEoEFgpaghPk5WJl7myG40m8QXmhhhv7VJVxhCnpY4k3KdQjih6OduCJ89blYnoYOqPgijG/pZ+ONFLKjo4w8ysXfjkHmOCSQPPboGY0xskgiktUReWOETkbJZJMY1iglh1CaWOWTV+7W5ZQNZtlciBds6eWXWYw4gZpJLolmmmOuaWZwddqp5C95GgGnng/N2RabWob5pqDZ3bkPonTiqNqftpEZ6YSETiqppY0yiimWjm4aj6KemhjqqJ4mAAAh+QQFBQAEACwKAAIAVwAwAAAD/ki63P4wPkCBvDjrPSvlYChKnjeeKFdWaet26yu/6zffZ23hPKj3o4AwkPqhBEhBazhEGUfJJIrJzNVO0eiJ2hw9Q1lpkCv0XkVhsYjc9Z1BafWaLfpu4soUm+iOweMueyF2GXgvgipvGoaHiBqEEnh5jWSJfouAM3t8GZAQkjiOGJ4PjKF0nYqRmTyiJKoRpq2oF6QMsrO0EbYKoEAKrjAlGLg9m7WwDb6/wLoQl7GsEAPUA4HOwsTSD9XVS9hH2w3d5HqVMuLj5OVjXDPpDOvy7W3oWRjy83NlPFoZ+fqYCQQYUOAvgusMMkPITiEQht0cHoRITWIPihUt8sCoFPEiw44PCYIMmW/kxIYmSVpLqSEBACH5BAUFAAQALB8AAgBXADAAAAP+SLrc/ivIAKu9OOs25/5gqHWdaJ4i6aFsW6mSK88ETNH4aed8uPeigXDA+p0ASEBrOEQZRckkisnUwY5RqYnaND1BWW2QK/ReoWHkidwFfTVp8ZicOoPjS7bPvokr83RufHB4LmxEH28XfjOHiCODi4yNehuKFZOUlRmXD35/NIeWkZiFOaKcpJ6mp5sXnQ2ZPKivqrGss7QvtgufQAu6ELAKskCOtSqSuMauwiQYxb8EwQ8lymEuAtoCGNQo0SHb292BMssg4ukXzSznGunw5FU42CLw9xnzOVEm9/jS0vz9A9hD4ECCOAzGQ8hDoTqGCR2Og0hD4kSKMyxqw1gV0SLHiAo/5ggpcqTAkgUXoky50UQCACH5BAUFAAQALDwAAgBCAEIAAAP+SDQ8+jDKSaudrd3Ne82ZJ44WqJFoajJpO66OK2/wbH/rrUe1G/yB3aOXAgKFi1zReNwRScym7imKSm/UjvVqy3K2QaH3AkYmTdCteVwpr5VaN5I9kc/hG3D4jY5bzUN4FnZ8IH5RgIF9ZGqJCnQKeo6PgnWNk5CSk5QhjH+bijGDly4ApgA7hCinpzqkq6ysN68isbauTCm2u6lcHru8oBvAwcIVxMXGEsi3yhTMsc4T0LLSEdSt1tfYqNoQ3N7L0OHTyOTPxOfHzerrpu3w8fLz9PX29/j5+voC/f7/AAMCNCawoMF/oA4qNLhpocOBkx5KFNBwosOEFg8SzCgDUEECACH5BAUFAAQALE4ACgAwAFcAAAPsSLq886PJSSuF0Op9cebg5n1hKY2kqaKpWrKRu7KyC9fmjYdwvHO6nygotBCLHRRyqFxWjk5GL5ocUSfTawN65aoC4ICRtguHn82aeV3FqNfsts8Er48fsrqdqt87+35IgHB8g2ZRhod/iWCFjI6GWolaCoOUC4CXDIGalWedoKGio6SlpqeoqaoqAK2ur7CxsDWytbavLre6tqy7vrgmv8IAvcO7uca3tMmyq87P0NHS09TVMgLYAqXZ3KLc39qd4N/i4+SU5uPo6eBa7O3u793x8tj09ev14Vf6+/z4+diVSxeKoLdzo+ZRSAAAIfkEBQUABAAsTgAfADAAVwAAA+lIutz+bsgBq71tTsw70aAnRmA4jmV6iqm6Yq37VrE8k7V207m+4z3KLxOUDIG9IzGoRLaajxwUUpvyTNarMMvter/gsHhMLpvP3IB6zW6727O3fM5e0e/zE34PH/H/AXqAe3aDdHGGb2iLjI2Oj5CRkpMKAJYAZpeaY5qdmGCenaChol2koaannlyqq6ytm6+wlrKzqbOfWbi5EAK+Ai+4Fb+/wbC9xMXGp8jJwDfMD87K0KXS0887scPYYti+3t1h39lf32Pn4+Lq0+Hr5u9e5O7O6PFd6ez1+vtg+f7t6BEj088euCkJAAAh+QQFBQAEACw8ADwAQgBCAAAD+Ui63P5QjUmrvTbqHbH/FSdyYPmN6GOuWepKbPy+sTy7tXnP+bn/wKBwSCwaj8ikcslsOp/QqHRKCFgD1Nd1mx1tv9iuBvwVR8hgswNNVjPYbXcVXpbP6Vf7HR928/N2f1Z6gkYAhwA3f0SIiIp4Q42NO3SRkodAbJaXiZl1EQKhAhycmEFcGqKipKVPqqobpaZMr6uxrU21oay4S7qjvJe5uiOytMQixr7Iyb1Ivyiync/MzZxK0NHKR9na19S1L9tF3d7C3NXmkujh4uNC5SnvQfHy30T16o7k6S7n/O12TGL3So+DfHYQylHohqEahw8LGnwAa2KDBAAh+QQFBQAEACwfAE4AVwAwAAAD/ki63P4wyjfqmDjrzYn9XSiOzWdeZKpKp7m+sNe6cR3Ora1reL7/kN4JSHQIacXkEZQsLi1N5RMVBU41gqzgF+gGRk+MVqvzesHHyXhcM5tJQvU623Z3VTjJnByzn/FIEHt0EwCGABh+dytMEYNbhYeGiYpRj5ARkpITiotFjxiah5R+SZehooicnZ+DGamqq6VAoK+pGqw/taiiuJU7u7yaG7k1pxqwxMUwwcKbyrPMzZG90NEr09TDHMsp2drP3L8q3xLJHd0i5ea3Iekcxx3n6O9YriLz9Ncd9/jtIuNC9AuRT58bb2tSFDToiQQbhf9GvKnibBTFKAsv/sioFFEHx441PoKEIXLki2omiYRLqSABACH5BAUFAAQALAoATgBXADAAAAP+SLrcLlC4Sau9OLfItf/gx41SaJ4hOaJsS6mkK7ewOt9gbeM8pse94OS3EhoXxM5xmYwsj03IE9qcUokngBYgHHgHmWR2q+19vz4dikzGnc+XWou9db+9aSWLXr/d0XFOLnxlFwGHARh/eFYEhFyGiIeKi1aPkBWSkheLjEuPGJqIlH9Pl6GiiZydn4QZqaqrpUagr6karEK1qKK4lUG7vJoeuTinGrDExTPBwpvKs8zNkb3Q0YOuH8kfy3vZ2rcg3WN8Idvcv97l5uHi6SbHIOfo7yDTyO3u1/brJvP6b9b0Y1fNRD1+bVD8A+hJYCGF+QwCakRtGEUrCy8KyagTsQfHjjg+gpwhcqSMgiaNPOORAAAh+QQFBQAEACwCADwAQgBCAAAD9Ugk3P7wqUmrvZjGzV3+4NWNXGiCZCqdrKW+QitPsDrf9Xjv+bb/wKBwSCwaj8ikcslsOp/QqHRKPQGugKoMy9WauOCsNxMGjy/l8JmSLq8Jbfc6rj7TzfY79q3f5/t8gIF3OwGGAUZ6hYeGRXQ/jIxEbUGRh454QJaXmFdDm40gA6MDUqCIoqSjUKeoGaqqT6chsKROrbS1pU2zubW8oCe6u0u9vrBMxsexSrjCusXBLMPNysu2SdbXq0ja28RG3qm/R+LjyOHmH9TpmzvsRdI38ETyM/T1kUD4+aE//G8mAAxIYGBAg28QrlF4hmFDdAQxMEsAACH5BAUFAAQALAIACgAwAGwAAAP+SLrc/ktIAau9bU7Mu9KaJ1bgNp5MaaKnurKiS8GtS4/yjdt6J889TC4oHBItxiOJp4Qkm44nNCKdEqrTnzXKhAC+gB6WAAbrsOX0rctIu2HshXvOKlXmdFTIgs9P+35QgG9/g2VbhodWiWaFjIiPkINbcoCUlXiXbYSam1+doKGio6SlpqeoqToBrK2ur7CvMLG0ta4otrm1J7q9siO+wQG8wr24xbazyLGqzc7P0NHS09TPA9cDo9jboNve2Zff3pTi31bl4lDo6U3r5kru4/Dx2Or01+334PP0U/cs3Cr0Q/HugTsY5SCgu5FQoTwaCwXW0xExXEOLF8ll3LIqrlNFjew0feS48dxIkyFBpiS5EmVBjC9ZxnQ5019JmhM9tlSJT1tOCwkAACH5BAkFAAQALAAAAAABAAEAAAMCSAkAOw=='><em>" + val.msg + "</em></span></p>");
-            dom.find("ol").find(".number").remove();
-            num_arry = fn(10);
-            for(var i= 0; i<num_arry.length; i++) {
-                dom.find("ol").append("<li class='number'>"+num_arry[i]+"</li>");
-            }
-            dom.find("ul").find("li").css({
-                'width': 'calc(100% / ' + val.num + ')'
-            });
-            dom.children(".ak-mask").fadeIn();
-            dom.children("section").animate({
-                    'bottom': '0'
-                },
-                150);
-            nowNo = 0;
-            dom.find("ul").find("span").text(' ');
-            dom.children(".ak-mask").click(function() {
-                if (nowNo <= val.num) {
-                    obj.akjs_hideKeyBoard();
-                }
-            });
-            dom.find("li").click(function() {
-                if (nowNo <= val.num && nowNo > -1) {
-                    if ($(this).hasClass('cancel')) {
-                        obj.akjs_hideKeyBoard();
-                    } else if ($(this).hasClass('delete')) {
-                        if (nowNo > 0) {
-                            nowNo--;
-                            dom.find("ul").find("span").eq(nowNo).text("");
-                            calldata.pop();
-                        }
-                    } else if ($(this).hasClass("number")) {
-                        dom.find('blockquote').text('');
-                        dom.find("ul").find("span").eq(nowNo).text("●");
-                        calldata.push($(this).text());
-                        nowNo++;
-                        if (nowNo == val.num) {
-                            dom.children('figure').css({
-                                "display": "table"
-                            });
-                            val.callback(calldata,dom);
-                        }
-                    }
-                } else {
-                    return false;
-                }
-            });
-        };
-        obj.akjs_reset = function(msg) {
-            nowNo = 0;
-            dom.find("ul").find("span").text("");
-            dom.children('figure').css({
-                "display": "none"
-            });
-            if (msg) {
-                dom.find("blockquote").text(msg);
-            } else {
-                dom.find("blockquote").text('');
-            }
-            calldata = [];
-        };
-        obj.akjs_hideKeyBoard = function() {
-            dom.children("section").animate({
-                    'bottom': '-360px'
-                },
-                150);
-            dom.children(".ak-mask").fadeOut(function() {
-                dom.remove();
-            });
-            setTimeout(function() {
-                obj.akjs_reset();
-            }, 1000);
-        };
-        return obj;
-    };
-})(jQuery);;
-///<jscompress sourcefile="AKjs_Lazyload.js" />
-/*
-Modification Date: 2018-11-12
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_Lazyload-------------------------------------------*/
-(function($){
     $.fn.AKjs_Lazyload = function(setting) {
         var option = $.extend({
                 scroll: $(window),
@@ -5711,13 +4138,9 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
             var TransparentImage ="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAAAAACH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS41LWMwMTQgNzkuMTUxNDgxLCAyMDEzLzAzLzEzLTEyOjA5OjE1ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkYwMkY5NUExNkVBRjExRThCOEE5RjZEMjg3OUQzMUIxIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkYwMkY5NUEyNkVBRjExRThCOEE5RjZEMjg3OUQzMUIxIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RjAyRjk1OUY2RUFGMTFFOEI4QTlGNkQyODc5RDMxQjEiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RjAyRjk1QTA2RUFGMTFFOEI4QTlGNkQyODc5RDMxQjEiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4B//79/Pv6+fj39vX08/Lx8O/u7ezr6uno5+bl5OPi4eDf3t3c29rZ2NfW1dTT0tHQz87NzMvKycjHxsXEw8LBwL++vby7urm4t7a1tLOysbCvrq2sq6qpqKempaSjoqGgn56dnJuamZiXlpWUk5KRkI+OjYyLiomIh4aFhIOCgYB/fn18e3p5eHd2dXRzcnFwb25tbGtqaWhnZmVkY2JhYF9eXVxbWllYV1ZVVFNSUVBPTk1MS0pJSEdGRURDQkFAPz49PDs6OTg3NjU0MzIxMC8uLSwrKikoJyYlJCMiISAfHh0cGxoZGBcWFRQTEhEQDw4NDAsKCQgHBgUEAwIBAAAh+QQBAAAAACwAAAAAAQABAAACAkQBADs=";
         });
     };
-}(jQuery));;
-///<jscompress sourcefile="AKjs_lightSlider.js" />
-/*
-Modification Date: 2018-09-17
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_lightSlider---------------------------------------*/
+} (jQuery));
+
+/*-----------------------------------------------AKjs_lightSlider (2018-12-13)--------------------------------------------*/
 (function($) {
     var defaults = {
         item: 3,
@@ -6494,14 +4917,10 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
             });
         return this
     }
-} (jQuery));;
-///<jscompress sourcefile="AKjs_Loader.js" />
-/*
-Modification Date: 2018-09-30
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_Loader------------------------------------------*/
-function AKjs_Loader(setting){
+} (jQuery));
+
+/*-----------------------------------------------AKjs_Loader (2018-12-13)--------------------------------------------*/
+function AKjs_Loader(setting) {
     var option = $.extend({
             ele: "",
             autoMode: true,
@@ -6731,13 +5150,8 @@ function AKjs_Loader(setting){
         }
     });
 }
-;
-///<jscompress sourcefile="AKjs_Marquee.js" />
-/*
-Modification Date: 2018-10-10
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_Marquee--------------------------------------*/
+
+/*-----------------------------------------------AKjs_Marquee (2018-12-13)--------------------------------------------*/
 (function($) {
     var methods = {
         init: function(setting) {
@@ -7893,919 +6307,908 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
             }
         }
     }
-} (jQuery));;
-///<jscompress sourcefile="AKjs_MediaElement.js" />
-/*
-Modification Date: 2018-09-17
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_MediaElement--------------------------------------*/
-var akjs = akjs || {};
-akjs.meIndex = 0,
-akjs.plugins = {
-    silverlight: [{
-        version: [3, 0],
-        types: ["video/mp4", "video/m4v", "video/mov", "video/wmv", "audio/wma", "audio/m4a", "audio/mp3", "audio/wav", "audio/mpeg"]
-    }],
-    flash: [{
-        version: [9, 0, 124],
-        types: ["video/mp4", "video/m4v", "video/mov", "video/flv", "video/rtmp", "video/x-flv", "audio/flv", "audio/x-flv", "audio/mp3", "audio/m4a", "audio/mpeg", "video/dailymotion", "video/x-dailymotion", "application/x-mpegURL"]
-    }],
-    vimeo: [{
-        version: null,
-        types: ["video/vimeo", "video/x-vimeo"]
-    }]
-},
-akjs.Utility = {
-    encodeUrl: function(a) {
-        return encodeURIComponent(a)
+} (jQuery));
+
+/*-----------------------------------------------AKjs_MediaElement (2018-12-13)--------------------------------------------*/
+(function($) {
+    var akjs = akjs || {};
+    akjs.meIndex = 0,
+    akjs.plugins = {
+        silverlight: [{
+            version: [3, 0],
+            types: ["video/mp4", "video/m4v", "video/mov", "video/wmv", "audio/wma", "audio/m4a", "audio/mp3", "audio/wav", "audio/mpeg"]
+        }],
+        flash: [{
+            version: [9, 0, 124],
+            types: ["video/mp4", "video/m4v", "video/mov", "video/flv", "video/rtmp", "video/x-flv", "audio/flv", "audio/x-flv", "audio/mp3", "audio/m4a", "audio/mpeg", "video/dailymotion", "video/x-dailymotion", "application/x-mpegURL"]
+        }],
+        vimeo: [{
+            version: null,
+            types: ["video/vimeo", "video/x-vimeo"]
+        }]
     },
-    escapeHTML: function(a) {
-        return a.toString().split("&").join("&amp;").split("<").join("&lt;").split('"').join("&quot;")
-    },
-    absolutizeUrl: function(a) {
-        var b = document.createElement("div");
-        return b.innerHTML = '<a href="' + this.escapeHTML(a) + '">x</a>',
-            b.firstChild.href
-    },
-    getScriptPath: function(a) {
-        for (var b, c, d, e, f, g, h = 0,
-                 i = "",
-                 j = "",
-                 k = document.getElementsByTagName("script"), l = k.length, m = a.length; l > h; h++) {
-            for (e = k[h].src, c = e.lastIndexOf("/"), c > -1 ? (g = e.substring(c + 1), f = e.substring(0, c + 1)) : (g = e, f = ""), b = 0; m > b; b++) if (j = a[b], d = g.indexOf(j), d > -1) {
-                i = f;
-                break
-            }
-            if ("" !== i) break
-        }
-        return i
-    },
-    secondsToTimeCode: function(a, b, c, d) {
-        "undefined" == typeof c ? c = !1 : "undefined" == typeof d && (d = 25);
-        var e = Math.floor(a / 3600) % 24,
-            f = Math.floor(a / 60) % 60,
-            g = Math.floor(a % 60),
-            h = Math.floor((a % 1 * d).toFixed(3)),
-            i = (b || e > 0 ? (10 > e ? "0" + e: e) + ":": "") + (10 > f ? "0" + f: f) + ":" + (10 > g ? "0" + g: g) + (c ? ":" + (10 > h ? "0" + h: h) : "");
-        return i
-    },
-    timeCodeToSeconds: function(a, b, c, d) {
-        "undefined" == typeof c ? c = !1 : "undefined" == typeof d && (d = 25);
-        var e = a.split(":"),
-            f = parseInt(e[0], 10),
-            g = parseInt(e[1], 10),
-            h = parseInt(e[2], 10),
-            i = 0,
-            j = 0;
-        return c && (i = parseInt(e[3]) / d),
-            j = 3600 * f + 60 * g + h + i
-    },
-    convertSMPTEtoSeconds: function(a) {
-        if ("string" != typeof a) return ! 1;
-        a = a.replace(",", ".");
-        var b = 0,
-            c = -1 != a.indexOf(".") ? a.split(".")[1].length: 0,
-            d = 1;
-        a = a.split(":").reverse();
-        for (var e = 0; e < a.length; e++) d = 1,
-        e > 0 && (d = Math.pow(60, e)),
-            b += Number(a[e]) * d;
-        return Number(b.toFixed(c))
-    },
-    removeSwf: function(a) {
-        var b = document.getElementById(a);
-        b && /object|embed/i.test(b.nodeName) && (akjs.MediaFeatures.isIE ? (b.style.display = "none",
-            function() {
-                4 == b.readyState ? akjs.Utility.removeObjectInIE(a) : setTimeout(arguments.callee, 10)
-            } ()) : b.parentNode.removeChild(b))
-    },
-    removeObjectInIE: function(a) {
-        var b = document.getElementById(a);
-        if (b) {
-            for (var c in b)"function" == typeof b[c] && (b[c] = null);
-            b.parentNode.removeChild(b)
-        }
-    }
-},
-akjs.PluginDetector = {
-    hasPluginVersion: function(a, b) {
-        var c = this.plugins[a];
-        return b[1] = b[1] || 0,
-            b[2] = b[2] || 0,
-            c[0] > b[0] || c[0] == b[0] && c[1] > b[1] || c[0] == b[0] && c[1] == b[1] && c[2] >= b[2] ? !0 : !1
-    },
-    nav: window.navigator,
-    ua: window.navigator.userAgent.toLowerCase(),
-    plugins: [],
-    addPlugin: function(a, b, c, d, e) {
-        this.plugins[a] = this.detectPlugin(b, c, d, e)
-    },
-    detectPlugin: function(a, b, c, d) {
-        var e, f, g, h = [0, 0, 0];
-        if ("undefined" != typeof this.nav.plugins && "object" == typeof this.nav.plugins[a]) {
-            if (e = this.nav.plugins[a].description, e && ("undefined" == typeof this.nav.mimeTypes || !this.nav.mimeTypes[b] || this.nav.mimeTypes[b].enabledPlugin)) for (h = e.replace(a, "").replace(/^\s+/, "").replace(/\sr/gi, ".").split("."), f = 0; f < h.length; f++) h[f] = parseInt(h[f].match(/\d+/), 10)
-        } else if ("undefined" != typeof window.ActiveXObject) try {
-            g = new ActiveXObject(c),
-            g && (h = d(g))
-        } catch(i) {}
-        return h
-    }
-},
-akjs.MediaFeatures = {
-    init: function() {
-        var a, b, c = this,
-            d = document,
-            e = akjs.PluginDetector.nav,
-            f = akjs.PluginDetector.ua.toLowerCase(),
-            g = ["source", "track", "audio", "video"];
-        c.isiPad = null !== f.match(/ipad/i),
-            c.isiPhone = null !== f.match(/iphone/i),
-            c.isiOS = c.isiPhone || c.isiPad,
-            c.isAndroid = null !== f.match(/android/i),
-            c.isBustedAndroid = null !== f.match(/android 2\.[12]/),
-            c.isBustedNativeHTTPS = "https:" === location.protocol && (null !== f.match(/android [12]\./) || null !== f.match(/macintosh.* version.* safari/)),
-            c.isIE = -1 != e.appName.toLowerCase().indexOf("microsoft") || null !== e.appName.toLowerCase().match(/trident/gi),
-            c.isChrome = null !== f.match(/chrome/gi),
-            c.isChromium = null !== f.match(/chromium/gi),
-            c.isFirefox = null !== f.match(/firefox/gi),
-            c.isWebkit = null !== f.match(/webkit/gi),
-            c.isGecko = null !== f.match(/gecko/gi) && !c.isWebkit && !c.isIE,
-            c.isOpera = null !== f.match(/opera/gi),
-            c.hasTouch = "ontouchstart" in window,
-            c.svg = !!document.createElementNS && !!document.createElementNS("http://www.w3.org/2000/svg", "svg").createSVGRect;
-        for (a = 0; a < g.length; a++) b = document.createElement(g[a]);
-        c.supportsMediaTag = "undefined" != typeof b.canPlayType || c.isBustedAndroid;
-        try {
-            b.canPlayType("video/mp4")
-        } catch(h) {
-            c.supportsMediaTag = !1
-        }
-        c.hasSemiNativeFullScreen = "undefined" != typeof b.webkitEnterFullscreen,
-            c.hasNativeFullscreen = "undefined" != typeof b.requestFullscreen,
-            c.hasWebkitNativeFullScreen = "undefined" != typeof b.webkitRequestFullScreen,
-            c.hasMozNativeFullScreen = "undefined" != typeof b.mozRequestFullScreen,
-            c.hasMsNativeFullScreen = "undefined" != typeof b.msRequestFullscreen,
-            c.hasTrueNativeFullScreen = c.hasWebkitNativeFullScreen || c.hasMozNativeFullScreen || c.hasMsNativeFullScreen,
-            c.nativeFullScreenEnabled = c.hasTrueNativeFullScreen,
-            c.hasMozNativeFullScreen ? c.nativeFullScreenEnabled = document.mozFullScreenEnabled: c.hasMsNativeFullScreen && (c.nativeFullScreenEnabled = document.msFullscreenEnabled),
-        c.isChrome && (c.hasSemiNativeFullScreen = !1),
-        c.hasTrueNativeFullScreen && (c.fullScreenEventName = "", c.hasWebkitNativeFullScreen ? c.fullScreenEventName = "webkitfullscreenchange": c.hasMozNativeFullScreen ? c.fullScreenEventName = "mozfullscreenchange": c.hasMsNativeFullScreen && (c.fullScreenEventName = "MSFullscreenChange"), c.isFullScreen = function() {
-            return c.hasMozNativeFullScreen ? d.mozFullScreen: c.hasWebkitNativeFullScreen ? d.webkitIsFullScreen: c.hasMsNativeFullScreen ? null !== d.msFullscreenElement: void 0
+    akjs.Utility = {
+        encodeUrl: function(a) {
+            return encodeURIComponent(a)
         },
-            c.requestFullScreen = function(a) {
-                c.hasWebkitNativeFullScreen ? a.webkitRequestFullScreen() : c.hasMozNativeFullScreen ? a.mozRequestFullScreen() : c.hasMsNativeFullScreen && a.msRequestFullscreen()
-            },
-            c.cancelFullScreen = function() {
-                c.hasWebkitNativeFullScreen ? document.webkitCancelFullScreen() : c.hasMozNativeFullScreen ? document.mozCancelFullScreen() : c.hasMsNativeFullScreen && document.msExitFullscreen()
-            }),
-        c.hasSemiNativeFullScreen && f.match(/mac os x 10_5/i) && (c.hasNativeFullScreen = !1, c.hasSemiNativeFullScreen = !1)
-    }
-},
-akjs.MediaFeatures.init(),
-akjs.HtmlMediaElement = {
-    pluginType: "native",
-    isFullScreen: !1,
-    setCurrentTime: function(a) {
-        this.currentTime = a
-    },
-    setMuted: function(a) {
-        this.muted = a
-    },
-    setVolume: function(a) {
-        this.volume = a
-    },
-    stop: function() {
-        this.pause()
-    },
-    setSrc: function(a) {
-        for (var b = this.getElementsByTagName("source"); b.length > 0;) this.removeChild(b[0]);
-        if ("string" == typeof a) this.src = a;
-        else {
-            var c, d;
-            for (c = 0; c < a.length; c++) if (d = a[c], this.canPlayType(d.type)) {
-                this.src = d.src;
-                break
+        escapeHTML: function(a) {
+            return a.toString().split("&").join("&amp;").split("<").join("&lt;").split('"').join("&quot;")
+        },
+        absolutizeUrl: function(a) {
+            var b = document.createElement("div");
+            return b.innerHTML = '<a href="' + this.escapeHTML(a) + '">x</a>',
+                b.firstChild.href
+        },
+        getScriptPath: function(a) {
+            for (var b, c, d, e, f, g, h = 0,
+                     i = "",
+                     j = "",
+                     k = document.getElementsByTagName("script"), l = k.length, m = a.length; l > h; h++) {
+                for (e = k[h].src, c = e.lastIndexOf("/"), c > -1 ? (g = e.substring(c + 1), f = e.substring(0, c + 1)) : (g = e, f = ""), b = 0; m > b; b++) if (j = a[b], d = g.indexOf(j), d > -1) {
+                    i = f;
+                    break
+                }
+                if ("" !== i) break
             }
-        }
-    },
-    setVideoSize: function(a, b) {
-        this.width = a,
-            this.height = b
-    }
-},
-akjs.MediaPluginBridge = {
-    pluginMediaElements: {},
-    htmlMediaElements: {},
-    registerPluginElement: function(a, b, c) {
-        this.pluginMediaElements[a] = b,
-            this.htmlMediaElements[a] = c
-    },
-    unregisterPluginElement: function(a) {
-        delete this.pluginMediaElements[a],
-            delete this.htmlMediaElements[a]
-    },
-    initPlugin: function(a) {
-        var b = this.pluginMediaElements[a],
-            c = this.htmlMediaElements[a];
-        if (b) {
-            switch (b.pluginType) {
-                case "flash":
-                    b.pluginElement = b.pluginApi = document.getElementById(a);
-                    break;
-                case "silverlight":
-                    b.pluginElement = document.getElementById(b.id),
-                        b.pluginApi = b.pluginElement.Content.MediaElementJS
-            }
-            null != b.pluginApi && b.success && b.success(b, c)
-        }
-    },
-    fireEvent: function(a, b, c) {
-        var d, e, f, g = this.pluginMediaElements[a];
-        if (g) {
-            d = {
-                type: b,
-                target: g
-            };
-            for (e in c) g[e] = c[e],
-                d[e] = c[e];
-            f = c.bufferedTime || 0,
-                d.target.buffered = d.buffered = {
-                    start: function() {
-                        return 0
-                    },
-                    end: function() {
-                        return f
-                    },
-                    length: 1
-                },
-                g.dispatchEvent(d.type, d)
-        }
-    }
-},
-akjs.MediaElementDefaults = {
-    mode: "auto",
-    plugins: ["flash", "silverlight","vimeo"],
-    enablePluginDebug: !1,
-    httpsBasicAuthSite: !1,
-    type: "",
-    pluginPath: akjs.Utility.getScriptPath(["mediaelement.js", "mediaelement.min.js", "mediaelement-and-player.js", "mediaelement-and-player.min.js"]),
-    flashName: "flashmediaelement.swf",
-    flashStreamer: "",
-    enablePluginSmoothing: !1,
-    enablePseudoStreaming: !1,
-    pseudoStreamingStartQueryParam: "start",
-    silverlightName: "silverlightmediaelement.xap",
-    defaultVideoWidth: 480,
-    defaultVideoHeight: 270,
-    pluginWidth: -1,
-    pluginHeight: -1,
-    pluginVars: [],
-    timerRate: 250,
-    startVolume: .8,
-    success: function() {},
-    error: function() {}
-},
-akjs.MediaElement = function(a, b) {
-    return akjs.HtmlMediaElementShim.create(a, b)
-},
-akjs.HtmlMediaElementShim = {
-    create: function(a, b) {
-        var c, d, e = akjs.MediaElementDefaults,
-            f = "string" == typeof a ? document.getElementById(a) : a,
-            g = f.tagName.toLowerCase(),
-            h = "audio" === g || "video" === g,
-            i = f.getAttribute(h ? "src": "href"),
-            j = f.getAttribute("poster"),
-            k = f.getAttribute("autoplay"),
-            l = f.getAttribute("preload"),
-            m = f.getAttribute("controls");
-        for (d in b) e[d] = b[d];
-        return i = "undefined" == typeof i || null === i || "" == i ? null: i,
-            j = "undefined" == typeof j || null === j ? "": j,
-            l = "undefined" == typeof l || null === l || "false" === l ? "none": l,
-            k = !("undefined" == typeof k || null === k || "false" === k),
-            m = !("undefined" == typeof m || null === m || "false" === m),
-            c = this.determinePlayback(f, e, akjs.MediaFeatures.supportsMediaTag, h, i),
-            c.url = null !== c.url ? akjs.Utility.absolutizeUrl(c.url) : "",
-            "native" == c.method ? (akjs.MediaFeatures.isBustedAndroid && (f.src = c.url, f.addEventListener("click",
+            return i
+        },
+        secondsToTimeCode: function(a, b, c, d) {
+            "undefined" == typeof c ? c = !1 : "undefined" == typeof d && (d = 25);
+            var e = Math.floor(a / 3600) % 24,
+                f = Math.floor(a / 60) % 60,
+                g = Math.floor(a % 60),
+                h = Math.floor((a % 1 * d).toFixed(3)),
+                i = (b || e > 0 ? (10 > e ? "0" + e: e) + ":": "") + (10 > f ? "0" + f: f) + ":" + (10 > g ? "0" + g: g) + (c ? ":" + (10 > h ? "0" + h: h) : "");
+            return i
+        },
+        timeCodeToSeconds: function(a, b, c, d) {
+            "undefined" == typeof c ? c = !1 : "undefined" == typeof d && (d = 25);
+            var e = a.split(":"),
+                f = parseInt(e[0], 10),
+                g = parseInt(e[1], 10),
+                h = parseInt(e[2], 10),
+                i = 0,
+                j = 0;
+            return c && (i = parseInt(e[3]) / d),
+                j = 3600 * f + 60 * g + h + i
+        },
+        convertSMPTEtoSeconds: function(a) {
+            if ("string" != typeof a) return ! 1;
+            a = a.replace(",", ".");
+            var b = 0,
+                c = -1 != a.indexOf(".") ? a.split(".")[1].length: 0,
+                d = 1;
+            a = a.split(":").reverse();
+            for (var e = 0; e < a.length; e++) d = 1,
+            e > 0 && (d = Math.pow(60, e)),
+                b += Number(a[e]) * d;
+            return Number(b.toFixed(c))
+        },
+        removeSwf: function(a) {
+            var b = document.getElementById(a);
+            b && /object|embed/i.test(b.nodeName) && (akjs.MediaFeatures.isIE ? (b.style.display = "none",
                 function() {
-                    f.play()
+                    4 == b.readyState ? akjs.Utility.removeObjectInIE(a) : setTimeout(arguments.callee, 10)
+                } ()) : b.parentNode.removeChild(b))
+        },
+        removeObjectInIE: function(a) {
+            var b = document.getElementById(a);
+            if (b) {
+                for (var c in b)"function" == typeof b[c] && (b[c] = null);
+                b.parentNode.removeChild(b)
+            }
+        }
+    },
+    akjs.PluginDetector = {
+        hasPluginVersion: function(a, b) {
+            var c = this.plugins[a];
+            return b[1] = b[1] || 0,
+                b[2] = b[2] || 0,
+                c[0] > b[0] || c[0] == b[0] && c[1] > b[1] || c[0] == b[0] && c[1] == b[1] && c[2] >= b[2] ? !0 : !1
+        },
+        nav: window.navigator,
+        ua: window.navigator.userAgent.toLowerCase(),
+        plugins: [],
+        addPlugin: function(a, b, c, d, e) {
+            this.plugins[a] = this.detectPlugin(b, c, d, e)
+        },
+        detectPlugin: function(a, b, c, d) {
+            var e, f, g, h = [0, 0, 0];
+            if ("undefined" != typeof this.nav.plugins && "object" == typeof this.nav.plugins[a]) {
+                if (e = this.nav.plugins[a].description, e && ("undefined" == typeof this.nav.mimeTypes || !this.nav.mimeTypes[b] || this.nav.mimeTypes[b].enabledPlugin)) for (h = e.replace(a, "").replace(/^\s+/, "").replace(/\sr/gi, ".").split("."), f = 0; f < h.length; f++) h[f] = parseInt(h[f].match(/\d+/), 10)
+            } else if ("undefined" != typeof window.ActiveXObject) try {
+                g = new ActiveXObject(c),
+                g && (h = d(g))
+            } catch(i) {}
+            return h
+        }
+    },
+    akjs.MediaFeatures = {
+        init: function() {
+            var a, b, c = this,
+                d = document,
+                e = akjs.PluginDetector.nav,
+                f = akjs.PluginDetector.ua.toLowerCase(),
+                g = ["source", "track", "audio", "video"];
+            c.isiPad = null !== f.match(/ipad/i),
+                c.isiPhone = null !== f.match(/iphone/i),
+                c.isiOS = c.isiPhone || c.isiPad,
+                c.isAndroid = null !== f.match(/android/i),
+                c.isBustedAndroid = null !== f.match(/android 2\.[12]/),
+                c.isBustedNativeHTTPS = "https:" === location.protocol && (null !== f.match(/android [12]\./) || null !== f.match(/macintosh.* version.* safari/)),
+                c.isIE = -1 != e.appName.toLowerCase().indexOf("microsoft") || null !== e.appName.toLowerCase().match(/trident/gi),
+                c.isChrome = null !== f.match(/chrome/gi),
+                c.isChromium = null !== f.match(/chromium/gi),
+                c.isFirefox = null !== f.match(/firefox/gi),
+                c.isWebkit = null !== f.match(/webkit/gi),
+                c.isGecko = null !== f.match(/gecko/gi) && !c.isWebkit && !c.isIE,
+                c.isOpera = null !== f.match(/opera/gi),
+                c.hasTouch = "ontouchstart" in window,
+                c.svg = !!document.createElementNS && !!document.createElementNS("http://www.w3.org/2000/svg", "svg").createSVGRect;
+            for (a = 0; a < g.length; a++) b = document.createElement(g[a]);
+            c.supportsMediaTag = "undefined" != typeof b.canPlayType || c.isBustedAndroid;
+            try {
+                b.canPlayType("video/mp4")
+            } catch(h) {
+                c.supportsMediaTag = !1
+            }
+            c.hasSemiNativeFullScreen = "undefined" != typeof b.webkitEnterFullscreen,
+                c.hasNativeFullscreen = "undefined" != typeof b.requestFullscreen,
+                c.hasWebkitNativeFullScreen = "undefined" != typeof b.webkitRequestFullScreen,
+                c.hasMozNativeFullScreen = "undefined" != typeof b.mozRequestFullScreen,
+                c.hasMsNativeFullScreen = "undefined" != typeof b.msRequestFullscreen,
+                c.hasTrueNativeFullScreen = c.hasWebkitNativeFullScreen || c.hasMozNativeFullScreen || c.hasMsNativeFullScreen,
+                c.nativeFullScreenEnabled = c.hasTrueNativeFullScreen,
+                c.hasMozNativeFullScreen ? c.nativeFullScreenEnabled = document.mozFullScreenEnabled: c.hasMsNativeFullScreen && (c.nativeFullScreenEnabled = document.msFullscreenEnabled),
+            c.isChrome && (c.hasSemiNativeFullScreen = !1),
+            c.hasTrueNativeFullScreen && (c.fullScreenEventName = "", c.hasWebkitNativeFullScreen ? c.fullScreenEventName = "webkitfullscreenchange": c.hasMozNativeFullScreen ? c.fullScreenEventName = "mozfullscreenchange": c.hasMsNativeFullScreen && (c.fullScreenEventName = "MSFullscreenChange"), c.isFullScreen = function() {
+                return c.hasMozNativeFullScreen ? d.mozFullScreen: c.hasWebkitNativeFullScreen ? d.webkitIsFullScreen: c.hasMsNativeFullScreen ? null !== d.msFullscreenElement: void 0
+            },
+                c.requestFullScreen = function(a) {
+                    c.hasWebkitNativeFullScreen ? a.webkitRequestFullScreen() : c.hasMozNativeFullScreen ? a.mozRequestFullScreen() : c.hasMsNativeFullScreen && a.msRequestFullscreen()
                 },
-                !1)), this.updateNative(c, e, k, l)) : "" !== c.method ? this.createPlugin(c, e, j, k, l, m) : (this.createErrorMessage(c, e, j), this)
-    },
-    determinePlayback: function(a, b, c, d, e) {
-        var f, g, h, i, j, k, l, m, n, o, p, q = [],
-            r = {
-                method: "",
-                url: "",
-                htmlMediaElement: a,
-                isVideo: "audio" != a.tagName.toLowerCase()
-            };
-        if ("undefined" != typeof b.type && "" !== b.type) if ("string" == typeof b.type) q.push({
-            type: b.type,
-            url: e
-        });
-        else for (f = 0; f < b.type.length; f++) q.push({
-                type: b.type[f],
-                url: e
-            });
-        else if (null !== e) k = this.formatType(e, a.getAttribute("type")),
-            q.push({
-                type: k,
-                url: e
-            });
-        else for (f = 0; f < a.childNodes.length; f++) j = a.childNodes[f],
-            1 == j.nodeType && "source" == j.tagName.toLowerCase() && (e = j.getAttribute("src"), k = this.formatType(e, j.getAttribute("type")), p = j.getAttribute("media"), (!p || !window.matchMedia || window.matchMedia && window.matchMedia(p).matches) && q.push({
-                type: k,
-                url: e
-            }));
-        if (!d && q.length > 0 && null !== q[0].url && this.getTypeFromFile(q[0].url).indexOf("audio") > -1 && (r.isVideo = !1), akjs.MediaFeatures.isBustedAndroid && (a.canPlayType = function(a) {
-                return null !== a.match(/video\/(mp4|m4v)/gi) ? "maybe": ""
-            }), akjs.MediaFeatures.isChromium && (a.canPlayType = function(a) {
-                return null !== a.match(/video\/(webm|ogv|ogg)/gi) ? "maybe": ""
-            }), !(!c || "auto" !== b.mode && "auto_plugin" !== b.mode && "native" !== b.mode || akjs.MediaFeatures.isBustedNativeHTTPS && b.httpsBasicAuthSite === !0)) {
-            for (d || (o = document.createElement(r.isVideo ? "video": "audio"), a.parentNode.insertBefore(o, a), a.style.display = "none", r.htmlMediaElement = a = o), f = 0; f < q.length; f++) if ("video/m3u8" == q[f].type || "" !== a.canPlayType(q[f].type).replace(/no/, "") || "" !== a.canPlayType(q[f].type.replace(/mp3/, "mpeg")).replace(/no/, "") || "" !== a.canPlayType(q[f].type.replace(/m4a/, "mp4")).replace(/no/, "")) {
-                r.method = "native",
-                    r.url = q[f].url;
-                break
-            }
-            if ("native" === r.method && (null !== r.url && (a.src = r.url), "auto_plugin" !== b.mode)) return r
-        }
-        if ("auto" === b.mode || "auto_plugin" === b.mode || "shim" === b.mode) for (f = 0; f < q.length; f++) for (k = q[f].type, g = 0; g < b.plugins.length; g++) for (l = b.plugins[g], m = akjs.plugins[l], h = 0; h < m.length; h++) if (n = m[h], null == n.version || akjs.PluginDetector.hasPluginVersion(l, n.version)) for (i = 0; i < n.types.length; i++) if (k == n.types[i]) return r.method = l,
-            r.url = q[f].url,
-            r;
-        return "auto_plugin" === b.mode && "native" === r.method ? r: ("" === r.method && q.length > 0 && (r.url = q[0].url), r)
-    },
-    formatType: function(a, b) {
-        return a && !b ? this.getTypeFromFile(a) : b && ~b.indexOf(";") ? b.substr(0, b.indexOf(";")) : b
-    },
-    getTypeFromFile: function(a) {
-        a = a.split("?")[0];
-        var b = a.substring(a.lastIndexOf(".") + 1).toLowerCase();
-        return (/(mp4|m4v|ogg|ogv|m3u8|webm|webmv|flv|wmv|mpeg|mov)/gi.test(b) ? "video": "audio") + "/" + this.getTypeFromExtension(b)
-    },
-    getTypeFromExtension: function(a) {
-        switch (a) {
-            case "mp4":
-            case "m4v":
-            case "m4a":
-                return "mp4";
-            case "webm":
-            case "webma":
-            case "webmv":
-                return "webm";
-            case "ogg":
-            case "oga":
-            case "ogv":
-                return "ogg";
-            default:
-                return a
+                c.cancelFullScreen = function() {
+                    c.hasWebkitNativeFullScreen ? document.webkitCancelFullScreen() : c.hasMozNativeFullScreen ? document.mozCancelFullScreen() : c.hasMsNativeFullScreen && document.msExitFullscreen()
+                }),
+            c.hasSemiNativeFullScreen && f.match(/mac os x 10_5/i) && (c.hasNativeFullScreen = !1, c.hasSemiNativeFullScreen = !1)
         }
     },
-    createErrorMessage: function(a, b, c) {
-        var d = a.htmlMediaElement,
-            e = document.createElement("div");
-        e.className = "me-cannotplay";
-        try {
-            e.style.width = d.width + "px",
-                e.style.height = d.height + "px"
-        } catch(f) {}
-        e.innerHTML = b.customError ? b.customError: "" !== c ? '<a href="' + a.url + '"><img src="' + c + '" width="100%" height="100%" /></a>': '<a href="' + a.url + '"><span>' + akjs.i18n.t("Download File") + "</span></a>",
-            d.parentNode.insertBefore(e, d),
-            d.style.display = "none",
-            b.error(d)
-    },
-    createPlugin: function(a, b, c, d, e, f) {
-        var g, h, i, j = a.htmlMediaElement,
-            k = 1,
-            l = 1,
-            m = "me_" + a.method + "_" + akjs.meIndex++,
-            n = new akjs.PluginMediaElement(m, a.method, a.url),
-            o = document.createElement("div");
-        n.tagName = j.tagName;
-        for (var p = 0; p < j.attributes.length; p++) {
-            var q = j.attributes[p];
-            1 == q.specified && n.setAttribute(q.name, q.value)
-        }
-        for (h = j.parentNode; null !== h && null != h.tagName && "body" !== h.tagName.toLowerCase() && null != h.parentNode && null != h.parentNode.tagName && null != h.parentNode.constructor && "ShadowRoot" === h.parentNode.constructor.name;) {
-            if ("p" === h.parentNode.tagName.toLowerCase()) {
-                h.parentNode.parentNode.insertBefore(h, h.parentNode);
-                break
-            }
-            h = h.parentNode
-        }
-        switch (a.isVideo ? (k = b.pluginWidth > 0 ? b.pluginWidth: b.videoWidth > 0 ? b.videoWidth: null !== j.getAttribute("width") ? j.getAttribute("width") : b.defaultVideoWidth, l = b.pluginHeight > 0 ? b.pluginHeight: b.videoHeight > 0 ? b.videoHeight: null !== j.getAttribute("height") ? j.getAttribute("height") : b.defaultVideoHeight, k = akjs.Utility.encodeUrl(k), l = akjs.Utility.encodeUrl(l)) : b.enablePluginDebug && (k = 320, l = 240), n.success = b.success, akjs.MediaPluginBridge.registerPluginElement(m, n, j), o.className = "abs", o.id = m + "_container", a.isVideo ? j.parentNode.insertBefore(o, j) : document.body.insertBefore(o, document.body.childNodes[0]), i = ["id=" + m, "jsinitfunction=akjs.MediaPluginBridge.initPlugin", "jscallbackfunction=akjs.MediaPluginBridge.fireEvent", "isvideo=" + (a.isVideo ? "true": "false"), "autoplay=" + (d ? "true": "false"), "preload=" + e, "width=" + k, "startvolume=" + b.startVolume, "timerrate=" + b.timerRate, "flashstreamer=" + b.flashStreamer, "height=" + l, "pseudostreamstart=" + b.pseudoStreamingStartQueryParam], null !== a.url && i.push("flash" == a.method ? "file=" + akjs.Utility.encodeUrl(a.url) : "file=" + a.url), b.enablePluginDebug && i.push("debug=true"), b.enablePluginSmoothing && i.push("smoothing=true"), b.enablePseudoStreaming && i.push("pseudostreaming=true"), f && i.push("controls=true"), b.pluginVars && (i = i.concat(b.pluginVars)), a.method) {
-            case "silverlight":
-                o.innerHTML = '<object data="data:application/x-silverlight-2," type="application/x-silverlight-2" id="' + m + '" name="' + m + '" width="' + k + '" height="' + l + '" class="ak-shim"><param name="initParams" value="' + i.join(",") + '" /><param name="windowless" value="true" /><param name="background" value="black" /><param name="minRuntimeVersion" value="3.0.0.0" /><param name="autoUpgrade" value="true" /><param name="source" value="' + b.pluginPath + b.silverlightName + '" /></object>';
-                break;
-            case "flash":
-                akjs.MediaFeatures.isIE ? (g = document.createElement("div"), o.appendChild(g), g.outerHTML = '<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="//download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab" id="' + m + '" width="' + k + '" height="' + l + '" class="ak-shim"><param name="movie" value="' + b.pluginPath + b.flashName + "?x=" + new Date + '" /><param name="flashvars" value="' + i.join("&amp;") + '" /><param name="quality" value="high" /><param name="bgcolor" value="#000000" /><param name="wmode" value="transparent" /><param name="allowScriptAccess" value="always" /><param name="allowFullScreen" value="true" /><param name="scale" value="default" /></object>') : o.innerHTML = '<embed id="' + m + '" name="' + m + '" play="true" loop="false" quality="high" bgcolor="#000000" wmode="transparent" allowScriptAccess="always" allowFullScreen="true" type="application/x-shockwave-flash" pluginspage="//www.macromedia.com/go/getflashplayer" src="' + b.pluginPath + b.flashName + '" flashvars="' + i.join("&") + '" width="' + k + '" height="' + l + '" scale="default"class="ak-shim"></embed>';
-                break;
-            case "vimeo":
-                var s = m + "_player";
-                if (n.vimeoid = a.url.substr(a.url.lastIndexOf("/") + 1), o.innerHTML = '<iframe src="//player.vimeo.com/video/' + n.vimeoid + "?api=1&portrait=0&byline=0&title=0&player_id=" + s + '" width="' + k + '" height="' + l + '" frameborder="0" class="ak-shim" id="' + s + '" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>', "function" == typeof $f) {
-                    var t = $f(o.childNodes[0]);
-                    t.addEvent("ready",
-                        function() {
-                            function a(a, b, c, d) {
-                                var e = {
-                                    type: c,
-                                    target: b
-                                };
-                                "timeupdate" == c && (b.currentTime = e.currentTime = d.seconds, b.duration = e.duration = d.duration),
-                                    b.dispatchEvent(e.type, e)
-                            }
-                            t.playVideo = function() {
-                                t.api("play")
-                            },
-                                t.stopVideo = function() {
-                                    t.api("unload")
-                                },
-                                t.pauseVideo = function() {
-                                    t.api("pause")
-                                },
-                                t.seekTo = function(a) {
-                                    t.api("seekTo", a)
-                                },
-                                t.setVolume = function(a) {
-                                    t.api("setVolume", a)
-                                },
-                                t.setMuted = function(a) {
-                                    a ? (t.lastVolume = t.api("getVolume"), t.api("setVolume", 0)) : (t.api("setVolume", t.lastVolume), delete t.lastVolume)
-                                },
-                                t.addEvent("play",
-                                    function() {
-                                        a(t, n, "play"),
-                                            a(t, n, "playing")
-                                    }),
-                                t.addEvent("pause",
-                                    function() {
-                                        a(t, n, "pause")
-                                    }),
-                                t.addEvent("finish",
-                                    function() {
-                                        a(t, n, "ended")
-                                    }),
-                                t.addEvent("playProgress",
-                                    function(b) {
-                                        a(t, n, "timeupdate", b)
-                                    }),
-                                n.pluginElement = o,
-                                n.pluginApi = t,
-                                akjs.MediaPluginBridge.initPlugin(m)
-                        })
-                } else console.warn("You need to include froogaloop for vimeo to work")
-        }
-        return j.style.display = "none",
-            j.removeAttribute("autoplay"),
-            n
-    },
-    updateNative: function(a, b) {
-        var c, d = a.htmlMediaElement;
-        for (c in akjs.HtmlMediaElement) d[c] = akjs.HtmlMediaElement[c];
-        return b.success(d, d),
-            d
-    }
-},
-function(a, b) {
-    "use strict";
-    var c = {
-        locale: {
-            language: b.i18n && b.i18n.locale.language || "",
-            strings: b.i18n && b.i18n.locale.strings || {}
+    akjs.MediaFeatures.init(),
+    akjs.HtmlMediaElement = {
+        pluginType: "native",
+        isFullScreen: !1,
+        setCurrentTime: function(a) {
+            this.currentTime = a
         },
-        ietf_lang_regex: /^(x\-)?[a-z]{2,}(\-\w{2,})?(\-\w{2,})?$/,
-        methods: {}
-    };
-    c.getLanguage = function() {
-        var a = c.locale.language || window.navigator.userLanguage || window.navigator.language;
-        return c.ietf_lang_regex.exec(a) ? a: null
-    },
-    "undefined" != typeof akjsL10n && (c.locale.language = akjsL10n.language),
-        c.methods.checkPlain = function(a) {
-            var b, c, d = {
-                "&": "&amp;",
-                '"': "&quot;",
-                "<": "&lt;",
-                ">": "&gt;"
-            };
-            a = String(a);
-            for (b in d) d.hasOwnProperty(b) && (c = new RegExp(b, "g"), a = a.replace(c, d[b]));
-            return a
+        setMuted: function(a) {
+            this.muted = a
         },
-        c.methods.t = function(a, b) {
-            return c.locale.strings && c.locale.strings[b.context] && c.locale.strings[b.context][a] && (a = c.locale.strings[b.context][a]),
-                c.methods.checkPlain(a)
+        setVolume: function(a) {
+            this.volume = a
         },
-        c.t = function(a, b) {
-            if ("string" == typeof a && a.length > 0) {
-                var d = c.getLanguage();
-                return b = b || {
-                    context: d
-                },
-                    c.methods.t(a, b)
-            }
-            throw {
-                name: "InvalidArgumentException",
-                message: "First argument is either not a string or empty."
+        stop: function() {
+            this.pause()
+        },
+        setSrc: function(a) {
+            for (var b = this.getElementsByTagName("source"); b.length > 0;) this.removeChild(b[0]);
+            if ("string" == typeof a) this.src = a;
+            else {
+                var c, d;
+                for (c = 0; c < a.length; c++) if (d = a[c], this.canPlayType(d.type)) {
+                    this.src = d.src;
+                    break
+                }
             }
         },
-        b.i18n = c
-} (document, akjs)
-"undefined" != typeof jQuery ? akjs.$ = jQuery: "undefined" != typeof ender && (akjs.$ = ender),
-function(a) {akjs.MepDefaults = {
-        poster: "",
-        showPosterWhenEnded: !1,
+        setVideoSize: function(a, b) {
+            this.width = a,
+                this.height = b
+        }
+    },
+    akjs.MediaPluginBridge = {
+        pluginMediaElements: {},
+        htmlMediaElements: {},
+        registerPluginElement: function(a, b, c) {
+            this.pluginMediaElements[a] = b,
+                this.htmlMediaElements[a] = c
+        },
+        unregisterPluginElement: function(a) {
+            delete this.pluginMediaElements[a],
+                delete this.htmlMediaElements[a]
+        },
+        initPlugin: function(a) {
+            var b = this.pluginMediaElements[a],
+                c = this.htmlMediaElements[a];
+            if (b) {
+                switch (b.pluginType) {
+                    case "flash":
+                        b.pluginElement = b.pluginApi = document.getElementById(a);
+                        break;
+                    case "silverlight":
+                        b.pluginElement = document.getElementById(b.id),
+                            b.pluginApi = b.pluginElement.Content.MediaElementJS
+                }
+                null != b.pluginApi && b.success && b.success(b, c)
+            }
+        },
+        fireEvent: function(a, b, c) {
+            var d, e, f, g = this.pluginMediaElements[a];
+            if (g) {
+                d = {
+                    type: b,
+                    target: g
+                };
+                for (e in c) g[e] = c[e],
+                    d[e] = c[e];
+                f = c.bufferedTime || 0,
+                    d.target.buffered = d.buffered = {
+                        start: function() {
+                            return 0
+                        },
+                        end: function() {
+                            return f
+                        },
+                        length: 1
+                    },
+                    g.dispatchEvent(d.type, d)
+            }
+        }
+    },
+    akjs.MediaElementDefaults = {
+        mode: "auto",
+        plugins: ["flash", "silverlight","vimeo"],
+        enablePluginDebug: !1,
+        httpsBasicAuthSite: !1,
+        type: "",
+        pluginPath: akjs.Utility.getScriptPath(["mediaelement.js", "mediaelement.min.js", "mediaelement-and-player.js", "mediaelement-and-player.min.js"]),
+        flashName: "flashmediaelement.swf",
+        flashStreamer: "",
+        enablePluginSmoothing: !1,
+        enablePseudoStreaming: !1,
+        pseudoStreamingStartQueryParam: "start",
+        silverlightName: "silverlightmediaelement.xap",
         defaultVideoWidth: 480,
         defaultVideoHeight: 270,
-        videoWidth: -1,
-        videoHeight: -1,
-        defaultAudioWidth: 400,
-        defaultAudioHeight: 30,
-        defaultSeekBackwardInterval: function(a) {
-            return.05 * a.duration
-        },
-        defaultSeekForwardInterval: function(a) {
-            return.05 * a.duration
-        },
-        setDimensions: !0,
-        audioWidth: -1,
-        audioHeight: -1,
+        pluginWidth: -1,
+        pluginHeight: -1,
+        pluginVars: [],
+        timerRate: 250,
         startVolume: .8,
-        loop: !1,
-        autoRewind: !0,
-        enableAutosize: !0,
-        alwaysShowHours: !1,
-        showTimecodeFrameCount: !1,
-        framesPerSecond: 25,
-        autosizeProgress: !0,
-        alwaysShowControls: !1,
-        hideVideoControlsOnLoad: !1,
-        clickToPlayPause: !0,
-        iPadUseNativeControls: !1,
-        iPhoneUseNativeControls: !1,
-        AndroidUseNativeControls: !1,
-        features: ["playpause", "current", "progress", "duration", "tracks", "volume", "fullscreen"],
-        isVideo: !0,
-        enableKeyboard: !0,
-        pauseOtherPlayers: !0,
-        keyActions: [{
-            keys: [32, 179],
-            action: function(a, b) {
-                b.paused || b.ended ? a.play() : a.pause()
+        success: function() {},
+        error: function() {}
+    },
+    akjs.MediaElement = function(a, b) {
+        return akjs.HtmlMediaElementShim.create(a, b)
+    },
+    akjs.HtmlMediaElementShim = {
+        create: function(a, b) {
+            var c, d, e = akjs.MediaElementDefaults,
+                f = "string" == typeof a ? document.getElementById(a) : a,
+                g = f.tagName.toLowerCase(),
+                h = "audio" === g || "video" === g,
+                i = f.getAttribute(h ? "src": "href"),
+                j = f.getAttribute("poster"),
+                k = f.getAttribute("autoplay"),
+                l = f.getAttribute("preload"),
+                m = f.getAttribute("controls");
+            for (d in b) e[d] = b[d];
+            return i = "undefined" == typeof i || null === i || "" == i ? null: i,
+                j = "undefined" == typeof j || null === j ? "": j,
+                l = "undefined" == typeof l || null === l || "false" === l ? "none": l,
+                k = !("undefined" == typeof k || null === k || "false" === k),
+                m = !("undefined" == typeof m || null === m || "false" === m),
+                c = this.determinePlayback(f, e, akjs.MediaFeatures.supportsMediaTag, h, i),
+                c.url = null !== c.url ? akjs.Utility.absolutizeUrl(c.url) : "",
+                "native" == c.method ? (akjs.MediaFeatures.isBustedAndroid && (f.src = c.url, f.addEventListener("click",
+                    function() {
+                        f.play()
+                    },
+                    !1)), this.updateNative(c, e, k, l)) : "" !== c.method ? this.createPlugin(c, e, j, k, l, m) : (this.createErrorMessage(c, e, j), this)
+        },
+        determinePlayback: function(a, b, c, d, e) {
+            var f, g, h, i, j, k, l, m, n, o, p, q = [],
+                r = {
+                    method: "",
+                    url: "",
+                    htmlMediaElement: a,
+                    isVideo: "audio" != a.tagName.toLowerCase()
+                };
+            if ("undefined" != typeof b.type && "" !== b.type) if ("string" == typeof b.type) q.push({
+                type: b.type,
+                url: e
+            });
+            else for (f = 0; f < b.type.length; f++) q.push({
+                    type: b.type[f],
+                    url: e
+                });
+            else if (null !== e) k = this.formatType(e, a.getAttribute("type")),
+                q.push({
+                    type: k,
+                    url: e
+                });
+            else for (f = 0; f < a.childNodes.length; f++) j = a.childNodes[f],
+                1 == j.nodeType && "source" == j.tagName.toLowerCase() && (e = j.getAttribute("src"), k = this.formatType(e, j.getAttribute("type")), p = j.getAttribute("media"), (!p || !window.matchMedia || window.matchMedia && window.matchMedia(p).matches) && q.push({
+                    type: k,
+                    url: e
+                }));
+            if (!d && q.length > 0 && null !== q[0].url && this.getTypeFromFile(q[0].url).indexOf("audio") > -1 && (r.isVideo = !1), akjs.MediaFeatures.isBustedAndroid && (a.canPlayType = function(a) {
+                    return null !== a.match(/video\/(mp4|m4v)/gi) ? "maybe": ""
+                }), akjs.MediaFeatures.isChromium && (a.canPlayType = function(a) {
+                    return null !== a.match(/video\/(webm|ogv|ogg)/gi) ? "maybe": ""
+                }), !(!c || "auto" !== b.mode && "auto_plugin" !== b.mode && "native" !== b.mode || akjs.MediaFeatures.isBustedNativeHTTPS && b.httpsBasicAuthSite === !0)) {
+                for (d || (o = document.createElement(r.isVideo ? "video": "audio"), a.parentNode.insertBefore(o, a), a.style.display = "none", r.htmlMediaElement = a = o), f = 0; f < q.length; f++) if ("video/m3u8" == q[f].type || "" !== a.canPlayType(q[f].type).replace(/no/, "") || "" !== a.canPlayType(q[f].type.replace(/mp3/, "mpeg")).replace(/no/, "") || "" !== a.canPlayType(q[f].type.replace(/m4a/, "mp4")).replace(/no/, "")) {
+                    r.method = "native",
+                        r.url = q[f].url;
+                    break
+                }
+                if ("native" === r.method && (null !== r.url && (a.src = r.url), "auto_plugin" !== b.mode)) return r
+            }
+            if ("auto" === b.mode || "auto_plugin" === b.mode || "shim" === b.mode) for (f = 0; f < q.length; f++) for (k = q[f].type, g = 0; g < b.plugins.length; g++) for (l = b.plugins[g], m = akjs.plugins[l], h = 0; h < m.length; h++) if (n = m[h], null == n.version || akjs.PluginDetector.hasPluginVersion(l, n.version)) for (i = 0; i < n.types.length; i++) if (k == n.types[i]) return r.method = l,
+                r.url = q[f].url,
+                r;
+            return "auto_plugin" === b.mode && "native" === r.method ? r: ("" === r.method && q.length > 0 && (r.url = q[0].url), r)
+        },
+        formatType: function(a, b) {
+            return a && !b ? this.getTypeFromFile(a) : b && ~b.indexOf(";") ? b.substr(0, b.indexOf(";")) : b
+        },
+        getTypeFromFile: function(a) {
+            a = a.split("?")[0];
+            var b = a.substring(a.lastIndexOf(".") + 1).toLowerCase();
+            return (/(mp4|m4v|ogg|ogv|m3u8|webm|webmv|flv|wmv|mpeg|mov)/gi.test(b) ? "video": "audio") + "/" + this.getTypeFromExtension(b)
+        },
+        getTypeFromExtension: function(a) {
+            switch (a) {
+                case "mp4":
+                case "m4v":
+                case "m4a":
+                    return "mp4";
+                case "webm":
+                case "webma":
+                case "webmv":
+                    return "webm";
+                case "ogg":
+                case "oga":
+                case "ogv":
+                    return "ogg";
+                default:
+                    return a
             }
         },
-            {
-                keys: [38],
-                action: function(a, b) {
-                    a.container.find(".ak-volume-slider").css("display", "block"),
-                    a.isVideo && (a.showControls(), a.startControlsTimer());
-                    var c = Math.min(b.volume + .1, 1);
-                    b.setVolume(c)
+        createErrorMessage: function(a, b, c) {
+            var d = a.htmlMediaElement,
+                e = document.createElement("div");
+            e.className = "me-cannotplay";
+            try {
+                e.style.width = d.width + "px",
+                    e.style.height = d.height + "px"
+            } catch(f) {}
+            e.innerHTML = b.customError ? b.customError: "" !== c ? '<a href="' + a.url + '"><img src="' + c + '" width="100%" height="100%" /></a>': '<a href="' + a.url + '"><span>' + akjs.i18n.t("Download File") + "</span></a>",
+                d.parentNode.insertBefore(e, d),
+                d.style.display = "none",
+                b.error(d)
+        },
+        createPlugin: function(a, b, c, d, e, f) {
+            var g, h, i, j = a.htmlMediaElement,
+                k = 1,
+                l = 1,
+                m = "me_" + a.method + "_" + akjs.meIndex++,
+                n = new akjs.PluginMediaElement(m, a.method, a.url),
+                o = document.createElement("div");
+            n.tagName = j.tagName;
+            for (var p = 0; p < j.attributes.length; p++) {
+                var q = j.attributes[p];
+                1 == q.specified && n.setAttribute(q.name, q.value)
+            }
+            for (h = j.parentNode; null !== h && null != h.tagName && "body" !== h.tagName.toLowerCase() && null != h.parentNode && null != h.parentNode.tagName && null != h.parentNode.constructor && "ShadowRoot" === h.parentNode.constructor.name;) {
+                if ("p" === h.parentNode.tagName.toLowerCase()) {
+                    h.parentNode.parentNode.insertBefore(h, h.parentNode);
+                    break
                 }
-            },
-            {
-                keys: [40],
-                action: function(a, b) {
-                    a.container.find(".ak-volume-slider").css("display", "block"),
-                    a.isVideo && (a.showControls(), a.startControlsTimer());
-                    var c = Math.max(b.volume - .1, 0);
-                    b.setVolume(c)
-                }
-            },
-            {
-                keys: [37, 227],
-                action: function(a, b) {
-                    if (!isNaN(b.duration) && b.duration > 0) {
-                        a.isVideo && (a.showControls(), a.startControlsTimer());
-                        var c = Math.max(b.currentTime - a.options.defaultSeekBackwardInterval(b), 0);
-                        b.setCurrentTime(c)
-                    }
-                }
-            },
-            {
-                keys: [39, 228],
-                action: function(a, b) {
-                    if (!isNaN(b.duration) && b.duration > 0) {
-                        a.isVideo && (a.showControls(), a.startControlsTimer());
-                        var c = Math.min(b.currentTime + a.options.defaultSeekForwardInterval(b), b.duration);
-                        b.setCurrentTime(c)
-                    }
-                }
-            },
-            {
-                keys: [70],
-                action: function(a) {
-                    "undefined" != typeof a.enterFullScreen && (a.isFullScreen ? a.exitFullScreen() : a.enterFullScreen())
-                }
-            },
-            {
-                keys: [77],
-                action: function(a) {
-                    a.container.find(".ak-volume-slider").css("display", "block"),
-                    a.isVideo && (a.showControls(), a.startControlsTimer()),
-                        a.setMuted(a.media.muted ? !1 : !0)
-                }
-            }]
-    },
-akjs.mepIndex = 0,
-akjs.players = {},
-akjs.MediaElementPlayer = function(b, c) {
-    if (! (this instanceof akjs.MediaElementPlayer)) return new akjs.MediaElementPlayer(b, c);
-    var d = this;
-    return d.$media = d.$node = a(b),
-        d.node = d.media = d.$media[0],
-        d.node ? "undefined" != typeof d.node.player ? d.node.player: (d.node.player = d, "undefined" == typeof c && (c = d.$node.data("akjsoptions")), d.options = a.extend({},
-            akjs.MepDefaults, c), d.id = "mep_" + akjs.mepIndex++, akjs.players[d.id] = d, d.init(), d) : void 0
-},
-akjs.MediaElementPlayer.prototype = {
-    hasFocus: !1,
-    controlsAreVisible: !0,
-    init: function() {
-        var b = this,
-            c = akjs.MediaFeatures,
-            d = a.extend(!0, {},
-                b.options, {
-                    success: function(a, c) {
-                        b.meReady(a, c)
-                    },
-                    error: function(a) {
-                        b.handleError(a)
-                    }
-                }),
-            e = b.media.tagName.toLowerCase();
-        if (b.isDynamic = "audio" !== e && "video" !== e, b.isVideo = b.isDynamic ? b.options.isVideo: "audio" !== e && b.options.isVideo, c.isiPad && b.options.iPadUseNativeControls || c.isiPhone && b.options.iPhoneUseNativeControls) b.$media.attr("controls", "controls"),
-        c.isiPad && null !== b.media.getAttribute("autoplay") && b.play();
-        else if (c.isAndroid && b.options.AndroidUseNativeControls);
-        else {
-            b.$media.removeAttr("controls");
-            var f = akjs.i18n.t(b.isVideo ? "Video Player": "Audio Player");
-            if (a('<span class="ak-offscreen">' + f + "</span>").insertBefore(b.$media), b.container = a('<div id="' + b.id + '" class="ak-container ' + (akjs.MediaFeatures.svg ? "svg": "no-svg") + '" tabindex="0" role="application" aria-label="' + f + '"><div class="ak-inner"><div class="ak-mediaelement"></div><div class="ak-layers"></div><div class="ak-controls"></div><div class="ak-clear"></div></div></div>').addClass(b.$media[0].className).insertBefore(b.$media).focus(function() {
-                    if (!b.controlsAreVisible) {
-                        b.showControls(!0);
-                        var a = b.container.find(".ak-playpause-button > button");
-                        a.focus()
-                    }
-                }), b.container.addClass((c.isAndroid ? "ak-android ": "") + (c.isiOS ? "ak-ios ": "") + (c.isiPad ? "ak-ipad ": "") + (c.isiPhone ? "ak-iphone ": "") + (b.isVideo ? "ak-video ": "ak-audio ")), c.isiOS) {
-                var g = b.$media.clone();
-                b.container.find(".ak-mediaelement").append(g),
-                    b.$media.remove(),
-                    b.$node = b.$media = g,
-                    b.node = b.media = g[0]
-            } else b.container.find(".ak-mediaelement").append(b.$media);
-            b.controls = b.container.find(".ak-controls"),
-                b.layers = b.container.find(".ak-layers");
-            var h = b.isVideo ? "video": "audio",
-                i = h.substring(0, 1).toUpperCase() + h.substring(1);
-            b.width = b.options[h + "Width"] > 0 || b.options[h + "Width"].toString().indexOf("%") > -1 ? b.options[h + "Width"] : "" !== b.media.style.width && null !== b.media.style.width ? b.media.style.width: null !== b.media.getAttribute("width") ? b.$media.attr("width") : b.options["default" + i + "Width"],
-                b.height = b.options[h + "Height"] > 0 || b.options[h + "Height"].toString().indexOf("%") > -1 ? b.options[h + "Height"] : "" !== b.media.style.height && null !== b.media.style.height ? b.media.style.height: null !== b.$media[0].getAttribute("height") ? b.$media.attr("height") : b.options["default" + i + "Height"],
-                b.setPlayerSize(b.width, b.height),
-                d.pluginWidth = b.width,
-                d.pluginHeight = b.height
+                h = h.parentNode
+            }
+            switch (a.isVideo ? (k = b.pluginWidth > 0 ? b.pluginWidth: b.videoWidth > 0 ? b.videoWidth: null !== j.getAttribute("width") ? j.getAttribute("width") : b.defaultVideoWidth, l = b.pluginHeight > 0 ? b.pluginHeight: b.videoHeight > 0 ? b.videoHeight: null !== j.getAttribute("height") ? j.getAttribute("height") : b.defaultVideoHeight, k = akjs.Utility.encodeUrl(k), l = akjs.Utility.encodeUrl(l)) : b.enablePluginDebug && (k = 320, l = 240), n.success = b.success, akjs.MediaPluginBridge.registerPluginElement(m, n, j), o.className = "abs", o.id = m + "_container", a.isVideo ? j.parentNode.insertBefore(o, j) : document.body.insertBefore(o, document.body.childNodes[0]), i = ["id=" + m, "jsinitfunction=akjs.MediaPluginBridge.initPlugin", "jscallbackfunction=akjs.MediaPluginBridge.fireEvent", "isvideo=" + (a.isVideo ? "true": "false"), "autoplay=" + (d ? "true": "false"), "preload=" + e, "width=" + k, "startvolume=" + b.startVolume, "timerrate=" + b.timerRate, "flashstreamer=" + b.flashStreamer, "height=" + l, "pseudostreamstart=" + b.pseudoStreamingStartQueryParam], null !== a.url && i.push("flash" == a.method ? "file=" + akjs.Utility.encodeUrl(a.url) : "file=" + a.url), b.enablePluginDebug && i.push("debug=true"), b.enablePluginSmoothing && i.push("smoothing=true"), b.enablePseudoStreaming && i.push("pseudostreaming=true"), f && i.push("controls=true"), b.pluginVars && (i = i.concat(b.pluginVars)), a.method) {
+                case "silverlight":
+                    o.innerHTML = '<object data="data:application/x-silverlight-2," type="application/x-silverlight-2" id="' + m + '" name="' + m + '" width="' + k + '" height="' + l + '" class="ak-shim"><param name="initParams" value="' + i.join(",") + '" /><param name="windowless" value="true" /><param name="background" value="black" /><param name="minRuntimeVersion" value="3.0.0.0" /><param name="autoUpgrade" value="true" /><param name="source" value="' + b.pluginPath + b.silverlightName + '" /></object>';
+                    break;
+                case "flash":
+                    akjs.MediaFeatures.isIE ? (g = document.createElement("div"), o.appendChild(g), g.outerHTML = '<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="//download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab" id="' + m + '" width="' + k + '" height="' + l + '" class="ak-shim"><param name="movie" value="' + b.pluginPath + b.flashName + "?x=" + new Date + '" /><param name="flashvars" value="' + i.join("&amp;") + '" /><param name="quality" value="high" /><param name="bgcolor" value="#000000" /><param name="wmode" value="transparent" /><param name="allowScriptAccess" value="always" /><param name="allowFullScreen" value="true" /><param name="scale" value="default" /></object>') : o.innerHTML = '<embed id="' + m + '" name="' + m + '" play="true" loop="false" quality="high" bgcolor="#000000" wmode="transparent" allowScriptAccess="always" allowFullScreen="true" type="application/x-shockwave-flash" pluginspage="//www.macromedia.com/go/getflashplayer" src="' + b.pluginPath + b.flashName + '" flashvars="' + i.join("&") + '" width="' + k + '" height="' + l + '" scale="default"class="ak-shim"></embed>';
+                    break;
+                case "vimeo":
+                    var s = m + "_player";
+                    if (n.vimeoid = a.url.substr(a.url.lastIndexOf("/") + 1), o.innerHTML = '<iframe src="//player.vimeo.com/video/' + n.vimeoid + "?api=1&portrait=0&byline=0&title=0&player_id=" + s + '" width="' + k + '" height="' + l + '" frameborder="0" class="ak-shim" id="' + s + '" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>', "function" == typeof $f) {
+                        var t = $f(o.childNodes[0]);
+                        t.addEvent("ready",
+                            function() {
+                                function a(a, b, c, d) {
+                                    var e = {
+                                        type: c,
+                                        target: b
+                                    };
+                                    "timeupdate" == c && (b.currentTime = e.currentTime = d.seconds, b.duration = e.duration = d.duration),
+                                        b.dispatchEvent(e.type, e)
+                                }
+                                t.playVideo = function() {
+                                    t.api("play")
+                                },
+                                    t.stopVideo = function() {
+                                        t.api("unload")
+                                    },
+                                    t.pauseVideo = function() {
+                                        t.api("pause")
+                                    },
+                                    t.seekTo = function(a) {
+                                        t.api("seekTo", a)
+                                    },
+                                    t.setVolume = function(a) {
+                                        t.api("setVolume", a)
+                                    },
+                                    t.setMuted = function(a) {
+                                        a ? (t.lastVolume = t.api("getVolume"), t.api("setVolume", 0)) : (t.api("setVolume", t.lastVolume), delete t.lastVolume)
+                                    },
+                                    t.addEvent("play",
+                                        function() {
+                                            a(t, n, "play"),
+                                                a(t, n, "playing")
+                                        }),
+                                    t.addEvent("pause",
+                                        function() {
+                                            a(t, n, "pause")
+                                        }),
+                                    t.addEvent("finish",
+                                        function() {
+                                            a(t, n, "ended")
+                                        }),
+                                    t.addEvent("playProgress",
+                                        function(b) {
+                                            a(t, n, "timeupdate", b)
+                                        }),
+                                    n.pluginElement = o,
+                                    n.pluginApi = t,
+                                    akjs.MediaPluginBridge.initPlugin(m)
+                            })
+                    } else console.warn("You need to include froogaloop for vimeo to work")
+            }
+            return j.style.display = "none",
+                j.removeAttribute("autoplay"),
+                n
+        },
+        updateNative: function(a, b) {
+            var c, d = a.htmlMediaElement;
+            for (c in akjs.HtmlMediaElement) d[c] = akjs.HtmlMediaElement[c];
+            return b.success(d, d),
+                d
         }
-        akjs.MediaElement(b.$media[0], d),
-        "undefined" != typeof b.container && b.controlsAreVisible && b.container.trigger("controlsshown")
     },
-    showControls: function(a) {
-        var b = this;
-        a = "undefined" == typeof a || a,
-        b.controlsAreVisible || (a ? (b.controls.css("visibility", "visible").stop(!0, !0).fadeIn(200,
-            function() {
-                b.controlsAreVisible = !0,
-                    b.container.trigger("controlsshown")
-            }), b.container.find(".ak-control").css("visibility", "visible").stop(!0, !0).fadeIn(200,
-            function() {
-                b.controlsAreVisible = !0
-            })) : (b.controls.css("visibility", "visible").css("display", "block"), b.container.find(".ak-control").css("visibility", "visible").css("display", "block"), b.controlsAreVisible = !0, b.container.trigger("controlsshown")), b.setControlsSize())
-    },
-    hideControls: function(b) {
-        var c = this;
-        b = "undefined" == typeof b || b,
-        !c.controlsAreVisible || c.options.alwaysShowControls || c.keyboardAction || (b ? (c.controls.stop(!0, !0).fadeOut(200,
-            function() {
-                a(this).css("visibility", "hidden").css("display", "block"),
-                    c.controlsAreVisible = !1,
-                    c.container.trigger("controlshidden")
-            }), c.container.find(".ak-control").stop(!0, !0).fadeOut(200,
-            function() {
-                a(this).css("visibility", "hidden").css("display", "block")
-            })) : (c.controls.css("visibility", "hidden").css("display", "block"), c.container.find(".ak-control").css("visibility", "hidden").css("display", "block"), c.controlsAreVisible = !1, c.container.trigger("controlshidden")))
-    },
-    controlsTimer: null,
-    startControlsTimer: function(a) {
-        var b = this;
-        a = "undefined" != typeof a ? a: 1500,
-            b.killControlsTimer("start"),
-            b.controlsTimer = setTimeout(function() {
-                    b.hideControls(),
-                        b.killControlsTimer("hide")
-                },
-                a)
-    },
-    killControlsTimer: function() {
-        var a = this;
-        null !== a.controlsTimer && (clearTimeout(a.controlsTimer), delete a.controlsTimer, a.controlsTimer = null)
-    },
-    controlsEnabled: !0,
-    disableControls: function() {
-        var a = this;
-        a.killControlsTimer(),
-            a.hideControls(!1),
-            this.controlsEnabled = !1
-    },
-    enableControls: function() {
-        var a = this;
-        a.showControls(!1),
-            a.controlsEnabled = !0
-    },
-    meReady: function(b, c) {
-        var d, e, f = this,
-            g = akjs.MediaFeatures,
-            h = c.getAttribute("autoplay"),
-            i = !("undefined" == typeof h || null === h || "false" === h);
-        if (!f.created) {
-            if (f.created = !0, f.media = b, f.domNode = c, !(g.isAndroid && f.options.AndroidUseNativeControls || g.isiPad && f.options.iPadUseNativeControls || g.isiPhone && f.options.iPhoneUseNativeControls)) {
-                f.buildposter(f, f.controls, f.layers, f.media),
-                    f.buildkeyboard(f, f.controls, f.layers, f.media),
-                    f.buildoverlays(f, f.controls, f.layers, f.media),
-                    f.findTracks();
-                for (d in f.options.features) if (e = f.options.features[d], f["build" + e]) try {
-                    f["build" + e](f, f.controls, f.layers, f.media)
-                } catch(j) {}
-                f.container.trigger("controlsready"),
-                    f.setPlayerSize(f.width, f.height),
-                    f.setControlsSize(),
-                f.isVideo && (akjs.MediaFeatures.hasTouch ? f.$media.bind("touchstart",
-                    function() {
-                        f.controlsAreVisible ? f.hideControls(!1) : f.controlsEnabled && f.showControls(!1)
-                    }) : (f.clickToPlayPauseCallback = function() {
-                    f.options.clickToPlayPause && (f.media.paused ? f.play() : f.pause())
-                },
-                    f.media.addEventListener("click", f.clickToPlayPauseCallback, !1), f.container.bind("mouseenter mouseover",
-                    function() {
-                        f.controlsEnabled && (f.options.alwaysShowControls || (f.killControlsTimer("enter"), f.showControls(), f.startControlsTimer(2500)))
-                    }).bind("mousemove",
-                    function() {
-                        f.controlsEnabled && (f.controlsAreVisible || f.showControls(), f.options.alwaysShowControls || f.startControlsTimer(2500))
-                    }).bind("mouseleave",
-                    function() {
-                        f.controlsEnabled && (f.media.paused || f.options.alwaysShowControls || f.startControlsTimer(1e3))
-                    })), f.options.hideVideoControlsOnLoad && f.hideControls(!1), i && !f.options.alwaysShowControls && f.hideControls(), f.options.enableAutosize && f.media.addEventListener("loadedmetadata",
-                    function(a) {
-                        f.options.videoHeight <= 0 && null === f.domNode.getAttribute("height") && !isNaN(a.target.videoHeight) && (f.setPlayerSize(a.target.videoWidth, a.target.videoHeight), f.setControlsSize(), f.media.setVideoSize(a.target.videoWidth, a.target.videoHeight))
+    function(a, b) {
+        "use strict";
+        var c = {
+            locale: {
+                language: b.i18n && b.i18n.locale.language || "",
+                strings: b.i18n && b.i18n.locale.strings || {}
+            },
+            ietf_lang_regex: /^(x\-)?[a-z]{2,}(\-\w{2,})?(\-\w{2,})?$/,
+            methods: {}
+        };
+        c.getLanguage = function() {
+            var a = c.locale.language || window.navigator.userLanguage || window.navigator.language;
+            return c.ietf_lang_regex.exec(a) ? a: null
+        },
+        "undefined" != typeof akjsL10n && (c.locale.language = akjsL10n.language),
+            c.methods.checkPlain = function(a) {
+                var b, c, d = {
+                    "&": "&amp;",
+                    '"': "&quot;",
+                    "<": "&lt;",
+                    ">": "&gt;"
+                };
+                a = String(a);
+                for (b in d) d.hasOwnProperty(b) && (c = new RegExp(b, "g"), a = a.replace(c, d[b]));
+                return a
+            },
+            c.methods.t = function(a, b) {
+                return c.locale.strings && c.locale.strings[b.context] && c.locale.strings[b.context][a] && (a = c.locale.strings[b.context][a]),
+                    c.methods.checkPlain(a)
+            },
+            c.t = function(a, b) {
+                if ("string" == typeof a && a.length > 0) {
+                    var d = c.getLanguage();
+                    return b = b || {
+                        context: d
                     },
-                    !1)),
-                    b.addEventListener("play",
-                        function() {
-                            var a;
-                            for (a in akjs.players) {
-                                var b = akjs.players[a];
-                                b.id == f.id || !f.options.pauseOtherPlayers || b.paused || b.ended || b.pause(),
-                                    b.hasFocus = !1
-                            }
-                            f.hasFocus = !0
+                        c.methods.t(a, b)
+                }
+                throw {
+                    name: "InvalidArgumentException",
+                    message: "First argument is either not a string or empty."
+                }
+            },
+            b.i18n = c
+    } (document, akjs)
+    "undefined" != typeof jQuery ? akjs.$ = jQuery: "undefined" != typeof ender && (akjs.$ = ender),
+    function(a) {akjs.MepDefaults = {
+            poster: "",
+            showPosterWhenEnded: !1,
+            defaultVideoWidth: 480,
+            defaultVideoHeight: 270,
+            videoWidth: -1,
+            videoHeight: -1,
+            defaultAudioWidth: 400,
+            defaultAudioHeight: 30,
+            defaultSeekBackwardInterval: function(a) {
+                return.05 * a.duration
+            },
+            defaultSeekForwardInterval: function(a) {
+                return.05 * a.duration
+            },
+            setDimensions: !0,
+            audioWidth: -1,
+            audioHeight: -1,
+            startVolume: .8,
+            loop: !1,
+            autoRewind: !0,
+            enableAutosize: !0,
+            alwaysShowHours: !1,
+            showTimecodeFrameCount: !1,
+            framesPerSecond: 25,
+            autosizeProgress: !0,
+            alwaysShowControls: !1,
+            hideVideoControlsOnLoad: !1,
+            clickToPlayPause: !0,
+            iPadUseNativeControls: !1,
+            iPhoneUseNativeControls: !1,
+            AndroidUseNativeControls: !1,
+            features: ["playpause", "current", "progress", "duration", "tracks", "volume", "fullscreen"],
+            isVideo: !0,
+            enableKeyboard: !0,
+            pauseOtherPlayers: !0,
+            keyActions: [{
+                keys: [32, 179],
+                action: function(a, b) {
+                    b.paused || b.ended ? a.play() : a.pause()
+                }
+            },
+                {
+                    keys: [38],
+                    action: function(a, b) {
+                        a.container.find(".ak-volume-slider").css("display", "block"),
+                        a.isVideo && (a.showControls(), a.startControlsTimer());
+                        var c = Math.min(b.volume + .1, 1);
+                        b.setVolume(c)
+                    }
+                },
+                {
+                    keys: [40],
+                    action: function(a, b) {
+                        a.container.find(".ak-volume-slider").css("display", "block"),
+                        a.isVideo && (a.showControls(), a.startControlsTimer());
+                        var c = Math.max(b.volume - .1, 0);
+                        b.setVolume(c)
+                    }
+                },
+                {
+                    keys: [37, 227],
+                    action: function(a, b) {
+                        if (!isNaN(b.duration) && b.duration > 0) {
+                            a.isVideo && (a.showControls(), a.startControlsTimer());
+                            var c = Math.max(b.currentTime - a.options.defaultSeekBackwardInterval(b), 0);
+                            b.setCurrentTime(c)
+                        }
+                    }
+                },
+                {
+                    keys: [39, 228],
+                    action: function(a, b) {
+                        if (!isNaN(b.duration) && b.duration > 0) {
+                            a.isVideo && (a.showControls(), a.startControlsTimer());
+                            var c = Math.min(b.currentTime + a.options.defaultSeekForwardInterval(b), b.duration);
+                            b.setCurrentTime(c)
+                        }
+                    }
+                },
+                {
+                    keys: [70],
+                    action: function(a) {
+                        "undefined" != typeof a.enterFullScreen && (a.isFullScreen ? a.exitFullScreen() : a.enterFullScreen())
+                    }
+                },
+                {
+                    keys: [77],
+                    action: function(a) {
+                        a.container.find(".ak-volume-slider").css("display", "block"),
+                        a.isVideo && (a.showControls(), a.startControlsTimer()),
+                            a.setMuted(a.media.muted ? !1 : !0)
+                    }
+                }]
+        },
+    akjs.mepIndex = 0,
+    akjs.players = {},
+    akjs.MediaElementPlayer = function(b, c) {
+        if (! (this instanceof akjs.MediaElementPlayer)) return new akjs.MediaElementPlayer(b, c);
+        var d = this;
+        return d.$media = d.$node = a(b),
+            d.node = d.media = d.$media[0],
+            d.node ? "undefined" != typeof d.node.player ? d.node.player: (d.node.player = d, "undefined" == typeof c && (c = d.$node.data("akjsoptions")), d.options = a.extend({},
+                akjs.MepDefaults, c), d.id = "mep_" + akjs.mepIndex++, akjs.players[d.id] = d, d.init(), d) : void 0
+    },
+    akjs.MediaElementPlayer.prototype = {
+        hasFocus: !1,
+        controlsAreVisible: !0,
+        init: function() {
+            var b = this,
+                c = akjs.MediaFeatures,
+                d = a.extend(!0, {},
+                    b.options, {
+                        success: function(a, c) {
+                            b.meReady(a, c)
                         },
-                        !1),
-                    f.media.addEventListener("ended",
-                        function() {
-                            if (f.options.autoRewind) try {
-                                f.media.setCurrentTime(0),
-                                    window.setTimeout(function() {
-                                            a(f.container).find(".ak-overlay-loading").parent().hide()
-                                        },
-                                        20)
-                            } catch(b) {}
-                            f.media.pause(),
-                            f.setProgressRail && f.setProgressRail(),
-                            f.setCurrentRail && f.setCurrentRail(),
-                                f.options.loop ? f.play() : !f.options.alwaysShowControls && f.controlsEnabled && f.showControls()
-                        },
-                        !1),
-                    f.media.addEventListener("loadedmetadata",
-                        function() {
-                            f.updateDuration && f.updateDuration(),
-                            f.updateCurrent && f.updateCurrent(),
-                            f.isFullScreen || (f.setPlayerSize(f.width, f.height), f.setControlsSize())
-                        },
-                        !1),
-                    f.container.focusout(function(b) {
-                        if (b.relatedTarget) {
-                            var c = a(b.relatedTarget);
-                            f.keyboardAction && 0 === c.parents(".ak-container").length && (f.keyboardAction = !1, f.hideControls(!0))
+                        error: function(a) {
+                            b.handleError(a)
                         }
                     }),
-                    setTimeout(function() {
-                            f.setPlayerSize(f.width, f.height),
-                                f.setControlsSize()
-                        },
-                        50),
-                    f.globalBind("resize",
-                        function() {
-                            f.isFullScreen || akjs.MediaFeatures.hasTrueNativeFullScreen && document.webkitIsFullScreen || f.setPlayerSize(f.width, f.height),
-                                f.setControlsSize()
-                        })
+                e = b.media.tagName.toLowerCase();
+            if (b.isDynamic = "audio" !== e && "video" !== e, b.isVideo = b.isDynamic ? b.options.isVideo: "audio" !== e && b.options.isVideo, c.isiPad && b.options.iPadUseNativeControls || c.isiPhone && b.options.iPhoneUseNativeControls) b.$media.attr("controls", "controls"),
+            c.isiPad && null !== b.media.getAttribute("autoplay") && b.play();
+            else if (c.isAndroid && b.options.AndroidUseNativeControls);
+            else {
+                b.$media.removeAttr("controls");
+                var f = akjs.i18n.t(b.isVideo ? "Video Player": "Audio Player");
+                if (a('<span class="ak-offscreen">' + f + "</span>").insertBefore(b.$media), b.container = a('<div id="' + b.id + '" class="ak-container ' + (akjs.MediaFeatures.svg ? "svg": "no-svg") + '" tabindex="0" role="application" aria-label="' + f + '"><div class="ak-inner"><div class="ak-mediaelement"></div><div class="ak-layers"></div><div class="ak-controls"></div><div class="ak-clear"></div></div></div>').addClass(b.$media[0].className).insertBefore(b.$media).focus(function() {
+                        if (!b.controlsAreVisible) {
+                            b.showControls(!0);
+                            var a = b.container.find(".ak-playpause-button > button");
+                            a.focus()
+                        }
+                    }), b.container.addClass((c.isAndroid ? "ak-android ": "") + (c.isiOS ? "ak-ios ": "") + (c.isiPad ? "ak-ipad ": "") + (c.isiPhone ? "ak-iphone ": "") + (b.isVideo ? "ak-video ": "ak-audio ")), c.isiOS) {
+                    var g = b.$media.clone();
+                    b.container.find(".ak-mediaelement").append(g),
+                        b.$media.remove(),
+                        b.$node = b.$media = g,
+                        b.node = b.media = g[0]
+                } else b.container.find(".ak-mediaelement").append(b.$media);
+                b.controls = b.container.find(".ak-controls"),
+                    b.layers = b.container.find(".ak-layers");
+                var h = b.isVideo ? "video": "audio",
+                    i = h.substring(0, 1).toUpperCase() + h.substring(1);
+                b.width = b.options[h + "Width"] > 0 || b.options[h + "Width"].toString().indexOf("%") > -1 ? b.options[h + "Width"] : "" !== b.media.style.width && null !== b.media.style.width ? b.media.style.width: null !== b.media.getAttribute("width") ? b.$media.attr("width") : b.options["default" + i + "Width"],
+                    b.height = b.options[h + "Height"] > 0 || b.options[h + "Height"].toString().indexOf("%") > -1 ? b.options[h + "Height"] : "" !== b.media.style.height && null !== b.media.style.height ? b.media.style.height: null !== b.$media[0].getAttribute("height") ? b.$media.attr("height") : b.options["default" + i + "Height"],
+                    b.setPlayerSize(b.width, b.height),
+                    d.pluginWidth = b.width,
+                    d.pluginHeight = b.height
             }
-            i && "native" == b.pluginType && f.play(),
-            f.options.success && ("string" == typeof f.options.success ? window[f.options.success](f.media, f.domNode, f) : f.options.success(f.media, f.domNode, f))
-        }
-    },
-    handleError: function(a) {
-        var b = this;
-        b.controls.hide(),
-        b.options.error && b.options.error(a)
-    },
-    setPlayerSize: function(b, c) {
-        var d = this;
-        if (!d.options.setDimensions) return ! 1;
-        if ("undefined" != typeof b && (d.width = b), "undefined" != typeof c && (d.height = c), d.height.toString().indexOf("%") > 0 || "100%" === d.$node.css("max-width") || d.$node[0].currentStyle && "100%" === d.$node[0].currentStyle.maxWidth) {
-            var e = function() {
-                    return d.isVideo ? d.media.videoWidth && d.media.videoWidth > 0 ? d.media.videoWidth: null !== d.media.getAttribute("width") ? d.media.getAttribute("width") : d.options.defaultVideoWidth: d.options.defaultAudioWidth
-                } (),
-                f = function() {
-                    return d.isVideo ? d.media.videoHeight && d.media.videoHeight > 0 ? d.media.videoHeight: null !== d.media.getAttribute("height") ? d.media.getAttribute("height") : d.options.defaultVideoHeight: d.options.defaultAudioHeight
-                } (),
-                g = d.container.parent().closest(":visible").width(),
-                h = d.container.parent().closest(":visible").height(),
-                i = d.isVideo || !d.options.autosizeProgress ? parseInt(g * f / e, 10) : f;
-            isNaN(i) && (i = h),
-            d.container.parent().length > 0 && "body" === d.container.parent()[0].tagName.toLowerCase() && (g = a(window).width(), i = a(window).height()),
-            i && g && (d.container.width(g).height(i), d.$media.add(d.container.find(".ak-shim")).width("100%").height("100%"), d.isVideo && d.media.setVideoSize && d.media.setVideoSize(g, i), d.layers.children(".ak-layer").width("100%").height("100%"))
-        } else d.container.width(d.width).height(d.height),
-            d.layers.children(".ak-layer").width(d.width).height(d.height);
-        var j = d.layers.find(".ak-overlay-play"),
-            k = j.find(".ak-overlay-button");
-        j.height(d.container.height() - d.controls.height()),
-            k.css("margin-top", "-" + (k.height() / 2 - d.controls.height() / 2).toString() + "px")
-    },
-    setControlsSize: function() {
-        var b = this,
-            c = 0,
-            d = 0,
-            e = b.controls.find(".ak-time-rail"),
-            f = b.controls.find(".ak-time-total"),
-            g = (b.controls.find(".ak-time-current"), b.controls.find(".ak-time-loaded"), e.siblings()),
-            h = g.last(),
-            i = null;
-        if (b.container.is(":visible") && e.length && e.is(":visible")) {
-            b.options && !b.options.autosizeProgress && (d = parseInt(e.css("width"), 10)),
-            0 !== d && d || (g.each(function() {
-                var b = a(this);
-                "absolute" != b.css("position") && b.is(":visible") && (c += a(this).outerWidth(!0))
-            }), d = b.controls.width() - c - (e.outerWidth(!0) - e.width()));
-            do e.width(d),
-                f.width(d - (f.outerWidth(!0) - f.width())),
-            "absolute" != h.css("position") && (i = h.length ? h.position() : null, d--);
-            while (null !== i && i.top > 0 && d > 0);
-            b.setProgressRail && b.setProgressRail(),
-            b.setCurrentRail && b.setCurrentRail()
-        }
-    },
-    buildposter: function(b, c, d, e) {
-        var f = this,
-            g = a('<div class="ak-poster ak-layer"></div>').appendTo(d),
-            h = b.$media.attr("poster");
-        "" !== b.options.poster && (h = b.options.poster),
-            h ? f.setPoster(h) : g.hide(),
-            e.addEventListener("play",
+            akjs.MediaElement(b.$media[0], d),
+            "undefined" != typeof b.container && b.controlsAreVisible && b.container.trigger("controlsshown")
+        },
+        showControls: function(a) {
+            var b = this;
+            a = "undefined" == typeof a || a,
+            b.controlsAreVisible || (a ? (b.controls.css("visibility", "visible").stop(!0, !0).fadeIn(200,
                 function() {
-                    g.hide()
-                },
-                !1),
-        b.options.showPosterWhenEnded && b.options.autoRewind && e.addEventListener("ended",
-            function() {
-                g.show()
-            },
-            !1)
-    },
-    setPoster: function(b) {
-        var c = this,
-            d = c.container.find(".ak-poster"),
-            e = d.find("img");
-        0 === e.length && (e = a('<img width="100%" height="100%" />').appendTo(d)),
-            e.attr("src", b),
-            d.css({
-                "background-image": "url(" + b + ")"
-            })
-    },
-    buildoverlays: function(b, c, d, e) {
-        var f = this;
-        if (b.isVideo) {
-            var g = a('<div class="ak-overlay ak-layer"><div class="ak-overlay-loading"><span></span></div></div>').hide().appendTo(d),
-                h = a('<div class="ak-overlay ak-layer"><div class="ak-overlay-error"></div></div>').hide().appendTo(d),
-                i = a('<div class="ak-overlay ak-layer ak-overlay-play"><div class="ak-overlay-button"></div></div>').appendTo(d).bind("click",
+                    b.controlsAreVisible = !0,
+                        b.container.trigger("controlsshown")
+                }), b.container.find(".ak-control").css("visibility", "visible").stop(!0, !0).fadeIn(200,
+                function() {
+                    b.controlsAreVisible = !0
+                })) : (b.controls.css("visibility", "visible").css("display", "block"), b.container.find(".ak-control").css("visibility", "visible").css("display", "block"), b.controlsAreVisible = !0, b.container.trigger("controlsshown")), b.setControlsSize())
+        },
+        hideControls: function(b) {
+            var c = this;
+            b = "undefined" == typeof b || b,
+            !c.controlsAreVisible || c.options.alwaysShowControls || c.keyboardAction || (b ? (c.controls.stop(!0, !0).fadeOut(200,
+                function() {
+                    a(this).css("visibility", "hidden").css("display", "block"),
+                        c.controlsAreVisible = !1,
+                        c.container.trigger("controlshidden")
+                }), c.container.find(".ak-control").stop(!0, !0).fadeOut(200,
+                function() {
+                    a(this).css("visibility", "hidden").css("display", "block")
+                })) : (c.controls.css("visibility", "hidden").css("display", "block"), c.container.find(".ak-control").css("visibility", "hidden").css("display", "block"), c.controlsAreVisible = !1, c.container.trigger("controlshidden")))
+        },
+        controlsTimer: null,
+        startControlsTimer: function(a) {
+            var b = this;
+            a = "undefined" != typeof a ? a: 1500,
+                b.killControlsTimer("start"),
+                b.controlsTimer = setTimeout(function() {
+                        b.hideControls(),
+                            b.killControlsTimer("hide")
+                    },
+                    a)
+        },
+        killControlsTimer: function() {
+            var a = this;
+            null !== a.controlsTimer && (clearTimeout(a.controlsTimer), delete a.controlsTimer, a.controlsTimer = null)
+        },
+        controlsEnabled: !0,
+        disableControls: function() {
+            var a = this;
+            a.killControlsTimer(),
+                a.hideControls(!1),
+                this.controlsEnabled = !1
+        },
+        enableControls: function() {
+            var a = this;
+            a.showControls(!1),
+                a.controlsEnabled = !0
+        },
+        meReady: function(b, c) {
+            var d, e, f = this,
+                g = akjs.MediaFeatures,
+                h = c.getAttribute("autoplay"),
+                i = !("undefined" == typeof h || null === h || "false" === h);
+            if (!f.created) {
+                if (f.created = !0, f.media = b, f.domNode = c, !(g.isAndroid && f.options.AndroidUseNativeControls || g.isiPad && f.options.iPadUseNativeControls || g.isiPhone && f.options.iPhoneUseNativeControls)) {
+                    f.buildposter(f, f.controls, f.layers, f.media),
+                        f.buildkeyboard(f, f.controls, f.layers, f.media),
+                        f.buildoverlays(f, f.controls, f.layers, f.media),
+                        f.findTracks();
+                    for (d in f.options.features) if (e = f.options.features[d], f["build" + e]) try {
+                        f["build" + e](f, f.controls, f.layers, f.media)
+                    } catch(j) {}
+                    f.container.trigger("controlsready"),
+                        f.setPlayerSize(f.width, f.height),
+                        f.setControlsSize(),
+                    f.isVideo && (akjs.MediaFeatures.hasTouch ? f.$media.bind("touchstart",
+                        function() {
+                            f.controlsAreVisible ? f.hideControls(!1) : f.controlsEnabled && f.showControls(!1)
+                        }) : (f.clickToPlayPauseCallback = function() {
+                        f.options.clickToPlayPause && (f.media.paused ? f.play() : f.pause())
+                    },
+                        f.media.addEventListener("click", f.clickToPlayPauseCallback, !1), f.container.bind("mouseenter mouseover",
+                        function() {
+                            f.controlsEnabled && (f.options.alwaysShowControls || (f.killControlsTimer("enter"), f.showControls(), f.startControlsTimer(2500)))
+                        }).bind("mousemove",
+                        function() {
+                            f.controlsEnabled && (f.controlsAreVisible || f.showControls(), f.options.alwaysShowControls || f.startControlsTimer(2500))
+                        }).bind("mouseleave",
+                        function() {
+                            f.controlsEnabled && (f.media.paused || f.options.alwaysShowControls || f.startControlsTimer(1e3))
+                        })), f.options.hideVideoControlsOnLoad && f.hideControls(!1), i && !f.options.alwaysShowControls && f.hideControls(), f.options.enableAutosize && f.media.addEventListener("loadedmetadata",
+                        function(a) {
+                            f.options.videoHeight <= 0 && null === f.domNode.getAttribute("height") && !isNaN(a.target.videoHeight) && (f.setPlayerSize(a.target.videoWidth, a.target.videoHeight), f.setControlsSize(), f.media.setVideoSize(a.target.videoWidth, a.target.videoHeight))
+                        },
+                        !1)),
+                        b.addEventListener("play",
+                            function() {
+                                var a;
+                                for (a in akjs.players) {
+                                    var b = akjs.players[a];
+                                    b.id == f.id || !f.options.pauseOtherPlayers || b.paused || b.ended || b.pause(),
+                                        b.hasFocus = !1
+                                }
+                                f.hasFocus = !0
+                            },
+                            !1),
+                        f.media.addEventListener("ended",
+                            function() {
+                                if (f.options.autoRewind) try {
+                                    f.media.setCurrentTime(0),
+                                        window.setTimeout(function() {
+                                                a(f.container).find(".ak-overlay-loading").parent().hide()
+                                            },
+                                            20)
+                                } catch(b) {}
+                                f.media.pause(),
+                                f.setProgressRail && f.setProgressRail(),
+                                f.setCurrentRail && f.setCurrentRail(),
+                                    f.options.loop ? f.play() : !f.options.alwaysShowControls && f.controlsEnabled && f.showControls()
+                            },
+                            !1),
+                        f.media.addEventListener("loadedmetadata",
+                            function() {
+                                f.updateDuration && f.updateDuration(),
+                                f.updateCurrent && f.updateCurrent(),
+                                f.isFullScreen || (f.setPlayerSize(f.width, f.height), f.setControlsSize())
+                            },
+                            !1),
+                        f.container.focusout(function(b) {
+                            if (b.relatedTarget) {
+                                var c = a(b.relatedTarget);
+                                f.keyboardAction && 0 === c.parents(".ak-container").length && (f.keyboardAction = !1, f.hideControls(!0))
+                            }
+                        }),
+                        setTimeout(function() {
+                                f.setPlayerSize(f.width, f.height),
+                                    f.setControlsSize()
+                            },
+                            50),
+                        f.globalBind("resize",
+                            function() {
+                                f.isFullScreen || akjs.MediaFeatures.hasTrueNativeFullScreen && document.webkitIsFullScreen || f.setPlayerSize(f.width, f.height),
+                                    f.setControlsSize()
+                            })
+                }
+                i && "native" == b.pluginType && f.play(),
+                f.options.success && ("string" == typeof f.options.success ? window[f.options.success](f.media, f.domNode, f) : f.options.success(f.media, f.domNode, f))
+            }
+        },
+        handleError: function(a) {
+            var b = this;
+            b.controls.hide(),
+            b.options.error && b.options.error(a)
+        },
+        setPlayerSize: function(b, c) {
+            var d = this;
+            if (!d.options.setDimensions) return ! 1;
+            if ("undefined" != typeof b && (d.width = b), "undefined" != typeof c && (d.height = c), d.height.toString().indexOf("%") > 0 || "100%" === d.$node.css("max-width") || d.$node[0].currentStyle && "100%" === d.$node[0].currentStyle.maxWidth) {
+                var e = function() {
+                        return d.isVideo ? d.media.videoWidth && d.media.videoWidth > 0 ? d.media.videoWidth: null !== d.media.getAttribute("width") ? d.media.getAttribute("width") : d.options.defaultVideoWidth: d.options.defaultAudioWidth
+                    } (),
+                    f = function() {
+                        return d.isVideo ? d.media.videoHeight && d.media.videoHeight > 0 ? d.media.videoHeight: null !== d.media.getAttribute("height") ? d.media.getAttribute("height") : d.options.defaultVideoHeight: d.options.defaultAudioHeight
+                    } (),
+                    g = d.container.parent().closest(":visible").width(),
+                    h = d.container.parent().closest(":visible").height(),
+                    i = d.isVideo || !d.options.autosizeProgress ? parseInt(g * f / e, 10) : f;
+                isNaN(i) && (i = h),
+                d.container.parent().length > 0 && "body" === d.container.parent()[0].tagName.toLowerCase() && (g = a(window).width(), i = a(window).height()),
+                i && g && (d.container.width(g).height(i), d.$media.add(d.container.find(".ak-shim")).width("100%").height("100%"), d.isVideo && d.media.setVideoSize && d.media.setVideoSize(g, i), d.layers.children(".ak-layer").width("100%").height("100%"))
+            } else d.container.width(d.width).height(d.height),
+                d.layers.children(".ak-layer").width(d.width).height(d.height);
+            var j = d.layers.find(".ak-overlay-play"),
+                k = j.find(".ak-overlay-button");
+            j.height(d.container.height() - d.controls.height()),
+                k.css("margin-top", "-" + (k.height() / 2 - d.controls.height() / 2).toString() + "px")
+        },
+        setControlsSize: function() {
+            var b = this,
+                c = 0,
+                d = 0,
+                e = b.controls.find(".ak-time-rail"),
+                f = b.controls.find(".ak-time-total"),
+                g = (b.controls.find(".ak-time-current"), b.controls.find(".ak-time-loaded"), e.siblings()),
+                h = g.last(),
+                i = null;
+            if (b.container.is(":visible") && e.length && e.is(":visible")) {
+                b.options && !b.options.autosizeProgress && (d = parseInt(e.css("width"), 10)),
+                0 !== d && d || (g.each(function() {
+                    var b = a(this);
+                    "absolute" != b.css("position") && b.is(":visible") && (c += a(this).outerWidth(!0))
+                }), d = b.controls.width() - c - (e.outerWidth(!0) - e.width()));
+                do e.width(d),
+                    f.width(d - (f.outerWidth(!0) - f.width())),
+                "absolute" != h.css("position") && (i = h.length ? h.position() : null, d--);
+                while (null !== i && i.top > 0 && d > 0);
+                b.setProgressRail && b.setProgressRail(),
+                b.setCurrentRail && b.setCurrentRail()
+            }
+        },
+        buildposter: function(b, c, d, e) {
+            var f = this,
+                g = a('<div class="ak-poster ak-layer"></div>').appendTo(d),
+                h = b.$media.attr("poster");
+            "" !== b.options.poster && (h = b.options.poster),
+                h ? f.setPoster(h) : g.hide(),
+                e.addEventListener("play",
                     function() {
-                        f.options.clickToPlayPause && e.paused && e.play()
-                    });
-            e.addEventListener("play",
+                        g.hide()
+                    },
+                    !1),
+            b.options.showPosterWhenEnded && b.options.autoRewind && e.addEventListener("ended",
                 function() {
-                    i.hide(),
-                        g.hide(),
-                        c.find(".ak-time-buffering").hide(),
-                        h.hide()
+                    g.show()
                 },
-                !1),
-                e.addEventListener("playing",
+                !1)
+        },
+        setPoster: function(b) {
+            var c = this,
+                d = c.container.find(".ak-poster"),
+                e = d.find("img");
+            0 === e.length && (e = a('<img width="100%" height="100%" />').appendTo(d)),
+                e.attr("src", b),
+                d.css({
+                    "background-image": "url(" + b + ")"
+                })
+        },
+        buildoverlays: function(b, c, d, e) {
+            var f = this;
+            if (b.isVideo) {
+                var g = a('<div class="ak-overlay ak-layer"><div class="ak-overlay-loading"><span></span></div></div>').hide().appendTo(d),
+                    h = a('<div class="ak-overlay ak-layer"><div class="ak-overlay-error"></div></div>').hide().appendTo(d),
+                    i = a('<div class="ak-overlay ak-layer ak-overlay-play"><div class="ak-overlay-button"></div></div>').appendTo(d).bind("click",
+                        function() {
+                            f.options.clickToPlayPause && e.paused && e.play()
+                        });
+                e.addEventListener("play",
                     function() {
                         i.hide(),
                             g.hide(),
@@ -8813,768 +7216,773 @@ akjs.MediaElementPlayer.prototype = {
                             h.hide()
                     },
                     !1),
-                e.addEventListener("seeking",
-                    function() {
-                        g.show(),
-                            c.find(".ak-time-buffering").show()
-                    },
-                    !1),
-                e.addEventListener("seeked",
-                    function() {
-                        g.hide(),
-                            c.find(".ak-time-buffering").hide()
-                    },
-                    !1),
-                e.addEventListener("pause",
-                    function() {
-                        akjs.MediaFeatures.isiPhone || i.show()
-                    },
-                    !1),
-                e.addEventListener("waiting",
-                    function() {
-                        g.show(),
-                            c.find(".ak-time-buffering").show()
-                    },
-                    !1),
-                e.addEventListener("loadeddata",
-                    function() {
-                        g.show(),
-                            c.find(".ak-time-buffering").show(),
-                        akjs.MediaFeatures.isAndroid && (e.canplayTimeout = window.setTimeout(function() {
-                                if (document.createEvent) {
-                                    var a = document.createEvent("HTMLEvents");
-                                    return a.initEvent("canplay", !0, !0),
-                                        e.dispatchEvent(a)
-                                }
-                            },
-                            300))
-                    },
-                    !1),
-                e.addEventListener("canplay",
-                    function() {
-                        g.hide(),
-                            c.find(".ak-time-buffering").hide(),
-                            clearTimeout(e.canplayTimeout)
-                    },
-                    !1),
-                e.addEventListener("error",
-                    function() {
-                        g.hide(),
-                            c.find(".ak-time-buffering").hide(),
-                            h.show(),
-                            h.find(".ak-overlay-error").html("Error loading this resource")
-                    },
-                    !1),
-                e.addEventListener("keydown",
-                    function(a) {
-                        f.onkeydown(b, e, a)
-                    },
-                    !1)
-        }
-    },
-    buildkeyboard: function(b, c, d, e) {
-        var f = this;
-        f.container.keydown(function() {
-            f.keyboardAction = !0
-        }),
-            f.globalBind("keydown",
-                function(a) {
-                    return f.onkeydown(b, e, a)
-                }),
-            f.globalBind("click",
-                function(c) {
-                    b.hasFocus = 0 !== a(c.target).closest(".ak-container").length
-                })
-    },
-    onkeydown: function(a, b, c) {
-        if (a.hasFocus && a.options.enableKeyboard) for (var d = 0,
-                                                             e = a.options.keyActions.length; e > d; d++) for (var f = a.options.keyActions[d], g = 0, h = f.keys.length; h > g; g++) if (c.keyCode == f.keys[g]) return "function" == typeof c.preventDefault && c.preventDefault(),
-            f.action(a, b, c.keyCode),
-            !1;
-        return ! 0
-    },
-    findTracks: function() {
-        var b = this,
-            c = b.$media.find("track");
-        b.tracks = [],
-            c.each(function(c, d) {
-                d = a(d),
-                    b.tracks.push({
-                        srclang: d.attr("srclang") ? d.attr("srclang").toLowerCase() : "",
-                        src: d.attr("src"),
-                        kind: d.attr("kind"),
-                        label: d.attr("label") || "",
-                        entries: [],
-                        isLoaded: !1
-                    })
-            })
-    },
-    changeSkin: function(a) {
-        this.container[0].className = "ak-container " + a,
-            this.setPlayerSize(this.width, this.height),
-            this.setControlsSize()
-    },
-    play: function() {
-        this.load(),
-            this.media.play()
-    },
-    pause: function() {
-        try {
-            this.media.pause()
-        } catch(a) {}
-    },
-    load: function() {
-        this.isLoaded || this.media.load(),
-            this.isLoaded = !0
-    },
-    setMuted: function(a) {
-        this.media.setMuted(a)
-    },
-    setCurrentTime: function(a) {
-        this.media.setCurrentTime(a)
-    },
-    getCurrentTime: function() {
-        return this.media.currentTime
-    },
-    setVolume: function(a) {
-        this.media.setVolume(a)
-    },
-    getVolume: function() {
-        return this.media.volume
-    },
-    setSrc: function(a) {
-        this.media.setSrc(a)
-    },
-    remove: function() {
-        var a, b, c = this;
-        for (a in c.options.features) if (b = c.options.features[a], c["clean" + b]) try {
-            c["clean" + b](c)
-        } catch(d) {}
-        c.isDynamic ? c.$node.insertBefore(c.container) : (c.$media.prop("controls", !0), c.$node.clone().insertBefore(c.container).show(), c.$node.remove()),
-        "native" !== c.media.pluginType && c.media.remove(),
-            delete akjs.players[c.id],
-        "object" == typeof c.container && c.container.remove(),
-            c.globalUnbind(),
-            delete c.node.player
-    },
-    rebuildtracks: function() {
-        var a = this;
-        a.findTracks(),
-            a.buildtracks(a, a.controls, a.layers, a.media)
-    },
-    resetSize: function() {
-        var a = this;
-        setTimeout(function() {
-                a.setPlayerSize(a.width, a.height),
-                    a.setControlsSize()
-            },
-            50)
-    }
-},
-function() {
-    function b(b, d) {
-        var e = {
-            d: [],
-            w: []
-        };
-        return a.each((b || "").split(" "),
-            function(a, b) {
-                var f = b + "." + d;
-                0 === f.indexOf(".") ? (e.d.push(f), e.w.push(f)) : e[c.test(b) ? "w": "d"].push(f)
-            }),
-            e.d = e.d.join(" "),
-            e.w = e.w.join(" "),
-            e
-    }
-    var c = /^((after|before)print|(before)?unload|hashchange|message|o(ff|n)line|page(hide|show)|popstate|resize|storage)\b/;
-    akjs.MediaElementPlayer.prototype.globalBind = function(c, d, e) {
-        var f = this;
-        c = b(c, f.id),
-        c.d && a(document).bind(c.d, d, e),
-        c.w && a(window).bind(c.w, d, e)
-    },
-        akjs.MediaElementPlayer.prototype.globalUnbind = function(c, d) {
-            var e = this;
-            c = b(c, e.id),
-            c.d && a(document).unbind(c.d, d),
-            c.w && a(window).unbind(c.w, d)
-        }
-} (),
-"undefined" != typeof a && (a.fn.AKjs_MediaElement = function(b) {
-    return this.each(b === !1 ?
-        function() {
-            var b = a(this).data("AKjs_MediaElement");
-            b && b.remove(),
-                a(this).removeData("AKjs_MediaElement")
-        }: function() {
-            a(this).data("AKjs_MediaElement", new akjs.MediaElementPlayer(this, b))
-        }),
-        this
-}, a(document).ready(function() {
-        a(".ak-player").AKjs_MediaElement()
-    }));
-    window.MediaElementPlayer = akjs.MediaElementPlayer
-} (akjs.$),
-function(a) {
-    a.extend(MediaElementPlayer.prototype, {
-            buildplaypause: function(b, c, d, e) {
-                function f(a) {
-                    "play" === a ? (i.removeClass("ak-play").addClass("ak-pause"), j.attr({
-                        title: h.pauseText,
-                        "aria-label": h.pauseText
-                    })) : (i.removeClass("ak-pause").addClass("ak-play"), j.attr({
-                        title: h.playText,
-                        "aria-label": h.playText
-                    }))
-                }
-                var g = this,
-                    h = g.options,
-                    i = a('<div class="ak-button ak-playpause-button ak-play" ><button type="button" aria-controls="' + g.id + '" title="' + h.playText + '" aria-label="' + h.playText + '"></button></div>').appendTo(c).click(function(a) {
-                        return a.preventDefault(),
-                            e.paused ? e.play() : e.pause(),
-                            !1
-                    }),
-                    j = i.find("button");
-                f("pse"),
-                    e.addEventListener("play",
-                        function() {
-                            f("play")
-                        },
-                        !1),
                     e.addEventListener("playing",
                         function() {
-                            f("play")
+                            i.hide(),
+                                g.hide(),
+                                c.find(".ak-time-buffering").hide(),
+                                h.hide()
+                        },
+                        !1),
+                    e.addEventListener("seeking",
+                        function() {
+                            g.show(),
+                                c.find(".ak-time-buffering").show()
+                        },
+                        !1),
+                    e.addEventListener("seeked",
+                        function() {
+                            g.hide(),
+                                c.find(".ak-time-buffering").hide()
                         },
                         !1),
                     e.addEventListener("pause",
                         function() {
-                            f("pse")
+                            akjs.MediaFeatures.isiPhone || i.show()
                         },
                         !1),
-                    e.addEventListener("paused",
+                    e.addEventListener("waiting",
                         function() {
-                            f("pse")
+                            g.show(),
+                                c.find(".ak-time-buffering").show()
+                        },
+                        !1),
+                    e.addEventListener("loadeddata",
+                        function() {
+                            g.show(),
+                                c.find(".ak-time-buffering").show(),
+                            akjs.MediaFeatures.isAndroid && (e.canplayTimeout = window.setTimeout(function() {
+                                    if (document.createEvent) {
+                                        var a = document.createEvent("HTMLEvents");
+                                        return a.initEvent("canplay", !0, !0),
+                                            e.dispatchEvent(a)
+                                    }
+                                },
+                                300))
+                        },
+                        !1),
+                    e.addEventListener("canplay",
+                        function() {
+                            g.hide(),
+                                c.find(".ak-time-buffering").hide(),
+                                clearTimeout(e.canplayTimeout)
+                        },
+                        !1),
+                    e.addEventListener("error",
+                        function() {
+                            g.hide(),
+                                c.find(".ak-time-buffering").hide(),
+                                h.show(),
+                                h.find(".ak-overlay-error").html("Error loading this resource")
+                        },
+                        !1),
+                    e.addEventListener("keydown",
+                        function(a) {
+                            f.onkeydown(b, e, a)
                         },
                         !1)
             }
-        })
-} (akjs.$),
-function(a) {
-    a.extend(akjs.MepDefaults, {
-        progessHelpText: akjs.i18n.t("Use Left/Right Arrow keys to advance one second, Up/Down arrows to advance ten seconds.")
-    }),
-        a.extend(MediaElementPlayer.prototype, {
-            buildprogress: function(b, c, d, e) {
-                a('<div class="ak-time-rail"><span  class="ak-time-total ak-time-slider"><span class="ak-time-buffering"></span><span class="ak-time-loaded"></span><span class="ak-time-current"></span><span class="ak-time-handle"></span><span class="ak-time-float"><span class="ak-time-float-current">00:00</span><span class="ak-time-float-corner"></span></span></span></div>').appendTo(c),
-                    c.find(".ak-time-buffering").hide();
-                var f = this,
-                    g = c.find(".ak-time-total"),
-                    h = c.find(".ak-time-loaded"),
-                    i = c.find(".ak-time-current"),
-                    j = c.find(".ak-time-handle"),
-                    k = c.find(".ak-time-float"),
-                    l = c.find(".ak-time-float-current"),
-                    m = c.find(".ak-time-slider"),
-                    n = function(a) {
-                        var b, c = g.offset(),
-                            d = g.outerWidth(!0),
-                            f = 0,
-                            h = 0,
-                            i = 0;
-                        b = a.originalEvent.changedTouches ? a.originalEvent.changedTouches[0].pageX: a.pageX,
-                        e.duration && (b < c.left ? b = c.left: b > d + c.left && (b = d + c.left), i = b - c.left, f = i / d, h = .02 >= f ? 0 : f * e.duration, o && h !== e.currentTime && e.setCurrentTime(h), akjs.MediaFeatures.hasTouch || (k.css("left", i), l.html(akjs.Utility.secondsToTimeCode(h)), k.show()))
-                    },
-                    o = !1,
-                    p = !1,
-                    q = 0,
-                    r = !1,
-                    s = b.options.autoRewind,
-                    t = function() {
-                        var a = e.currentTime,
-                            b = akjs.i18n.t("Time Slider"),
-                            c = akjs.Utility.secondsToTimeCode(a),
-                            d = e.duration;
-                        m.attr({
-                            "aria-label": b,
-                            "aria-valuemin": 0,
-                            "aria-valuemax": d,
-                            "aria-valuenow": a,
-                            "aria-valuetext": c,
-                            role: "slider",
-                            tabindex: 0
-                        })
-                    },
-                    u = function() {
-                        var a = new Date;
-                        a - q >= 1e3 && e.play()
-                    };
-                m.bind("focus",
-                    function() {
-                        b.options.autoRewind = !1
-                    }),
-                    m.bind("blur",
-                        function() {
-                            b.options.autoRewind = s
-                        }),
-                    m.bind("keydown",
-                        function(a) {
-                            new Date - q >= 1e3 && (r = e.paused);
-                            var b = a.keyCode,
-                                c = e.duration,
-                                d = e.currentTime;
-                            switch (b) {
-                                case 37:
-                                    d -= 1;
-                                    break;
-                                case 39:
-                                    d += 1;
-                                    break;
-                                case 38:
-                                    d += Math.floor(.1 * c);
-                                    break;
-                                case 40:
-                                    d -= Math.floor(.1 * c);
-                                    break;
-                                case 36:
-                                    d = 0;
-                                    break;
-                                case 35:
-                                    d = c;
-                                    break;
-                                case 10:
-                                    return void(e.paused ? e.play() : e.pause());
-                                case 13:
-                                    return void(e.paused ? e.play() : e.pause());
-                                default:
-                                    return
-                            }
-                            return d = 0 > d ? 0 : d >= c ? c: Math.floor(d),
-                                q = new Date,
-                            r || e.pause(),
-                            d < e.duration && !r && setTimeout(u, 1100),
-                                e.setCurrentTime(d),
-                                a.preventDefault(),
-                                a.stopPropagation(),
-                                !1
-                        }),
-                    g.bind("mousedown touchstart",
-                        function(a) { (1 === a.which || 0 === a.which) && (o = !0, n(a), f.globalBind("mousemove.dur touchmove.dur",
-                            function(a) {
-                                n(a)
-                            }), f.globalBind("mouseup.dur touchend.dur",
-                            function() {
-                                o = !1,
-                                    k.hide(),
-                                    f.globalUnbind(".dur")
-                            }))
-                        }).bind("mouseenter",
-                        function() {
-                            p = !0,
-                                f.globalBind("mousemove.dur",
-                                    function(a) {
-                                        n(a)
-                                    }),
-                            akjs.MediaFeatures.hasTouch || k.show()
-                        }).bind("mouseleave",
-                        function() {
-                            p = !1,
-                            o || (f.globalUnbind(".dur"), k.hide())
-                        }),
-                    e.addEventListener("progress",
-                        function(a) {
-                            b.setProgressRail(a),
-                                b.setCurrentRail(a)
-                        },
-                        !1),
-                    e.addEventListener("timeupdate",
-                        function(a) {
-                            b.setProgressRail(a),
-                                b.setCurrentRail(a),
-                                t(a)
-                        },
-                        !1),
-                    f.loaded = h,
-                    f.total = g,
-                    f.current = i,
-                    f.handle = j
-            },
-            setProgressRail: function(a) {
-                var b = this,
-                    c = void 0 !== a ? a.target: b.media,
-                    d = null;
-                c && c.buffered && c.buffered.length > 0 && c.buffered.end && c.duration ? d = c.buffered.end(0) / c.duration: c && void 0 !== c.bytesTotal && c.bytesTotal > 0 && void 0 !== c.bufferedBytes ? d = c.bufferedBytes / c.bytesTotal: a && a.lengthComputable && 0 !== a.total && (d = a.loaded / a.total),
-                null !== d && (d = Math.min(1, Math.max(0, d)), b.loaded && b.total && b.loaded.width(b.total.width() * d))
-            },
-            setCurrentRail: function() {
-                var a = this;
-                if (void 0 !== a.media.currentTime && a.media.duration && a.total && a.handle) {
-                    var b = Math.round(a.total.width() * a.media.currentTime / a.media.duration),
-                        c = b - Math.round(a.handle.outerWidth(!0) / 2);
-                    a.current.width(b),
-                        a.handle.css("left", c)
-                }
-            }
-        })
-} (akjs.$),
-function(a) {
-    a.extend(akjs.MepDefaults, {
-        duration: -1,
-        timeAndDurationSeparator: "<span> | </span>"
-    }), a.extend(MediaElementPlayer.prototype, {
-            buildcurrent: function(b, c, d, e) {
-                var f = this;
-                a('<div class="ak-time" role="timer" aria-live="off"><span class="ak-currenttime">' + (b.options.alwaysShowHours ? "00:": "") + (b.options.showTimecodeFrameCount ? "00:00:00": "00:00") + "</span></div>").appendTo(c),
-                    f.currenttime = f.controls.find(".ak-currenttime"),
-                    e.addEventListener("timeupdate",
-                        function() {
-                            b.updateCurrent()
-                        },
-                        !1)
-            },
-            buildduration: function(b, c, d, e) {
-                var f = this;
-                c.children().last().find(".ak-currenttime").length > 0 ? a(f.options.timeAndDurationSeparator + '<span class="ak-duration">' + (f.options.duration > 0 ? akjs.Utility.secondsToTimeCode(f.options.duration, f.options.alwaysShowHours || f.media.duration > 3600, f.options.showTimecodeFrameCount, f.options.framesPerSecond || 25) : (b.options.alwaysShowHours ? "00:": "") + (b.options.showTimecodeFrameCount ? "00:00:00": "00:00")) + "</span>").appendTo(c.find(".ak-time")) : (c.find(".ak-currenttime").parent().addClass("ak-currenttime-container"), a('<div class="ak-time ak-duration-container"><span class="ak-duration">' + (f.options.duration > 0 ? akjs.Utility.secondsToTimeCode(f.options.duration, f.options.alwaysShowHours || f.media.duration > 3600, f.options.showTimecodeFrameCount, f.options.framesPerSecond || 25) : (b.options.alwaysShowHours ? "00:": "") + (b.options.showTimecodeFrameCount ? "00:00:00": "00:00")) + "</span></div>").appendTo(c)),
-                    f.durationD = f.controls.find(".ak-duration"),
-                    e.addEventListener("timeupdate",
-                        function() {
-                            b.updateDuration()
-                        },
-                        !1)
-            },
-            updateCurrent: function() {
-                var a = this;
-                a.currenttime && a.currenttime.html(akjs.Utility.secondsToTimeCode(a.media.currentTime, a.options.alwaysShowHours || a.media.duration > 3600, a.options.showTimecodeFrameCount, a.options.framesPerSecond || 25))
-            },
-            updateDuration: function() {
-                var a = this;
-                a.container.toggleClass("ak-long-video", a.media.duration > 3600),
-                a.durationD && (a.options.duration > 0 || a.media.duration) && a.durationD.html(akjs.Utility.secondsToTimeCode(a.options.duration > 0 ? a.options.duration: a.media.duration, a.options.alwaysShowHours, a.options.showTimecodeFrameCount, a.options.framesPerSecond || 25))
-            }
-        })
-} (akjs.$),
-function(a) {
-    a.extend(akjs.MepDefaults, {
-        muteText: akjs.i18n.t("Mute Toggle"),
-        allyVolumeControlText: akjs.i18n.t("Use Up/Down Arrow keys to increase or decrease volume."),
-        hideVolumeOnTouchDevices: !0,
-        audioVolume: "horizontal",
-        videoVolume: "vertical"
-    }),
-        a.extend(MediaElementPlayer.prototype, {
-            buildvolume: function(b, c, d, e) {
-                if (!akjs.MediaFeatures.isAndroid && !akjs.MediaFeatures.isiOS || !this.options.hideVolumeOnTouchDevices) {
-                    var f = this,
-                        g = f.isVideo ? f.options.videoVolume: f.options.audioVolume,
-                        h = "horizontal" == g ? a('<div class="ak-button ak-volume-button ak-mute"><button type="button" aria-controls="' + f.id + '" title="' + f.options.muteText + '" aria-label="' + f.options.muteText + '"></button></div><a href="javascript:void(0);" class="ak-horizontal-volume-slider"><span class="ak-offscreen">' + f.options.allyVolumeControlText + '</span><div class="ak-horizontal-volume-total"></div><div class="ak-horizontal-volume-current"></div><div class="ak-horizontal-volume-handle"></div></a>').appendTo(c) : a('<div class="ak-button ak-volume-button ak-mute"><button type="button" aria-controls="' + f.id + '" title="' + f.options.muteText + '" aria-label="' + f.options.muteText + '"></button><a href="javascript:void(0);" class="ak-volume-slider"><span class="ak-offscreen">' + f.options.allyVolumeControlText + '</span><div class="ak-volume-total"></div><div class="ak-volume-current"></div><div class="ak-volume-handle"></div></a></div>').appendTo(c),
-                        i = f.container.find(".ak-volume-slider, .ak-horizontal-volume-slider"),
-                        j = f.container.find(".ak-volume-total, .ak-horizontal-volume-total"),
-                        k = f.container.find(".ak-volume-current, .ak-horizontal-volume-current"),
-                        l = f.container.find(".ak-volume-handle, .ak-horizontal-volume-handle"),
-                        m = function(a, b) {
-                            if (!i.is(":visible") && "undefined" == typeof b) return i.show(),
-                                m(a, !0),
-                                void i.hide();
-                            a = Math.max(0, a),
-                                a = Math.min(a, 1),
-                                0 === a ? (h.removeClass("ak-mute").addClass("ak-unmute"), h.children("button").attr("title", akjs.i18n.t("Unmute")).attr("aria-label", akjs.i18n.t("Unmute"))) : (h.removeClass("ak-unmute").addClass("ak-mute"), h.children("button").attr("title", akjs.i18n.t("Mute")).attr("aria-label", akjs.i18n.t("Mute")));
-                            var c = j.position();
-                            if ("vertical" == g) {
-                                var d = j.height(),
-                                    e = d - d * a;
-                                l.css("top", Math.round(c.top + e - l.height() / 2)),
-                                    k.height(d - e),
-                                    k.css("top", c.top + e)
-                            } else {
-                                var f = j.width(),
-                                    n = f * a;
-                                l.css("left", Math.round(c.left + n - l.width() / 2)),
-                                    k.width(Math.round(n))
-                            }
-                        },
-                        n = function(a) {
-                            var b = null,
-                                c = j.offset();
-                            if ("vertical" === g) {
-                                var d = j.height(),
-                                    f = (parseInt(j.css("top").replace(/px/, ""), 10), a.pageY - c.top);
-                                if (b = (d - f) / d, 0 === c.top || 0 === c.left) return
-                            } else {
-                                var h = j.width(),
-                                    i = a.pageX - c.left;
-                                b = i / h
-                            }
-                            b = Math.max(0, b),
-                                b = Math.min(b, 1),
-                                m(b),
-                                e.setMuted(0 === b ? !0 : !1),
-                                e.setVolume(b)
-                        },
-                        o = !1,
-                        p = !1;
-                    h.hover(function() {
-                            i.show(),
-                                p = !0
-                        },
-                        function() {
-                            p = !1,
-                            o || "vertical" != g || i.hide()
-                        });
-                    var q = function() {
-                        var a = Math.floor(100 * e.volume);
-                        i.attr({
-                            "aria-label": akjs.i18n.t("volumeSlider"),
-                            "aria-valuemin": 0,
-                            "aria-valuemax": 100,
-                            "aria-valuenow": a,
-                            "aria-valuetext": a + "%",
-                            role: "slider",
-                            tabindex: 0
-                        })
-                    };
-                    i.bind("mouseover",
-                        function() {
-                            p = !0
-                        }).bind("mousedown",
-                        function(a) {
-                            return n(a),
-                                f.globalBind("mousemove.vol",
-                                    function(a) {
-                                        n(a)
-                                    }),
-                                f.globalBind("mouseup.vol",
-                                    function() {
-                                        o = !1,
-                                            f.globalUnbind(".vol"),
-                                        p || "vertical" != g || i.hide()
-                                    }),
-                                o = !0,
-                                !1
-                        }).bind("keydown",
-                        function(a) {
-                            var b = a.keyCode,
-                                c = e.volume;
-                            switch (b) {
-                                case 38:
-                                    c += .1;
-                                    break;
-                                case 40:
-                                    c -= .1;
-                                    break;
-                                default:
-                                    return ! 0
-                            }
-                            return o = !1,
-                                m(c),
-                                e.setVolume(c),
-                                !1
-                        }).bind("blur",
-                        function() {
-                            i.hide()
-                        }),
-                        h.find("button").click(function() {
-                            e.setMuted(!e.muted)
-                        }),
-                        h.find("button").bind("focus",
-                            function() {
-                                i.show()
-                            }),
-                        e.addEventListener("volumechange",
-                            function(a) {
-                                o || (e.muted ? (m(0), h.removeClass("ak-mute").addClass("ak-unmute")) : (m(e.volume), h.removeClass("ak-unmute").addClass("ak-mute"))),
-                                    q(a)
-                            },
-                            !1),
-                    f.container.is(":visible") && (m(b.options.startVolume), 0 === b.options.startVolume && e.setMuted(!0), "native" === e.pluginType && e.setVolume(b.options.startVolume))
-                }
-            }
-        })
-} (akjs.$),
-function(a) {
-    a.extend(akjs.MepDefaults, {
-        usePluginFullScreen: !0,
-        newWindowCallback: function() {
-            return ""
         },
-        fullscreenText: akjs.i18n.t("Fullscreen")
-    }),
+        buildkeyboard: function(b, c, d, e) {
+            var f = this;
+            f.container.keydown(function() {
+                f.keyboardAction = !0
+            }),
+                f.globalBind("keydown",
+                    function(a) {
+                        return f.onkeydown(b, e, a)
+                    }),
+                f.globalBind("click",
+                    function(c) {
+                        b.hasFocus = 0 !== a(c.target).closest(".ak-container").length
+                    })
+        },
+        onkeydown: function(a, b, c) {
+            if (a.hasFocus && a.options.enableKeyboard) for (var d = 0,
+                                                                 e = a.options.keyActions.length; e > d; d++) for (var f = a.options.keyActions[d], g = 0, h = f.keys.length; h > g; g++) if (c.keyCode == f.keys[g]) return "function" == typeof c.preventDefault && c.preventDefault(),
+                f.action(a, b, c.keyCode),
+                !1;
+            return ! 0
+        },
+        findTracks: function() {
+            var b = this,
+                c = b.$media.find("track");
+            b.tracks = [],
+                c.each(function(c, d) {
+                    d = a(d),
+                        b.tracks.push({
+                            srclang: d.attr("srclang") ? d.attr("srclang").toLowerCase() : "",
+                            src: d.attr("src"),
+                            kind: d.attr("kind"),
+                            label: d.attr("label") || "",
+                            entries: [],
+                            isLoaded: !1
+                        })
+                })
+        },
+        changeSkin: function(a) {
+            this.container[0].className = "ak-container " + a,
+                this.setPlayerSize(this.width, this.height),
+                this.setControlsSize()
+        },
+        play: function() {
+            this.load(),
+                this.media.play()
+        },
+        pause: function() {
+            try {
+                this.media.pause()
+            } catch(a) {}
+        },
+        load: function() {
+            this.isLoaded || this.media.load(),
+                this.isLoaded = !0
+        },
+        setMuted: function(a) {
+            this.media.setMuted(a)
+        },
+        setCurrentTime: function(a) {
+            this.media.setCurrentTime(a)
+        },
+        getCurrentTime: function() {
+            return this.media.currentTime
+        },
+        setVolume: function(a) {
+            this.media.setVolume(a)
+        },
+        getVolume: function() {
+            return this.media.volume
+        },
+        setSrc: function(a) {
+            this.media.setSrc(a)
+        },
+        remove: function() {
+            var a, b, c = this;
+            for (a in c.options.features) if (b = c.options.features[a], c["clean" + b]) try {
+                c["clean" + b](c)
+            } catch(d) {}
+            c.isDynamic ? c.$node.insertBefore(c.container) : (c.$media.prop("controls", !0), c.$node.clone().insertBefore(c.container).show(), c.$node.remove()),
+            "native" !== c.media.pluginType && c.media.remove(),
+                delete akjs.players[c.id],
+            "object" == typeof c.container && c.container.remove(),
+                c.globalUnbind(),
+                delete c.node.player
+        },
+        rebuildtracks: function() {
+            var a = this;
+            a.findTracks(),
+                a.buildtracks(a, a.controls, a.layers, a.media)
+        },
+        resetSize: function() {
+            var a = this;
+            setTimeout(function() {
+                    a.setPlayerSize(a.width, a.height),
+                        a.setControlsSize()
+                },
+                50)
+        }
+    },
+    function() {
+        function b(b, d) {
+            var e = {
+                d: [],
+                w: []
+            };
+            return a.each((b || "").split(" "),
+                function(a, b) {
+                    var f = b + "." + d;
+                    0 === f.indexOf(".") ? (e.d.push(f), e.w.push(f)) : e[c.test(b) ? "w": "d"].push(f)
+                }),
+                e.d = e.d.join(" "),
+                e.w = e.w.join(" "),
+                e
+        }
+        var c = /^((after|before)print|(before)?unload|hashchange|message|o(ff|n)line|page(hide|show)|popstate|resize|storage)\b/;
+        akjs.MediaElementPlayer.prototype.globalBind = function(c, d, e) {
+            var f = this;
+            c = b(c, f.id),
+            c.d && a(document).bind(c.d, d, e),
+            c.w && a(window).bind(c.w, d, e)
+        },
+            akjs.MediaElementPlayer.prototype.globalUnbind = function(c, d) {
+                var e = this;
+                c = b(c, e.id),
+                c.d && a(document).unbind(c.d, d),
+                c.w && a(window).unbind(c.w, d)
+            }
+    } (),
+    "undefined" != typeof a && (a.fn.AKjs_MediaElement = function(b) {
+        return this.each(b === !1 ?
+            function() {
+                var b = a(this).data("AKjs_MediaElement");
+                b && b.remove(),
+                    a(this).removeData("AKjs_MediaElement")
+            }: function() {
+                a(this).data("AKjs_MediaElement", new akjs.MediaElementPlayer(this, b))
+            }),
+            this
+    }, a(document).ready(function() {
+            a(".ak-player").AKjs_MediaElement()
+        }));
+        window.MediaElementPlayer = akjs.MediaElementPlayer
+    } (akjs.$),
+    function(a) {
         a.extend(MediaElementPlayer.prototype, {
-            isFullScreen: !1,
-            isNativeFullScreen: !1,
-            isInIframe: !1,
-            buildfullscreen: function(b, c, d, e) {
-                if (b.isVideo) {
-                    if (b.isInIframe = window.location != window.parent.location, akjs.MediaFeatures.hasTrueNativeFullScreen) {
-                        var f = function() {
-                            b.isFullScreen && (akjs.MediaFeatures.isFullScreen() ? (b.isNativeFullScreen = !0, b.setControlsSize()) : (b.isNativeFullScreen = !1, b.exitFullScreen()))
-                        };
-                        b.globalBind(akjs.MediaFeatures.fullScreenEventName, f)
+                buildplaypause: function(b, c, d, e) {
+                    function f(a) {
+                        "play" === a ? (i.removeClass("ak-play").addClass("ak-pause"), j.attr({
+                            title: h.pauseText,
+                            "aria-label": h.pauseText
+                        })) : (i.removeClass("ak-pause").addClass("ak-play"), j.attr({
+                            title: h.playText,
+                            "aria-label": h.playText
+                        }))
                     }
                     var g = this,
-                        h = (b.container, a('<div class="ak-button ak-fullscreen-button"><button type="button" aria-controls="' + g.id + '" title="' + g.options.fullscreenText + '" aria-label="' + g.options.fullscreenText + '"></button></div>').appendTo(c));
-                    if ("native" === g.media.pluginType || !g.options.usePluginFullScreen && !akjs.MediaFeatures.isFirefox) h.click(function() {
-                        var a = akjs.MediaFeatures.hasTrueNativeFullScreen && akjs.MediaFeatures.isFullScreen() || b.isFullScreen;
-                        a ? b.exitFullScreen() : b.enterFullScreen()
-                    });
-                    else {
-                        var i = null,
-                            j = function() {
-                                var a, b = document.createElement("x"),
-                                    c = document.documentElement,
-                                    d = window.getComputedStyle;
-                                return "pointerEvents" in b.style ? (b.style.pointerEvents = "auto", b.style.pointerEvents = "x", c.appendChild(b), a = d && "auto" === d(b, "").pointerEvents, c.removeChild(b), !!a) : !1
-                            } ();
-                        if (j && !akjs.MediaFeatures.isOpera) {
-                            var k, l, m = !1,
-                                n = function() {
-                                    if (m) {
-                                        for (var a in o) o[a].hide();
-                                        h.css("pointer-events", ""),
-                                            g.controls.css("pointer-events", ""),
-                                            g.media.removeEventListener("click", g.clickToPlayPauseCallback),
-                                            m = !1
-                                    }
-                                },
-                                o = {},
-                                p = ["top", "left", "right", "bottom"],
-                                q = function() {
-                                    var a = h.offset().left - g.container.offset().left,
-                                        b = h.offset().top - g.container.offset().top,
-                                        c = h.outerWidth(!0),
-                                        d = h.outerHeight(!0),
-                                        e = g.container.width(),
-                                        f = g.container.height();
-                                    for (k in o) o[k].css({
-                                        position: "absolute",
-                                        top: 0,
-                                        left: 0
-                                    });
-                                    o.top.width(e).height(b),
-                                        o.left.width(a).height(d).css({
-                                            top: b
-                                        }),
-                                        o.right.width(e - a - c).height(d).css({
-                                            top: b,
-                                            left: a + c
-                                        }),
-                                        o.bottom.width(e).height(f - d - b).css({
-                                            top: b + d
-                                        })
-                                };
-                            for (g.globalBind("resize",
-                                function() {
-                                    q()
-                                }), k = 0, l = p.length; l > k; k++) o[p[k]] = a('<div class="ak-fullscreen-hover" />').appendTo(g.container).mouseover(n).hide();
-                            h.on("mouseover",
-                                function() {
-                                    if (!g.isFullScreen) {
-                                        var a = h.offset(),
-                                            c = b.container.offset();
-                                        e.positionFullscreenButton(a.left - c.left, a.top - c.top, !1),
-                                            h.css("pointer-events", "none"),
-                                            g.controls.css("pointer-events", "none"),
-                                            g.media.addEventListener("click", g.clickToPlayPauseCallback);
-                                        for (k in o) o[k].show();
-                                        q(),
-                                            m = !0
-                                    }
-                                }),
-                                e.addEventListener("fullscreenchange",
-                                    function() {
-                                        g.isFullScreen = !g.isFullScreen,
-                                            g.isFullScreen ? g.media.removeEventListener("click", g.clickToPlayPauseCallback) : g.media.addEventListener("click", g.clickToPlayPauseCallback),
-                                            n()
-                                    }),
-                                g.globalBind("mousemove",
-                                    function(a) {
-                                        if (m) {
-                                            var b = h.offset(); (a.pageY < b.top || a.pageY > b.top + h.outerHeight(!0) || a.pageX < b.left || a.pageX > b.left + h.outerWidth(!0)) && (h.css("pointer-events", ""), g.controls.css("pointer-events", ""), m = !1)
-                                        }
-                                    })
-                        } else h.on("mouseover",
+                        h = g.options,
+                        i = a('<div class="ak-button ak-playpause-button ak-play" ><button type="button" aria-controls="' + g.id + '" title="' + h.playText + '" aria-label="' + h.playText + '"></button></div>').appendTo(c).click(function(a) {
+                            return a.preventDefault(),
+                                e.paused ? e.play() : e.pause(),
+                                !1
+                        }),
+                        j = i.find("button");
+                    f("pse"),
+                        e.addEventListener("play",
                             function() {
-                                null !== i && (clearTimeout(i), delete i);
-                                var a = h.offset(),
-                                    c = b.container.offset();
-                                e.positionFullscreenButton(a.left - c.left, a.top - c.top, !0)
-                            }).on("mouseout",
-                            function() {
-                                null !== i && (clearTimeout(i), delete i),
-                                    i = setTimeout(function() {
-                                            e.hideFullscreenButton()
-                                        },
-                                        1500)
-                            })
-                    }
-                    b.fullscreenBtn = h,
-                        g.globalBind("keydown",
-                            function(a) { (akjs.MediaFeatures.hasTrueNativeFullScreen && akjs.MediaFeatures.isFullScreen() || g.isFullScreen) && 27 == a.keyCode && b.exitFullScreen()
-                            })
-                }
-            },
-            cleanfullscreen: function(a) {
-                a.exitFullScreen()
-            },
-            containerSizeTimeout: null,
-            enterFullScreen: function() {
-                var b = this;
-                if ("native" === b.media.pluginType || !akjs.MediaFeatures.isFirefox && !b.options.usePluginFullScreen) {
-                    if (a(document.documentElement).addClass("ak-fullscreen"), normalHeight = b.container.height(), normalWidth = b.container.width(), "native" === b.media.pluginType) if (akjs.MediaFeatures.hasTrueNativeFullScreen) akjs.MediaFeatures.requestFullScreen(b.container[0]),
-                    b.isInIframe && setTimeout(function d() {
-                            if (b.isNativeFullScreen) {
-                                var c = window.devicePixelRatio || 1,
-                                    e = .002,
-                                    f = c * a(window).width(),
-                                    g = screen.width,
-                                    h = Math.abs(g - f),
-                                    i = g * e;
-                                h > i ? b.exitFullScreen() : setTimeout(d, 500)
-                            }
-                        },
-                        500);
-                    else if (akjs.MediaFeatures.hasSemiNativeFullScreen) return void b.media.webkitEnterFullscreen();
-                    if (b.isInIframe) {
-                        var c = b.options.newWindowCallback(this);
-                        if ("" !== c) {
-                            if (!akjs.MediaFeatures.hasTrueNativeFullScreen) return b.pause(),
-                                void window.open(c, b.id, "top=0,left=0,width=" + screen.availWidth + ",height=" + screen.availHeight + ",resizable=yes,scrollbars=no,status=no,toolbar=no");
-                            setTimeout(function() {
-                                    b.isNativeFullScreen || (b.pause(), window.open(c, b.id, "top=0,left=0,width=" + screen.availWidth + ",height=" + screen.availHeight + ",resizable=yes,scrollbars=no,status=no,toolbar=no"))
-                                },
-                                250)
-                        }
-                    }
-                    b.container.addClass("ak-container-fullscreen").width("100%").height("100%"),
-                        b.containerSizeTimeout = setTimeout(function() {
-                                b.container.css({
-                                    width: "100%",
-                                    height: "100%"
-                                }),
-                                    b.setControlsSize()
+                                f("play")
                             },
-                            500),
-                        "native" === b.media.pluginType ? b.$media.width("100%").height("100%") : (b.container.find(".ak-shim").width("100%").height("100%"), b.media.setVideoSize(a(window).width(), a(window).height())),
-                        b.layers.children("div").width("100%").height("100%"),
-                    b.fullscreenBtn && b.fullscreenBtn.removeClass("ak-fullscreen").addClass("ak-unfullscreen"),
-                        b.setControlsSize(),
-                        b.isFullScreen = !0,
-                        b.container.find(".ak-captions-text").css("font-size", screen.width / b.width * 1 * 100 + "%"),
-                        b.container.find(".ak-captions-position").css("bottom", "45px")
+                            !1),
+                        e.addEventListener("playing",
+                            function() {
+                                f("play")
+                            },
+                            !1),
+                        e.addEventListener("pause",
+                            function() {
+                                f("pse")
+                            },
+                            !1),
+                        e.addEventListener("paused",
+                            function() {
+                                f("pse")
+                            },
+                            !1)
                 }
+            })
+    } (akjs.$),
+    function(a) {
+        a.extend(akjs.MepDefaults, {
+            progessHelpText: akjs.i18n.t("Use Left/Right Arrow keys to advance one second, Up/Down arrows to advance ten seconds.")
+        }),
+            a.extend(MediaElementPlayer.prototype, {
+                buildprogress: function(b, c, d, e) {
+                    a('<div class="ak-time-rail"><span  class="ak-time-total ak-time-slider"><span class="ak-time-buffering"></span><span class="ak-time-loaded"></span><span class="ak-time-current"></span><span class="ak-time-handle"></span><span class="ak-time-float"><span class="ak-time-float-current">00:00</span><span class="ak-time-float-corner"></span></span></span></div>').appendTo(c),
+                        c.find(".ak-time-buffering").hide();
+                    var f = this,
+                        g = c.find(".ak-time-total"),
+                        h = c.find(".ak-time-loaded"),
+                        i = c.find(".ak-time-current"),
+                        j = c.find(".ak-time-handle"),
+                        k = c.find(".ak-time-float"),
+                        l = c.find(".ak-time-float-current"),
+                        m = c.find(".ak-time-slider"),
+                        n = function(a) {
+                            var b, c = g.offset(),
+                                d = g.outerWidth(!0),
+                                f = 0,
+                                h = 0,
+                                i = 0;
+                            b = a.originalEvent.changedTouches ? a.originalEvent.changedTouches[0].pageX: a.pageX,
+                            e.duration && (b < c.left ? b = c.left: b > d + c.left && (b = d + c.left), i = b - c.left, f = i / d, h = .02 >= f ? 0 : f * e.duration, o && h !== e.currentTime && e.setCurrentTime(h), akjs.MediaFeatures.hasTouch || (k.css("left", i), l.html(akjs.Utility.secondsToTimeCode(h)), k.show()))
+                        },
+                        o = !1,
+                        p = !1,
+                        q = 0,
+                        r = !1,
+                        s = b.options.autoRewind,
+                        t = function() {
+                            var a = e.currentTime,
+                                b = akjs.i18n.t("Time Slider"),
+                                c = akjs.Utility.secondsToTimeCode(a),
+                                d = e.duration;
+                            m.attr({
+                                "aria-label": b,
+                                "aria-valuemin": 0,
+                                "aria-valuemax": d,
+                                "aria-valuenow": a,
+                                "aria-valuetext": c,
+                                role: "slider",
+                                tabindex: 0
+                            })
+                        },
+                        u = function() {
+                            var a = new Date;
+                            a - q >= 1e3 && e.play()
+                        };
+                    m.bind("focus",
+                        function() {
+                            b.options.autoRewind = !1
+                        }),
+                        m.bind("blur",
+                            function() {
+                                b.options.autoRewind = s
+                            }),
+                        m.bind("keydown",
+                            function(a) {
+                                new Date - q >= 1e3 && (r = e.paused);
+                                var b = a.keyCode,
+                                    c = e.duration,
+                                    d = e.currentTime;
+                                switch (b) {
+                                    case 37:
+                                        d -= 1;
+                                        break;
+                                    case 39:
+                                        d += 1;
+                                        break;
+                                    case 38:
+                                        d += Math.floor(.1 * c);
+                                        break;
+                                    case 40:
+                                        d -= Math.floor(.1 * c);
+                                        break;
+                                    case 36:
+                                        d = 0;
+                                        break;
+                                    case 35:
+                                        d = c;
+                                        break;
+                                    case 10:
+                                        return void(e.paused ? e.play() : e.pause());
+                                    case 13:
+                                        return void(e.paused ? e.play() : e.pause());
+                                    default:
+                                        return
+                                }
+                                return d = 0 > d ? 0 : d >= c ? c: Math.floor(d),
+                                    q = new Date,
+                                r || e.pause(),
+                                d < e.duration && !r && setTimeout(u, 1100),
+                                    e.setCurrentTime(d),
+                                    a.preventDefault(),
+                                    a.stopPropagation(),
+                                    !1
+                            }),
+                        g.bind("mousedown touchstart",
+                            function(a) { (1 === a.which || 0 === a.which) && (o = !0, n(a), f.globalBind("mousemove.dur touchmove.dur",
+                                function(a) {
+                                    n(a)
+                                }), f.globalBind("mouseup.dur touchend.dur",
+                                function() {
+                                    o = !1,
+                                        k.hide(),
+                                        f.globalUnbind(".dur")
+                                }))
+                            }).bind("mouseenter",
+                            function() {
+                                p = !0,
+                                    f.globalBind("mousemove.dur",
+                                        function(a) {
+                                            n(a)
+                                        }),
+                                akjs.MediaFeatures.hasTouch || k.show()
+                            }).bind("mouseleave",
+                            function() {
+                                p = !1,
+                                o || (f.globalUnbind(".dur"), k.hide())
+                            }),
+                        e.addEventListener("progress",
+                            function(a) {
+                                b.setProgressRail(a),
+                                    b.setCurrentRail(a)
+                            },
+                            !1),
+                        e.addEventListener("timeupdate",
+                            function(a) {
+                                b.setProgressRail(a),
+                                    b.setCurrentRail(a),
+                                    t(a)
+                            },
+                            !1),
+                        f.loaded = h,
+                        f.total = g,
+                        f.current = i,
+                        f.handle = j
+                },
+                setProgressRail: function(a) {
+                    var b = this,
+                        c = void 0 !== a ? a.target: b.media,
+                        d = null;
+                    c && c.buffered && c.buffered.length > 0 && c.buffered.end && c.duration ? d = c.buffered.end(0) / c.duration: c && void 0 !== c.bytesTotal && c.bytesTotal > 0 && void 0 !== c.bufferedBytes ? d = c.bufferedBytes / c.bytesTotal: a && a.lengthComputable && 0 !== a.total && (d = a.loaded / a.total),
+                    null !== d && (d = Math.min(1, Math.max(0, d)), b.loaded && b.total && b.loaded.width(b.total.width() * d))
+                },
+                setCurrentRail: function() {
+                    var a = this;
+                    if (void 0 !== a.media.currentTime && a.media.duration && a.total && a.handle) {
+                        var b = Math.round(a.total.width() * a.media.currentTime / a.media.duration),
+                            c = b - Math.round(a.handle.outerWidth(!0) / 2);
+                        a.current.width(b),
+                            a.handle.css("left", c)
+                    }
+                }
+            })
+    } (akjs.$),
+    function(a) {
+        a.extend(akjs.MepDefaults, {
+            duration: -1,
+            timeAndDurationSeparator: "<span> | </span>"
+        }), a.extend(MediaElementPlayer.prototype, {
+                buildcurrent: function(b, c, d, e) {
+                    var f = this;
+                    a('<div class="ak-time" role="timer" aria-live="off"><span class="ak-currenttime">' + (b.options.alwaysShowHours ? "00:": "") + (b.options.showTimecodeFrameCount ? "00:00:00": "00:00") + "</span></div>").appendTo(c),
+                        f.currenttime = f.controls.find(".ak-currenttime"),
+                        e.addEventListener("timeupdate",
+                            function() {
+                                b.updateCurrent()
+                            },
+                            !1)
+                },
+                buildduration: function(b, c, d, e) {
+                    var f = this;
+                    c.children().last().find(".ak-currenttime").length > 0 ? a(f.options.timeAndDurationSeparator + '<span class="ak-duration">' + (f.options.duration > 0 ? akjs.Utility.secondsToTimeCode(f.options.duration, f.options.alwaysShowHours || f.media.duration > 3600, f.options.showTimecodeFrameCount, f.options.framesPerSecond || 25) : (b.options.alwaysShowHours ? "00:": "") + (b.options.showTimecodeFrameCount ? "00:00:00": "00:00")) + "</span>").appendTo(c.find(".ak-time")) : (c.find(".ak-currenttime").parent().addClass("ak-currenttime-container"), a('<div class="ak-time ak-duration-container"><span class="ak-duration">' + (f.options.duration > 0 ? akjs.Utility.secondsToTimeCode(f.options.duration, f.options.alwaysShowHours || f.media.duration > 3600, f.options.showTimecodeFrameCount, f.options.framesPerSecond || 25) : (b.options.alwaysShowHours ? "00:": "") + (b.options.showTimecodeFrameCount ? "00:00:00": "00:00")) + "</span></div>").appendTo(c)),
+                        f.durationD = f.controls.find(".ak-duration"),
+                        e.addEventListener("timeupdate",
+                            function() {
+                                b.updateDuration()
+                            },
+                            !1)
+                },
+                updateCurrent: function() {
+                    var a = this;
+                    a.currenttime && a.currenttime.html(akjs.Utility.secondsToTimeCode(a.media.currentTime, a.options.alwaysShowHours || a.media.duration > 3600, a.options.showTimecodeFrameCount, a.options.framesPerSecond || 25))
+                },
+                updateDuration: function() {
+                    var a = this;
+                    a.container.toggleClass("ak-long-video", a.media.duration > 3600),
+                    a.durationD && (a.options.duration > 0 || a.media.duration) && a.durationD.html(akjs.Utility.secondsToTimeCode(a.options.duration > 0 ? a.options.duration: a.media.duration, a.options.alwaysShowHours, a.options.showTimecodeFrameCount, a.options.framesPerSecond || 25))
+                }
+            })
+    } (akjs.$),
+    function(a) {
+        a.extend(akjs.MepDefaults, {
+            muteText: akjs.i18n.t("Mute Toggle"),
+            allyVolumeControlText: akjs.i18n.t("Use Up/Down Arrow keys to increase or decrease volume."),
+            hideVolumeOnTouchDevices: !0,
+            audioVolume: "horizontal",
+            videoVolume: "vertical"
+        }),
+            a.extend(MediaElementPlayer.prototype, {
+                buildvolume: function(b, c, d, e) {
+                    if (!akjs.MediaFeatures.isAndroid && !akjs.MediaFeatures.isiOS || !this.options.hideVolumeOnTouchDevices) {
+                        var f = this,
+                            g = f.isVideo ? f.options.videoVolume: f.options.audioVolume,
+                            h = "horizontal" == g ? a('<div class="ak-button ak-volume-button ak-mute"><button type="button" aria-controls="' + f.id + '" title="' + f.options.muteText + '" aria-label="' + f.options.muteText + '"></button></div><a href="javascript:void(0);" class="ak-horizontal-volume-slider"><span class="ak-offscreen">' + f.options.allyVolumeControlText + '</span><div class="ak-horizontal-volume-total"></div><div class="ak-horizontal-volume-current"></div><div class="ak-horizontal-volume-handle"></div></a>').appendTo(c) : a('<div class="ak-button ak-volume-button ak-mute"><button type="button" aria-controls="' + f.id + '" title="' + f.options.muteText + '" aria-label="' + f.options.muteText + '"></button><a href="javascript:void(0);" class="ak-volume-slider"><span class="ak-offscreen">' + f.options.allyVolumeControlText + '</span><div class="ak-volume-total"></div><div class="ak-volume-current"></div><div class="ak-volume-handle"></div></a></div>').appendTo(c),
+                            i = f.container.find(".ak-volume-slider, .ak-horizontal-volume-slider"),
+                            j = f.container.find(".ak-volume-total, .ak-horizontal-volume-total"),
+                            k = f.container.find(".ak-volume-current, .ak-horizontal-volume-current"),
+                            l = f.container.find(".ak-volume-handle, .ak-horizontal-volume-handle"),
+                            m = function(a, b) {
+                                if (!i.is(":visible") && "undefined" == typeof b) return i.show(),
+                                    m(a, !0),
+                                    void i.hide();
+                                a = Math.max(0, a),
+                                    a = Math.min(a, 1),
+                                    0 === a ? (h.removeClass("ak-mute").addClass("ak-unmute"), h.children("button").attr("title", akjs.i18n.t("Unmute")).attr("aria-label", akjs.i18n.t("Unmute"))) : (h.removeClass("ak-unmute").addClass("ak-mute"), h.children("button").attr("title", akjs.i18n.t("Mute")).attr("aria-label", akjs.i18n.t("Mute")));
+                                var c = j.position();
+                                if ("vertical" == g) {
+                                    var d = j.height(),
+                                        e = d - d * a;
+                                    l.css("top", Math.round(c.top + e - l.height() / 2)),
+                                        k.height(d - e),
+                                        k.css("top", c.top + e)
+                                } else {
+                                    var f = j.width(),
+                                        n = f * a;
+                                    l.css("left", Math.round(c.left + n - l.width() / 2)),
+                                        k.width(Math.round(n))
+                                }
+                            },
+                            n = function(a) {
+                                var b = null,
+                                    c = j.offset();
+                                if ("vertical" === g) {
+                                    var d = j.height(),
+                                        f = (parseInt(j.css("top").replace(/px/, ""), 10), a.pageY - c.top);
+                                    if (b = (d - f) / d, 0 === c.top || 0 === c.left) return
+                                } else {
+                                    var h = j.width(),
+                                        i = a.pageX - c.left;
+                                    b = i / h
+                                }
+                                b = Math.max(0, b),
+                                    b = Math.min(b, 1),
+                                    m(b),
+                                    e.setMuted(0 === b ? !0 : !1),
+                                    e.setVolume(b)
+                            },
+                            o = !1,
+                            p = !1;
+                        h.hover(function() {
+                                i.show(),
+                                    p = !0
+                            },
+                            function() {
+                                p = !1,
+                                o || "vertical" != g || i.hide()
+                            });
+                        var q = function() {
+                            var a = Math.floor(100 * e.volume);
+                            i.attr({
+                                "aria-label": akjs.i18n.t("volumeSlider"),
+                                "aria-valuemin": 0,
+                                "aria-valuemax": 100,
+                                "aria-valuenow": a,
+                                "aria-valuetext": a + "%",
+                                role: "slider",
+                                tabindex: 0
+                            })
+                        };
+                        i.bind("mouseover",
+                            function() {
+                                p = !0
+                            }).bind("mousedown",
+                            function(a) {
+                                return n(a),
+                                    f.globalBind("mousemove.vol",
+                                        function(a) {
+                                            n(a)
+                                        }),
+                                    f.globalBind("mouseup.vol",
+                                        function() {
+                                            o = !1,
+                                                f.globalUnbind(".vol"),
+                                            p || "vertical" != g || i.hide()
+                                        }),
+                                    o = !0,
+                                    !1
+                            }).bind("keydown",
+                            function(a) {
+                                var b = a.keyCode,
+                                    c = e.volume;
+                                switch (b) {
+                                    case 38:
+                                        c += .1;
+                                        break;
+                                    case 40:
+                                        c -= .1;
+                                        break;
+                                    default:
+                                        return ! 0
+                                }
+                                return o = !1,
+                                    m(c),
+                                    e.setVolume(c),
+                                    !1
+                            }).bind("blur",
+                            function() {
+                                i.hide()
+                            }),
+                            h.find("button").click(function() {
+                                e.setMuted(!e.muted)
+                            }),
+                            h.find("button").bind("focus",
+                                function() {
+                                    i.show()
+                                }),
+                            e.addEventListener("volumechange",
+                                function(a) {
+                                    o || (e.muted ? (m(0), h.removeClass("ak-mute").addClass("ak-unmute")) : (m(e.volume), h.removeClass("ak-unmute").addClass("ak-mute"))),
+                                        q(a)
+                                },
+                                !1),
+                        f.container.is(":visible") && (m(b.options.startVolume), 0 === b.options.startVolume && e.setMuted(!0), "native" === e.pluginType && e.setVolume(b.options.startVolume))
+                    }
+                }
+            })
+    } (akjs.$),
+    function(a) {
+        a.extend(akjs.MepDefaults, {
+            usePluginFullScreen: !0,
+            newWindowCallback: function() {
+                return ""
             },
-            exitFullScreen: function() {
-                var b = this;
-                return clearTimeout(b.containerSizeTimeout),
-                    "native" !== b.media.pluginType && akjs.MediaFeatures.isFirefox ? void b.media.setFullscreen(!1) : (akjs.MediaFeatures.hasTrueNativeFullScreen && (akjs.MediaFeatures.isFullScreen() || b.isFullScreen) && akjs.MediaFeatures.cancelFullScreen(), a(document.documentElement).removeClass("ak-fullscreen"), b.container.removeClass("ak-container-fullscreen").width(normalWidth).height(normalHeight), "native" === b.media.pluginType ? b.$media.width(normalWidth).height(normalHeight) : (b.container.find(".ak-shim").width(normalWidth).height(normalHeight), b.media.setVideoSize(normalWidth, normalHeight)), b.layers.children("div").width(normalWidth).height(normalHeight), b.fullscreenBtn.removeClass("ak-unfullscreen").addClass("ak-fullscreen"), b.setControlsSize(), b.isFullScreen = !1, b.container.find(".ak-captions-text").css("font-size", ""), void b.container.find(".ak-captions-position").css("bottom", ""))
-            }
-        })
-} (akjs.$);;
-///<jscompress sourcefile="AKjs_Menu.js" />
-/*
-Modification Date: 2018-06-04
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_Menu--------------------------------------------*/
-(function($){
+            fullscreenText: akjs.i18n.t("Fullscreen")
+        }),
+            a.extend(MediaElementPlayer.prototype, {
+                isFullScreen: !1,
+                isNativeFullScreen: !1,
+                isInIframe: !1,
+                buildfullscreen: function(b, c, d, e) {
+                    if (b.isVideo) {
+                        if (b.isInIframe = window.location != window.parent.location, akjs.MediaFeatures.hasTrueNativeFullScreen) {
+                            var f = function() {
+                                b.isFullScreen && (akjs.MediaFeatures.isFullScreen() ? (b.isNativeFullScreen = !0, b.setControlsSize()) : (b.isNativeFullScreen = !1, b.exitFullScreen()))
+                            };
+                            b.globalBind(akjs.MediaFeatures.fullScreenEventName, f)
+                        }
+                        var g = this,
+                            h = (b.container, a('<div class="ak-button ak-fullscreen-button"><button type="button" aria-controls="' + g.id + '" title="' + g.options.fullscreenText + '" aria-label="' + g.options.fullscreenText + '"></button></div>').appendTo(c));
+                        if ("native" === g.media.pluginType || !g.options.usePluginFullScreen && !akjs.MediaFeatures.isFirefox) h.click(function() {
+                            var a = akjs.MediaFeatures.hasTrueNativeFullScreen && akjs.MediaFeatures.isFullScreen() || b.isFullScreen;
+                            a ? b.exitFullScreen() : b.enterFullScreen()
+                        });
+                        else {
+                            var i = null,
+                                j = function() {
+                                    var a, b = document.createElement("x"),
+                                        c = document.documentElement,
+                                        d = window.getComputedStyle;
+                                    return "pointerEvents" in b.style ? (b.style.pointerEvents = "auto", b.style.pointerEvents = "x", c.appendChild(b), a = d && "auto" === d(b, "").pointerEvents, c.removeChild(b), !!a) : !1
+                                } ();
+                            if (j && !akjs.MediaFeatures.isOpera) {
+                                var k, l, m = !1,
+                                    n = function() {
+                                        if (m) {
+                                            for (var a in o) o[a].hide();
+                                            h.css("pointer-events", ""),
+                                                g.controls.css("pointer-events", ""),
+                                                g.media.removeEventListener("click", g.clickToPlayPauseCallback),
+                                                m = !1
+                                        }
+                                    },
+                                    o = {},
+                                    p = ["top", "left", "right", "bottom"],
+                                    q = function() {
+                                        var a = h.offset().left - g.container.offset().left,
+                                            b = h.offset().top - g.container.offset().top,
+                                            c = h.outerWidth(!0),
+                                            d = h.outerHeight(!0),
+                                            e = g.container.width(),
+                                            f = g.container.height();
+                                        for (k in o) o[k].css({
+                                            position: "absolute",
+                                            top: 0,
+                                            left: 0
+                                        });
+                                        o.top.width(e).height(b),
+                                            o.left.width(a).height(d).css({
+                                                top: b
+                                            }),
+                                            o.right.width(e - a - c).height(d).css({
+                                                top: b,
+                                                left: a + c
+                                            }),
+                                            o.bottom.width(e).height(f - d - b).css({
+                                                top: b + d
+                                            })
+                                    };
+                                for (g.globalBind("resize",
+                                    function() {
+                                        q()
+                                    }), k = 0, l = p.length; l > k; k++) o[p[k]] = a('<div class="ak-fullscreen-hover" />').appendTo(g.container).mouseover(n).hide();
+                                h.on("mouseover",
+                                    function() {
+                                        if (!g.isFullScreen) {
+                                            var a = h.offset(),
+                                                c = b.container.offset();
+                                            e.positionFullscreenButton(a.left - c.left, a.top - c.top, !1),
+                                                h.css("pointer-events", "none"),
+                                                g.controls.css("pointer-events", "none"),
+                                                g.media.addEventListener("click", g.clickToPlayPauseCallback);
+                                            for (k in o) o[k].show();
+                                            q(),
+                                                m = !0
+                                        }
+                                    }),
+                                    e.addEventListener("fullscreenchange",
+                                        function() {
+                                            g.isFullScreen = !g.isFullScreen,
+                                                g.isFullScreen ? g.media.removeEventListener("click", g.clickToPlayPauseCallback) : g.media.addEventListener("click", g.clickToPlayPauseCallback),
+                                                n()
+                                        }),
+                                    g.globalBind("mousemove",
+                                        function(a) {
+                                            if (m) {
+                                                var b = h.offset(); (a.pageY < b.top || a.pageY > b.top + h.outerHeight(!0) || a.pageX < b.left || a.pageX > b.left + h.outerWidth(!0)) && (h.css("pointer-events", ""), g.controls.css("pointer-events", ""), m = !1)
+                                            }
+                                        })
+                            } else h.on("mouseover",
+                                function() {
+                                    null !== i && (clearTimeout(i), delete i);
+                                    var a = h.offset(),
+                                        c = b.container.offset();
+                                    e.positionFullscreenButton(a.left - c.left, a.top - c.top, !0)
+                                }).on("mouseout",
+                                function() {
+                                    null !== i && (clearTimeout(i), delete i),
+                                        i = setTimeout(function() {
+                                                e.hideFullscreenButton()
+                                            },
+                                            1500)
+                                })
+                        }
+                        b.fullscreenBtn = h,
+                            g.globalBind("keydown",
+                                function(a) { (akjs.MediaFeatures.hasTrueNativeFullScreen && akjs.MediaFeatures.isFullScreen() || g.isFullScreen) && 27 == a.keyCode && b.exitFullScreen()
+                                })
+                    }
+                },
+                cleanfullscreen: function(a) {
+                    a.exitFullScreen()
+                },
+                containerSizeTimeout: null,
+                enterFullScreen: function() {
+                    var b = this;
+                    if ("native" === b.media.pluginType || !akjs.MediaFeatures.isFirefox && !b.options.usePluginFullScreen) {
+                        if (a(document.documentElement).addClass("ak-fullscreen"), normalHeight = b.container.height(), normalWidth = b.container.width(), "native" === b.media.pluginType) if (akjs.MediaFeatures.hasTrueNativeFullScreen) akjs.MediaFeatures.requestFullScreen(b.container[0]),
+                        b.isInIframe && setTimeout(function d() {
+                                if (b.isNativeFullScreen) {
+                                    var c = window.devicePixelRatio || 1,
+                                        e = .002,
+                                        f = c * a(window).width(),
+                                        g = screen.width,
+                                        h = Math.abs(g - f),
+                                        i = g * e;
+                                    h > i ? b.exitFullScreen() : setTimeout(d, 500)
+                                }
+                            },
+                            500);
+                        else if (akjs.MediaFeatures.hasSemiNativeFullScreen) return void b.media.webkitEnterFullscreen();
+                        if (b.isInIframe) {
+                            var c = b.options.newWindowCallback(this);
+                            if ("" !== c) {
+                                if (!akjs.MediaFeatures.hasTrueNativeFullScreen) return b.pause(),
+                                    void window.open(c, b.id, "top=0,left=0,width=" + screen.availWidth + ",height=" + screen.availHeight + ",resizable=yes,scrollbars=no,status=no,toolbar=no");
+                                setTimeout(function() {
+                                        b.isNativeFullScreen || (b.pause(), window.open(c, b.id, "top=0,left=0,width=" + screen.availWidth + ",height=" + screen.availHeight + ",resizable=yes,scrollbars=no,status=no,toolbar=no"))
+                                    },
+                                    250)
+                            }
+                        }
+                        b.container.addClass("ak-container-fullscreen").width("100%").height("100%"),
+                            b.containerSizeTimeout = setTimeout(function() {
+                                    b.container.css({
+                                        width: "100%",
+                                        height: "100%"
+                                    }),
+                                        b.setControlsSize()
+                                },
+                                500),
+                            "native" === b.media.pluginType ? b.$media.width("100%").height("100%") : (b.container.find(".ak-shim").width("100%").height("100%"), b.media.setVideoSize(a(window).width(), a(window).height())),
+                            b.layers.children("div").width("100%").height("100%"),
+                        b.fullscreenBtn && b.fullscreenBtn.removeClass("ak-fullscreen").addClass("ak-unfullscreen"),
+                            b.setControlsSize(),
+                            b.isFullScreen = !0,
+                            b.container.find(".ak-captions-text").css("font-size", screen.width / b.width * 1 * 100 + "%"),
+                            b.container.find(".ak-captions-position").css("bottom", "45px")
+                    }
+                },
+                exitFullScreen: function() {
+                    var b = this;
+                    return clearTimeout(b.containerSizeTimeout),
+                        "native" !== b.media.pluginType && akjs.MediaFeatures.isFirefox ? void b.media.setFullscreen(!1) : (akjs.MediaFeatures.hasTrueNativeFullScreen && (akjs.MediaFeatures.isFullScreen() || b.isFullScreen) && akjs.MediaFeatures.cancelFullScreen(), a(document.documentElement).removeClass("ak-fullscreen"), b.container.removeClass("ak-container-fullscreen").width(normalWidth).height(normalHeight), "native" === b.media.pluginType ? b.$media.width(normalWidth).height(normalHeight) : (b.container.find(".ak-shim").width(normalWidth).height(normalHeight), b.media.setVideoSize(normalWidth, normalHeight)), b.layers.children("div").width(normalWidth).height(normalHeight), b.fullscreenBtn.removeClass("ak-unfullscreen").addClass("ak-fullscreen"), b.setControlsSize(), b.isFullScreen = !1, b.container.find(".ak-captions-text").css("font-size", ""), void b.container.find(".ak-captions-position").css("bottom", ""))
+                }
+            })
+    } (akjs.$);
+} (jQuery));
+
+/*-----------------------------------------------AKjs_Menu (2018-12-13)--------------------------------------------*/
+(function($) {
     $.fn.AKjs_Menu = function(setting) {
         var option = $.extend({
                 icon_text: [],
@@ -9626,14 +8034,10 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
             });
         }
     }
-}(jQuery));;
-///<jscompress sourcefile="AKjs_MenuList.js" />
-/*
-Modification Date: 2018-09-29
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_MenuList--------------------------------------------*/
-(function($){
+} (jQuery));
+
+/*-----------------------------------------------AKjs_MenuList (2018-12-13)--------------------------------------------*/
+(function($) {
     $.fn.AKjs_MenuList = function(setting) {
         var option = $.extend({
                 icon_text: [],
@@ -9685,14 +8089,10 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
             });
         }
     }
-}(jQuery));;
-///<jscompress sourcefile="AKjs_Mkinfinite.js" />
-/*
-Modification Date: 2018-07-31
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_Mkinfinite-------------------------------------------*/
-(function($){
+} (jQuery));
+
+/*-----------------------------------------------AKjs_Mkinfinite (2018-12-13)--------------------------------------------*/
+(function($) {
     $.fn.AKjs_Mkinfinite = function(options){
         var options = $.extend({
             maxZoom:           1.25,
@@ -9766,120 +8166,9 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
         };
         return this.each(make);
     };
-}(jQuery));;
-///<jscompress sourcefile="AKjs_MobileChat.js" />
-/*
-Modification Date: 2018-09-17
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_MobileChat--------------------------------------------*/
-(function($) {
-    $.fn.AKjs_MobileChat = function(setting) {
-        var option = $.extend({
-                chat_view: "",
-                chat_optDom: "",
-                chat_optHeight: "8em",
-                callback: function() {},
-                chatcallback: function() {},
-                btncallback: function() {},
-                optcallback: function() {}
-            },
-            setting);
-        var $chat_plugin = $(this);
-        if ($chat_plugin.find("button[type='submit']").length < 1) {
-            $chat_plugin.find("button[type='button']").before('<button class="dis_none_im" type="submit" />')
-        }
-        $(option.chat_view).addClass("ak-chat");
-        var container = $(option.chat_view).children("ul");
-        var scrollHeight = $("#ak-scrollview").prop("scrollHeight");
-        option.callback($chat_plugin, container, scrollHeight);
-        $chat_plugin.find("input").keyup(function() {
-            if ($(this).prop("value").length > 0) {
-                option.chatcallback($chat_plugin, $(this).prop("value"));
-            }
-            $(document).keyup(function(event) {
-                var keycode = event.which;
-                if (keycode == 13) {
-                    $chat_plugin.find("button[type='submit']").click();
-                }
-            })
-        });
-        $("#ak-scrollview").click(function() {
-            ChatOption_hide();
-        });
-        $chat_plugin.find("button[type='button']").click(function() {
-            if ($(option.chat_optDom).hasClass("dis_none")) {
-                ChatOption_show();
-            } else {
-                ChatOption_hide();
-            }
-        });
-        $chat_plugin.find("button[type='submit']").click(function(e) {
-            e.preventDefault();
-            if ($(this).prev("input").prop("value").length > 0) {
-                var chat_str = $(this).prev("input").prop("value");
-                var scrollHeight = $("#ak-scrollview").prop("scrollHeight");
-                option.btncallback(chat_str, container, scrollHeight);
-                $(this).prev("input").val("");
-            }
-        });
-        function ChatOption_show() {
-            $("footer").children().addClass("h_au");
-            $(option.chat_optDom).removeClass("dis_none").animate({
-                "height": option.chat_optHeight
-            }, 200);
-            setTimeout(function() {
-                ChatCssSetting();
-            }, 200);
-            $(function() {
-                option.optcallback($(option.chat_optDom), true);
-                $chat_plugin.find("input").on("focus", function() {
-                    ChatOption_hide();
-                });
-            })
-        }
-        function ChatOption_hide() {
-            $(option.chat_optDom).animate({
-                "height": 0
-            }, 200);
-            setTimeout(function() {
-                ChatCssSetting();
-            }, 200);
-            $(function() {
-                $("footer").children().removeClass("h_au");
-                $(option.chat_optDom).addClass("dis_none");
-                option.optcallback($(option.chat_optDom), false);
-            })
-        }
-        function ChatCssSetting() {
-            if ($("header").not("aside header").hasClass("dis_none_im") || $("header").not("aside header").length === 0) {
-                var header_h = 0;
-            } else {
-                var header_h = $("header").prop("clientHeight");
-            }
-            if ($("footer").not("aside footer").hasClass("dis_none_im") || $("footer").not("aside footer").length === 0) {
-                var footer_h = 0;
-            } else {
-                var footer_h = $("footer").children().prop("clientHeight");
-            }
-            $("main").css({
-                "height": $(window).height() - header_h - footer_h,
-                "margin-bottom": footer_h
-            });
-            $("#ak-scrollview").css({
-                "height": $(window).height() - $("#ak-scrollview").offset().top - footer_h
-            });
-            var scrollHeight = $("#ak-scrollview").prop("scrollHeight");
-            $("#ak-scrollview").scrollTop(scrollHeight);
-        }
-    }
-} (jQuery));;
-///<jscompress sourcefile="AKjs_MultiDate.js" />
-/*
-Modification Date: 2018-11-16
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_MultiDate-------------------------------------------*/
+} (jQuery));
+
+/*-----------------------------------------------AKjs_MultiDate (2018-12-13)--------------------------------------------*/
 (function($) {
     var ak_MultiDate = function(element, options) {
         var that = this;
@@ -11161,14 +9450,10 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
     };
     DateTimeGlobal.template = '<div class="ak-MultiDate dis_none">' + '<div class="minutes">' + "<table>" + DateTimeGlobal.headTemplate + DateTimeGlobal.contTemplate + DateTimeGlobal.footTemplate + "</table>" + "</div>" + '<div class="hours">' + "<table>" + DateTimeGlobal.headTemplate + DateTimeGlobal.contTemplate + DateTimeGlobal.footTemplate + "</table>" + "</div>" + '<div class="days">' + "<table>" + DateTimeGlobal.headTemplate + "<tbody></tbody>" + DateTimeGlobal.footTemplate + "</table>" + "</div>" + '<div class="month">' + "<table>" + DateTimeGlobal.headTemplate + DateTimeGlobal.contTemplate + DateTimeGlobal.footTemplate + "</table>" + "</div>" + '<div class="years">' + "<table>" + DateTimeGlobal.headTemplate + DateTimeGlobal.contTemplate + DateTimeGlobal.footTemplate + "</table>" + "</div>" + "</div>";
     $.fn.AKjs_MultiDate.DateTimeGlobal = DateTimeGlobal
-} (jQuery));;
-///<jscompress sourcefile="AKjs_NavMenu.js" />
-/*
-Modification Date: 2018-09-17
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_NavMenu-------------------------------------------*/
-(function($){
+} (jQuery));
+
+/*-----------------------------------------------AKjs_NavMenu (2018-12-13)--------------------------------------------*/
+(function($) {
     $.fn.AKjs_NavMenu = function(setting) {
         var option = $.extend({
                 curDisplay: 3,
@@ -11339,140 +9624,10 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
             },100);
         }
     };
-}(jQuery));;
-///<jscompress sourcefile="AKjs_NavScroll.js" />
-/*
-Modification Date: 2018-08-09
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_NavScroll--------------------------------------------*/
-(function($){
-    $.fn.AKjs_NavScroll = function(setting) {
-        var option = $.extend({
-                content_dom: "",
-                line_style: "dis_block abs bor_top2 bor_title",
-                active_corlor: "c_title",
-                ClickCallback: function() {}
-            },
-            setting);
-        var ele = $(this);
-        var ele_list = ele.children().first().children();
-        if (option.content_dom) {
-            var ele_content = $(option.content_dom);
-        } else {
-            var ele_content = ele.children().last();
-        }
-        if (ele_list.children("sub").length < 1) {
-            ele_list.append("<sub></sub>");
-        }
-        var ele_list_line = ele_list.children("sub");
-        ele_list.css({
-            "left": "0",
-            "transform": "translate3d(0px, 0px, 0px)",
-            "transition-duration": "0s"
-        });
-        ele_list.find("li").each(function(){
-            ele_list_line.addClass(option.line_style).css({
-                "left": "0"
-            });
-            ele_list.children().eq(0).addClass(option.active_corlor).siblings().removeClass(option.active_corlor);
-        });
-        var nav_w = ele_list.children().eq(0).width();
-        ele_list_line.css({
-            "width": nav_w,
-            "top": ele_list.outerHeight()-3
-        });
-        ele_list.find("li").on('click', function(){
-            nav_w=$(this).width();
-            ele_list_line.stop(true);
-            ele_list_line.animate({
-                "left":$(this).position().left
-            },300);
-            ele_list_line.animate({
-                "width": nav_w
-            });
-            $(this).addClass(option.active_corlor).siblings().removeClass(option.active_corlor);
-            var fn_w = (ele.width() - nav_w) / 2;
-            var fnl_l;
-            var fnl_x = parseInt($(this).position().left);
-            if (fnl_x <= fn_w) {
-                fnl_l = 0;
-            } else if (fn_w - fnl_x <= flb_w - fl_w) {
-                fnl_l = flb_w - fl_w;
-            } else {
-                fnl_l = fn_w - fnl_x;
-            }
-            ele_list.animate({
-                "left" : fnl_l
-            }, 300);
-            ele_content.animate({
-                "left" : "-"+flb_w * $(this).index()
-            }, 300);
-            option.ClickCallback($(this),$(this).index());
-        });
-        $(function() {
-            ak_SetStyle();
-        });
+} (jQuery));
 
-        $(window).resize(function(){
-            ak_SetStyle();
-        });
-
-        function ak_SetStyle() {
-            fl_w = ele_list.width();
-            flb_w = ele.width();
-            ele_content.removeClass("dis_none");
-            ele_content.children().css({"width": flb_w});
-            ele_content.css({"width": ele_content.children().width() * ele_content.children().length});
-        }
-
-        ele_list.on('touchstart', function (e) {
-            var touch1 = e.originalEvent.targetTouches[0];
-            x1 = touch1.pageX;
-            y1 = touch1.pageY;
-            ty_left = parseInt($(this).css("left"));
-        });
-        ele_list.on('touchmove', function (e) {
-            var touch2 = e.originalEvent.targetTouches[0];
-            var x2 = touch2.pageX;
-            var y2 = touch2.pageY;
-            if(ty_left + x2 - x1>=0){
-                $(this).css({
-                    "left": "0",
-                    "transform": "translate3d("+x2/4+"px, 0px, 0px)",
-                    "transition-duration": "0s"
-                });
-            }else if(ty_left + x2 - x1<=flb_w-fl_w){
-                $(this).css({
-                    "left": flb_w-fl_w,
-                    "transform": "translate3d(-"+x1/4+"px, 0px, 0px)",
-                    "transition-duration": "0.2s"
-                });
-            }else{
-                $(this).css({
-                    "left": ty_left + x2 - x1
-                });
-            }
-            if(Math.abs(y2-y1)>0){
-                e.preventDefault();
-            }
-        });
-        ele_list.on('touchend', function (e) {
-            $(this).css({
-                "transform": "translate3d(0px, 0px, 0px)",
-                "transition-duration": "0s"
-            });
-        });
-    };
-}(jQuery));
-;
-///<jscompress sourcefile="AKjs_NowTime.js" />
-/*
-Modification Date: 2018-08-09
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_NowTime-----------------------------------------*/
-(function($){
+/*-----------------------------------------------AKjs_NowTime (2018-12-13)--------------------------------------------*/
+(function($) {
     $.fn.AKjs_NowTime = function(setting) {
         var option = $.extend({
                 dateStyle: 'yyyy-MM-dd hh:mm:ss'
@@ -11496,14 +9651,10 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
             time.html(new Date().Format(option.dateStyle));
         },1000);
     };
-}(jQuery));;
-///<jscompress sourcefile="AKjs_Paginator.js" />
-/*
-Modification Date: 2018-08-09
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_Paginator-------------------------------------------*/
-(function ($) {
+} (jQuery));
+
+/*-----------------------------------------------AKjs_Paginator (2018-12-13)--------------------------------------------*/
+(function($) {
     $.AKjs_Paginator = function (el, options) {
         if(!(this instanceof $.AKjs_Paginator)){
             return new $.AKjs_Paginator(el, options);
@@ -11722,14 +9873,10 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
         }
     };
 
-})(jQuery);;
-///<jscompress sourcefile="AKjs_PassLevel.js" />
-/*
-Modification Date: 2018-10-08
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_PassLevel-------------------------------------*/
-(function($){
+} (jQuery));
+
+/*-----------------------------------------------AKjs_PassLevel (2018-12-13)--------------------------------------------*/
+(function($) {
     $.fn.AKjs_PassLevel = function(setting) {
         var option = $.extend({
                 O_color: "#cccccc",
@@ -11819,14 +9966,10 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
             return ak_bitTotal(Modes);
         }
     };
-}(jQuery));;
-///<jscompress sourcefile="AKjs_PickupTime.js" />
-/*
-Modification Date: 2018-10-16
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_PickupTime-------------------------------------*/
-(function($){
+} (jQuery));
+
+/*-----------------------------------------------AKjs_PickupTime (2018-12-13)--------------------------------------------*/
+(function($) {
     $.fn.AKjs_PickupTime = function(setting) {
         var option = $.extend({
                 dateleng: 6,
@@ -12062,14 +10205,10 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
         };
         new ak_pickuptime($(this));
     };
-}(jQuery));;
-///<jscompress sourcefile="AKjs_Popupwin.js" />
-/*
-Modification Date: 2018-12-12
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_Popupwin----------------------------------------*/
-function AKjs_Popupwin (setting){
+} (jQuery));
+
+/*-----------------------------------------------AKjs_Popupwin (2018-12-13)--------------------------------------------*/
+function AKjs_Popupwin (setting) {
     option = $.extend({
         dom: "",
         position: "",
@@ -12269,13 +10408,9 @@ function AKjs_Popupwin (setting){
             $(option.dom).addClass("dis_none");
         },setTimeouts);
     }
-};
-///<jscompress sourcefile="AKjs_PortraitImage.js" />
-/*
-Modification Date: 2018-12-13
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_PortraitImage--------------------------------------*/
+}
+
+/*-----------------------------------------------AKjs_PortraitImage (2018-12-13)--------------------------------------------*/
 (function($) {
     var option = {};
     $.fn.AKjs_PortraitImage = function(setting) {
@@ -12364,13 +10499,9 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
             option.addCallbak($(id).next().find("img"));
         }
     }
-} (jQuery));;
-///<jscompress sourcefile="AKjs_PreviewImage.js" />
-/*
-Modification Date: 2018-12-13
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_PreviewImage---------------------------------------*/
+} (jQuery));
+
+/*-----------------------------------------------AKjs_PreviewImage  (2018-12-13)--------------------------------------------*/
 (function($) {
     var option = {};
     $.fn.AKjs_PreviewImage = function(setting) {
@@ -12526,13 +10657,8 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
         }
     }
 } (jQuery));
-;
-///<jscompress sourcefile="AKjs_Print.js" />
-/*
-Modification Date: 2018-09-07
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_Print-------------------------------------------*/
+
+/*-----------------------------------------------AKjs_Print (2018-12-13)--------------------------------------------*/
 (function($) {
     $.AKjs_Print = $.fn.AKjs_Print = function() {
         var options, $this, self = this;
@@ -12659,14 +10785,10 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
     function PrintIsNode(o) {
         return !! (typeof Node === "object" ? o instanceof Node: o && typeof o === "object" && typeof o.nodeType === "number" && typeof o.nodeName === "string");
     }
-})(jQuery);;
-///<jscompress sourcefile="AKjs_ProductPhoto.js" />
-/*
-Modification Date: 2018-10-26
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_ProductPhoto-------------------------------------*/
-(function($){
+} (jQuery));
+
+/*-----------------------------------------------AKjs_ProductPhoto (2018-12-13)--------------------------------------------*/
+(function($) {
     $.fn.AKjs_ProductPhoto = function(setting) {
         var option = $.extend({
                 data: [],
@@ -12863,13 +10985,9 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
             }
         })
     }
-}(jQuery));;
-///<jscompress sourcefile="AKjs_Progress.js" />
-/*
-Modification Date: 2018-09-17
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_Progress-------------------------------------------*/
+} (jQuery));
+
+/*-----------------------------------------------AKjs_Progress (2018-12-13)--------------------------------------------*/
 (function($) {
     $.fn.extend({
         AKjs_Progress: function(options) {
@@ -12942,13 +11060,9 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
             })
         }
     })
-} (jQuery));;
-///<jscompress sourcefile="AKjs_QRcode.js" />
-/*
-Modification Date: 2018-10-10
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_QRcode-------------------------------------------*/
+} (jQuery));
+
+/*-----------------------------------------------AKjs_QRcode (2018-12-13)--------------------------------------------*/
 (function($) {
     $.fn.AKjs_QRcode = function(options) {
         var QRMode;
@@ -13370,15 +11484,9 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
             });
         })
     }
-}(jQuery));
+} (jQuery));
 
-;
-///<jscompress sourcefile="AKjs_Radio.js" />
-/*
-Modification Date: 2018-09-25
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_Radio--------------------------------------*/
+/*-----------------------------------------------AKjs_Radio (2018-12-13)--------------------------------------------*/
 (function($) {
     $.fn.AKjs_Radio = function(settings) {
         var _defaults = {
@@ -13444,13 +11552,9 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
                 })
         })
     }
-} (jQuery));;
-///<jscompress sourcefile="AKjs_Range.js" />
-/*
-Modification Date: 2018-08-09
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_Range-------------------------------------------*/
+} (jQuery));
+
+/*-----------------------------------------------AKjs_Range (2018-12-13)--------------------------------------------*/
 (function($) {
     var AKjs_Range = function() {
         return this.init.apply(this, arguments)
@@ -13750,13 +11854,9 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
             500);
         return result || this
     };
-})(jQuery);;
-///<jscompress sourcefile="AKjs_Ratyli.js" />
-/*
-Modification Date: 2018-09-17
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_Ratyli-------------------------------------------*/
+} (jQuery));
+
+/*-----------------------------------------------AKjs_Ratyli (2018-12-13)--------------------------------------------*/
 (function($) {
     $.AKjs_Ratyli = function(el, options) {
         var base = this;
@@ -13857,13 +11957,9 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
         return this.each(function() { (new $.AKjs_Ratyli(this, options))
         })
     }
-} (jQuery));;
-///<jscompress sourcefile="AKjs_ReadMore.js" />
-/*
-Modification Date: 2018-08-09
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_ReadMore-------------------------------------------*/
+} (jQuery));
+
+/*-----------------------------------------------AKjs_ReadMore (2018-12-13)--------------------------------------------*/
 (function($) {
     var readmore = 'AKjs_ReadMore',
         defaults = {
@@ -13970,14 +12066,9 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
             });
         }
     }
-})(jQuery);
-;
-///<jscompress sourcefile="AKjs_Scrollbar.js" />
-/*
-Modification Date: 2018-09-29
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_Scrollbar--------------------------------------------*/
+} (jQuery));
+
+/*-----------------------------------------------AKjs_Scrollbar (2018-12-13)--------------------------------------------*/
 (function($) {
     $.fn.AKjs_Scrollbar = function(options) {
         var setting = {
@@ -14185,14 +12276,10 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
             opts.callback(ak_FlollowContent, iTop);
         }
     }
-})(jQuery);;
-///<jscompress sourcefile="AKjs_ScrollFixed.js" />
-/*
-Modification Date: 2018-08-30
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_ScrollFixed-------------------------------------*/
-(function($){
+} (jQuery));
+
+/*-----------------------------------------------AKjs_ScrollFixed (2018-12-13)--------------------------------------------*/
+(function($) {
     $.fn.AKjs_ScrollFixed = function(setting) {
         var option = $.extend({
                 ScrollFixed: false,
@@ -14287,555 +12374,10 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
             }
         }
     };
-}(jQuery));;
-///<jscompress sourcefile="AKjs_Select.js" />
-/*
-Modification Date: 2018-09-17
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_Select-------------------------------------------*/
+} (jQuery));
+
+/*-----------------------------------------------AKjs_SelectOption (2018-12-13)--------------------------------------------*/
 (function($) {
-    window.AKjs_Select = (function() {
-        function getClass(dom, string) {
-            return dom.getElementsByClassName(string)
-        }
-        function AKjs_Select(config) {
-            this.AKjs_Select;
-            this.wheelsData = config.wheels;
-            this.jsonType = false;
-            this.jsonData = [];
-            this.checkDataType();
-            this.renderWheels(this.wheelsData);
-            this.displayJson = [];
-            this.cascade = false;
-            this.startY;
-            this.moveEndY;
-            this.moveY;
-            this.oldMoveY;
-            this.offset = 0;
-            this.offsetSum = 0;
-            this.oversizeBorder;
-            this.curDistance = [];
-            this.clickStatus = false;
-            this.init(config)
-        }
-        AKjs_Select.prototype = {
-            constructor: AKjs_Select,
-            init: function(config) {
-                var _this = this;
-                _this.trigger = document.querySelector(config.trigger);
-                if (_this.trigger == undefined || _this.trigger == null || _this.trigger == "") {
-                    return
-                }
-                $(function() {
-                    $("body").append(_this.AKjs_Select)
-                });
-                document.activeElement.blur();
-                _this.wheel = getClass(_this.AKjs_Select, "wheel");
-                _this.slider = getClass(_this.AKjs_Select, "selectContainer");
-                _this.wheels = _this.AKjs_Select.querySelector(".wheels");
-                _this.ensureBtn = _this.AKjs_Select.querySelector(".ensure");
-                _this.closeBtn = _this.AKjs_Select.querySelector(".cancel");
-                _this.grayLayer = _this.AKjs_Select.querySelector(".ak-mask");
-                _this.popUp = _this.AKjs_Select.querySelector(".content");
-                _this.callback = config.callback ? config.callback: function() {};
-                _this.transitionEnd = config.transitionEnd ? config.transitionEnd: function() {};
-                _this.initPosition = config.position ? config.position: [];
-                $(function() {
-                    _this.liHeight = _this.AKjs_Select.querySelector("li").offsetHeight;
-                    _this.setCurDistance(_this.initPosition)
-                });
-                $(window).resize(function() {
-                    _this.liHeight = _this.AKjs_Select.querySelector("li").offsetHeight;
-                    _this.setCurDistance(_this.initPosition)
-                });
-                $(_this.grayLayer).bind({
-                    touchmove: function(e) {
-                        e.preventDefault()
-                    }
-                });
-                _this.titleText = config.title ? config.title: "";
-                _this.button_ensure = config.ensure ? config.ensure: "";
-                _this.button_cancel = config.cancel ? config.cancel: "";
-                _this.setTitle(_this.titleText);
-                _this.setEnsure(_this.button_ensure);
-                _this.setCancel(_this.button_cancel);
-                _this.checkCascade();
-                if (_this.cascade) {
-                    _this.initCascade()
-                }
-                if (_this.initPosition.length == 0) {
-                    for (var i = 0; i < _this.slider.length; i++) {
-                        _this.initPosition.push(0)
-                    }
-                }
-                _this.setCurDistance(_this.initPosition);
-                _this.addListenerAll();
-                _this.closeBtn.addEventListener("click",
-                    function() {
-                        $(_this.AKjs_Select).removeClass("ak-Select-show");
-                        setTimeout(function() {
-                                $(_this.grayLayer).addClass("dis_none_im");
-                                $(_this.popUp).children().addClass("dis_opa_0")
-                            },
-                            500);
-                        $("#ak-scrollview").addClass("scrolling_touch")
-                    });
-                _this.ensureBtn.addEventListener("click",
-                    function() {
-                        $(_this.AKjs_Select).removeClass("ak-Select-show");
-                        setTimeout(function() {
-                                $(_this.grayLayer).addClass("dis_none_im");
-                                $(_this.popUp).children().addClass("dis_opa_0")
-                            },
-                            500);
-                        $("#ak-scrollview").addClass("scrolling_touch");
-                        var tempValue = "";
-                        for (var i = 0; i < _this.wheel.length; i++) {
-                            i == _this.wheel.length - 1 ? tempValue += _this.getValue(i) : tempValue += _this.getValue(i) + " "
-                        }
-                        $(_this.trigger).next("label").hide();
-                        _this.trigger.value = tempValue;
-                        _this.callback(_this.getJson(), _this.getIndexArr())
-                    });
-                $(_this.trigger).unbind("click");
-                _this.trigger.addEventListener("click",
-                    function() {
-                        $(_this.grayLayer).removeClass("dis_none_im");
-                        $(_this.AKjs_Select).addClass("ak-Select-show");
-                        $("#ak-scrollview").removeClass("scrolling_touch");
-                        if ($(_this.AKjs_Select).hasClass("ak-Select-show")) {
-                            $(_this.popUp).children().removeClass("dis_opa_0")
-                        }
-                    });
-                _this.grayLayer.addEventListener("click",
-                    function() {
-                        $(_this.AKjs_Select).removeClass("ak-Select-show");
-                        setTimeout(function() {
-                                $(_this.grayLayer).addClass("dis_none_im");
-                                $(_this.popUp).children().addClass("dis_opa_0")
-                            },
-                            500);
-                        $("#ak-scrollview").addClass("scrolling_touch")
-                    });
-                _this.popUp.addEventListener("click",
-                    function(event) {
-                        event.stopPropagation();
-                        $("#ak-scrollview").addClass("scrolling_touch")
-                    });
-                _this.fixRowStyle()
-            },
-            setTitle: function(string) {
-                var _this = this;
-                _this.titleText = string;
-                $(_this.AKjs_Select).find(".title").html(_this.titleText)
-            },
-            setEnsure: function(string) {
-                var _this = this;
-                _this.button_ensure = string;
-                $(_this.AKjs_Select).find(".ensure").html(_this.button_ensure)
-            },
-            setCancel: function(string) {
-                var _this = this;
-                _this.button_cancel = string;
-                $(_this.AKjs_Select).find(".cancel").html(_this.button_cancel)
-            },
-            renderWheels: function(wheelsData) {
-                var _this = this;
-                _this.AKjs_Select = document.createElement("div");
-                $(_this.AKjs_Select).addClass("ak-Select");
-                $(_this.AKjs_Select).html('<div id="select_mask" class="ak-mask dis_none_im"></div>' + '<div class="content">' + '<div class="panel dis_opa_0">' + '<div class="title c_title"></div>' + '<div class="fixWidth">' + '<div class="wheels">' + "</div>" + '<div class="selectLine"></div>' + '<div class="shadowMask"></div>' + "</div>" + "</div>" + '<div class="btnBar dis_opa_0">' + '<div class="fixWidth">' + '<button type="button" class="cancel bg_white c_gray_777"></button>' + '<button type="button" class="ensure bg_white c_title"></button>' + "</div>" + "</div>" + "</div>");
-                var tempHTML = "";
-                for (var i = 0; i < wheelsData.length; i++) {
-                    tempHTML += '<div class="wheel"><ul class="selectContainer">';
-                    if (_this.jsonType) {
-                        for (var j = 0; j < wheelsData[i].data.length; j++) {
-                            tempHTML += '<li data-id="' + wheelsData[i].data[j].id + '">' + wheelsData[i].data[j].value + "</li>"
-                        }
-                    } else {
-                        for (var j = 0; j < wheelsData[i].data.length; j++) {
-                            tempHTML += "<li>" + wheelsData[i].data[j] + "</li>"
-                        }
-                    }
-                    tempHTML += "</ul></div>"
-                }
-                $(_this.AKjs_Select).find(".wheels").html(tempHTML)
-            },
-            addListenerAll: function() {
-                var _this = this;
-                for (var i = 0; i < _this.slider.length; i++) { (function(i) {
-                    _this.addListenerWheel(_this.wheel[i], i);
-                    _this.addListenerLi(i)
-                })(i)
-                }
-            },
-            addListenerWheel: function(theWheel, index, event) {
-                var _this = this;
-                theWheel.addEventListener("touchstart",
-                    function() {
-                        _this.touch(event, this.firstChild, index)
-                    },
-                    false);
-                theWheel.addEventListener("touchend",
-                    function() {
-                        _this.touch(event, this.firstChild, index)
-                    },
-                    false);
-                theWheel.addEventListener("touchmove",
-                    function() {
-                        _this.touch(event, this.firstChild, index)
-                    },
-                    false);
-                theWheel.addEventListener("mousedown",
-                    function() {
-                        _this.dragClick(event, this.firstChild, index)
-                    },
-                    false);
-                theWheel.addEventListener("mousemove",
-                    function() {
-                        _this.dragClick(event, this.firstChild, index)
-                    },
-                    false);
-                theWheel.addEventListener("mouseup",
-                    function() {
-                        _this.dragClick(event, this.firstChild, index)
-                    },
-                    true)
-            },
-            addListenerLi: function(sliderIndex) {
-                var _this = this;
-                var curWheelLi = _this.slider[sliderIndex].getElementsByTagName("li");
-                for (var j = 0; j < curWheelLi.length; j++) { (function(j) {
-                    curWheelLi[j].addEventListener("click",
-                        function() {
-                            _this.singleClick(this, j, sliderIndex)
-                        },
-                        false)
-                })(j)
-                }
-            },
-            checkDataType: function() {
-                var _this = this;
-                if (typeof(_this.wheelsData[0].data[0]) == "object") {
-                    _this.jsonType = true;
-                    _this.jsonData = _this.wheelsData[0].data
-                }
-            },
-            checkCascade: function() {
-                var _this = this;
-                if (_this.jsonType) {
-                    var node = _this.wheelsData[0].data;
-                    for (var i = 0; i < node.length; i++) {
-                        if ("childs" in node[i] && node[i].childs.length > 0) {
-                            _this.cascade = true;
-                            break
-                        }
-                    }
-                } else {
-                    _this.cascade = false
-                }
-            },
-            initCascade: function() {
-                var _this = this;
-                _this.displayJson.push(_this.generateArrData(_this.jsonData));
-                _this.checkArrDeep(_this.jsonData[0]);
-                _this.updateWheels()
-            },
-            generateArrData: function(targetArr) {
-                var tempArr = [];
-                for (var i = 0; i < targetArr.length; i++) {
-                    tempArr.push({
-                        "id": targetArr[i].id,
-                        "value": targetArr[i].value
-                    })
-                }
-                return tempArr
-            },
-            checkArrDeep: function(parent) {
-                var _this = this;
-                if ("childs" in parent && parent.childs.length > 0) {
-                    _this.displayJson.push(_this.generateArrData(parent.childs));
-                    _this.checkArrDeep(parent.childs[0])
-                }
-            },
-            checkRange: function(index, posIndexArr) {
-                var _this = this;
-                var deleteNum = _this.displayJson.length - 1 - index;
-                for (var i = 0; i < deleteNum; i++) {
-                    _this.displayJson.pop()
-                }
-                var resultNode;
-                for (var i = 0; i <= index; i++) {
-                    if (i == 0) {
-                        resultNode = _this.jsonData[posIndexArr[0]]
-                    } else {
-                        resultNode = resultNode.childs[posIndexArr[i]]
-                    }
-                }
-                _this.checkArrDeep(resultNode);
-                _this.updateWheels();
-                _this.fixRowStyle();
-                _this.setCurDistance(_this.resetPostion(index, posIndexArr))
-            },
-            resetPostion: function(index, posIndexArr) {
-                var _this = this;
-                var tempPosArr = posIndexArr;
-                var tempCount;
-                if (_this.slider.length > posIndexArr.length) {
-                    tempCount = _this.slider.length - posIndexArr.length;
-                    for (var i = 0; i < tempCount; i++) {
-                        tempPosArr.push(0)
-                    }
-                } else {
-                    if (_this.slider.length < posIndexArr.length) {
-                        tempCount = posIndexArr.length - _this.slider.length;
-                        for (var i = 0; i < tempCount; i++) {
-                            tempPosArr.pop()
-                        }
-                    }
-                }
-                for (var i = index + 1; i < tempPosArr.length; i++) {
-                    tempPosArr[i] = 0
-                }
-                return tempPosArr
-            },
-            updateWheels: function() {
-                var _this = this;
-                if (_this.wheel.length > _this.displayJson.length) {
-                    var count = _this.wheel.length - _this.displayJson.length;
-                    for (var i = 0; i < count; i++) {
-                        _this.wheels.removeChild(_this.wheel[_this.wheel.length - 1])
-                    }
-                }
-                for (var i = 0; i < _this.displayJson.length; i++) { (function(i) {
-                    var tempHTML = "";
-                    if (_this.wheel[i]) {
-                        for (var j = 0; j < _this.displayJson[i].length; j++) {
-                            tempHTML += '<li data-id="' + _this.displayJson[i][j].id + '">' + _this.displayJson[i][j].value + "</li>"
-                        }
-                        _this.slider[i].innerHTML = tempHTML
-                    } else {
-                        var tempWheel = document.createElement("div");
-                        $(tempWheel).addClass("wheel");
-                        tempHTML = '<ul class="selectContainer">';
-                        for (var j = 0; j < _this.displayJson[i].length; j++) {
-                            tempHTML += '<li data-id="' + _this.displayJson[i][j].id + '">' + _this.displayJson[i][j].value + "</li>"
-                        }
-                        tempHTML += "</ul>";
-                        $(tempWheel).html(tempHTML);
-                        _this.addListenerWheel(tempWheel, i);
-                        _this.wheels.appendChild(tempWheel)
-                    }
-                    _this.addListenerLi(i)
-                })(i)
-                }
-            },
-            updateWheel: function(sliderIndex, data) {
-                var _this = this;
-                var tempHTML = "";
-                for (var j = 0; j < data.length; j++) {
-                    tempHTML += "<li>" + data[j] + "</li>"
-                }
-                _this.slider[sliderIndex].innerHTML = tempHTML;
-                _this.addListenerLi(sliderIndex)
-            },
-            fixRowStyle: function() {
-                var _this = this;
-                var width = (100 / _this.wheel.length).toFixed(2);
-                for (var i = 0; i < _this.wheel.length; i++) {
-                    _this.wheel[i].style.width = width + "%"
-                }
-            },
-            getIndex: function(distance) {
-                return Math.round((2 * this.liHeight - distance) / this.liHeight)
-            },
-            getIndexArr: function() {
-                var _this = this;
-                var temp = [];
-                for (var i = 0; i < _this.curDistance.length; i++) {
-                    temp.push(_this.getIndex(_this.curDistance[i]))
-                }
-                return temp
-            },
-            getJson: function() {
-                var _this = this;
-                var temp = [];
-                var positionArr = _this.getIndexArr();
-                if (_this.cascade) {
-                    for (var i = 0; i < _this.wheel.length; i++) {
-                        temp.push(_this.displayJson[i][positionArr[i]])
-                    }
-                } else {
-                    if (_this.jsonType) {
-                        for (var i = 0; i < _this.curDistance.length; i++) {
-                            temp.push(_this.wheelsData[i].data[_this.getIndex(_this.curDistance[i])])
-                        }
-                    } else {
-                        for (var i = 0; i < _this.curDistance.length; i++) {
-                            temp.push(_this.getValue(i))
-                        }
-                    }
-                }
-                return temp
-            },
-            calcDistance: function(index) {
-                return 2 * this.liHeight - index * this.liHeight
-            },
-            setCurDistance: function(indexArr) {
-                var _this = this;
-                var temp = [];
-                for (var i = 0; i < _this.slider.length; i++) {
-                    temp.push(_this.calcDistance(indexArr[i]));
-                    _this.movePosition(_this.slider[i], temp[i])
-                }
-                _this.curDistance = temp
-            },
-            fixPosition: function(distance) {
-                return - (this.getIndex(distance) - 2) * this.liHeight
-            },
-            movePosition: function(theSlider, distance) {
-                theSlider.style.webkitTransform = "translate3d(0," + distance + "px, 0)";
-                theSlider.style.transform = "translate3d(0," + distance + "px, 0)"
-            },
-            locatePostion: function(index, posIndex) {
-                this.curDistance[index] = this.calcDistance(posIndex);
-                this.movePosition(this.slider[index], this.curDistance[index])
-            },
-            updateCurDistance: function(theSlider, index) {
-                this.curDistance[index] = parseInt(theSlider.style.transform.split(",")[1])
-            },
-            getDistance: function(theSlider) {
-                return parseInt(theSlider.style.transform.split(",")[1])
-            },
-            getValue: function(sliderIndex) {
-                var _this = this;
-                var index = _this.getIndex(_this.curDistance[sliderIndex]);
-                return _this.slider[sliderIndex].getElementsByTagName("li")[index].innerHTML
-            },
-            touch: function(event, theSlider, index) {
-                var _this = this;
-                event = event || window.event;
-                switch (event.type) {
-                    case "touchstart":
-                        _this.startY = event.touches[0].clientY;
-                        _this.oldMoveY = _this.startY;
-                        break;
-                    case "touchend":
-                        _this.moveEndY = event.changedTouches[0].clientY;
-                        _this.offsetSum = _this.moveEndY - _this.startY;
-                        _this.updateCurDistance(theSlider, index);
-                        _this.curDistance[index] = _this.fixPosition(_this.curDistance[index]);
-                        _this.movePosition(theSlider, _this.curDistance[index]);
-                        _this.oversizeBorder = -(theSlider.getElementsByTagName("li").length - 3) * _this.liHeight;
-                        if (_this.curDistance[index] + _this.offsetSum > 2 * _this.liHeight) {
-                            _this.curDistance[index] = 2 * _this.liHeight;
-                            setTimeout(function() {
-                                    _this.movePosition(theSlider, _this.curDistance[index])
-                                },
-                                100)
-                        } else {
-                            if (_this.curDistance[index] + _this.offsetSum < _this.oversizeBorder) {
-                                _this.curDistance[index] = _this.oversizeBorder;
-                                setTimeout(function() {
-                                        _this.movePosition(theSlider, _this.curDistance[index])
-                                    },
-                                    100)
-                            }
-                        }
-                        _this.transitionEnd(_this.getIndexArr(), _this.getJson());
-                        if (_this.cascade) {
-                            var tempPosArr = _this.getIndexArr();
-                            tempPosArr[index] = _this.getIndex(_this.curDistance[index]);
-                            _this.checkRange(index, tempPosArr)
-                        }
-                        break;
-                    case "touchmove":
-                        event.preventDefault();
-                        _this.moveY = event.touches[0].clientY;
-                        _this.offset = _this.moveY - _this.oldMoveY;
-                        _this.updateCurDistance(theSlider, index);
-                        _this.curDistance[index] = _this.curDistance[index] + _this.offset;
-                        _this.movePosition(theSlider, _this.curDistance[index]);
-                        _this.oldMoveY = _this.moveY;
-                        break
-                }
-            },
-            dragClick: function(event, theSlider, index) {
-                var _this = this;
-                event = event || window.event;
-                if (typeof event !== "undefined") {
-                    switch (event.type) {
-                        case "mousedown":
-                            _this.startY = event.clientY;
-                            _this.oldMoveY = _this.startY;
-                            _this.clickStatus = true;
-                            break;
-                        case "mouseup":
-                            _this.moveEndY = event.clientY;
-                            _this.offsetSum = _this.moveEndY - _this.startY;
-                            _this.updateCurDistance(theSlider, index);
-                            _this.curDistance[index] = _this.fixPosition(_this.curDistance[index]);
-                            _this.movePosition(theSlider, _this.curDistance[index]);
-                            _this.oversizeBorder = -(theSlider.getElementsByTagName("li").length - 3) * _this.liHeight;
-                            if (_this.curDistance[index] + _this.offsetSum > 2 * _this.liHeight) {
-                                _this.curDistance[index] = 2 * _this.liHeight;
-                                setTimeout(function() {
-                                        _this.movePosition(theSlider, _this.curDistance[index])
-                                    },
-                                    100)
-                            } else {
-                                if (_this.curDistance[index] + _this.offsetSum < _this.oversizeBorder) {
-                                    _this.curDistance[index] = _this.oversizeBorder;
-                                    setTimeout(function() {
-                                            _this.movePosition(theSlider, _this.curDistance[index])
-                                        },
-                                        100)
-                                }
-                            }
-                            _this.clickStatus = false;
-                            _this.transitionEnd(_this.getIndexArr(), _this.getJson());
-                            if (_this.cascade) {
-                                var tempPosArr = _this.getIndexArr();
-                                tempPosArr[index] = _this.getIndex(_this.curDistance[index]);
-                                _this.checkRange(index, tempPosArr)
-                            }
-                            break;
-                        case "mousemove":
-                            event.preventDefault();
-                            if (_this.clickStatus) {
-                                _this.moveY = event.clientY;
-                                _this.offset = _this.moveY - _this.oldMoveY;
-                                _this.updateCurDistance(theSlider, index);
-                                _this.curDistance[index] = _this.curDistance[index] + _this.offset;
-                                _this.movePosition(theSlider, _this.curDistance[index]);
-                                _this.oldMoveY = _this.moveY
-                            }
-                            break
-                    }
-                }
-            },
-            singleClick: function(theLi, index, sliderIndex) {
-                var _this = this;
-                if (_this.cascade) {
-                    var tempPosArr = _this.getIndexArr();
-                    tempPosArr[sliderIndex] = index;
-                    _this.checkRange(sliderIndex, tempPosArr)
-                } else {
-                    _this.curDistance[sliderIndex] = (2 - index) * _this.liHeight;
-                    _this.movePosition(theLi.parentNode, _this.curDistance[sliderIndex])
-                }
-            }
-        };
-        return AKjs_Select
-    })()
-} (jQuery));;
-///<jscompress sourcefile="AKjs_SelectOption.js" />
-/*
-Modification Date: 2018-09-30
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_SelectOption-------------------------------------------*/
-(function($){
     var defaluts = {
         active: "",
         boxheight: 5,
@@ -15002,14 +12544,10 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
             });
         }
     });
-}(jQuery));;
-///<jscompress sourcefile="AKjs_Slider.js" />
-/*
-Modification Date: 2018-12-03
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_Slider------------------------------------------*/
-(function($){
+} (jQuery));
+
+/*-----------------------------------------------AKjs_Slider (2018-12-13)--------------------------------------------*/
+(function($) {
     var AKjs_Slider = function(ele, opt) {
         var self = this;
         self.$element = ele,
@@ -15455,13 +12993,9 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
             ak_Slider.init()
         })
     }
-}(jQuery));;
-///<jscompress sourcefile="AKjs_SnInput.js" />
-/*
-Modification Date: 2018-09-17
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_SnInput-------------------------------------------*/
+} (jQuery));
+
+/*-----------------------------------------------AKjs_SnInput (2018-12-13)--------------------------------------------*/
 (function($) {
     $.fn.AKjs_SnInput = function(setting) {
         var option = $.extend({
@@ -15548,13 +13082,9 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
                 }
             })
     }
-} (jQuery));;
-///<jscompress sourcefile="AKjs_Snippet.js" />
-/*
-Modification Date: 2018-05-23
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_Snippet-------------------------------------*/
+} (jQuery));
+
+/*-----------------------------------------------AKjs_Snippet (2018-12-13)--------------------------------------------*/
 (function($) {
     $.fn.AKjs_Snippet = function(language, settings) {
         if (typeof language == "object") {
@@ -16159,14 +13689,10 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
     ak_languages["url"] = [[{"regex": /(?:<?)[A-Za-z0-9_\.\/\-_]+@[A-Za-z0-9_\.\/\-_]+(?:>?)/g, "style": "ak_url"}, {"regex": /(?:<?)[A-Za-z0-9_]+:\/\/[A-Za-z0-9_\.\/\-_]+(?:>?)/g, "style": "ak_url"}]];
     ak_languages.xml = [[[/<\?xml/g, "ak_preproc", 1, 1], [/<!DOCTYPE/g, "ak_preproc", 3, 1], [/<!--/g, "ak_comment", 4], [/<(?:\/)?[A-Za-z](?:[A-Za-z0-9_:.-]*)(?:\/)?>/g, "ak_keyword", -1], [/<(?:\/)?[A-Za-z](?:[A-Za-z0-9_:.-]*)/g, "ak_keyword", 5, 1], [/&(?:[A-Za-z0-9]+);/g, "ak_preproc", -1]], [[/\?>/g, "ak_preproc", -2], [/([^=" \t>]+)([ \t]*)(=?)/g, ["ak_type", "ak_normal", "ak_symbol"], -1], [/"/g, "ak_string", 2]], [[/\\(?:\\|")/g, null, -1], [/"/g, "ak_string", -2]], [[/>/g, "ak_preproc", -2], [/([^=" \t>]+)([ \t]*)(=?)/g, ["ak_type", "ak_normal", "ak_symbol"], -1], [/"/g, "ak_string", 2]], [[/-->/g, "ak_comment", -2], [/<!--/g, "ak_comment", 4]], [[/(?:\/)?>/g, "ak_keyword", -2], [/([^=" \t>]+)([ \t]*)(=?)/g, ["ak_type", "ak_normal", "ak_symbol"], -1], [/"/g, "ak_string", 2]]];
 
-})(jQuery);;
-///<jscompress sourcefile="AKjs_Spinner.js" />
-/*
-Modification Date: 2018-09-26
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_Spinner-------------------------------------------*/
-(function($){
+} (jQuery));
+
+/*-----------------------------------------------AKjs_Spinner (2018-12-13)--------------------------------------------*/
+(function($) {
     $.fn.AKjs_Spinner=function(setting) {
         var option = $.extend({
                 input_width:"100%",
@@ -16291,14 +13817,10 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
             });
         }
     }
-}(jQuery));;
-///<jscompress sourcefile="AKjs_StepOrder.js" />
-/*
-Modification Date: 2018-08-09
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_StepOrder---------------------------------------*/
-(function($){
+} (jQuery));
+
+/*-----------------------------------------------AKjs_StepOrder (2018-12-13)--------------------------------------------*/
+(function($) {
     $.fn.AKjs_StepOrder = function(setting) {
         var option = $.extend({
                 stepNum: "",
@@ -16355,14 +13877,9 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
         });
         option.callback(step);
     };
-}(jQuery));
-;
-///<jscompress sourcefile="AKjs_Substring.js" />
-/*
-Modification Date: 2018-09-17
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_Substring-----------------------------------------*/
+} (jQuery));
+
+/*-----------------------------------------------AKjs_Substring (2018-12-13)--------------------------------------------*/
 (function($) {
     $.fn.AKjs_Substring = function() {
         $(this).blur(function() {
@@ -16401,13 +13918,9 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
             return outputdollars(Math.floor(number - 0) + "") + outputcents(number - 0)
         }
     }
-} (jQuery));;
-///<jscompress sourcefile="AKjs_Switch.js" />
-/*
-Modification Date: 2018-09-17
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_Switch--------------------------------------*/
+} (jQuery));
+
+/*-----------------------------------------------AKjs_Switch (2018-12-13)--------------------------------------------*/
 (function($) {
     $.fn.AKjs_Switch = function(settings) {
         var _defaults = {
@@ -16451,13 +13964,9 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
                 })
         })
     }
-} (jQuery));;
-///<jscompress sourcefile="AKjs_Tabs.js" />
-/*
-Modification Date: 2018-12-02
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_Tabs--------------------------------------------*/
+} (jQuery));
+
+/*-----------------------------------------------AKjs_Tabs (2018-12-13)--------------------------------------------*/
 (function($) {
     var Plugin = function(elem, options) {
         this.$wrapper = elem;
@@ -16867,12 +14376,8 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
         return plugin.inital()
     }
 } (jQuery));
-;
-///<jscompress sourcefile="AKjs_Template.js" />
-/*
-Modification Date: 2018-09-17
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
+
+/*-----------------------------------------------AKjs_Template (2018-12-13)--------------------------------------------*/
 (function($, undefined) {
     var oldManip = $.fn.domManip,
         tmplItmAtt = "_tmplitem",
@@ -17288,15 +14793,10 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
         $.AKjs_Template(null, null, null, this).insertBefore(coll[0]);
         $(coll).remove();
     }
-})(jQuery);
-;
-///<jscompress sourcefile="AKjs_Textarea.js" />
-/*
-Modification Date: 2018-09-17
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_Textarea----------------------------------------*/
-(function($){
+} (jQuery));
+
+/*-----------------------------------------------AKjs_Textarea (2018-12-13)--------------------------------------------*/
+(function($) {
     $.fn.AKjs_Textarea = function(setting) {
         var opm = $.extend({
                 maxlength: 300,
@@ -17344,14 +14844,10 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
             });
         }
     };
-}(jQuery));;
-///<jscompress sourcefile="AKjs_TimeAxis.js" />
-/*
-Modification Date: 2018-09-17
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_TimeAxis------------------------------------*/
-(function($){
+} (jQuery));
+
+/*-----------------------------------------------AKjs_TimeAxis (2018-12-13)--------------------------------------------*/
+(function($) {
     $.fn.AKjs_TimeAxis = function(setting) {
         var option = $.extend({
                 firstbox: "",
@@ -17411,15 +14907,10 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
         };
         var el = new TimeAxis($(this));
     };
-}(jQuery));
-;
-///<jscompress sourcefile="AKjs_TimeClock.js" />
-/*
-Modification Date: 2018-10-14
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_TimeClock----------------------------------------*/
-(function($){
+} (jQuery));
+
+/*-----------------------------------------------AKjs_TimeClock (2018-12-13)--------------------------------------------*/
+(function($) {
     var ak_Clock = function(elem, ctx, opts) {
         this.$element = elem;
         this.context = ctx;
@@ -17546,14 +15037,10 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
             TimeClock.draw();
         }, 1000);
     }
-}(jQuery));;
-///<jscompress sourcefile="AKjs_ToolTip.js" />
-/*
-Modification Date: 2018-09-17
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_ToolTip-------------------------------------------*/
-(function($){
+} (jQuery));
+
+/*-----------------------------------------------AKjs_ToolTip (2018-12-13)--------------------------------------------*/
+(function($) {
     $.fn.AKjs_ToolTip = function(options) {
         var defaults = {
                 background: '#777777',
@@ -17591,1039 +15078,47 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
             });
         });
     }
-}(jQuery));;
-///<jscompress sourcefile="AKjs_TouchDelete.js" />
-/*
-Modification Date: 2018-09-21
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_TouchDelete-------------------------------------*/
-(function($){
-    var AKjs_TouchDelete = function(ele, opt) {
-        var self = this;
-        self.$element = ele;
-        self.defaults = {
-            DelText: "",
-            DelClass: "",
-            ClickDelete: function() {},
-            TouchCallback: function() {}
-        };
-        self.options = $.extend({},
-            self.defaults, opt);
-        this.init = this.options.init || this.init;
-        this.touch = this.options.touch || this.touch;
-    };
-    AKjs_TouchDelete.prototype = {
-        init: function() {
-            var self = this,
-                ele = self.$element;
-            var DeleteLi = ele.find("li");
-            DeleteLi.append("<button type='button' class='"+self.options.DelClass+"'></button>");
-            DeleteLi.children("article").addClass("ak_delete_art").css({
-                "left": "0",
-                "position": "absolute"
-            });
-            DeleteLi.children("button").addClass("ak_delete_btn").html(self.options.DelText);
-            DeleteLi.children("button").css({
-                "right": "-"+DeleteLi.children("button").outerWidth()+"px"
-            });
-            self.touch();
-        },
-        touch: function () {
-            var self = this,
-                ele = self.$element;
-            var DeleteLi = ele.find("li");
-            var touchStartY = 0,
-                touchStartX = 0,
-                mouseStartY = 0,
-                mouseStartX = 0;
-            AKjs_UserAgent();
-            DeleteLi.on({
-                touchstart: function(e) {
-                    touchStartY = e.originalEvent.touches[0].clientY;
-                    touchStartX = e.originalEvent.touches[0].clientX;
-                    $(this).children("button").on('touchstart', function (event) {
-                        event.preventDefault();
-                        self.options.ClickDelete($(this),$(this).parent(),$(this).parent().index());
-                    });
-                },
-                touchend: function(e) {
-                    var touchEndY = e.originalEvent.changedTouches[0].clientY,
-                        touchEndX = e.originalEvent.changedTouches[0].clientX,
-                        yDiff = touchStartY - touchEndY,
-                        xDiff = touchStartX - touchEndX;
-                    if (Math.abs(xDiff) > Math.abs(yDiff)) {
-                        if (xDiff > 5) {
-                            DeleteLi.children("article").css({
-                                "left": "0"
-                            });
-                            DeleteLi.children("button").css({
-                                "right": "-"+DeleteLi.children("button").outerWidth()+"px"
-                            });
-                            $(this).children("article").css({
-                                "left": "-"+$(this).children("button").outerWidth()+"px"
-                            });
-                            $(this).children("button").css({
-                                "display": "block",
-                                "right": "0"
-                            });
-                            self.options.TouchCallback($(this));
-                        } else {
-                            $(this).children("article").css({
-                                "left": "0"
-                            });
-                            $(this).children("button").css({
-                                "right": "-"+$(this).children("button").outerWidth()+"px"
-                            });
-                        }
-                    }
-                    touchStartY = null;
-                    touchStartX = null
-                },
-                touchmove: function(e) {
-                    var touchEndY = e.originalEvent.changedTouches[0].clientY,
-                        touchEndX = e.originalEvent.changedTouches[0].clientX,
-                        yDiff = touchStartY - touchEndY,
-                        xDiff = touchStartX - touchEndX;
-                    if (Math.abs(xDiff) > Math.abs(yDiff)) {
-                        e.preventDefault()
-                    }
-                }
-            });
-            if (!IsMobile) {
-                DeleteLi.on({
-                    mousedown: function(e) {
-                        mouseStartY = e.originalEvent.clientY;
-                        mouseStartX = e.originalEvent.clientX;
-                        $(this).children("button").unbind("click");
-                        $(this).children("button").on('click', function (event) {
-                            event.preventDefault();
-                            self.options.ClickDelete($(this),$(this).parent(),$(this).parent().index());
-                        });
-                    },
-                    mouseup: function(e) {
-                        var mouseEndY = e.originalEvent.screenY,
-                            mouseEndX = e.originalEvent.screenX,
-                            yDiff = mouseStartY - mouseEndY,
-                            xDiff = mouseStartX - mouseEndX;
-                        if (Math.abs(xDiff) > Math.abs(yDiff)) {
-                            if (xDiff > 5) {
-                                DeleteLi.children("article").css({
-                                    "left": "0"
-                                });
-                                DeleteLi.children("button").css({
-                                    "right": "-"+DeleteLi.children("button").outerWidth()+"px"
-                                });
-                                $(this).children("article").css({
-                                    "left": "-"+$(this).children("button").outerWidth()+"px"
-                                });
-                                $(this).children("button").css({
-                                    "display": "block",
-                                    "right": "0"
-                                });
-                                self.options.TouchCallback($(this));
-                            } else {
-                                $(this).children("article").css({
-                                    "left": "0"
-                                });
-                                $(this).children("button").css({
-                                    "right": "-"+$(this).children("button").outerWidth()+"px"
-                                });
-                            }
-                        }
-                        mouseStartY = null;
-                        mouseStartX = null
-                    },
-                    mousemove: function(e) {
-                        e.preventDefault();
-                    }
-                });
-            }
-        }
-    };
-    $.fn.AKjs_TouchDelete = function(options) {
-        var ak_TouchDelete = new AKjs_TouchDelete(this, options);
-        return this.each(function() {
-            ak_TouchDelete.init();
-        })
-    }
-}(jQuery));;
-///<jscompress sourcefile="AKjs_TouchSwipe.js" />
-/*-----------------------------------------------AKjs_TouchSwipe-------------------------------------------*/
-(function($){
-    $.fn.AKjs_TouchSwipe = function(G) {
-        var F = $(this),
-            E = F.data(B);
-        if (E && typeof G === "string") {
-            if (E[G]) {
-                return E[G].apply(this, Array.prototype.slice.call(arguments, 1))
-            } else {
-                $.error("Method " + G + " does not exist on jQuery.AKjs_TouchSwipe")
-            }
-        } else {
-            if (!E && (typeof G === "object" || !G)) {
-                return w.apply(this, arguments)
-            }
-        }
-        return F
-    };
-    $.fn.AKjs_TouchSwipe.defaults = {
-        fingers: 1,
-        threshold: 75,
-        cancelThreshold: null,
-        pinchThreshold: 20,
-        maxTimeThreshold: null,
-        fingerReleaseThreshold: 250,
-        longTapThreshold: 500,
-        doubleTapThreshold: 200,
-        swipe: null,
-        swipeLeft: null,
-        swipeRight: null,
-        swipeUp: null,
-        swipeDown: null,
-        swipeStatus: null,
-        pinchIn: null,
-        pinchOut: null,
-        pinchStatus: null,
-        click: null,
-        tap: null,
-        doubleTap: null,
-        longTap: null,
-        hold: null,
-        triggerOnTouchEnd: true,
-        triggerOnTouchLeave: false,
-        allowPageScroll: "auto",
-        fallbackToMouseEvents: true,
-        excludedElements: "label, button, input, select, textarea, a, .noSwipe"
-    };
-    var p = "left",
-        o = "right",
-        e = "up",
-        x = "down",
-        c = "in",
-        z = "out",
-        m = "none",
-        s = "auto",
-        l = "swipe",
-        t = "pinch",
-        A = "tap",
-        j = "doubletap",
-        b = "longtap",
-        y = "hold",
-        D = "horizontal",
-        u = "vertical",
-        i = "all",
-        r = 10,
-        g = "start",
-        k = "move",
-        h = "end",
-        q = "cancel",
-        a = "ontouchstart" in window,
-        v = window.navigator.msPointerEnabled && !window.navigator.pointerEnabled,
-        d = window.navigator.pointerEnabled || window.navigator.msPointerEnabled,
-        B = "TouchSwipe";
-    $.fn.AKjs_TouchSwipe.phases = {
-        PHASE_START: g,
-        PHASE_MOVE: k,
-        PHASE_END: h,
-        PHASE_CANCEL: q
-    };
-    $.fn.AKjs_TouchSwipe.directions = {
-        LEFT: p,
-        RIGHT: o,
-        UP: e,
-        DOWN: x,
-        IN: c,
-        OUT: z
-    };
-    $.fn.AKjs_TouchSwipe.pageScroll = {
-        NONE: m,
-        HORIZONTAL: D,
-        VERTICAL: u,
-        AUTO: s
-    };
-    $.fn.AKjs_TouchSwipe.fingers = {
-        ONE: 1,
-        TWO: 2,
-        THREE: 3,
-        ALL: i
-    };
-    function w(E) {
-        if (E && (E.allowPageScroll === undefined && (E.swipe !== undefined || E.swipeStatus !== undefined))) {
-            E.allowPageScroll = m
-        }
-        if (E.click !== undefined && E.tap === undefined) {
-            E.tap = E.click
-        }
-        if (!E) {
-            E = {}
-        }
-        E = $.extend({},
-            $.fn.AKjs_TouchSwipe.defaults, E);
-        return this.each(function() {
-            var G = $(this);
-            var F = G.data(B);
-            if (!F) {
-                F = new C(this, E);
-                G.data(B, F)
-            }
-        })
-    }
-    function C(a4, av) {
-        var az = (a || d || !av.fallbackToMouseEvents),
-            J = az ? (d ? (v ? "MSPointerDown": "pointerdown") : "touchstart") : "mousedown",
-            ay = az ? (d ? (v ? "MSPointerMove": "pointermove") : "touchmove") : "mousemove",
-            U = az ? (d ? (v ? "MSPointerUp": "pointerup") : "touchend") : "mouseup",
-            S = az ? null: "mouseleave",
-            aD = (d ? (v ? "MSPointerCancel": "pointercancel") : "touchcancel");
-        var ag = 0,
-            aP = null,
-            ab = 0,
-            a1 = 0,
-            aZ = 0,
-            G = 1,
-            aq = 0,
-            aJ = 0,
-            M = null;
-        var aR = $(a4);
-        var Z = "start";
-        var W = 0;
-        var aQ = null;
-        var T = 0,
-            a2 = 0,
-            a5 = 0,
-            ad = 0,
-            N = 0;
-        var aW = null,
-            af = null;
-        try {
-            aR.bind(J, aN);
-            aR.bind(aD, a9)
-        } catch(ak) {
-            $.error("events not supported " + J + "," + aD + " on jQuery.AKjs_TouchSwipe")
-        }
-        this.enable = function() {
-            aR.bind(J, aN);
-            aR.bind(aD, a9);
-            return aR
-        };
-        this.disable = function() {
-            aK();
-            return aR
-        };
-        this.destroy = function() {
-            aK();
-            aR.data(B, null);
-            return aR
-        };
-        this.option = function(bc, bb) {
-            if (av[bc] !== undefined) {
-                if (bb === undefined) {
-                    return av[bc]
-                } else {
-                    av[bc] = bb
-                }
-            } else {
-                $.error("Option " + bc + " does not exist on jQuery.AKjs_TouchSwipe.options")
-            }
-            return null
-        };
-        function aN(bd) {
-            if (aB()) {
-                return
-            }
-            if ($(bd.target).closest(av.excludedElements, aR).length > 0) {
-                return
-            }
-            var be = bd.originalEvent ? bd.originalEvent: bd;
-            var bc, bb = a ? be.touches[0] : be;
-            Z = g;
-            if (a) {
-                W = be.touches.length
-            } else {
-                bd.preventDefault()
-            }
-            ag = 0;
-            aP = null;
-            aJ = null;
-            ab = 0;
-            a1 = 0;
-            aZ = 0;
-            G = 1;
-            aq = 0;
-            aQ = aj();
-            M = aa();
-            R();
-            if (!a || (W === av.fingers || av.fingers === i) || aX()) {
-                ai(0, bb);
-                T = at();
-                if (W == 2) {
-                    ai(1, be.touches[1]);
-                    a1 = aZ = au(aQ[0].start, aQ[1].start)
-                }
-                if (av.swipeStatus || av.pinchStatus) {
-                    bc = O(be, Z)
-                }
-            } else {
-                bc = false
-            }
-            if (bc === false) {
-                Z = q;
-                O(be, Z);
-                return bc
-            } else {
-                if (av.hold) {
-                    af = setTimeout($.proxy(function() {
-                            aR.trigger("hold", [be.target]);
-                            if (av.hold) {
-                                bc = av.hold.call(aR, be, be.target)
-                            }
-                        },
-                        this), av.longTapThreshold)
-                }
-                ao(true)
-            }
-            return null
-        }
-        function a3(be) {
-            var bh = be.originalEvent ? be.originalEvent: be;
-            if (Z === h || Z === q || am()) {
-                return
-            }
-            var bd, bc = a ? bh.touches[0] : bh;
-            var bf = aH(bc);
-            a2 = at();
-            if (a) {
-                W = bh.touches.length
-            }
-            if (av.hold) {
-                clearTimeout(af)
-            }
-            Z = k;
-            if (W == 2) {
-                if (a1 == 0) {
-                    ai(1, bh.touches[1]);
-                    a1 = aZ = au(aQ[0].start, aQ[1].start)
-                } else {
-                    aH(bh.touches[1]);
-                    aZ = au(aQ[0].end, aQ[1].end);
-                    aJ = ar(aQ[0].end, aQ[1].end)
-                }
-                G = a7(a1, aZ);
-                aq = Math.abs(a1 - aZ)
-            }
-            if ((W === av.fingers || av.fingers === i) || !a || aX()) {
-                aP = aL(bf.start, bf.end);
-                al(be, aP);
-                ag = aS(bf.start, bf.end);
-                ab = aM();
-                aI(aP, ag);
-                if (av.swipeStatus || av.pinchStatus) {
-                    bd = O(bh, Z)
-                }
-                if (!av.triggerOnTouchEnd || av.triggerOnTouchLeave) {
-                    var bb = true;
-                    if (av.triggerOnTouchLeave) {
-                        var bg = aY(this);
-                        bb = E(bf.end, bg)
-                    }
-                    if (!av.triggerOnTouchEnd && bb) {
-                        Z = aC(k)
-                    } else {
-                        if (av.triggerOnTouchLeave && !bb) {
-                            Z = aC(h)
-                        }
-                    }
-                    if (Z == q || Z == h) {
-                        O(bh, Z)
-                    }
-                }
-            } else {
-                Z = q;
-                O(bh, Z)
-            }
-            if (bd === false) {
-                Z = q;
-                O(bh, Z)
-            }
-        }
-        function L(bb) {
-            var bc = bb.originalEvent;
-            if (a) {
-                if (bc.touches.length > 0) {
-                    F();
-                    return true
-                }
-            }
-            if (am()) {
-                W = ad
-            }
-            a2 = at();
-            ab = aM();
-            if (ba() || !an()) {
-                Z = q;
-                O(bc, Z)
-            } else {
-                if (av.triggerOnTouchEnd || (av.triggerOnTouchEnd == false && Z === k)) {
-                    bb.preventDefault();
-                    Z = h;
-                    O(bc, Z)
-                } else {
-                    if (!av.triggerOnTouchEnd && a6()) {
-                        Z = h;
-                        aF(bc, Z, A)
-                    } else {
-                        if (Z === k) {
-                            Z = q;
-                            O(bc, Z)
-                        }
-                    }
-                }
-            }
-            ao(false);
-            return null
-        }
-        function a9() {
-            W = 0;
-            a2 = 0;
-            T = 0;
-            a1 = 0;
-            aZ = 0;
-            G = 1;
-            R();
-            ao(false)
-        }
-        function K(bb) {
-            var bc = bb.originalEvent;
-            if (av.triggerOnTouchLeave) {
-                Z = aC(h);
-                O(bc, Z)
-            }
-        }
-        function aK() {
-            aR.unbind(J, aN);
-            aR.unbind(aD, a9);
-            aR.unbind(ay, a3);
-            aR.unbind(U, L);
-            if (S) {
-                aR.unbind(S, K)
-            }
-            ao(false)
-        }
-        function aC(bf) {
-            var be = bf;
-            var bd = aA();
-            var bc = an();
-            var bb = ba();
-            if (!bd || bb) {
-                be = q
-            } else {
-                if (bc && bf == k && (!av.triggerOnTouchEnd || av.triggerOnTouchLeave)) {
-                    be = h
-                } else {
-                    if (!bc && bf == h && av.triggerOnTouchLeave) {
-                        be = q
-                    }
-                }
-            }
-            return be
-        }
-        function O(bd, bb) {
-            var bc = undefined;
-            if (I() || V()) {
-                bc = aF(bd, bb, l)
-            } else {
-                if ((P() || aX()) && bc !== false) {
-                    bc = aF(bd, bb, t)
-                }
-            }
-            if (aG() && bc !== false) {
-                bc = aF(bd, bb, j)
-            } else {
-                if (ap() && bc !== false) {
-                    bc = aF(bd, bb, b)
-                } else {
-                    if (ah() && bc !== false) {
-                        bc = aF(bd, bb, A)
-                    }
-                }
-            }
-            if (bb === q) {
-                a9(bd)
-            }
-            if (bb === h) {
-                if (a) {
-                    if (bd.touches.length == 0) {
-                        a9(bd)
-                    }
-                } else {
-                    a9(bd)
-                }
-            }
-            return bc
-        }
-        function aF(be, bb, bd) {
-            var bc = undefined;
-            if (bd == l) {
-                aR.trigger("swipeStatus", [bb, aP || null, ag || 0, ab || 0, W, aQ]);
-                if (av.swipeStatus) {
-                    bc = av.swipeStatus.call(aR, be, bb, aP || null, ag || 0, ab || 0, W, aQ);
-                    if (bc === false) {
-                        return false
-                    }
-                }
-                if (bb == h && aV()) {
-                    aR.trigger("swipe", [aP, ag, ab, W, aQ]);
-                    if (av.swipe) {
-                        bc = av.swipe.call(aR, be, aP, ag, ab, W, aQ);
-                        if (bc === false) {
-                            return false
-                        }
-                    }
-                    switch (aP) {
-                        case p:
-                            aR.trigger("swipeLeft", [aP, ag, ab, W, aQ]);
-                            if (av.swipeLeft) {
-                                bc = av.swipeLeft.call(aR, be, aP, ag, ab, W, aQ)
-                            }
-                            break;
-                        case o:
-                            aR.trigger("swipeRight", [aP, ag, ab, W, aQ]);
-                            if (av.swipeRight) {
-                                bc = av.swipeRight.call(aR, be, aP, ag, ab, W, aQ)
-                            }
-                            break;
-                        case e:
-                            aR.trigger("swipeUp", [aP, ag, ab, W, aQ]);
-                            if (av.swipeUp) {
-                                bc = av.swipeUp.call(aR, be, aP, ag, ab, W, aQ)
-                            }
-                            break;
-                        case x:
-                            aR.trigger("swipeDown", [aP, ag, ab, W, aQ]);
-                            if (av.swipeDown) {
-                                bc = av.swipeDown.call(aR, be, aP, ag, ab, W, aQ)
-                            }
-                            break
-                    }
-                }
-            }
-            if (bd == t) {
-                aR.trigger("pinchStatus", [bb, aJ || null, aq || 0, ab || 0, W, G, aQ]);
-                if (av.pinchStatus) {
-                    bc = av.pinchStatus.call(aR, be, bb, aJ || null, aq || 0, ab || 0, W, G, aQ);
-                    if (bc === false) {
-                        return false
-                    }
-                }
-                if (bb == h && a8()) {
-                    switch (aJ) {
-                        case c:
-                            aR.trigger("pinchIn", [aJ || null, aq || 0, ab || 0, W, G, aQ]);
-                            if (av.pinchIn) {
-                                bc = av.pinchIn.call(aR, be, aJ || null, aq || 0, ab || 0, W, G, aQ)
-                            }
-                            break;
-                        case z:
-                            aR.trigger("pinchOut", [aJ || null, aq || 0, ab || 0, W, G, aQ]);
-                            if (av.pinchOut) {
-                                bc = av.pinchOut.call(aR, be, aJ || null, aq || 0, ab || 0, W, G, aQ)
-                            }
-                            break
-                    }
-                }
-            }
-            if (bd == A) {
-                if (bb === q || bb === h) {
-                    clearTimeout(aW);
-                    clearTimeout(af);
-                    if (Y() && !H()) {
-                        N = at();
-                        aW = setTimeout($.proxy(function() {
-                                N = null;
-                                aR.trigger("tap", [be.target]);
-                                if (av.tap) {
-                                    bc = av.tap.call(aR, be, be.target)
-                                }
-                            },
-                            this), av.doubleTapThreshold)
-                    } else {
-                        N = null;
-                        aR.trigger("tap", [be.target]);
-                        if (av.tap) {
-                            bc = av.tap.call(aR, be, be.target)
-                        }
-                    }
-                }
-            } else {
-                if (bd == j) {
-                    if (bb === q || bb === h) {
-                        clearTimeout(aW);
-                        N = null;
-                        aR.trigger("doubletap", [be.target]);
-                        if (av.doubleTap) {
-                            bc = av.doubleTap.call(aR, be, be.target)
-                        }
-                    }
-                } else {
-                    if (bd == b) {
-                        if (bb === q || bb === h) {
-                            clearTimeout(aW);
-                            N = null;
-                            aR.trigger("longtap", [be.target]);
-                            if (av.longTap) {
-                                bc = av.longTap.call(aR, be, be.target)
-                            }
-                        }
-                    }
-                }
-            }
-            return bc
-        }
-        function an() {
-            var bb = true;
-            if (av.threshold !== null) {
-                bb = ag >= av.threshold
-            }
-            return bb
-        }
-        function ba() {
-            var bb = false;
-            if (av.cancelThreshold !== null && aP !== null) {
-                bb = (aT(aP) - ag) >= av.cancelThreshold
-            }
-            return bb
-        }
-        function ae() {
-            if (av.pinchThreshold !== null) {
-                return aq >= av.pinchThreshold
-            }
-            return true
-        }
-        function aA() {
-            var bb;
-            if (av.maxTimeThreshold) {
-                if (ab >= av.maxTimeThreshold) {
-                    bb = false
-                } else {
-                    bb = true
-                }
-            } else {
-                bb = true
-            }
-            return bb
-        }
-        function al(bb, bc) {
-            if (av.allowPageScroll === m || aX()) {
-                bb.preventDefault()
-            } else {
-                var bd = av.allowPageScroll === s;
-                switch (bc) {
-                    case p:
-                        if ((av.swipeLeft && bd) || (!bd && av.allowPageScroll != D)) {
-                            bb.preventDefault()
-                        }
-                        break;
-                    case o:
-                        if ((av.swipeRight && bd) || (!bd && av.allowPageScroll != D)) {
-                            bb.preventDefault()
-                        }
-                        break;
-                    case e:
-                        if ((av.swipeUp && bd) || (!bd && av.allowPageScroll != u)) {
-                            bb.preventDefault()
-                        }
-                        break;
-                    case x:
-                        if ((av.swipeDown && bd) || (!bd && av.allowPageScroll != u)) {
-                            bb.preventDefault()
-                        }
-                        break
-                }
-            }
-        }
-        function a8() {
-            var bc = aO();
-            var bb = X();
-            var bd = ae();
-            return bc && bb && bd
-        }
-        function aX() {
-            return !! (av.pinchStatus || av.pinchIn || av.pinchOut)
-        }
-        function P() {
-            return !! (a8() && aX())
-        }
-        function aV() {
-            var be = aA();
-            var bg = an();
-            var bd = aO();
-            var bb = X();
-            var bc = ba();
-            var bf = !bc && bb && bd && bg && be;
-            return bf
-        }
-        function V() {
-            return !! (av.swipe || av.swipeStatus || av.swipeLeft || av.swipeRight || av.swipeUp || av.swipeDown)
-        }
-        function I() {
-            return !! (aV() && V())
-        }
-        function aO() {
-            return ((W === av.fingers || av.fingers === i) || !a)
-        }
-        function X() {
-            return aQ[0].end.x !== 0
-        }
-        function a6() {
-            return !! (av.tap)
-        }
-        function Y() {
-            return !! (av.doubleTap)
-        }
-        function aU() {
-            return !! (av.longTap)
-        }
-        function Q() {
-            if (N == null) {
-                return false
-            }
-            var bb = at();
-            return (Y() && ((bb - N) <= av.doubleTapThreshold))
-        }
-        function H() {
-            return Q()
-        }
-        function ax() {
-            return ((W === 1 || !a) && (isNaN(ag) || ag < av.threshold))
-        }
-        function a0() {
-            return ((ab > av.longTapThreshold) && (ag < r))
-        }
-        function ah() {
-            return !! (ax() && a6())
-        }
-        function aG() {
-            return !! (Q() && Y())
-        }
-        function ap() {
-            return !! (a0() && aU())
-        }
-        function F() {
-            a5 = at();
-            ad = event.touches.length + 1
-        }
-        function R() {
-            a5 = 0;
-            ad = 0
-        }
-        function am() {
-            var bb = false;
-            if (a5) {
-                var bc = at() - a5;
-                if (bc <= av.fingerReleaseThreshold) {
-                    bb = true
-                }
-            }
-            return bb
-        }
-        function aB() {
-            return !! (aR.data(B + "_intouch") === true)
-        }
-        function ao(bb) {
-            if (bb === true) {
-                aR.bind(ay, a3);
-                aR.bind(U, L);
-                if (S) {
-                    aR.bind(S, K)
-                }
-            } else {
-                aR.unbind(ay, a3, false);
-                aR.unbind(U, L, false);
-                if (S) {
-                    aR.unbind(S, K, false)
-                }
-            }
-            aR.data(B + "_intouch", bb === true)
-        }
-        function ai(bc, bb) {
-            var bd = bb.identifier !== undefined ? bb.identifier: 0;
-            aQ[bc].identifier = bd;
-            aQ[bc].start.x = aQ[bc].end.x = bb.pageX || bb.clientX;
-            aQ[bc].start.y = aQ[bc].end.y = bb.pageY || bb.clientY;
-            return aQ[bc]
-        }
-        function aH(bb) {
-            var bd = bb.identifier !== undefined ? bb.identifier: 0;
-            var bc = ac(bd);
-            bc.end.x = bb.pageX || bb.clientX;
-            bc.end.y = bb.pageY || bb.clientY;
-            return bc
-        }
-        function ac(bc) {
-            for (var bb = 0; bb < aQ.length; bb++) {
-                if (aQ[bb].identifier == bc) {
-                    return aQ[bb]
-                }
-            }
-        }
-        function aj() {
-            var bb = [];
-            for (var bc = 0; bc <= 5; bc++) {
-                bb.push({
-                    start: {
-                        x: 0,
-                        y: 0
-                    },
-                    end: {
-                        x: 0,
-                        y: 0
-                    },
-                    identifier: 0
-                })
-            }
-            return bb
-        }
-        function aI(bb, bc) {
-            bc = Math.max(bc, aT(bb));
-            M[bb].distance = bc
-        }
-        function aT(bb) {
-            if (M[bb]) {
-                return M[bb].distance
-            }
-            return undefined
-        }
-        function aa() {
-            var bb = {};
-            bb[p] = aw(p);
-            bb[o] = aw(o);
-            bb[e] = aw(e);
-            bb[x] = aw(x);
-            return bb
-        }
-        function aw(bb) {
-            return {
-                direction: bb,
-                distance: 0
-            }
-        }
-        function aM() {
-            return a2 - T
-        }
-        function au(be, bd) {
-            var bc = Math.abs(be.x - bd.x);
-            var bb = Math.abs(be.y - bd.y);
-            return Math.round(Math.sqrt(bc * bc + bb * bb))
-        }
-        function a7(bb, bc) {
-            var bd = (bc / bb) * 1;
-            return bd.toFixed(2)
-        }
-        function ar() {
-            if (G < 1) {
-                return z
-            } else {
-                return c
-            }
-        }
-        function aS(bc, bb) {
-            return Math.round(Math.sqrt(Math.pow(bb.x - bc.x, 2) + Math.pow(bb.y - bc.y, 2)))
-        }
-        function aE(be, bc) {
-            var bb = be.x - bc.x;
-            var bg = bc.y - be.y;
-            var bd = Math.atan2(bg, bb);
-            var bf = Math.round(bd * 180 / Math.PI);
-            if (bf < 0) {
-                bf = 360 - Math.abs(bf)
-            }
-            return bf
-        }
-        function aL(bc, bb) {
-            var bd = aE(bc, bb);
-            if ((bd <= 45) && (bd >= 0)) {
-                return p
-            } else {
-                if ((bd <= 360) && (bd >= 315)) {
-                    return p
-                } else {
-                    if ((bd >= 135) && (bd <= 225)) {
-                        return o
-                    } else {
-                        if ((bd > 45) && (bd < 135)) {
-                            return x
-                        } else {
-                            return e
-                        }
-                    }
-                }
-            }
-        }
-        function at() {
-            var bb = new Date();
-            return bb.getTime()
-        }
-        function aY(bb) {
-            bb = $(bb);
-            var bd = bb.offset();
-            var bc = {
-                left: bd.left,
-                right: bd.left + bb.outerWidth(),
-                top: bd.top,
-                bottom: bd.top + bb.outerHeight()
-            };
-            return bc
-        }
-        function E(bb, bc) {
-            return (bb.x > bc.left && bb.x < bc.right && bb.y > bc.top && bb.y < bc.bottom)
-        }
-    }
-}(jQuery));;
-///<jscompress sourcefile="AKjs_Typeahead.js" />
-/*
-Modification Date: 2018-11-30
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_Typeahead-----------------------------------------*/
+} (jQuery));
+
+/*-----------------------------------------------AKjs_Typeahead (2018-12-13)--------------------------------------------*/
 (function($) {
     var AKjs_Typeahead = function(element, options) {
         var _this = this;
         $(function() {
-                _this.$element = $(element);
-                _this.options = $.extend(true, {}, $.fn.AKjs_Typeahead.defaults, options);
-                _this.$menu = $("<div class=\"ak-typeahead\"></div>").appendTo("body");
-                _this.shown = false;
-                _this.eventSupported = _this.options.eventSupported || _this.eventSupported;
-                _this.grepper = _this.options.grepper || _this.grepper;
-                _this.highlighter = _this.options.highlighter || _this.highlighter;
-                _this.lookup = _this.options.lookup || _this.lookup;
-                _this.matcher = _this.options.matcher || _this.matcher;
-                _this.render = _this.options.render || _this.render;
-                _this.init = _this.options.init || _this.init;
-                _this.ele_show = _this.options.ele_show || _this.ele_show;
-                _this.select = _this.options.select || _this.select;
-                _this.sorter = _this.options.sorter || _this.sorter;
-                _this.source = _this.options.source || _this.source;
-                AKjs_UserAgent();
-                if (!_this.source.length) {
-                    var ajax = _this.options.ajax;
-                    if (typeof ajax === "string") {
-                        _this.ajax = $.extend({},
-                            $.fn.AKjs_Typeahead.defaults.ajax, {
-                                url: ajax
-                            })
-                    } else {
-                        _this.ajax = $.extend({},
-                            $.fn.AKjs_Typeahead.defaults.ajax, ajax)
-                    }
-                    if (!_this.ajax.url) {
-                        _this.ajax = null
-                    }
+            _this.$element = $(element);
+            _this.options = $.extend(true, {}, $.fn.AKjs_Typeahead.defaults, options);
+            _this.$menu = $("<div class=\"ak-typeahead\"></div>").appendTo("body");
+            _this.shown = false;
+            _this.eventSupported = _this.options.eventSupported || _this.eventSupported;
+            _this.grepper = _this.options.grepper || _this.grepper;
+            _this.highlighter = _this.options.highlighter || _this.highlighter;
+            _this.lookup = _this.options.lookup || _this.lookup;
+            _this.matcher = _this.options.matcher || _this.matcher;
+            _this.render = _this.options.render || _this.render;
+            _this.init = _this.options.init || _this.init;
+            _this.ele_show = _this.options.ele_show || _this.ele_show;
+            _this.select = _this.options.select || _this.select;
+            _this.sorter = _this.options.sorter || _this.sorter;
+            _this.source = _this.options.source || _this.source;
+            AKjs_UserAgent();
+            if (!_this.source.length) {
+                var ajax = _this.options.ajax;
+                if (typeof ajax === "string") {
+                    _this.ajax = $.extend({},
+                        $.fn.AKjs_Typeahead.defaults.ajax, {
+                            url: ajax
+                        })
+                } else {
+                    _this.ajax = $.extend({},
+                        $.fn.AKjs_Typeahead.defaults.ajax, ajax)
                 }
-                _this.init();
-                _this.listen()
-            });
+                if (!_this.ajax.url) {
+                    _this.ajax = null
+                }
+            }
+            _this.init();
+            _this.listen()
+        });
     };
     AKjs_Typeahead.prototype = {
         constructor: AKjs_Typeahead,
@@ -18881,7 +15376,11 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
             this.$menu.html("<ul />");
             items = $(items).map(function(i, item) {
                 i = $("<li class=\"touchstart\"></li>").attr("data-value", item[that.options.val]);
-                i.html("<span class='fl'>"+that.highlighter(item[that.options.display], item)+"</span><span class='fr'>"+item[that.options.custom]+"</span>");
+                if (item[that.options.custom] != undefined) {
+                    i.html("<span class='fl'>"+that.highlighter(item[that.options.display], item)+"</span><span class='fr'>"+item[that.options.custom]+"</span>");
+                } else {
+                    i.html("<span class='fl'>"+that.highlighter(item[that.options.display], item)+"</span>");
+                }
                 return i[0]
             });
             items.first().addClass("ak-is_active");
@@ -19039,13 +15538,8 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
             })
     })
 } (jQuery));
-;
-///<jscompress sourcefile="AKjs_TypeIt.js" />
-/*
-Modification Date: 2018-09-17
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_TypeIt-----------------------------------------*/
+
+/*-----------------------------------------------AKjs_TypeIt (2018-12-13)--------------------------------------------*/
 (function($) {
     var AKjs_TypeIt = function(el, options) {
         this.el = $(el);
@@ -19259,13 +15753,9 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
         preString: function() {},
         onString: function() {}
     };
-}(jQuery));;
-///<jscompress sourcefile="AKjs_Validate.js" />
-/*
-Modification Date: 2018-10-11
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_Validate--------------------------------------*/
+} (jQuery));
+
+/*-----------------------------------------------AKjs_Validate (2018-12-13)--------------------------------------------*/
 (function($) {
     $.fn.AKjs_Validate = function(setting) {
         var option = $.extend({
@@ -19436,14 +15926,10 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
             return false;
         }
     }
-}(jQuery));;
-///<jscompress sourcefile="AKjs_Viewer.js" />
-/*
-Modification Date: 2018-12-12
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_Viewer-------------------------------------------*/
-(function($){
+} (jQuery));
+
+/*-----------------------------------------------AKjs_Viewer (2018-12-13)--------------------------------------------*/
+(function($) {
     function isString(s) {
         return typeof s === 'string';
     }
@@ -20296,13 +16782,9 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
         $.fn.AKjs_Viewer.noConflict = function() {
             return $.fn.AKjs_Viewer = ak_Viewer.other, this;
         }
-}(jQuery));;
-///<jscompress sourcefile="AKjs_Vticker.js" />
-/*
-Modification Date: 2018-08-09
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_Vticker--------------------------------------*/
+} (jQuery));
+
+/*-----------------------------------------------AKjs_Vticker (2018-12-13)--------------------------------------------*/
 (function($) {
     $.fn.AKjs_Vticker = function(setting) {
         var option = $.extend({
@@ -20386,13 +16868,9 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
                 })
         })
     }
-})(jQuery);;
-///<jscompress sourcefile="AKjs_Waterfall.js" />
-/*
-Modification Date: 2018-11-10
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_Waterfall-------------------------------------------*/
+} (jQuery));
+
+/*-----------------------------------------------AKjs_Waterfall (2018-12-13)--------------------------------------------*/
 (function($) {
     var pluginName = 'AKjs_Waterfall',
         defaults = {
@@ -20512,15 +16990,10 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
         });
         return this;
     }
-})(jQuery);
-;
-///<jscompress sourcefile="AKjs_WebToast.js" />
-/*
-Modification Date: 2018-09-20
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_WebToast-------------------------------------------*/
-function AKjs_WebToast(){
+} (jQuery));
+
+/*-----------------------------------------------AKjs_WebToast (2018-12-13)--------------------------------------------*/
+function AKjs_WebToast() {
     var dcfg = {
         message: "",
         position: "bottom",
@@ -20606,14 +17079,9 @@ function AKjs_WebToast(){
         }, dcfg.time);
     }
 }
-;
-///<jscompress sourcefile="AKjs_ZoomImage.js" />
-/*
-Modification Date: 2018-11-30
-Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
-*/
-/*-----------------------------------------------AKjs_ZoomImage-------------------------------------------*/
-(function($){
+
+/*-----------------------------------------------AKjs_ZoomImage (2018-12-13)--------------------------------------------*/
+(function($) {
     var defaults = {
         fadeduration: 200,
         imgclass:"border2 bor_title"
@@ -20720,5 +17188,4 @@ Coding by Andrew.Kim (E-mail: andrewkim365@qq.com)
             });
         });
     };
-}(jQuery));
-;
+} (jQuery));

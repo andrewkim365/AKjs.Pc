@@ -1,5 +1,6 @@
-﻿
-/***<jscompress sourcefile="AKjs_ButtonSubmit.css" />*/
+﻿/*! jquery.AKjs by Website Plugin v1.0.0 Stable --- Copyright Andrew.Kim | (c) 20170808 ~ 20181213 AKjs license */
+/*! Coding by Andrew.Kim (E-mail: andrewkim365@qq.com) https://github.com/andrewkim365/AKjs.Pc */
+
 /*-----------------------------------------------AKjs_ButtonSubmit-------------------------------------------*/
 .ak-submit-loading, .ak-submit-loading > *{vertical-align: middle;display: inline-block;}
 .ak-submit-loading i{display: inline-block;border-radius: 100%;margin: 0.5em;border-width: 2px;border-style: solid;border-color: inherit;border-bottom-color: transparent;-webkit-animation: rotate 0.75s linear infinite;animation: rotate 0.75s linear infinite;}
@@ -10,13 +11,11 @@
 50%{transform: rotate(180deg);}
 100%{transform: rotate(360deg);}}
 
-/***<jscompress sourcefile="AKjs_Checkbox.css" />*/
 /*-----------------------------------------------AKjs_Checkbox-------------------------------------------*/
 .ak-Checkbox{display: inline-block; overflow: hidden; border: solid 1px; border-color: #dddddd; background-color: #ffffff; width: 1.88em; height: 1.88em; line-height: 1.88em; border-radius: 50%; text-align: center; position: relative; vertical-align: middle;}
 .ak-Checkbox input{opacity:0 !important; filter:alpha(opacity=0); width:100%; position:absolute; top: auto; right:0; cursor: pointer;}
 .ak-Checkbox:before{border-color:inherit; font-size:90%;}
 
-/***<jscompress sourcefile="AKjs_CitySelect.css" />*/
 /*-----------------------------------------------AKjs_CitySelect-------------------------------------------*/
 .ak-areaLayer {position: absolute;display: none;background: #ffffff;border: solid 1px #dddddd;overflow: hidden;min-width: 8em;z-index: 9;}
 .ak-areaLayer > section {position: relative;width: 100%;height: 3em;line-height: 3em;text-align: center;border-bottom: solid 1px #dddddd;}
@@ -26,43 +25,14 @@
 .ak-areaLayer > article li {line-height: 3em;cursor: pointer;border-bottom: solid 1px #dddddd; padding-left: 1em}
 .ak-areaLayer > article li:hover {background: #f5f5f5;}
 
-/***<jscompress sourcefile="AKjs_Codeval.css" />*/
 /*-----------------------------------------------AKjs_Codeval-------------------------------------------*/
 .ak-codeval{overflow: hidden; display: block; position: relative; padding: 0 0.2em; text-align: center; height: inherit !important; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; cursor: pointer;}
 .ak-codeval > *{display: inline-block; line-height: inherit !important; font-style: oblique;}
 
-/***<jscompress sourcefile="AKjs_Completer.css" />*/
 /*-----------------------------------------------AKjs_Completer-------------------------------------------*/
 .ak-Completer {position: absolute;padding: 0;margin: 0;background-color: #ffffff;border: 1px solid #dddddd;}
 .ak-Completer li {padding: 0.8em;margin: 0;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;cursor: pointer;border-bottom: 1px solid #dddddd;}
 
-/***<jscompress sourcefile="AKjs_DateTime.css" />*/
-/*-----------------------------------------------AKjs_Datetime-------------------------------------------*/
-.ak-datetime{position:fixed; width:100%; height:100%; top:0; left:0; z-index:6000; pointer-events:auto;}
-.ak-datetime .alwaysShow td{position:relative;}
-.ak-datetime .alwaysShow td{position:absolute; z-index:1; top:50%; left:100%; transform:translate(-50%,-50%);}
-.ak-datetime .jdt_box{-webkit-animation-duration:.4s; animation-duration:.4s; min-width:100%; background:#ffffff; text-shadow:none; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; z-index:8; position:absolute; -webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; -ms-touch-action:none; overflow:hidden; text-align:center; -webkit-tap-highlight-color:rgba(0,0,0,0); bottom: -0.1em;}
-.ak-datetime .jdt_box .jdt_final{text-align:center; line-height:3em; border-bottom:dashed 1px #dddddd;}
-.ak-datetime .jdt_box .jdt_item{position:relative; overflow:hidden;}
-.ak-datetime .jdt_box .jdt_item .jdt_bg{position:absolute; width:100%; height:100%; top:0; left:0;}
-.ak-datetime .jdt_box .jdt_top{-webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; background:linear-gradient(#fff 0%,rgba(255,255,255,.85)45%,rgba(255,255,255,.6) 75%,rgba(255,255,255,.4) 100%); background:-webkit-gradient(linear,left top,left bottom,from(#fff),color-stop(0.45,rgba(255,255,255,.85)),color-stop(0.75,rgba(255,255,255,.6)),to(rgba(255,255,255,.4))); background:-moz-linear-gradient(#fff 0%,rgba(255,255,255,.85) 45%,rgba(255,255,255,.6) 75%,rgba(255,255,255,.4) 100%); background:-o-linear-gradient(#fff 0%,rgba(255,255,255,.85) 45%,rgba(255,255,255,.6) 75%,rgba(255,255,255,.4) 100%);}
-.ak-datetime .jdt_box .jdt_mid{-webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box;}
-.ak-datetime .jdt_box .jdt_btm{-webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; background:linear-gradient(rgba(255,255,255,.4) 0%,rgba(255,255,255,.6)25%,rgba(255,255,255,.85) 65%,#fff 100%); background:-webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,.4)),color-stop(0.25,rgba(255,255,255,.6)),color-stop(0.65,rgba(255,255,255,.85)),to(#fff)); background:-moz-linear-gradient(rgba(255,255,255,.4) 0%,rgba(255,255,255,.6) 25%,rgba(255,255,255,.85) 48%,#fff 100%); background:-o-linear-gradient(rgba(255,255,255,.4) 0%,rgba(255,255,255,.6) 25%,rgba(255,255,255,.85) 48%,#fff 100%);}
-.ak-datetime .jdt_box .jdt_ctn{-webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; margin:0; padding:0 .2em; position:relative; background:#000000; zoom:1;}
-.ak-datetime .jdt_box .jdt_wrap{display: block; width: 100%; border-top: solid 0.5em #eeeeee;}
-.ak-datetime .jdt_box .jdt_wrap:first-child{border-top:none;}
-.ak-datetime .jdt_box .jdt_wrap .jdt_active{width:100%; border-top:solid 1px #dddddd; border-bottom:solid 1px #dddddd; position:absolute; z-index:-1;}
-.ak-datetime .jdt_box .jdt_wrap table{width:100%;}
-.ak-datetime .jdt_box .jdt_strip{position:relative; z-index:2;}
-.ak-datetime .jdt_box .jdt_ul{-webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; -webkit-backface-visibility:hidden; text-decoration:none; list-style:none; padding:0; margin:0;}
-.ak-datetime .jdt_box .jdt_li{-webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; padding:0 .5em; display:block; text-align:center; vertical-align:bottom; filter:Alpha(Opacity=90); white-space:nowrap;}
-.ak-datetime .jdt_box .jdt_class{font-weight:bold;}
-.ak-datetime .jdt_box .jdt_btn{display:block; border-top:0.5em solid #eeeeee; height: 3.6em; line-height: 3.4em;}
-.ak-datetime .jdt_box .jdt_btn button{display:inline-block; width:50%; height:100%; cursor:pointer; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
-.ak-datetime .jdt_box .jdt_btn button:first-child{border-right:solid 1px #dddddd;}
-.ak-datetime .jdt_hide{visibility:hidden;}
-
-/***<jscompress sourcefile="AKjs_Dialog.css" />*/
 /*-----------------------------------------------AKjs_Dialog-------------------------------------------*/
 .ak-dialog{width:100%; height:auto; position:fixed; z-index:20; box-sizing:border-box; display:none;}
 .ak-dialog.ak-is_active{display:block; -webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;}
@@ -89,17 +59,6 @@
 .ak-dialog .ak-dialog_footer .ak_btn.button_cancel{color:#333333;}
 .ak-dialog .ak-dialog_footer .ak_btn.button_cancel + .button_ok{float:left; width:50%;}
 
-
-/***<jscompress sourcefile="AKjs_DropLoad.css" />*/
-/*-----------------------------------------------AKjs_DropLoad-------------------------------------------*/
-.ak-dropload-up,.ak-dropload-down{position: relative; height: 0; overflow: hidden; -webkit-transform:translateZ(0); transform:translateZ(0);}
-.ak-dropload-down{height: 4em;}
-.ak-dropload-refresh,.ak-dropload-update,.ak-dropload-load,.ak-dropload-noData{height: 4em; line-height: 4em; text-align: center;}
-.ak-dropload-load .loading{display: inline-block; height: 1.2em; width: 1.2em; border-radius: 100%; margin: 0.5em; border: 2px solid #777777; border-bottom-color: transparent; vertical-align: middle; -webkit-animation: rotate 0.75s linear infinite; animation: rotate 0.75s linear infinite;}
-@-webkit-keyframes rotate{0%{-webkit-transform: rotate(0deg);} 50%{-webkit-transform: rotate(180deg);} 100%{-webkit-transform: rotate(360deg);}}
-@keyframes rotate{0%{transform: rotate(0deg);} 50%{transform: rotate(180deg);} 100%{transform: rotate(360deg);}}
-
-/***<jscompress sourcefile="AKjs_FullPage.css" />*/
 /*-----------------------------------------------AKjs_FullPage------------------------------------------*/
 .ak-fullpage {position: relative;height: 100%;}
 .ak-fullpage > div, .ak-fullpage > div > section {position: relative;height: inherit;}
@@ -113,280 +72,49 @@
 .ak-fullpage > ul.horizontal li {margin: 0 0.6em;vertical-align: middle;display: inline-block;}
 .ak-fullpage > ul.horizontal li.ak-is_active {vertical-align: middle;}
 
-/***<jscompress sourcefile="AKjs_HotspotMap.css" />*/
 /*-----------------------------------------------AKjs_HotspotMap-------------------------------------------*/
-.ak-Hotspot-object {
-    position: absolute;
-    cursor: pointer;
-    z-index: 100;
-}
-.ak-Hotspot-object.visible-tooltip {
-    z-index: 9999;
-}
-.ak-Hotspot.visible .ak-Hotspot-shape {
-    position: absolute;
-    left: -1px;
-    top: -1px;
-    background: black;
-    border-radius: 50%;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    width: 100%;
-    height: 100%;
-    opacity: 0.15;
-    z-index: 0;
-    border: 1px solid #ffffff;
-}
-.ak-Hotspot.visible .ak-Hotspot-shape-inner {
-    background: #da0606;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 60%;
-    height: 60%;
-    margin: -30% 0 0 -30%;
-    z-index: 1;
-    border-radius: 50%;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-}
-.ak-Hotspot.visible:hover .ak-Hotspot-shape-inner {
-    width: 80%;
-    height: 80%;
-    margin: -40% 0 0 -40%;
-}
-.ak-Hotspot-rect {
-    position: absolute;
-    left: 0;
-    top: 0;
-    cursor: pointer;
-    z-index: 99;
-    border: none;
-}
-.ak-Hotspot-rect.visible .ak-Hotspot-shape {
-    position: absolute;
-    left: -3px;
-    top: -3px;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    background: none;
-    border: 3px solid;
-    border-radius: 50%;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-}
-.ak-Hotspot-rect.visible .ak-Hotspot-shape-inner {
-    position: absolute;
-    z-index: 0;
-    width: 100%;
-    height: 100%;
-    background: none;
-    border: 6px solid;
-    border-radius: 50%;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    left: -6px;
-    top: -6px;
-    opacity: 0.15;
-}
-.ak-Hotspot-rect.visible:hover .ak-Hotspot-shape {
-    border-width: 3px;
-    left: -3px;
-    top: -3px;
-}
-.ak-Hotspot-rect.visible:hover .ak-Hotspot-shape-inner {
-    border-width: 5px;
-    left: -5px;
-    top: -5px;
-}
-.ak-Hotspot-object .ak-Hotspot-tooltip-outer {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-}
-.ak-Hotspot-ToolTip-wrap {
-    position: absolute;
-}
-.ak-Hotspot-ToolTip {
-    display: block;
-    background: #181818;
-    color: #ffffff;
-    padding: 0.5em;
-    position: relative;
-    min-height: 1.6em;
-    border-radius: 0.3em;
-    -moz-border-radius: 0.3em;
-    -webkit-border-radius: 0.3em;
-}
-.ak-Hotspot-ToolTip * {
-    color: #ffffff !important;
-}
-.ak-HotspotMrap {
-    position: relative !important;
-    display: inline-block !important;
-}
-.ak-HotspotMrap img {
-    width: 100% !important;
-}
-.ak-HotspotMrap.mouseover .ak-Hotspot-object.left .ak-Hotspot-tooltip-outer, .ak-HotspotMrap.click .ak-Hotspot-object.left .ak-Hotspot-tooltip-outer {
-    position: absolute;
-    top: 0;
-    left: -30px;
-    z-index: 98;
-}
-.ak-Hotspot-object.left .ak-Hotspot-ToolTip-wrap {
-    right: 100%;
-    top: 0;
-    padding-right: 16px;
-}
-.ak-Hotspot.left .ak-Hotspot-ToolTip-wrap {
-    top: -12px;
-}
-.ak-Hotspot-object.left .ak-Hotspot-ToolTip:before {
-    position: absolute;
-    content: "";
-    display: block;
-    width: 0;
-    height: 0;
-    right: -8px;
-    top: 8px;
-    border-top: 8px solid transparent;
-    border-bottom: 8px solid transparent;
-    border-left: 8px solid #181818;
-}
-.ak-Hotspot.left .ak-Hotspot-ToolTip:before {
-    top: 16px;
-}
-.ak-HotspotMrap.mouseover .ak-Hotspot-object.top .ak-Hotspot-tooltip-outer, .ak-HotspotMrap.click .ak-Hotspot-object.top .ak-Hotspot-tooltip-outer {
-    position: absolute;
-    left: 0;
-    top: -30px;
-}
-.ak-Hotspot-object.top .ak-Hotspot-ToolTip-wrap {
-    bottom: 100%;
-    left: 0;
-    padding-bottom: 16px;
-}
-.ak-Hotspot.top .ak-Hotspot-ToolTip-wrap {
-    left: -1px;
-}
-.ak-Hotspot-object.top .ak-Hotspot-ToolTip:before {
-    position: absolute;
-    content: "";
-    display: block;
-    left: 8px;
-    bottom: -8px;
-    width: 0;
-    height: 0;
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    border-top: 8px solid #181818;
-}
-.ak-HotspotMrap.mouseover .ak-Hotspot-object.right .ak-Hotspot-tooltip-outer, .ak-HotspotMrap.click .ak-Hotspot-object.right .ak-Hotspot-tooltip-outer {
-    position: absolute;
-    top: 0;
-    left: 30px;
-}
-.ak-Hotspot-object.right .ak-Hotspot-ToolTip-wrap {
-    left: 100%;
-    top: 0;
-    padding-left: 16px;
-}
-.ak-Hotspot.right .ak-Hotspot-ToolTip-wrap {
-    top: -12px;
-}
-.ak-Hotspot-object.right .ak-Hotspot-ToolTip:before {
-    position: absolute;
-    content: "";
-    display: block;
-    left: -8px;
-    top: 8px;
-    width: 0;
-    height: 0;
-    border-top: 8px solid transparent;
-    border-bottom: 8px solid transparent;
-    border-right: 8px solid #181818;
-}
-.ak-Hotspot.right .ak-Hotspot-ToolTip:before {
-    top: 16px;
-}
+.ak-Hotspot-object {position: absolute;cursor: pointer;z-index: 100;}
+.ak-Hotspot-object.visible-tooltip {z-index: 9999;}
+.ak-Hotspot.visible .ak-Hotspot-shape {position: absolute;left: -1px;top: -1px;background: black;border-radius: 50%;-moz-border-radius: 50%;-webkit-border-radius: 50%;width: 100%;height: 100%;opacity: 0.15;z-index: 0;border: 1px solid #ffffff;}
+.ak-Hotspot.visible .ak-Hotspot-shape-inner {background: #da0606;position: absolute;left: 50%;top: 50%;width: 60%;height: 60%;margin: -30% 0 0 -30%;z-index: 1;border-radius: 50%;-moz-border-radius: 50%;-webkit-border-radius: 50%;}
+.ak-Hotspot.visible:hover .ak-Hotspot-shape-inner {width: 80%;height: 80%;margin: -40% 0 0 -40%;}
+.ak-Hotspot-rect {position: absolute;left: 0;top: 0;cursor: pointer;z-index: 99;border: none;}
+.ak-Hotspot-rect.visible .ak-Hotspot-shape {position: absolute;left: -3px;top: -3px;z-index: 1;width: 100%;height: 100%;background: none;border: 3px solid;border-radius: 50%;-moz-border-radius: 50%;-webkit-border-radius: 50%;}
+.ak-Hotspot-rect.visible .ak-Hotspot-shape-inner {position: absolute;z-index: 0;width: 100%;height: 100%;background: none;border: 6px solid;border-radius: 50%;-moz-border-radius: 50%;-webkit-border-radius: 50%;left: -6px;top: -6px;opacity: 0.15;}
+.ak-Hotspot-rect.visible:hover .ak-Hotspot-shape {border-width: 3px;left: -3px;top: -3px;}
+.ak-Hotspot-rect.visible:hover .ak-Hotspot-shape-inner {border-width: 5px;left: -5px;top: -5px;}
+.ak-Hotspot-object .ak-Hotspot-tooltip-outer {position: absolute;left: 0;top: 0;width: 100%;height: 100%;}
+.ak-Hotspot-ToolTip-wrap {position: absolute;}
+.ak-Hotspot-ToolTip {display: block;background: #181818;color: #ffffff;padding: 0.5em;position: relative;min-height: 1.6em;border-radius: 0.3em;-moz-border-radius: 0.3em;-webkit-border-radius: 0.3em;}
+.ak-Hotspot-ToolTip * {color: #ffffff !important;}
+.ak-HotspotMrap {position: relative !important;display: inline-block !important;}
+.ak-HotspotMrap img {width: 100% !important;}
+.ak-HotspotMrap.mouseover .ak-Hotspot-object.left .ak-Hotspot-tooltip-outer, .ak-HotspotMrap.click .ak-Hotspot-object.left .ak-Hotspot-tooltip-outer {position: absolute;top: 0;left: -30px;z-index: 98;}
+.ak-Hotspot-object.left .ak-Hotspot-ToolTip-wrap {right: 100%;top: 0;padding-right: 16px;}
+.ak-Hotspot.left .ak-Hotspot-ToolTip-wrap {top: -12px;}
+.ak-Hotspot-object.left .ak-Hotspot-ToolTip:before {position: absolute;content: "";display: block;width: 0;height: 0;right: -8px;top: 8px;border-top: 8px solid transparent;border-bottom: 8px solid transparent;border-left: 8px solid #181818;}
+.ak-Hotspot.left .ak-Hotspot-ToolTip:before {top: 16px;}
+.ak-HotspotMrap.mouseover .ak-Hotspot-object.top .ak-Hotspot-tooltip-outer, .ak-HotspotMrap.click .ak-Hotspot-object.top .ak-Hotspot-tooltip-outer {position: absolute;left: 0;top: -30px;}
+.ak-Hotspot-object.top .ak-Hotspot-ToolTip-wrap {bottom: 100%;left: 0;padding-bottom: 16px;}
+.ak-Hotspot.top .ak-Hotspot-ToolTip-wrap {left: -1px;}
+.ak-Hotspot-object.top .ak-Hotspot-ToolTip:before {position: absolute;content: "";display: block;left: 8px;bottom: -8px;width: 0;height: 0;border-left: 8px solid transparent;border-right: 8px solid transparent;border-top: 8px solid #181818;}
+.ak-HotspotMrap.mouseover .ak-Hotspot-object.right .ak-Hotspot-tooltip-outer, .ak-HotspotMrap.click .ak-Hotspot-object.right .ak-Hotspot-tooltip-outer {position: absolute;top: 0;left: 30px;}
+.ak-Hotspot-object.right .ak-Hotspot-ToolTip-wrap {left: 100%;top: 0;padding-left: 16px;}
+.ak-Hotspot.right .ak-Hotspot-ToolTip-wrap {top: -12px;}
+.ak-Hotspot-object.right .ak-Hotspot-ToolTip:before {position: absolute;content: "";display: block;left: -8px;top: 8px;width: 0;height: 0;border-top: 8px solid transparent;border-bottom: 8px solid transparent;border-right: 8px solid #181818;}
+.ak-Hotspot.right .ak-Hotspot-ToolTip:before {top: 16px;}
+.ak-HotspotMrap.mouseover .ak-Hotspot-object.bottom .ak-Hotspot-tooltip-outer, .ak-HotspotMrap.click .ak-Hotspot-object.bottom .ak-Hotspot-tooltip-outer {position: absolute;left: 0;top: 30px;}
+.ak-Hotspot-object.bottom .ak-Hotspot-ToolTip-wrap {top: 100%;left: 0;padding-top: 16px;}
+.ak-Hotspot.bottom .ak-Hotspot-ToolTip-wrap {left: -1px;}
+.ak-Hotspot-object.bottom .ak-Hotspot-ToolTip:before {position: absolute;content: "";display: block;top: -8px;left: 8px;width: 0;height: 0;border-left: 8px solid transparent;border-right: 8px solid transparent;border-bottom: 8px solid black;}
+.ak-Hotspot-ToolTip :last-child {margin-bottom: 0;}
+.ak-HotspotMrap.always .ak-Hotspot-tooltip-outer {opacity: 1;left: 0 !important;top: 0 !important;width: 100% !important;height: 100% !important;}
+.ak-HotspotMrap.always .ak-Hotspot-ToolTip, .ak-HotspotMrap.always .ak-Hotspot-ToolTip-wrap {display: block;}
+.ak-Hotspot-object .ak-Hotspot-tooltip-outer {opacity: 0;width: 0 !important;height: 0 !important;-moz-transition: left 0.25s ease-out, top 0.25s ease-out, opacity 0.25s ease-out;-webkit-transition: left 0.25s ease-out, top 0.25s ease-out, opacity 0.25s ease-out;transition: left 0.25s ease-out, top 0.25s ease-out, opacity 0.25s ease-out;}
+.ak-Hotspot-object .ak-Hotspot-ToolTip, .ak-Hotspot-object .ak-Hotspot-ToolTip-wrap {display: none;}
+.ak-Hotspot-object.visible-tooltip .ak-Hotspot-tooltip-outer {opacity: 1;left: 0 !important;top: 0 !important;width: 100% !important;height: 100% !important;}
+.ak-Hotspot-object.visible-tooltip .ak-Hotspot-ToolTip, .ak-Hotspot-object.visible-tooltip .ak-Hotspot-ToolTip-wrap {display: block;}
 
-.ak-HotspotMrap.mouseover .ak-Hotspot-object.bottom .ak-Hotspot-tooltip-outer, .ak-HotspotMrap.click .ak-Hotspot-object.bottom .ak-Hotspot-tooltip-outer {
-    position: absolute;
-    left: 0;
-    top: 30px;
-}
-.ak-Hotspot-object.bottom .ak-Hotspot-ToolTip-wrap {
-    top: 100%;
-    left: 0;
-    padding-top: 16px;
-}
-.ak-Hotspot.bottom .ak-Hotspot-ToolTip-wrap {
-    left: -1px;
-}
-.ak-Hotspot-object.bottom .ak-Hotspot-ToolTip:before {
-    position: absolute;
-    content: "";
-    display: block;
-    top: -8px;
-    left: 8px;
-    width: 0;
-    height: 0;
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    border-bottom: 8px solid black;
-}
-.ak-Hotspot-ToolTip :last-child {
-    margin-bottom: 0;
-}
-.ak-HotspotMrap.always .ak-Hotspot-tooltip-outer {
-    opacity: 1;
-    left: 0 !important;
-    top: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-}
-.ak-HotspotMrap.always .ak-Hotspot-ToolTip, .ak-HotspotMrap.always .ak-Hotspot-ToolTip-wrap {
-    display: block;
-}
-.ak-Hotspot-object .ak-Hotspot-tooltip-outer {
-    opacity: 0;
-    width: 0 !important;
-    height: 0 !important;
-    -moz-transition: left 0.25s ease-out, top 0.25s ease-out, opacity 0.25s ease-out;
-    -webkit-transition: left 0.25s ease-out, top 0.25s ease-out, opacity 0.25s ease-out;
-    transition: left 0.25s ease-out, top 0.25s ease-out, opacity 0.25s ease-out;
-}
-.ak-Hotspot-object .ak-Hotspot-ToolTip, .ak-Hotspot-object .ak-Hotspot-ToolTip-wrap {
-    display: none;
-}
-.ak-Hotspot-object.visible-tooltip .ak-Hotspot-tooltip-outer {
-    opacity: 1;
-    left: 0 !important;
-    top: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-}
-.ak-Hotspot-object.visible-tooltip .ak-Hotspot-ToolTip, .ak-Hotspot-object.visible-tooltip .ak-Hotspot-ToolTip-wrap {
-    display: block;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-/***<jscompress sourcefile="AKjs_IntlTelInput.css" />*/
 /*-----------------------------------------------AKjs_IntlTelInput-------------------------------------------*/
 .ak-IntlTel{position: fixed; background-color: #eeeeee; display: none; z-index: 6; width: 100%; top: 0; left: 0; overflow: hidden;border:solid 1px #dddddd;}
 .ak-IntlTel .ak-IntlTel_head{width: 100% !important; height: 3.2em; line-height: 3.2em; position: fixed; z-index: 5; top: 0; left: 0; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;}
@@ -403,34 +131,6 @@
 .ak-IntlTel datalist dl dd{overflow: hidden; line-height: 3.2em; padding-left: 1em; cursor: pointer;}
 .ak-IntlTel datalist dl dd:last-child{border-bottom: none !important;}
 
-
-/***<jscompress sourcefile="AKjs_Keyboard.css" />*/
-/*-----------------------------------------------AKjs_Keyboard-------------------------------------------*/
-.ak-keyboard *{margin: 0; padding: 0; box-sizing: border-box; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;}
-.ak-keyboard{position: fixed; left: 0; top: 0; bottom: 0; right: 0; z-index: 99999;}
-.ak-keyboard section{text-align: center; height: 22em; position: absolute; z-index: 10; width: 100%; bottom: -22em; left: 0; background: #f7f7f7;}
-.ak-keyboard section h3{height: 2.4em; font-weight: 700; font-size: 1.1em; line-height: 2.4em; border-bottom: 1px solid #dddddd;}
-.ak-keyboard section h3 i{font-size: 1.4em; vertical-align: text-top; margin-right: 0.1em;}
-.ak-keyboard blockquote{padding: 0 10%; height: 2.4em; line-height: 2.4em; text-align: left; color: red;}
-.ak-keyboard fieldset{padding: 0 10%; text-align: right; height: 3em; line-height: 3em; color: #cccccc;}
-.ak-keyboard ul{border-radius: 0.4em; border: 1px solid #dddddd; text-align: center; background: #fff; height: 3.2em; line-height: 3.2em; margin: 4% 10% 0; overflow: hidden;}
-.ak-keyboard ul li{width: calc(100% / 6); float: left; border-left: 1px solid #dddddd; height: 3.2em;}
-.ak-keyboard ul li:first-child{border: none}
-.ak-keyboard ul li span{font-size: 1.4em; vertical-align: top; line-height: inherit;}
-.ak-keyboard ol{background: #ffffff; border-top: 1px solid #cccccc; overflow: hidden; position: absolute; width: 100%; bottom: 0; height: fit-content;}
-.ak-keyboard ol li{width: calc(100% / 3); float: left; height: 3.2em; line-height: 3.2em; border-bottom: 1px solid #dddddd; border-left: 1px solid #dddddd; cursor: pointer;}
-.ak-keyboard ol li.number:last-child{margin-left: calc(100% / 3);border-bottom: none;}
-.ak-keyboard ol li:active{border-top: 1px solid #dddddd; background: #f1f1f1 !important;}
-.ak-keyboard ol li.number:nth-child(-n+5):active{border-top: none !important;}
-.ak-keyboard ol li.cancel, .ak-keyboard ol li.delete{background: #f7f7f7; position: absolute; bottom: 0; border-bottom: none;}
-.ak-keyboard ol li.cancel{left: 0;}
-.ak-keyboard ol li.delete{right: 0;}
-.ak-keyboard figure{position: absolute; z-index: 10; left: 0; top: -10%; width: 100%; height: 100%; text-align: center; display: none; vertical-align: middle}
-.ak-keyboard figure p{display: table-cell; vertical-align: middle;}
-.ak-keyboard figure span{padding: 1em 2em; background: rgba(0,0,0,.8); border-radius: 0.5em; color: #ffffff;}
-.ak-keyboard figure img{height: 2em; vertical-align: middle; margin-right: 0.5em;}
-
-/***<jscompress sourcefile="AKjs_lightSlider.css" />*/
 /*-----------------------------------------------AKjs_lightSlider-------------------------------------------*/
 .ak-lSSlideOuter{overflow: hidden; -webkit-touch-callout: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
 .ak-lightSlider{overflow: hidden; margin: 0;}
@@ -443,7 +143,6 @@
 .ak-lightSlider.ak-lsGrab > *{cursor: -webkit-grab; cursor: -moz-grab; cursor: grab;}
 .ak-lightSlider.ak-lsGrabbing > *{cursor: move; cursor: -webkit-grabbing; cursor: -moz-grabbing; cursor: grabbing;}
 
-/***<jscompress sourcefile="AKjs_Loader.css" />*/
 /*-----------------------------------------------AKjs_Loader-------------------------------------------*/
 .ak-Loader {width: 100%;height:100%;left: 0;top: 0;position: fixed;-ms-user-select: none;-moz-user-select: none;-webkit-user-select: none;user-select: none; z-index: 2}
 .ak-Loader figure.ak-loading {border-radius: 50%;padding: 0.5em;width: 3em; height: 3em;z-index: 9}
@@ -503,7 +202,6 @@
 .ak-Loader:not(.ak-mask) .ak-loading > div{z-index: 2;}
 .ak-Loader:not(.ak-mask) .ak-loading:after{content: ''; position: absolute; left: -40%; top: -40%; width: 180%; height: 180%; background-color: rgba(0,0,0,0.3); border-radius: 0.5em;}
 
-/***<jscompress sourcefile="AKjs_Marquee.css" />*/
 /*-----------------------------------------------AKjs_Marquee-------------------------------------------*/
 .ak-marquee_wrap{overflow:hidden; position:relative; -moz-user-select: none; user-select: none; white-space:nowrap;}
 .ak-marquee_move{white-space:nowrap; position:absolute; top:0; left:0; cursor:move;}
@@ -517,7 +215,6 @@
 .noStop .ak-marquee_move{cursor:inherit;}
 .ak-marquee_wrap img{max-width:none !important;}
 
-/***<jscompress sourcefile="AKjs_MediaElement.css" />*/
 /*-----------------------------------------------AKjs_MediaElement-------------------------------------------*/
 .ak-offscreen{position:absolute!important;top:-10000px;left:-10000px;overflow:hidden;width:1px;height:1px}
 .ak-container{position:relative;background:#000;font-family:Helvetica,Arial;text-align:left;vertical-align:top;text-indent:0}
@@ -551,17 +248,11 @@
 .ak-controls .ak-time-rail span,.ak-controls .ak-time-rail a{display:block;position:absolute;width:180px;height:2.4em;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;cursor:pointer}
 .ak-controls .ak-time-rail .ak-time-total{margin:5px;background:#333;background:rgba(50,50,50,.8);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(30,30,30,.8)),to(rgba(60,60,60,.8)));background:-webkit-linear-gradient(top,rgba(30,30,30,.8),rgba(60,60,60,.8));background:-moz-linear-gradient(top,rgba(30,30,30,.8),rgba(60,60,60,.8));background:-o-linear-gradient(top,rgba(30,30,30,.8),rgba(60,60,60,.8));background:-ms-linear-gradient(top,rgba(30,30,30,.8),rgba(60,60,60,.8));background:linear-gradient(rgba(30,30,30,.8),rgba(60,60,60,.8))}
 .ak-controls .ak-time-rail .ak-time-buffering{width:100%;background-image:-o-linear-gradient(-45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);background-image:-webkit-gradient(linear,0 100%,100% 0,color-stop(0.25,rgba(255,255,255,.15)),color-stop(0.25,transparent),color-stop(0.5,transparent),color-stop(0.5,rgba(255,255,255,.15)),color-stop(0.75,rgba(255,255,255,.15)),color-stop(0.75,transparent),to(transparent));background-image:-webkit-linear-gradient(-45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);background-image:-moz-linear-gradient(-45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);background-image:-ms-linear-gradient(-45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);background-image:linear-gradient(-45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);-webkit-background-size:15px 15px;-moz-background-size:15px 15px;-o-background-size:15px 15px;background-size:15px 15px;-webkit-animation:buffering-stripes 2s linear infinite;-moz-animation:buffering-stripes 2s linear infinite;-ms-animation:buffering-stripes 2s linear infinite;-o-animation:buffering-stripes 2s linear infinite;animation:buffering-stripes 2s linear infinite}
-@-webkit-keyframes buffering-stripes{from{background-position:0 0}
-    to{background-position:4em 0}
-}@-moz-keyframes buffering-stripes{from{background-position:0 0}
-     to{background-position:4em 0}
- }@-ms-keyframes buffering-stripes{from{background-position:0 0}
-      to{background-position:4em 0}
-  }@-o-keyframes buffering-stripes{from{background-position:0 0}
-       to{background-position:4em 0}
-   }@keyframes buffering-stripes{from{background-position:0 0}
-        to{background-position:4em 0}
-    }.ak-controls .ak-time-rail .ak-time-loaded{background:#3caac8;background:rgba(60,170,200,.8);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(44,124,145,.8)),to(rgba(78,183,212,.8)));background:-webkit-linear-gradient(top,rgba(44,124,145,.8),rgba(78,183,212,.8));background:-moz-linear-gradient(top,rgba(44,124,145,.8),rgba(78,183,212,.8));background:-o-linear-gradient(top,rgba(44,124,145,.8),rgba(78,183,212,.8));background:-ms-linear-gradient(top,rgba(44,124,145,.8),rgba(78,183,212,.8));background:linear-gradient(rgba(44,124,145,.8),rgba(78,183,212,.8));width:0}
+@-webkit-keyframes buffering-stripes{from{background-position:0 0}to{background-position:4em 0}
+}@-moz-keyframes buffering-stripes{from{background-position:0 0} to{background-position:4em 0}
+ }@-ms-keyframes buffering-stripes{from{background-position:0 0}  to{background-position:4em 0}
+  }@-o-keyframes buffering-stripes{from{background-position:0 0}   to{background-position:4em 0}
+   }@keyframes buffering-stripes{from{background-position:0 0}    to{background-position:4em 0}}.ak-controls .ak-time-rail .ak-time-loaded{background:#3caac8;background:rgba(60,170,200,.8);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(44,124,145,.8)),to(rgba(78,183,212,.8)));background:-webkit-linear-gradient(top,rgba(44,124,145,.8),rgba(78,183,212,.8));background:-moz-linear-gradient(top,rgba(44,124,145,.8),rgba(78,183,212,.8));background:-o-linear-gradient(top,rgba(44,124,145,.8),rgba(78,183,212,.8));background:-ms-linear-gradient(top,rgba(44,124,145,.8),rgba(78,183,212,.8));background:linear-gradient(rgba(44,124,145,.8),rgba(78,183,212,.8));width:0}
 .ak-controls .ak-time-rail .ak-time-current{background:#fff;background:rgba(255,255,255,.8);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(255,255,255,.9)),to(rgba(200,200,200,.8)));background:-webkit-linear-gradient(top,rgba(255,255,255,.9),rgba(200,200,200,.8));background:-moz-linear-gradient(top,rgba(255,255,255,.9),rgba(200,200,200,.8));background:-o-linear-gradient(top,rgba(255,255,255,.9),rgba(200,200,200,.8));background:-ms-linear-gradient(top,rgba(255,255,255,.9),rgba(200,200,200,.8));background:linear-gradient(rgba(255,255,255,.9),rgba(200,200,200,.8));width:0}
 .ak-controls .ak-time-rail .ak-time-handle{display:none;position:absolute;margin:0;width:10px;background:#fff;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;cursor:pointer;border:solid 2px #333;top:-2px;text-align:center}
 .ak-controls .ak-time-rail .ak-time-float{position:absolute;display:none;background:#eee;width:6em;height:2.4em;border:solid 1px #333;top:-3.2em;margin-left:0;text-align:center;color:#111}
@@ -641,23 +332,6 @@ div.ak-speed-button{width:46px!important;position:relative}
 .ak-controls .ak-button.ak-skip-back-button{background:transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAWCAMAAAD3n0w0AAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAADJUExURQAAAP///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////2bufzgAAABCdFJOUwCliQXkNysB8FbPxAMy8d2LbvLgbzMf3/4dBKiBwQbb8/ympyYqwyH0NifU7feD+zo0QDGR02s1v0QeLG0on+7ciKY3wdwAAADNSURBVBjTZZHXcsJADEWv6667aaaYDgmQAumNfv//o8hkZjOL9zyekUbSFfDH6xuG/SfoDNebwfM7X3S3uifrE3Jke7FyN2MqUqul7PyWfHgkv0akGygrasvBXcTvn2aD8t9i0Yf4+AS2Ed0E1wj4bVoOqtQ6dc+Q3Yw29kkhdOnMGOI4seKr0pwSKQ/CkCHLntFu89StDDrDG3d2xkrOlG0forJ84jLyVZ2vzgwkG83id1qv0AIJXDIr87zM9Oha09QIGYg9O5QyVO+4AIEwGeM+re9NAAAAAElFTkSuQmCC) no-repeat;background-position:3px 3px}
 .ak-controls .ak-button.ak-skip-back-button button{background:transparent;font-size:9px;line-height:normal;color:#fff}
 
-/***<jscompress sourcefile="AKjs_MobileChat.css" />*/
-/*-----------------------------------------------AKjs_MobileChat-------------------------------------------*/
-.ak-chat time{display: block; background-color: #cccccc; color: #ffffff; text-align: center; line-height: 1.8em; padding: 0 0.5em; overflow: hidden; margin: 0 auto; height: 2em; width: -moz-max-content; width: -webkit-max-content; width: max-content; border-radius: 0.3em;}
-.ak-chat_left,.ak-chat_right{position: relative; overflow: hidden;}
-.ak-chat_left img,.ak-chat_right img{display:block; width: 100%;}
-.ak-chat_left dt, .ak-chat_right dt{position: relative; overflow: hidden;}
-.ak-chat_left dd, .ak-chat_right dd{position: relative; margin: 0.5em 1em; padding:0.5em; line-height:1.5em; max-width:70%; border-radius:0.5em; word-wrap:break-word; border: solid 1px #dddddd; background-color: #ffffff;}
-.ak-chat_left dt, .ak-chat_left dd{float: left;}
-.ak-chat_right dt, .ak-chat_right dd{float: right;}
-.ak-chat_left dd:before, .ak-chat_right dd:before{display: block; content: ""; position: absolute; top: 0.6em; pointer-events: none; border-top: 0.4em solid transparent; border-bottom: 0.4em solid transparent; z-index: 1;}
-.ak-chat_left dd:before{left: -0.6em; border-right: 0.6em solid; border-right-color: #ffffff;}
-.ak-chat_right dd:before{right: -0.7em; border-left: 0.7em solid; border-left-color: inherit;}
-.ak-chat_left dd:after, .ak-chat_right dd:after{display: block; content: ""; position: absolute; top: 0.5em; pointer-events: none; border-top: 0.5em solid transparent; border-bottom: 0.5em solid transparent;}
-.ak-chat_left dd:after{left: -0.7em; border-right: 0.7em solid; border-right-color: inherit;}
-.ak-chat_right dd:after{right: -0.7em; border-left: 0.7em solid; border-left-color: inherit;}
-
-/***<jscompress sourcefile="AKjs_MultiDate.css" />*/
 /*-----------------------------------------------AKjs_MultiDate-------------------------------------------*/
 .ak-MultiDate{display: none; position: absolute; top: 100%; left: 0; z-index: 10; float: left; width: 18em; background-color: #ffffff; border: 1px solid #dddddd; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;}
 .ak-multiDate-parent{position: relative; overflow: hidden;}
@@ -684,7 +358,6 @@ div.ak-speed-button{width:46px!important;position:relative}
 .ak-MultiDate thead tr:first-child th:active, .ak-MultiDate tfoot button:active{background-color: #f9f9f9;}
 .ak-MultiDate thead tr:first-child th.press:active{background-color: transparent;}
 
-/***<jscompress sourcefile="AKjs_Paginator.css" />*/
 /*-----------------------------------------------AKjs_Paginator-------------------------------------------*/
 .ak-pagination{display: block; margin: 0 auto; overflow: hidden; position: relative; width: -moz-fit-content; width: -webkit-fit-content; width: -o-fit-content; width: fit-content; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;}
 .ak-pagination li:first-child{margin-left: 0; border-bottom-left-radius: 0.3em; border-top-left-radius: 0.3em;}
@@ -695,59 +368,27 @@ div.ak-speed-button{width:46px!important;position:relative}
 .ak-pagination .arrow-left{display: inline-block; overflow: hidden; vertical-align: middle; margin: 3px 8px 5px 0; border-left: 5px dashed transparent; border-bottom: 5px dashed transparent; border-top: 5px dashed transparent; border-right: 5px solid #ccc;}
 .ak-pagination .arrow-right{display: inline-block; overflow: hidden; vertical-align: middle; margin: 3px 0 5px 8px; border-top: 5px dashed transparent; border-bottom: 5px dashed transparent; border-right: 5px dashed transparent; border-left: 5px solid #ccc;}
 
-/***<jscompress sourcefile="AKjs_PassLevel.css" />*/
 /*-----------------------------------------------AKjs_PassLevel-------------------------------------------*/
 .ak-PassLevel {overflow: hidden;position: absolute;}
 .ak-PassLevel li {float: left;width: 2.4em;height: 2.4em;text-align: center;line-height: 2.4em;margin-right: 0.2em;color: #ffffff;}
 
-/***<jscompress sourcefile="AKjs_PickupTime.css" />*/
 /*-----------------------------------------------AKjs_PickupTime-------------------------------------*/
-.ak-PickupTime {
-    position: absolute;
-    background: #ffffff;
-    z-index: 6;
-    border: solid 1px #dddddd;
-}
-.ak-PickupTime ol {
-    width: 50%;
-    overflow-y: scroll;
-}
-.ak-PickupTime li {
-    border-bottom: solid 1px #dddddd;
-}
-.ak-PickupTime li:hover {
-    background-color: #f5f5f5;
-}
-.ak-PickupTime ul {
-    width: 50%;
-    overflow-y: scroll;
-}
-.ak-PickupTime li {
-    height: 3em;
-    line-height: 3em;
-    cursor: pointer;
-    text-overflow: ellipsis;
-    word-wrap: break-word;
-    word-break: normal;
-    overflow: hidden;
-    -webkit-box-orient: vertical;
-    text-align: center;
-}
-.ak-PickupTime ol, .ak-PickupTime ul {
-    float: left;
-}
+.ak-PickupTime {position: absolute;background: #ffffff;z-index: 6;border: solid 1px #dddddd;}
+.ak-PickupTime ol {width: 50%;overflow-y: scroll;}
+.ak-PickupTime li {border-bottom: solid 1px #dddddd;}
+.ak-PickupTime li:hover {background-color: #f5f5f5;}
+.ak-PickupTime ul {width: 50%;overflow-y: scroll;}
+.ak-PickupTime li {height: 3em;line-height: 3em;cursor: pointer;text-overflow: ellipsis;word-wrap: break-word;word-break: normal;overflow: hidden;-webkit-box-orient: vertical;text-align: center;}
+.ak-PickupTime ol, .ak-PickupTime ul {float: left;}
 
-/***<jscompress sourcefile="AKjs_PortraitImage.css" />*/
 /*-----------------------------------------------AKjs_PortraitImage-------------------------------------------*/
 .ak-previewImage.bg_white:active, .ak-PortraitImage.bg_white:active{background-color: #f1f1f1 !important;;}
 .ak-previewImage input[type="file"], .ak-PortraitImage input[type="file"]{position:absolute; opacity:0; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0); -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=0)"; cursor:pointer; left:0; width:inherit; height:inherit;}
 
-/***<jscompress sourcefile="AKjs_PreviewImage.css" />*/
 /*-----------------------------------------------AKjs_PreviewImage-------------------------------------------*/
 .ak-previewImage.bg_white:active, .ak-PortraitImage.bg_white:active{background-color: #f1f1f1 !important;;}
 .ak-previewImage input[type="file"], .ak-PortraitImage input[type="file"]{position:absolute; opacity:0; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0); -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=0)"; cursor:pointer; left:0; width:inherit; height:inherit;}
 
-/***<jscompress sourcefile="AKjs_ProductPhoto.css" />*/
 /*-----------------------------------------------AKjs_ProductPhoto-------------------------------------*/
 .ak-large_box {overflow: hidden;border:solid 1px #dddddd;margin-bottom: 1em;}
 .ak-large_box ul {width: 100%;height: inherit;}
@@ -765,19 +406,16 @@ div.ak-speed-button{width:46px!important;position:relative}
 .ak-small_box button.ak-is_next {float: right;}
 .ak-small_box button i {color: #ffffff;text-align: center;font-size: 0.6em;}
 
-/***<jscompress sourcefile="AKjs_Progress.css" />*/
 /*-----------------------------------------------AKjs_Progress-------------------------------------------*/
 .ak-progressBar{display: block; text-indent: 1em; width: 0; height: inherit; line-height: inherit; position: relative; white-space: nowrap;}
 .ak-progressBar:after{content: ''; width: 100%; height: 100%; background-image: url(data:image/gif;base64,R0lGODlhKAAoAIAAAP///////yH/C05FVFNDQVBFMi4wAwEAAAAh/wtYTVAgRGF0YVhNUDw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpFOEI3QTQ4RkRCRTExMUU3OEY2REVFMUI5OTI5QUJERCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpFOEI3QTQ5MERCRTExMUU3OEY2REVFMUI5OTI5QUJERCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkU4QjdBNDhEREJFMTExRTc4RjZERUUxQjk5MjlBQkREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkU4QjdBNDhFREJFMTExRTc4RjZERUUxQjk5MjlBQkREIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28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) !important; z-index: 2; position: absolute; left: 0; opacity: 0.1; filter:alpha(opacity=10);}
 .ak-progressBar span{z-index: 1; left: 0; position: absolute; width: 100%; display: none; color: inherit !important;}
 
-/***<jscompress sourcefile="AKjs_Radio.css" />*/
 /*-----------------------------------------------AKjs_Radio-------------------------------------------*/
 .ak-Radio{display:block; height:inherit; line-height:inherit; overflow:hidden; float:right; font-size: inherit !important;vertical-align: middle;border: solid 1px #dddddd; border-radius: 50%;}
 .ak-Radio input{opacity:0 !important; filter:alpha(opacity=0); width:100%; position:absolute; top:0; right:0; height:inherit; cursor: pointer;}
 .ak-Radio:before{font-size:1.2em;}
 
-/***<jscompress sourcefile="AKjs_Range.css" />*/
 /*-----------------------------------------------AKjs_Range-------------------------------------------*/
 .ak-range{margin: 0 auto;}
 .ak-readonly{opacity: 0.5;}
@@ -792,28 +430,6 @@ div.ak-speed-button{width:46px!important;position:relative}
 .ak-range .ak-scale span{position: absolute;height: 0.5em;border-left: 1px solid #999;}
 .ak-range .ak-scale ins{font-size: 0.8em;color: #777;text-decoration: none;position: absolute;left: 0;top: 0.5em;width: -webkit-max-content;width: -moz-max-content;width: -o-max-content;width: max-content;}
 
-/***<jscompress sourcefile="AKjs_Select.css" />*/
-/*-----------------------------------------------AKjs_Select-------------------------------------------*/
-.ak-Select .content{width:100%; display:block; position:fixed; z-index:8; color:black; left:0; bottom:-100%; -webkit-transition:all 1s; transition:all 1s;}
-.ak-Select-show{opacity:1; z-index:100; visibility:visible; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -webkit-appearance:none; outline:none; -webkit-tap-highlight-color:rgba(255,255,255,0);}
-.ak-Select-show .content{left:0; bottom: -0.1em; -webkit-transition:all 0.5s; transition:all 0.5s;}
-.ak-Select .content .fixWidth{width:100%; position:relative;}
-.ak-Select .content .fixWidth:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
-.ak-Select .content .btnBar{border-top:0.5em solid #eeeeee; height: 3.6em; line-height: 3.4em; position:relative; z-index:22; text-align:center; background-color:#ffffff; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;}
-.ak-Select .content .btnBar .cancel,.ak-Select .content .btnBar .ensure{width:50%; height: 3.6em; line-height: 3.4em; text-align:center; cursor:pointer; position:absolute; top:0;}
-.ak-Select .content .btnBar .cancel{left:0; border-right:solid 1px #dddddd;}
-.ak-Select .content .btnBar .ensure{right:0;}
-.ak-Select .content .panel{background-color:#ffffff; position:relative; z-index:22;}
-.ak-Select .content .panel:after{content:"."; display:block; height:0; clear:both; visibility:hidden;}
-.ak-Select .content .panel .title{text-align:center; line-height:3em; border-bottom:dashed 1px #dddddd;}
-.ak-Select .content .panel .wheels{position: relative; width:100%; height:15em; -webkit-overflow-scrolling: touch; overflow:hidden;}
-.ak-Select .content .panel .wheel{z-index:0; float:left; -webkit-transition:width 0.3s ease; transition:width 0.3s ease;}
-.ak-Select .content .panel .wheel .selectContainer{display:block; text-align:center; -webkit-transition:-webkit-transform 0.4s ease-out; transition:-webkit-transform 0.4s ease-out; transition:transform 0.4s ease-out;}
-.ak-Select .content .panel .wheel .selectContainer li{display:block; height:3em; line-height:3em; cursor:pointer; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
-.ak-Select .content .panel .selectLine{height:3em; width:100%; position:absolute; top:6em; pointer-events:none; -webkit-box-sizing:border-box; box-sizing:border-box; border-top:1px solid #dddddd; border-bottom:1px solid #dddddd;}
-.ak-Select .content .panel .shadowMask{position:absolute; top:0; width:100%; height:15em; background:-webkit-gradient(linear,left top,left bottom,from(#ffffff),color-stop(rgba(255,255,255,0)),to(#ffffff)); background:-webkit-linear-gradient(top,#ffffff,rgba(255,255,255,0),#ffffff); background:linear-gradient(to bottom,#ffffff,rgba(255,255,255,0),#ffffff); opacity:0.9; pointer-events:none;}
-
-/***<jscompress sourcefile="AKjs_SelectOption.css" />*/
 /*-----------------------------------------------AKjs_SelectOption-------------------------------------------*/
 .ak-SelectOpts{width: 100%; position:relative; cursor:pointer; text-indent: 1em; display: inline-block; overflow: hidden; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;}
 select.ak-SelectOpts{display: none !important;}
@@ -827,7 +443,6 @@ select.ak-SelectOpts{display: none !important;}
 @media screen and (max-width:1024px){.ak-SelectList li:active{background:#f5f5f5;}}
 @media screen and (min-width:1025px){.ak-SelectList li:hover{background:#f5f5f5;}}
 
-/***<jscompress sourcefile="AKjs_Slider.css" />*/
 /*-----------------------------------------------AKjs_Slider-------------------------------------------*/
 .ak-Slider ul{position: absolute; z-index: 1; width: 100%; height: 100%;}
 .ak-Slider ul li{display: none; position: absolute; top: 0; width: 100%; height: 100%; overflow: hidden;}
@@ -837,8 +452,6 @@ select.ak-SelectOpts{display: none !important;}
 .ak-Slider:hover button{display: block;}
 .ak-Slider button:hover, .ak-Slider button:active{background-color: rgba(0, 0, 0, 0.7);}
 
-
-/***<jscompress sourcefile="AKjs_Snippet.css" />*/
 /*-----------------------------------------------AKjs_Snippet-------------------------------------------*/
 .ak_acid{background:none;padding:0;margin:0;border:0 none}
 .ak_acid .ak_sourceCode{background-color:#eee;color:#000;font-weight:normal;font-style:normal}
@@ -1854,14 +1467,12 @@ select.ak-SelectOpts{display: none !important;}
 .ak-snippet-wrap .ak-snippet-no-num li.box{border:1px solid}
 .ak-snippet-wrap .ak-snippet-no-num li .box-sp{display:none}
 
-/***<jscompress sourcefile="AKjs_Switch.css" />*/
 /*-----------------------------------------------AKjs_Switch-------------------------------------------*/
 .ak-Switch{position: absolute; top:0; left: 0; width: 100%; z-index: 1; opacity: 0 !important; filter:alpha(opacity=0); cursor: pointer;}
 .ak-Switch + label{width: 3.6em; height: 2em; background: #cccccc; position: relative; display: inline-block; border-radius: 1.4em; box-shadow: inset 1px 1px 10px rgba(0,0,0,0.1);}
 .ak-Switch + label:after{content: ''; position: absolute; top: 0; width: 2em; height: 2em; border-radius: 100%; left: -2px; background: #ffffff; -webkit-transition: 0.4s; transition: 0.4s; box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2); background: -webkit-linear-gradient(#ffffff,#f5f5f5); background: linear-gradient(#ffffff,#f5f5f5); cursor: pointer;}
 .ak-Switch:checked + label:after{left: 1.8em;}
 
-/***<jscompress sourcefile="AKjs_TimeAxis.css" />*/
 /*-----------------------------------------------AKjs_TimeAxis-------------------------------------------*/
 .ak-TimeAxis{display: flex;}
 .ak-TimeAxis > cite{flex-shrink: 0; display: block; overflow: hidden; position: relative; margin-left: 3%;}
@@ -1875,17 +1486,10 @@ select.ak-SelectOpts{display: none !important;}
 .ak-TimeAxis article{border: solid 1px #dddddd; border-radius: 0.3em; background-color: #ffffff; line-height: 1.4em; padding: 3%; margin-right: 3%;}
 .ak-TimeAxis article p{color: #777777;}
 
-/***<jscompress sourcefile="AKjs_ToolTip.css" />*/
 /*-----------------------------------------------AKjs_ToolTip-------------------------------------------*/
 .ak-tooltip{border:1px solid #000000;max-width:20em;font-size:1.2em;padding:1em;position:absolute;z-index:100;text-shadow:none;border-radius:0.3em;-moz-border-radius:0.3em;-webkit-border-radius:0.3em}
 .ak-tooltip:after{display:block;content:"";position:absolute;top:100%;left:50%;pointer-events:none;margin-left:-0.6em;border-top:0.6em solid #000000;border-right:0.6em solid transparent;border-left:0.6em solid transparent}
 
-/***<jscompress sourcefile="AKjs_TouchDelete.css" />*/
-/*-----------------------------------------------AKjs_TouchDelete-------------------------------------------*/
-.ak_delete_art, .ak_delete_btn{-webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; -ms-transition: all .2s ease-in-out; -o-transition: all .2s ease-in-out; transition: all .2s ease-in-out;}
-.ak_delete_btn{display: none;}
-
-/***<jscompress sourcefile="AKjs_Typeahead.css" />*/
 /*-----------------------------------------------AKjs_Typeahead-------------------------------------------*/
 .ak-typeahead{position: fixed; overflow: hidden; background-color: #f5f5f5; z-index: 3; display: none; height: 100%; -webkit-appearance:none; outline:none; -webkit-tap-highlight-color:rgba(255,255,255,0);}
 .ak-typeahead ul{position: relative; z-index: 9;border: solid 1px #dddddd;}
@@ -1895,7 +1499,6 @@ select.ak-SelectOpts{display: none !important;}
 @media screen and (min-width:1025px){.ak-typeahead li:hover{background-color: #f5f5f5;}}
 .ak-typeahead li strong{font-weight: bold;}
 
-/***<jscompress sourcefile="AKjs_TypeIt.css" />*/
 /*-----------------------------------------------AKjs_TypeIt-------------------------------------------*/
 .ak-TypeIt-cursor{opacity: 1; font-weight: 100; -webkit-animation: blink 0.7s infinite; -moz-animation: blink 0.7s infinite; -ms-animation: blink 0.7s infinite; -o-animation: blink 0.7s infinite; animation: blink 0.7s infinite; color: inherit; font-size: inherit;}
 @-webkit-keyframes blink{0%{opacity:1;} 50%{opacity:0;} 100%{opacity:1;}}
@@ -1903,7 +1506,6 @@ select.ak-SelectOpts{display: none !important;}
 @-ms-keyframes blink{0%{opacity:1;} 50%{opacity:0;} 100%{opacity:1;}}
 @-o-keyframes blink{0%{opacity:1;} 50%{opacity:0;} 100%{opacity:1;}}
 
-/***<jscompress sourcefile="AKjs_Viewer.css" />*/
 /*-----------------------------------------------AKjs_Viewer-------------------------------------------*/
 .ak-viewer-canvas,.ak-viewer-container,.ak-viewer-footer,.ak-viewer-player{right:0; bottom: -0.1em; left:0;}
 .ak-viewer-button,.ak-viewer-canvas,.ak-viewer-container,.ak-viewer-footer,.ak-viewer-list,.ak-viewer-navbar,.ak-viewer-open,.ak-viewer-title,.ak-viewer-toolbar,.ak-viewer-toolbar>li{overflow:hidden;}
@@ -1945,7 +1547,6 @@ select.ak-SelectOpts{display: none !important;}
 .ak-viewer-in{opacity:1; filter:alpha(opacity=100);}
 .ak-viewer-transition{-webkit-transition:all .3s ease-out; -o-transition:all .3s ease-out; transition:all .3s ease-out;}
 
-/***<jscompress sourcefile="AKjs_Waterfall.css" />*/
 /*-----------------------------------------------AKjs_Waterfall-------------------------------------------*/
 .ak-waterfall{background-color: inherit; position: relative; z-index: 2;}
 .ak-waterfall > *{float: left; border: solid 1px #dddddd; padding: 0.5em; height: auto; position: absolute; height: -moz-max-content !important; height: -webkit-max-content !important; height: max-content !important;}
@@ -1962,26 +1563,13 @@ select.ak-SelectOpts{display: none !important;}
 @-webkit-keyframes rotate{0%{-webkit-transform: rotate(0deg);} 50%{-webkit-transform: rotate(180deg);} 100%{-webkit-transform: rotate(360deg);}}
 @keyframes rotate{0%{transform: rotate(0deg);} 50%{transform: rotate(180deg);} 100%{transform: rotate(360deg);}}
 
-/***<jscompress sourcefile="AKjs_WebToast.css" />*/
 /*-----------------------------------------------AKjs_WebToast-------------------------------------------*/
 .ak-webtoast{position:fixed; left: 0; top:0; width: 100%; height: 100%; z-index:999; display:none;}
 .ak-webtoast h3{display: block; position:absolute; z-index:8; color:#ffffff; background-color: rgba(0,0,0,0.7); background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RUVDQkM1NTlBRkM2MTFFN0I3NzFGRDlFOTZEMjVBQjYiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RUVDQkM1NThBRkM2MTFFN0I3NzFGRDlFOTZEMjVBQjYiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjEyMUU4QkFFQUU1QjExRTdCRTA0QzMyRDkzNDQ0MzM0IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjEyMUU4QkFGQUU1QjExRTdCRTA0QzMyRDkzNDQ0MzM0Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+UAuucgAAAA9JREFUeNpiYGBg2AwQYAAAuAC01qHx9QAAAABJRU5ErkJggg==) repeat \9; text-align:center; border-radius:0.3em; padding:0.5em;}
 @media screen and (min-width:1025px){.ak-webtoast h3{font-size: 1.2em;}}
 
-/***<jscompress sourcefile="AKjs_ZoomImage.css" />*/
-.ak-ZoomImage{
-    position: absolute;
-    z-index: 22;
-    overflow: hidden;
-    background: #ffffff;
-    display: none;
-}
-
-.ak-ZoomImage img{
-    width: 160% !important;
-    position: absolute;
-    display: block;
-    cursor: Crosshair;
-}
+/*-----------------------------------------------AKjs_ZoomImage-------------------------------------------*/
+.ak-ZoomImage{position: absolute;z-index: 22;overflow: hidden;background: #ffffff;display: none;}
+.ak-ZoomImage img{width: 160% !important;position: absolute;display: block;cursor: Crosshair;}
 
 
