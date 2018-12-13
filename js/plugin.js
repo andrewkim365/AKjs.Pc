@@ -1,17 +1,15 @@
 ﻿/*-----------------------------------------------AKjs_Config (全局设置）使用方法-------------------------------------------*/
-$(function () {
-    AKjs_Config({ //环境配置管理
-        MaskStyle: ["style3", "opacity07"], //1.所有弹窗背景图案选择（样式style1~8）、2.遮挡层背景的透明度（opacity01~09）
-        Responsive: true, //是否开启文字大小按屏幕尺寸自适应变化，考虑到兼容平板电脑建议开启 (开启 true, 停用 false）
-        ButtonLink: true, //通过元素中加data-href属性的方式跳转界面, 建议开启路由功能后使用。(使用button超链接 true,不使用button超链接 false）
-        animation: true, //是否开启元素里加动画参数的功能？（例：data-animation="{name: 'zoomIn', duration:1, delay: 0}"） 动画库：akjs.animate.css
-        pluginPath: "./compress/", //功能插件文件所在的目录设置
-        pluginClear: { //定期清理功能插件的缓存 【days=天数, hours=小时, minutes=分钟，seconds=秒数 （当前提供的四个参数中任意抽选一个设置时间清理功能插件的缓存。四个参数不能同时设置）】
-            /*使用帮助：项目开发阶段建议使用秒数间隔清理缓存，项目正式上线后不经常改动插件所以建议使用天数间隔清理缓存。*/
-            /*注意：清理缓存时按需引入的功能插件将重新网络请求所以会影响到页面加载速度。*/
-            minutes: 10 //分钟
-        }
-    });
+AKjs_Config({ //环境配置管理
+    MaskStyle: ["style3", "opacity07"], //1.所有弹窗背景图案选择（样式style1~8）、2.遮挡层背景的透明度（opacity01~09）
+    Responsive: true, //是否开启文字大小按屏幕尺寸自适应变化，考虑到兼容平板电脑建议开启 (开启 true, 停用 false）
+    ButtonLink: true, //通过元素中加data-href属性的方式跳转界面, 建议开启路由功能后使用。(使用button超链接 true,不使用button超链接 false）
+    animation: true, //是否开启元素里加动画参数的功能？（例：data-animation="{name: 'zoomIn', duration:1, delay: 0}"） 动画库：akjs.animate.css
+    pluginPath: "./compress/", //功能插件文件所在的目录设置
+    pluginClear: { //定期清理功能插件的缓存 【days=天数, hours=小时, minutes=分钟，seconds=秒数 （当前提供的四个参数中任意抽选一个设置时间清理功能插件的缓存。四个参数不能同时设置）】
+        /*使用帮助：项目开发阶段建议使用秒数间隔清理缓存，项目正式上线后不经常改动插件所以建议使用天数间隔清理缓存。*/
+        /*注意：清理缓存时按需引入的功能插件将重新网络请求所以会影响到页面加载速度。*/
+        minutes: 10 //分钟
+    }
 });
 
 /******JS插件按需引入（注意：插件名称和插件文件名需要保持一致，而且插件文件必须要放到plugin目录里面，否则会出错！）******/
@@ -23,6 +21,30 @@ $(function () {
 
 /*-----------------------------------------------AKjs_Plugin 功能插件引入-------------------------------------------*/
 AKjs_Plugin("AKjs_plugin.pc.min","css"); //引入压缩版的全部功能插件
+
+/*-----------------------------------------------AKjs_Loader 使用方法-------------------------------------------*/
+$(function() {
+    AKjs_Loader({
+        ele: $("main").children("#ak-main"), //是否使用局部遮挡层，使用请设置指定的局部元素 （不设置任何参数代表使用全部遮挡层）
+        autoMode: false, //是否开启指定的时间后自动消失功能 (开启 true, 关闭 false）
+        timeToHide: 1000, //毫秒时间设置 (automode必须开启才能有效)
+        iconColor: "#ffffff", //图标颜色设置
+        maskBG: false, //是否开启遮挡背景 (开启 true, 关闭 false）
+        Loader: "load_2", //loading效果选择（load_1~7），在PC端使用时请填写load_0,让IE8也兼容。
+        //text: "内容加载中", //Loading时显示的文字
+        boxsize: "3em", //Loading框大小设置
+        eleclass: "animated fadeIn zindex_6 c_gray_333", //Loading的ele区域的样式设置
+        callback:function (ele,destroy) { //回调入口 （ele：元素，destroy：摧毁开关控制）
+            console.log(ele);
+            setTimeout(function() { //页面加载完2秒后执行
+                destroy(true); //关闭loading窗 [true:关闭loading效果，false:重新显示或不关闭loading效果]（使用该功能autoMode参数设为false，并且timeToHide参数不需要设置值）
+            },2000);
+            /*if($("#ak-scrollview").css('display') == 'block'){
+                $("#ak-scrollview").animate({scrollTop:0},0); //指定元素区域的滚动条返回到最顶部
+            }*/
+        }
+    });
+});
 
 /*
 # 所有功能插件的中文说明：
