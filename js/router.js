@@ -35,28 +35,6 @@ $(document).ready(function(){
                 AKjs_Include("js/data.js"); //Json数据文件引入（AKjs_Include是js文件中引入另一个js或css文件的功能）
             }
             AKjs_Include("js/plugin.js"); //功能插件按需引入（为了正常运行功能插件通过AKjs_Include方式引入）
-
-            /*-----------------------------------------------AKjs_Scrollbar 使用方法-------------------------------------------*/
-            $(function () {
-                if (IsIE6 || IsIE7 || IsIE8) {
-                    $("aside").addClass("ovs_im scrollbar");
-                } else {
-                    $(".plug_scroll").AKjs_Scrollbar({
-                        speed: 25, // 滚动速度
-                        barMargin: 2, //滚动条外间距 (单位px)
-                        barWidth: 8, //滚动条宽度 (单位px)
-                        barColor: "rgba(0,0,0,0.5)", //滚动条颜色
-                        barMDColor: "rgba(0,0,0,0.7)", //滚动条长按时颜色
-                        boxColor: "rgba(0,0,0,0.3)", //滚动条轨道颜色
-                        isBar: true, //是否默认显示滚动条(true,false)
-                        isBox: false, //是否默认显示滚动条轨道(true,false)
-                        callback: function (barele, bartop) { //通过回调获取当前滚动条的元素和实时变化的位置
-                            //console.log(barele) /*滚动条的元素*/
-                            //console.log(bartop) /*滚动条的位置*/
-                        }
-                    });
-                }
-            });
             /*-----------------------------------------------AKjs_MenuList (菜单控制插件）使用方法-------------------------------------------*/
             $(function() {
                 $(".plug_nav li").AKjs_MenuList({ //底部菜单的图标以及文字样式变化设置
