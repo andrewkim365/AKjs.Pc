@@ -25,7 +25,20 @@
             }
             if (options.mouse == "hover") {
                 elem.hover(function(e) {
+                        $(".ak-tooltip").not(tooltip).remove();
+                        tooltip.hide().appendTo('body').html("<i class='"+options.arrowColor+"' style='"+positionClass+"'></i><div class='rel zindex_2 min_w_6em min_h_2em "+options.boxClass+"'></div>").hide().addClass("abs zindex_show").show();
                         setting_tooltip();
+                        tooltip.css({
+                            "top": e.pageY - tooltip.outerHeight() - 10,
+                            "left": e.pageX - (tooltip.outerWidth()/2) + 2
+                        });
+                        options.callback(elem,tooltip.children("div"),options,function(){
+                            setting_tooltip();
+                            tooltip.css({
+                                "top": e.pageY - tooltip.outerHeight() - 10,
+                                "left": e.pageX - (tooltip.outerWidth()/2) + 2
+                            });
+                        });
                     },
                     function() {
                         tooltip.remove();
@@ -38,10 +51,19 @@
                 });
             } else if (options.mouse == "click") {
                 elem.click(function(e) {
+                    $(".ak-tooltip").not(tooltip).remove();
+                    tooltip.hide().appendTo('body').html("<i class='"+options.arrowColor+"' style='"+positionClass+"'></i><div class='rel zindex_2 min_w_6em min_h_2em "+options.boxClass+"'></div>").hide().addClass("abs zindex_show").show();
                     setting_tooltip();
                     tooltip.css({
                         "top": e.pageY - tooltip.outerHeight() - 10,
                         "left": e.pageX - (tooltip.outerWidth()/2) + 2
+                    });
+                    options.callback(elem,tooltip.children("div"),options,function(){
+                        setting_tooltip();
+                        tooltip.css({
+                            "top": e.pageY - tooltip.outerHeight() - 10,
+                            "left": e.pageX - (tooltip.outerWidth()/2) + 2
+                        });
                     });
                     $(document).on("mousedown", function(e) {
                         if ($(e.target).closest(elem).length === 0 && $(e.target).closest(tooltip).length === 0) {
@@ -51,13 +73,11 @@
                 });
             }
             function setting_tooltip() {
-                $(".ak-tooltip").not(tooltip).remove();
-                tooltip.hide().appendTo('body').html("<i class='"+options.arrowColor+"' style='"+positionClass+"'></i><div class='rel zindex_2 min_w_6em min_h_2em "+options.boxClass+"'></div>").hide().addClass("abs zindex_show").show();
-                options.callback(elem,tooltip.children("div"),options);
                 if(title != undefined && title != '') {
                     tooltip.css({"line-height": "2em","padding": "0 1em"});
                     tooltip.children("div").html(title).css({
-                        "text-align": "center"
+                        "text-align": "center",
+                        "padding": "0 1em"
                     });
                 }
                 tooltip.children("div").css({

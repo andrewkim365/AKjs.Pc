@@ -54,9 +54,10 @@ $(function () {
         arrowSize: "10", //箭头大小设置 （单位默认是px）
         arrowColor:"c_gray_333", //箭头颜色class设置
         arrowPosition: "top", //弹出层显示位置 (top,bottom)
-        callback: function(self,box,option) { //弹出层显示后的回调（注：元素中有title属性时无需当前回调）
+        callback: function(self,box,option,setting) { //弹出层显示后的回调（注：元素中有title属性时无需当前回调）
             box.parent().addClass("line_h_2em");
             box.parent().children("i").addClass("minus_mb_08em");
+            //setting(); //考虑数据加载先后顺序，该方法数据加载完后需要再次执行。
         }
     });
 });
