@@ -46,6 +46,20 @@ $(function() {
     });
 });
 
+/*-----------------------------------------------AKjs_ToolTip 使用方法-------------------------------------------*/
+$(function () {
+    $("*[title]").AKjs_ToolTip({
+        mouse: "hover", //鼠标操作类型 (hover,click)
+        boxClass: "border bor_black bg_black05 c_white",  //弹出层样式class设置
+        arrowSize: "10", //箭头大小设置 （单位默认是px）
+        arrowColor:"c_gray_333", //箭头颜色class设置
+        arrowPosition: "top", //弹出层显示位置 (top,bottom)
+        callback: function(self,box,option) { //弹出层显示后的回调（注：元素中有title属性时无需当前回调）
+            box.parent().addClass("line_h_2em");
+            box.parent().children("i").addClass("minus_mb_08em");
+        }
+    });
+});
 /*
 # 所有功能插件的中文说明：
 

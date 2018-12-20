@@ -1,5 +1,291 @@
-﻿/*! jquery.AKjs by Website Plugin v1.0.0 Stable --- Copyright Andrew.Kim | (c) 20170808 ~ 20181217 AKjs license */
+﻿/*! jquery.AKjs by Website Plugin v1.0.0 Stable --- Copyright Andrew.Kim | (c) 20170808 ~ 20181220 AKjs license */
 /*! Coding by Andrew.Kim (E-mail: andrewkim365@qq.com) https://github.com/andrewkim365/AKjs.Pc */
+
+/*-----------------------------------------------AKjs_ToolTip (2018-12-20)--------------------------------------------*/
+(function($) {
+    $.fn.AKjs_ToolTip = function(options) {
+        var defaults = {
+                mouse: "hover",
+                boxClass: "",
+                arrowSize: "30",
+                arrowColor:"",
+                arrowPosition: "bottom",
+                callback: function() {}
+            },
+            options = $.extend(defaults, options);
+        return this.each(function() {
+            var elem = $(this);
+            var title = elem.attr('title');
+            var tooltip = $('<div class="ak-tooltip" />');
+            elem.attr('title','');
+            if (options.arrowPosition == "top") {
+                var positionClass = "display:block;position: absolute;text-align:center;bottom:0;font-size:"+parseInt(options.arrowSize)+"px;margin-bottom: -"+parseInt(options.arrowSize/2)+"px";
+            } else if (options.arrowPosition == "bottom") {
+                var positionClass = "display:block;position: absolute;text-align:center;top:0;font-size:"+parseInt(options.arrowSize)+"px;margin-top: -"+parseInt(options.arrowSize/2)+"px";
+            }
+            if (options.mouse == "hover") {
+                elem.hover(function(e) {
+                        setting_tooltip();
+                    },
+                    function() {
+                        tooltip.remove();
+                    });
+                elem.mousemove(function(e) {
+                    tooltip.css({
+                        "top": e.pageY - tooltip.outerHeight() - 10,
+                        "left": e.pageX - (tooltip.outerWidth()/2) + 2
+                    });
+                });
+            } else if (options.mouse == "click") {
+                elem.click(function(e) {
+                    setting_tooltip();
+                    tooltip.css({
+                        "top": e.pageY - tooltip.outerHeight() - 10,
+                        "left": e.pageX - (tooltip.outerWidth()/2) + 2
+                    });
+                    $(document).on("mousedown", function(e) {
+                        if ($(e.target).closest(elem).length === 0 && $(e.target).closest(tooltip).length === 0) {
+                            tooltip.remove();
+                        }
+                    });
+                });
+            }
+            function setting_tooltip() {
+                $(".ak-tooltip").not(tooltip).remove();
+                tooltip.hide().appendTo('body').html("<i class='"+options.arrowColor+"' style='"+positionClass+"'></i><div class='rel zindex_2 min_w_6em min_h_2em "+options.boxClass+"'></div>").hide().addClass("abs zindex_show").show();
+                options.callback(elem,tooltip.children("div"),options);
+                if(title != undefined && title != '') {
+                    tooltip.css({"line-height": "2em","padding": "0 1em"});
+                    tooltip.children("div").html(title).css({
+                        "text-align": "center"
+                    });
+                }
+                tooltip.children("div").css({
+                    "border": "solid 1px #dddddd",
+                    "background-color": "#ffffff"
+                });
+                tooltip.children("i").css({
+                    "color": "#dddddd",
+                    "width": tooltip.children("div").outerWidth()
+                });
+                if (options.arrowPosition == "top") {
+                    tooltip.css({
+                        "margin-top": "-"+parseInt(options.arrowSize/2)+"px"
+                    });
+                    tooltip.children("i").addClass("icon-ln_sanjiaoxia");
+                } else if (options.arrowPosition == "bottom") {
+                    tooltip.css({
+                        "margin-top": elem.outerHeight() + tooltip.outerHeight() + parseInt(options.arrowSize/2)
+                    });
+                    tooltip.children("i").addClass("icon-ln_sanjiaoshang");
+                }
+            }
+        });
+    }
+} (jQuery));
+
+/*-----------------------------------------------AKjs_Popupwin (2018-12-20)--------------------------------------------*/
+function AKjs_Popupwin (setting) {
+    option = $.extend({
+        dom: "",
+        position: "",
+        effectIn: "",
+        effectOut: "",
+        hasMask: true,
+        closeBtn: "",
+        OneButton: "",
+        maskPosition: "",
+        toggleIcon: "",
+        callback :function () {},
+        scrollback :function () {}
+    },setting);
+    setPopupStyle();
+    $(window).resize(function(){
+        setPopupStyle();
+    });
+    var setTimes = 100;
+    if (option.OneButton) {
+        $(option.closeBtn).unbind("click");
+        $(option.closeBtn).on('click', function() {
+            option.callback($(option),false,option);
+            ClickHideModal();
+        });
+        AKjs_UserAgent();
+        $(option.OneButton).toggleClass("ak-is_active");
+        if ($(option.OneButton).hasClass("ak-is_active")) {
+            setPopupStyle();
+            setTimeout(function() {
+                if (option.hasMask) {
+                    addModalMask();
+                    $("#ak-scrollview").removeClass("scrolling_touch");
+                }
+                if (option.position === 'offset') {
+                    if (IsMobile) {
+                        var oth = $(option.OneButton).offset().top + $(option.OneButton).outerHeight();
+                        olw = 0;
+                    } else {
+                        var isOth = $(option.OneButton).offset().top + $(option.OneButton).outerHeight() - $("#ak-scrollview").offset().top + $("#ak-scrollview").scrollTop();
+                        if (isOth > $("#ak-scrollview").outerHeight()) {
+                            var oth = $(option.OneButton).offset().top + $(option.OneButton).outerHeight();
+                        } else {
+                            var oth = isOth;
+                        }
+                        olw = $(option.OneButton).offset().left + $(option.OneButton).outerWidth() - $("#ak-scrollview").offset().left;
+                        if ($(window).width() - olw > 0) {
+                            olw = $(option.OneButton).offset().left + $(option.OneButton).outerWidth() - $("#ak-scrollview").offset().left - $(option.dom).outerWidth();
+                        }
+                    }
+                    $(option.dom).css({
+                        "top": oth,
+                        "left": olw
+                    });
+                    $(window).resize(function(){
+                        $(option.dom).addClass("dis_none");
+                        ClickHideModal();
+                    });
+                }
+                if (option.effectIn || option.effectOut) {
+                    $(option.dom).removeClass("animated " + option.effectOut).addClass("animated " + option.effectIn).removeClass("dis_none");
+                }
+                if (option.toggleIcon) {
+                    if (option.position != 'offset') {
+                        $(option.OneButton).find("i").attr("data-icon",$(option.OneButton).find("i").attr("class"));
+                        $(option.OneButton).find("i").removeClass($(option.OneButton).find("i").attr("class")).addClass(option.toggleIcon);
+                    }
+                }
+                option.callback($(option),true,option);
+            },setTimes);
+        } else {
+            option.callback($(option),false,option);
+            ClickHideModal();
+        }
+    } else {
+        if (option.effectIn || option.effectOut) {
+            $(option.dom).removeClass("animated " + option.effectOut).addClass("animated " + option.effectIn).removeClass("dis_none");
+        }
+        if (option.hasMask) {
+            addModalMask();
+            $("#ak-scrollview").removeClass("scrolling_touch");
+        }
+        option.callback($(option),true,option);
+        $(option.closeBtn).unbind("click");
+        $(option.closeBtn).on('click', function(ec) {
+            ec.preventDefault();
+            option.callback($(option),false,option);
+            ClickHideModal();
+        });
+    }
+    $("#ak-scrollview").scroll(function(sc){
+        sc.preventDefault();
+        option.scrollback($(option));
+        $('#popup_mask').fadeOut().remove();
+        if (option.OneButton) {
+            var scrollHeight = $("#ak-scrollview").prop("scrollHeight");
+            $(option.dom).css({
+                top: scrollHeight
+            });
+            $(option.OneButton).removeClass("ak-is_active");
+        }
+    });
+    function addModalMask() {
+        $('#popup_mask').remove();
+        if ($("#popup_mask").length < 1) {
+            $("main").append('<div id="popup_mask" class="ak-mask"></div>');
+            $('#popup_mask').show();
+            $("#popup_mask").unbind("click");
+            $("#popup_mask").on('click', function() {
+                option.callback($(option),false,option);
+                ClickHideModal();
+            });
+            $('#popup_mask').bind({
+                touchmove: function (e) {
+                    e.preventDefault();
+                }
+            });
+            if (option.maskPosition) {
+                $('#popup_mask').css({
+                    "z-index": option.maskPosition
+                });
+                if (option.position === 'offset') {
+                    var otm = $(option.OneButton).offset().top;
+                    var ohm = $(option.OneButton).outerHeight();
+                    $('#popup_mask').css({
+                        "top": otm + ohm
+                    });
+                }
+            }
+        }
+    }
+    function setPopupStyle() {
+        var ww = $(window).width();
+        var wh = $(window).height();
+        if (option.dom) {
+            var dw = $(option.dom).outerWidth();
+            var dh = $(option.dom).outerHeight();
+            $(option.dom).css({
+                "position": "fixed",
+                "background": "transparent",
+                "z-index": parseInt(option.maskPosition) + 1
+            });
+            if (option.position === 'top') {
+                $(option.dom).css({
+                    "left": (ww / 2) - (dw / 2),
+                    "top": 0
+                });
+            } else if (option.position === 'bottom') {
+                $(option.dom).css({
+                    "left": (ww / 2) - (dw / 2),
+                    "bottom": 0
+                });
+            } else if (option.position === 'left') {
+                $(option.dom).css({
+                    "left": 0,
+                    "top": 0
+                });
+            } else if (option.position === 'right') {
+                $(option.dom).css({
+                    "right": 0,
+                    "top": 0
+                });
+            } else if (option.position === 'middle') {
+                $(option.dom).css({
+                    "left": (ww / 2) - (dw / 2),
+                    "top": (wh / 2) - (dh / 2)
+                });
+            }
+        }
+    }
+    function ClickHideModal(){
+        if (option.OneButton) {
+            if (option.effectIn || option.effectOut) {
+                $(option.dom).removeClass("animated " + option.effectIn).addClass("animated " + option.effectOut);
+            }
+            $(option.OneButton).find("i").removeClass(option.toggleIcon).addClass($(option.OneButton).find("i").attr("data-icon"));
+        } else {
+            if (option.effectIn || option.effectOut) {
+                $(option.dom).removeClass("animated " + option.effectIn).addClass("animated " + option.effectOut);
+            }
+        }
+        var effectTime = option.effectOut;
+        effectStr = effectTime.substring(effectTime.indexOf('ani_')+3,effectTime.lastIndexOf('s'));
+        if (effectStr.indexOf("_0") != -1) {
+            effectStr = effectStr.replace("_0","_0.");
+        }
+        effectStr = effectStr.substr(1);
+        var ani_css = new RegExp("ani_");
+        if(ani_css.test(effectTime)) {
+            var setTimeouts = effectStr*1000+setTimes;
+        } else {
+            var setTimeouts = 1000;
+        }
+        setTimeout(function() {
+            $("#ak-scrollview").addClass("scrolling_touch");
+            $(option.OneButton).removeClass("ak-is_active");
+            $('#popup_mask').fadeOut().remove();
+            $(option.dom).addClass("dis_none");
+        },setTimeouts);
+    }
+}
 
 /*-----------------------------------------------AKjs_Slider (2018-12-17)--------------------------------------------*/
 (function($) {
@@ -9926,209 +10212,6 @@ function AKjs_Loader(setting) {
     };
 } (jQuery));
 
-/*-----------------------------------------------AKjs_Popupwin (2018-12-13)--------------------------------------------*/
-function AKjs_Popupwin (setting) {
-    option = $.extend({
-        dom: "",
-        position: "",
-        effectIn: "",
-        effectOut: "",
-        hasMask: true,
-        closeBtn: "",
-        OneButton: "",
-        maskPosition: "",
-        toggleIcon: "",
-        callback :function () {},
-        scrollback :function () {}
-    },setting);
-    setPopupStyle();
-    $(window).resize(function(){
-        setPopupStyle();
-    });
-    var setTimes = 100;
-    if (option.OneButton) {
-        $(option.closeBtn).unbind("click");
-        $(option.closeBtn).on('click', function() {
-            option.callback($(option),false);
-            ClickHideModal();
-        });
-        AKjs_UserAgent();
-        $(option.OneButton).toggleClass("ak-is_active");
-        if ($(option.OneButton).hasClass("ak-is_active")) {
-            setPopupStyle();
-            setTimeout(function() {
-                if (option.hasMask) {
-                    addModalMask();
-                    $("#ak-scrollview").removeClass("scrolling_touch");
-                }
-                if (option.position === 'offset') {
-                    if (IsMobile) {
-                        var oth = $(option.OneButton).offset().top + $(option.OneButton).outerHeight();
-                        olw = 0;
-                    } else {
-                        var isOth = $(option.OneButton).offset().top + $(option.OneButton).outerHeight() - $("#ak-scrollview").offset().top + $("#ak-scrollview").scrollTop();
-                        if (isOth > $("#ak-scrollview").outerHeight()) {
-                            var oth = $(option.OneButton).offset().top + $(option.OneButton).outerHeight();
-                        } else {
-                            var oth = isOth;
-                        }
-                        olw = $(option.OneButton).offset().left + $(option.OneButton).outerWidth() - $("#ak-scrollview").offset().left;
-                        if ($(window).width() - olw > 0) {
-                            olw = $(option.OneButton).offset().left + $(option.OneButton).outerWidth() - $("#ak-scrollview").offset().left - $(option.dom).outerWidth();
-                        }
-                    }
-                    $(option.dom).css({
-                        "top": oth,
-                        "left": olw
-                    });
-                    $(window).resize(function(){
-                        $(option.dom).addClass("dis_none");
-                        ClickHideModal();
-                    });
-                }
-                if (option.effectIn || option.effectOut) {
-                    $(option.dom).removeClass("animated " + option.effectOut).addClass("animated " + option.effectIn).removeClass("dis_none");
-                }
-                if (option.toggleIcon) {
-                    if (option.position != 'offset') {
-                        $(option.OneButton).find("i").attr("data-icon",$(option.OneButton).find("i").attr("class"));
-                        $(option.OneButton).find("i").removeClass($(option.OneButton).find("i").attr("class")).addClass(option.toggleIcon);
-                    }
-                }
-                option.callback($(option),true);
-            },setTimes);
-        } else {
-            option.callback($(option),false);
-            ClickHideModal();
-        }
-    } else {
-        if (option.effectIn || option.effectOut) {
-            $(option.dom).removeClass("animated " + option.effectOut).addClass("animated " + option.effectIn).removeClass("dis_none");
-        }
-        if (option.hasMask) {
-            addModalMask();
-            $("#ak-scrollview").removeClass("scrolling_touch");
-        }
-        option.callback($(option),true);
-        $(option.closeBtn).unbind("click");
-        $(option.closeBtn).on('click', function(ec) {
-            ec.preventDefault();
-            option.callback($(option),false);
-            ClickHideModal();
-        });
-    }
-    $("#ak-scrollview").scroll(function(sc){
-        sc.preventDefault();
-        option.scrollback($(option));
-        $('#popup_mask').fadeOut().remove();
-        if (option.OneButton) {
-            var scrollHeight = $("#ak-scrollview").prop("scrollHeight");
-            $(option.dom).css({
-                top: scrollHeight
-            });
-            $(option.OneButton).removeClass("ak-is_active");
-        }
-    });
-    function addModalMask() {
-        $('#popup_mask').remove();
-        if ($("#popup_mask").length < 1) {
-            $("main").append('<div id="popup_mask" class="ak-mask"></div>');
-            $('#popup_mask').show();
-            $("#popup_mask").unbind("click");
-            $("#popup_mask").on('click', function() {
-                option.callback($(option),false);
-                ClickHideModal();
-            });
-            $('#popup_mask').bind({
-                touchmove: function (e) {
-                    e.preventDefault();
-                }
-            });
-            if (option.maskPosition) {
-                $('#popup_mask').css({
-                    "z-index": option.maskPosition
-                });
-                if (option.position === 'offset') {
-                    var otm = $(option.OneButton).offset().top;
-                    var ohm = $(option.OneButton).outerHeight();
-                    $('#popup_mask').css({
-                        "top": otm + ohm
-                    });
-                }
-            }
-        }
-    }
-    function setPopupStyle() {
-        var ww = $(window).width();
-        var wh = $(window).height();
-        if (option.dom) {
-            var dw = $(option.dom).outerWidth();
-            var dh = $(option.dom).outerHeight();
-            $(option.dom).css({
-                "position": "fixed",
-                "background": "transparent",
-                "z-index": parseInt(option.maskPosition) + 1
-            });
-            if (option.position === 'top') {
-                $(option.dom).css({
-                    "left": (ww / 2) - (dw / 2),
-                    "top": 0
-                });
-            } else if (option.position === 'bottom') {
-                $(option.dom).css({
-                    "left": (ww / 2) - (dw / 2),
-                    "bottom": 0
-                });
-            } else if (option.position === 'left') {
-                $(option.dom).css({
-                    "left": 0,
-                    "top": 0
-                });
-            } else if (option.position === 'right') {
-                $(option.dom).css({
-                    "right": 0,
-                    "top": 0
-                });
-            } else if (option.position === 'middle') {
-                $(option.dom).css({
-                    "left": (ww / 2) - (dw / 2),
-                    "top": (wh / 2) - (dh / 2)
-                });
-            }
-        }
-    }
-    function ClickHideModal(){
-        if (option.OneButton) {
-            if (option.effectIn || option.effectOut) {
-                $(option.dom).removeClass("animated " + option.effectIn).addClass("animated " + option.effectOut);
-            }
-            $(option.OneButton).find("i").removeClass(option.toggleIcon).addClass($(option.OneButton).find("i").attr("data-icon"));
-        } else {
-            if (option.effectIn || option.effectOut) {
-                $(option.dom).removeClass("animated " + option.effectIn).addClass("animated " + option.effectOut);
-            }
-        }
-        var effectTime = option.effectOut;
-        effectStr = effectTime.substring(effectTime.indexOf('ani_')+3,effectTime.lastIndexOf('s'));
-        if (effectStr.indexOf("_0") != -1) {
-            effectStr = effectStr.replace("_0","_0.");
-        }
-        effectStr = effectStr.substr(1);
-        var ani_css = new RegExp("ani_");
-        if(ani_css.test(effectTime)) {
-            var setTimeouts = effectStr*1000+setTimes;
-        } else {
-            var setTimeouts = 1000;
-        }
-        setTimeout(function() {
-            $("#ak-scrollview").addClass("scrolling_touch");
-            $(option.OneButton).removeClass("ak-is_active");
-            $('#popup_mask').fadeOut().remove();
-            $(option.dom).addClass("dis_none");
-        },setTimeouts);
-    }
-}
-
 /*-----------------------------------------------AKjs_PortraitImage (2018-12-13)--------------------------------------------*/
 (function($) {
     var option = {};
@@ -13331,47 +13414,6 @@ function AKjs_Popupwin (setting) {
             var TimeClock = new ak_Clock(_self, ctx, options);
             TimeClock.draw();
         }, 1000);
-    }
-} (jQuery));
-
-/*-----------------------------------------------AKjs_ToolTip (2018-12-13)--------------------------------------------*/
-(function($) {
-    $.fn.AKjs_ToolTip = function(options) {
-        var defaults = {
-                background: '#777777',
-                color: '#ffffff',
-                opacity: '0.8',
-                customHtml: ""
-            },
-            options = $.extend(defaults, options);
-        return this.each(function() {
-            var elem = $(this);
-            var title = elem.attr('title');
-            if(title != undefined && title != '') {
-                var htmls = title;
-            } else {
-                var htmls = options.customHtml;
-            }
-            var tooltip = $('<div class="ak-tooltip" />');
-            elem.attr('title','');
-            elem.hover(function(e) {
-                tooltip.hide().appendTo('body').html(htmls).hide().css({
-                    'background-color' : options.background,
-                    'color' : options.color,
-                    'opacity' : options.opacity
-                })
-                    .fadeIn(500);
-            },
-            function() {
-                tooltip.remove();
-            });
-            elem.mousemove(function(e) {
-                tooltip.css({
-                    top: e.pageY - tooltip.outerHeight() - 10,
-                    left: e.pageX - (tooltip.outerWidth()/2) + 2
-                });
-            });
-        });
     }
 } (jQuery));
 

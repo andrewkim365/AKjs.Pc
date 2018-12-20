@@ -1,4 +1,4 @@
-﻿/*! jquery.AKjs by Website Plugin v1.0.0 Stable --- Copyright Andrew.Kim | (c) 20170808 ~ 20181213 AKjs license */
+﻿/*! jquery.AKjs by Website Plugin v1.0.0 Stable --- Copyright Andrew.Kim | (c) 20170808 ~ 20181220 AKjs license */
 /*! Coding by Andrew.Kim (E-mail: andrewkim365@qq.com) https://github.com/andrewkim365/AKjs.Pc */
 
 /*-----------------------------------------------AKjs_ButtonSubmit-------------------------------------------*/
@@ -458,10 +458,6 @@ select.ak-SelectOpts{display: none !important;}
 .ak-TimeAxis locator > span{width: 0; height: 0; border: 0.6em solid #ffffff; border-top-color: transparent !important; border-bottom-color: transparent !important; border-left-color: transparent !important; position: absolute; left: -0.5em; top: -0.6em;}
 .ak-TimeAxis article{border: solid 1px #dddddd; border-radius: 0.3em; background-color: #ffffff; line-height: 1.4em; padding: 3%; margin-right: 3%;}
 .ak-TimeAxis article p{color: #777777;}
-
-/*-----------------------------------------------AKjs_ToolTip-------------------------------------------*/
-.ak-tooltip{border:1px solid #000000;max-width:20em;font-size:1.2em;padding:1em;position:absolute;z-index:100;text-shadow:none;border-radius:0.3em;-moz-border-radius:0.3em;-webkit-border-radius:0.3em}
-.ak-tooltip:after{display:block;content:"";position:absolute;top:100%;left:50%;pointer-events:none;margin-left:-0.6em;border-top:0.6em solid #000000;border-right:0.6em solid transparent;border-left:0.6em solid transparent}
 
 /*-----------------------------------------------AKjs_Typeahead-------------------------------------------*/
 .ak-typeahead{position: fixed; overflow: hidden; background-color: #f5f5f5; z-index: 3; display: none; height: 100%; -webkit-appearance:none; outline:none; -webkit-tap-highlight-color:rgba(255,255,255,0);}
