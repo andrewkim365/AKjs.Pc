@@ -1,4 +1,4 @@
-/*! jquery.AKjs by Website Plugin v1.0.0 Stable --- Copyright Andrew.Kim | (c) 20170808 ~ 20181213 AKjs license */
+/*! jquery.AKjs by Website Plugin v1.0.0 Stable --- Copyright Andrew.Kim | (c) 20170808 ~ 20190121 AKjs license */
 /*! Coding by Andrew.Kim (E-mail: andrewkim365@qq.com) https://github.com/andrewkim365/AKjs.Pc */
 
 if ("undefined" == typeof jQuery) throw new Error("AKjs Plugin's JavaScript requires jQuery");
@@ -115,6 +115,7 @@ function AKjs_Router(setting) {
         });
         $(window).bind('hashchange', function () {
             var page = "hashchange";
+            $(document).unbind();
             Router_Ajax(option,page);
             AKjs_mainHeight();
             $("header, main, footer").css({
