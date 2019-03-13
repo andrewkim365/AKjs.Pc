@@ -12864,14 +12864,15 @@ function AKjs_Loader(setting) {
             var ele = $(this[0]);
             ele.addClass("ak-for");
             var ret = $.AKjs_Template(ele, data, options, parentItem);
-            if (options.callback != undefined) {
-                newTmplItem(options.callback(ele,ret));
-            }
             $(function() {
                 ele.removeClass("ak-for");
                 ele.find(".ak-for").removeClass("ak-for");
                 ele.children().eq(0).remove();
+                ele.empty();
                 ret.appendTo(ele);
+                if (options.callback != undefined) {
+                    newTmplItem(options.callback(ele,ret));
+                }
             });
             return ret;
         },
