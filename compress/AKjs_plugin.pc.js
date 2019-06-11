@@ -1,4 +1,4 @@
-﻿/*! jquery.AKjs by Website Plugin v1.0.0 Stable --- Copyright Andrew.Kim | (c) 20170808 ~ 20181220 AKjs license */
+﻿/*! jQuery.AKjs by Website Plugin v1.0.0 Stable --- Copyright Andrew.Kim | (c) 20170808 ~ 20190611 AKjs license */
 /*! Coding by Andrew.Kim (E-mail: andrewkim365@qq.com) https://github.com/andrewkim365/AKjs.Pc */
 
 /*-----------------------------------------------AKjs_ToolTip (2018-12-20)--------------------------------------------*/
@@ -26,7 +26,7 @@
             if (options.mouse == "hover") {
                 elem.hover(function(e) {
                         $(".ak-tooltip").not(tooltip).remove();
-                        tooltip.hide().appendTo('body').html("<i class='"+options.arrowColor+"' style='"+positionClass+"'></i><div class='rel zindex_2 min_w_6em min_h_2em "+options.boxClass+"'></div>").hide().addClass("abs zindex_show").show();
+                        tooltip.hide().appendTo('body').html("<i class='"+options.arrowColor+"' style='"+positionClass+"'></i><div class='rel zindex_2 min_w_6rem min_h_2rem "+options.boxClass+"'></div>").hide().addClass("abs zindex_show").show();
                         setting_tooltip();
                         tooltip.css({
                             "top": e.pageY - tooltip.outerHeight() - 10,
@@ -52,7 +52,7 @@
             } else if (options.mouse == "click") {
                 elem.click(function(e) {
                     $(".ak-tooltip").not(tooltip).remove();
-                    tooltip.hide().appendTo('body').html("<i class='"+options.arrowColor+"' style='"+positionClass+"'></i><div class='rel zindex_2 min_w_6em min_h_2em "+options.boxClass+"'></div>").hide().addClass("abs zindex_show").show();
+                    tooltip.hide().appendTo('body').html("<i class='"+options.arrowColor+"' style='"+positionClass+"'></i><div class='rel zindex_2 min_w_6rem min_h_2rem "+options.boxClass+"'></div>").hide().addClass("abs zindex_show").show();
                     setting_tooltip();
                     tooltip.css({
                         "top": e.pageY - tooltip.outerHeight() - 10,
@@ -74,10 +74,10 @@
             }
             function setting_tooltip() {
                 if(title != undefined && title != '') {
-                    tooltip.css({"line-height": "2em","padding": "0 1em"});
+                    tooltip.css({"line-height": "2rem","padding": "0 1rem"});
                     tooltip.children("div").html(title).css({
                         "text-align": "center",
-                        "padding": "0 1em"
+                        "padding": "0 1rem"
                     });
                 }
                 tooltip.children("div").css({
@@ -326,7 +326,7 @@ function AKjs_Popupwin (setting) {
                 arrClass:"",
                 arrIcon: [],
                 CustomHeight: false,
-                ActiveClass: "bg_title",
+                ActiveClass: "bg_theme",
                 callback: function() {},
                 afterSlider: function() {}
             },
@@ -412,7 +412,7 @@ function AKjs_Popupwin (setting) {
                     if ($(ele).children("ol").length < 1) {
                         ele.append(dotElement);
                         if (self.options.UpDown) {
-                            $(ele).children("ol").addClass("bottom_au right_0 mr_1em");
+                            $(ele).children("ol").addClass("bottom_au right_0 mr_1rem");
                         } else {
                             $(ele).children("ol").find("li").addClass("fl");
                         }
@@ -1096,7 +1096,7 @@ function AKjs_Popupwin (setting) {
     $.fn.AKjs_ButtonSubmit = function(msg, setting) {
         var option = $.extend({
                 click: false,
-                icon: ["1.2em", "#ffffff"],
+                icon: ["1.2rem", "#ffffff"],
                 callback: function() {}
             },
             setting);
@@ -1234,7 +1234,7 @@ function AKjs_Popupwin (setting) {
     $.fn.AKjs_Checkbox = function(settings) {
         var _defaults = {
             boxSize: "",
-            checkedClass: "bg_title bor_title c_white",
+            checkedClass: "bg_theme bor_theme c_white",
             disabledClass: "bg_gray_ccc bor_gray_ccc c_white",
             onChange: function(element) {}
         };
@@ -1357,7 +1357,7 @@ function AKjs_Popupwin (setting) {
                 var _self = $(this);
                 if (option.btnIcon) {
                     if (_self.children("i").length < 1) {
-                        _self.append('<i class="c_in abs minus_bottom_03em minus_right_01em line_h_no text_18em icon-im_xuanze_b dis_none_im"></i>');
+                        _self.append('<i class="c_in abs minus_bottom_03rem minus_right_01rem line_h_no text_18rem icon-im_xuanze_b dis_none_im"></i>');
                         if (_self.attr("data-checked")) {
                             _self.children("i").removeClass("dis_none_im")
                         } else {
@@ -1676,7 +1676,7 @@ function AKjs_Popupwin (setting) {
             function css_info() {
                 ele.find(".ak-info").css({
                     "line-height": ($dimension * 1.25) + "px",
-                    "font-size": "0.6em",
+                    "font-size": "0.6rem",
                     "color": $font_color,
                     "z-index": 2
                 })
@@ -1685,7 +1685,7 @@ function AKjs_Popupwin (setting) {
                 ele.find(".ak-text-half").css({
                     "line-height": $dimension/2*1.25 + "px",
                     "font-weight": "bold",
-                    "font-size": "1.2em",
+                    "font-size": "1.2rem",
                     "color": $font_color,
                     "z-index": 2
                 })
@@ -1762,7 +1762,7 @@ function AKjs_Popupwin (setting) {
     $.fn.AKjs_CitySelect = function(setting) {
         var option = $.extend({
                 jsonData: [],
-                BoxWidth: "32em",
+                BoxWidth: "32rem",
                 BackBtn: "Back",
                 TitleText: "Title",
                 CloseBtn: "Close",
@@ -2483,10 +2483,10 @@ function AKjs_CountDown(ele,setting) {
     ak.tplBase += '<div class="ak-dialog_container">';
     ak.tplBase += "{{header}}";
     ak.tplBase += '<div class="ak-dialog_content"><p>{{message}}</p>{{input}}</div>';
-    ak.tplBase += '<div class="ak-dialog_footer">{{button_cancel}} <button type="button" class="ak_btn bg_white button_ok c_title">{{btn_ok}}</button></div>';
+    ak.tplBase += '<div class="ak-dialog_footer">{{button_cancel}} <button type="button" class="ak_btn bg_white button_ok c_theme">{{btn_ok}}</button></div>';
     ak.tplBase += "</div>";
     ak.tplBase += "</div>";
-    ak.tplHeader = '<div class="ak-dialog_header bor_bottom_dashed bor_gray_ddd {{icon}}"><h3 class="ml_05em">{{title}}</h3></div>';
+    ak.tplHeader = '<div class="ak-dialog_header bor_bottom_dashed bor_gray_ddd {{icon}}"><h3 class="ml_05rem">{{title}}</h3></div>';
     ak.tplInput = '<div class="ak-dialog_field">{{inputbox}}</div>';
     ak.getTeplate = function(type, message, option) {
         var template = ak.tplBase;
@@ -2945,7 +2945,7 @@ function AKjs_CountDown(ele,setting) {
                 str: "+1",
                 icon_defaultClass: "",
                 icon_changeClass: "",
-                textClass: "c_white text_12em ml_02em mr_02em",
+                textClass: "c_white text_12rem ml_02rem mr_02rem",
                 text_default: "Favorite",
                 text_change: "Cancel",
                 startSize: "12px",
@@ -3865,7 +3865,7 @@ function AKjs_CountDown(ele,setting) {
         var btn_password = mbf.find(option.btn_password);
         btn_password.each(function() {
             var pass_btn = $(this);
-            pass_btn.parent().append('<button type="button" class="press top_0 right_0 abs text_al_r text_18em c_gray_ccc"></button>');
+            pass_btn.parent().append('<button type="button" class="press top_0 right_0 abs text_al_r text_18rem c_gray_ccc"></button>');
             pass_btn.parent().children("button").addClass(option.btn_password_ico_hide);
             pass_btn.parent().children("button").css({
                 "height": pass_btn.outerHeight(),
@@ -3892,7 +3892,7 @@ function AKjs_CountDown(ele,setting) {
             var del_btn = $(this);
             if ($(this).val() > 0) {
                 if ($(this).next("button[type=reset]").length < 1) {
-                    $(this).after("<button type=\"reset\" class='press top_0 right_0 abs text_al_r text_18em c_gray_ccc'></button>");
+                    $(this).after("<button type=\"reset\" class='press top_0 right_0 abs text_al_r text_18rem c_gray_ccc'></button>");
                     $(this).next("button[type=reset]").css({
                         "height": del_btn.outerHeight(),
                         "margin-left": del_btn.width() - del_btn.next("button").width()
@@ -4329,7 +4329,7 @@ function AKjs_CountDown(ele,setting) {
                     time: 60,
                     event: "click",
                     phone: "",
-                    ableClass: "c_title",
+                    ableClass: "c_theme",
                     unableClass: "c_gray_999",
                     condition: function() {},
                     progress: function() {},
@@ -4415,11 +4415,11 @@ function AKjs_GoTop (setting) {
             sate= 'bottom:10%';
         }
         if(!option.icon || option.url) {
-            var dom = '<div class="ak-GoTopBox" style="width:' + option.width + ';height:' + option.height + ';display:none;position:fixed;cursor:pointer;right:2em;z-index:999;' + sate + '">' +
+            var dom = '<div class="ak-GoTopBox" style="width:' + option.width + ';height:' + option.height + ';display:none;position:fixed;cursor:pointer;right:2rem;z-index:999;' + sate + '">' +
                 '<img src=' + option.url + ' style="width:100%" />' +
                 '</div>';
         } else {
-            var dom = '<div class="ak-GoTopBox ' + option.icon + '" style="width:' + option.width + ';height:' + option.height + ';display:none;position:fixed;cursor:pointer;right:2em;z-index:999;' + sate + '">' +
+            var dom = '<div class="ak-GoTopBox ' + option.icon + '" style="width:' + option.width + ';height:' + option.height + ';display:none;position:fixed;cursor:pointer;right:2rem;z-index:999;' + sate + '">' +
                 '</div>';
         }
         $('.ak-GoTopBox').remove();
@@ -4745,7 +4745,7 @@ function AKjs_GoTop (setting) {
                 Nav_active: "",
                 show_color: "",
                 data: [],
-                boxsize: ["20em","30em"],
+                boxsize: ["20rem","30rem"],
                 showBack: function() {},
                 clickBack: function() {}
             },
@@ -4890,7 +4890,7 @@ function AKjs_GoTop (setting) {
                                             "width": option.boxsize[0],
                                             "left": $(this).offset().left
                                         });
-                                        objsub.children("ol").addClass("abs top_0 mt_1em mr_16em");
+                                        objsub.children("ol").addClass("abs top_0 mt_1rem mr_16rem");
                                         datalist.addClass("mt_0 scrollbar").css({
                                             "height": option.boxsize[1]
                                         });
@@ -5106,7 +5106,7 @@ function AKjs_Loader(setting) {
         }
         loading.css(yy);
         if (option.text) {
-            load_ele.append("<span><em class='dis_inbl pl_1em pr_1em'>"+option.text+"</em></span>");
+            load_ele.append("<span><em class='dis_inbl pl_1rem pr_1rem'>"+option.text+"</em></span>");
             if (option.maskBG == true) {
                 load_ele.children("span").children("em").removeClass("bg_white08");
             } else {
@@ -5116,7 +5116,7 @@ function AKjs_Loader(setting) {
                 top: loading.offset().top - load_ele.offset().top + load_ele.children("span").outerHeight()*2
             });
             if (IsIE) {
-                load_ele.children("span").addClass("mt_07em");
+                load_ele.children("span").addClass("mt_07rem");
             }
         }
         $(window).resize(function () {
@@ -8685,7 +8685,7 @@ function AKjs_Loader(setting) {
                     clsName += " today"
                 }
                 if (currentDate && prevMonth.valueOf() == currentDate) {
-                    clsName += " bg_title c_white"
+                    clsName += " bg_theme c_white"
                 }
                 if (prevMonth.valueOf() < this.startDate || prevMonth.valueOf() > this.endDate || $.inArray(prevMonth.getUTCDay(), this.daysOfWeekDisabled) !== -1) {
                     clsName += " disabled"
@@ -8705,7 +8705,7 @@ function AKjs_Loader(setting) {
                     clsName += " disabled"
                 } else {
                     if (hours == i) {
-                        clsName += " bg_title c_white"
+                        clsName += " bg_theme c_white"
                     }
                 }
                 html.push('<span class="hour' + clsName + '">' + i + ":00</span>")
@@ -8719,16 +8719,16 @@ function AKjs_Loader(setting) {
                     clsName += " disabled"
                 } else {
                     if (Math.floor(minutes / this.minuteStep) == Math.floor(i / this.minuteStep)) {
-                        clsName += " bg_title c_white"
+                        clsName += " bg_theme c_white"
                     }
                 }
                 html.push('<span class="minute' + clsName + '">' + hours + ":" + (i < 10 ? "0" + i: i) + "</span>")
             }
             this.picker.find(".minutes td").html(html.join(""));
             var currentYear = this.date && this.date.getUTCFullYear();
-            var month = this.picker.find(".month").find("th:eq(1)").text(year).end().find("span").removeClass("bg_title c_white");
+            var month = this.picker.find(".month").find("th:eq(1)").text(year).end().find("span").removeClass("bg_theme c_white");
             if (currentYear && currentYear == year) {
-                month.eq(this.date.getUTCMonth()).addClass("bg_title c_white")
+                month.eq(this.date.getUTCMonth()).addClass("bg_theme c_white")
             }
             if (year < startYear || year > endYear) {
                 month.addClass("disabled")
@@ -8744,7 +8744,7 @@ function AKjs_Loader(setting) {
             var yearCont = this.picker.find(".years").find("th:eq(1)").addClass("press").text(year + "-" + (year + 9)).end().find("td");
             year -= 1;
             for (var i = -1; i < 11; i++) {
-                html += '<span class="year' + (i == -1 || i == 10 ? " c_gray_ccc": "") + (currentYear == year ? " bg_title c_white": "") + (year < startYear || year > endYear ? " disabled": "") + '">' + year + "</span>";
+                html += '<span class="year' + (i == -1 || i == 10 ? " c_gray_ccc": "") + (currentYear == year ? " bg_theme c_white": "") + (year < startYear || year > endYear ? " disabled": "") + '">' + year + "</span>";
                 year += 1
             }
             yearCont.html(html)
@@ -8867,7 +8867,7 @@ function AKjs_Loader(setting) {
                 switch (target[0].nodeName.toLowerCase()) {
                     case "th":
                         switch (target[0].className) {
-                            case "c_title":
+                            case "c_theme":
                                 this.showMode(1);
                                 break;
                             case "prev":
@@ -9469,9 +9469,9 @@ function AKjs_Loader(setting) {
             }
             return viewMode
         },
-        headTemplate: "<thead>" + "<tr>" + '<th class="prev"><i class="icon-ln_fanhui_a"/></th>' + '<th colspan="5" class="c_title"></th>' + '<th class="next"><i class="icon-ln_qianjin_a"/></th>' + "</tr>" + "</thead>",
+        headTemplate: "<thead>" + "<tr>" + '<th class="prev"><i class="icon-ln_fanhui_a"/></th>' + '<th colspan="5" class="c_theme"></th>' + '<th class="next"><i class="icon-ln_qianjin_a"/></th>' + "</tr>" + "</thead>",
         contTemplate: '<tbody><tr><td colspan="7"></td></tr></tbody>',
-        footTemplate: '<tfoot><tr><th colspan="7"><fieldset><button type="button" class="fl close c_gray_777"></button><button type="button" class="fr today c_title"></button></fieldset></th></tr></tfoot>'
+        footTemplate: '<tfoot><tr><th colspan="7"><fieldset><button type="button" class="fl close c_gray_777"></button><button type="button" class="fr today c_theme"></button></fieldset></th></tr></tfoot>'
     };
     DateTimeGlobal.template = '<div class="ak-MultiDate dis_none">' + '<div class="minutes">' + "<table>" + DateTimeGlobal.headTemplate + DateTimeGlobal.contTemplate + DateTimeGlobal.footTemplate + "</table>" + "</div>" + '<div class="hours">' + "<table>" + DateTimeGlobal.headTemplate + DateTimeGlobal.contTemplate + DateTimeGlobal.footTemplate + "</table>" + "</div>" + '<div class="days">' + "<table>" + DateTimeGlobal.headTemplate + "<tbody></tbody>" + DateTimeGlobal.footTemplate + "</table>" + "</div>" + '<div class="month">' + "<table>" + DateTimeGlobal.headTemplate + DateTimeGlobal.contTemplate + DateTimeGlobal.footTemplate + "</table>" + "</div>" + '<div class="years">' + "<table>" + DateTimeGlobal.headTemplate + DateTimeGlobal.contTemplate + DateTimeGlobal.footTemplate + "</table>" + "</div>" + "</div>";
     $.fn.AKjs_MultiDate.DateTimeGlobal = DateTimeGlobal
@@ -10004,7 +10004,7 @@ function AKjs_Loader(setting) {
                 speed: 500,
                 dateflag: true,
                 mouse: "click",
-                selectedClass: "c_title",
+                selectedClass: "c_theme",
                 weeks_text: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
                 today_text: "Today",
                 months_text:"-",
@@ -10448,7 +10448,7 @@ function AKjs_Loader(setting) {
             return null
         }
         function showPrvImg(src, id) {
-            var imgList = "<li class='rel fl mb_5'>" + "<figure class='img_auto " + option.Class + "' style='background-color: #eeeeee !important;'>" + "<img src=" + src + " />" + "</figure>" + "<span class='pointer top_0 abs wh_12em line_h_12em text_14em text_al_c bor_rad_50 c_white " + option.Del_icon + "' style='background-color: rgba(255,0,0,1); z-index: 1'>" + "</span>" + "</li>";
+            var imgList = "<li class='rel fl mb_5'>" + "<figure class='img_auto " + option.Class + "' style='background-color: #eeeeee !important;'>" + "<img src=" + src + " />" + "</figure>" + "<span class='pointer top_0 abs wh_12rem line_h_12rem text_14rem text_al_c bor_rad_50 c_white " + option.Del_icon + "' style='background-color: rgba(255,0,0,1); z-index: 1'>" + "</span>" + "</li>";
             $(id).parents("li").before(imgList);
             $(option.delbtnClass).show();
             var showPrvImg_li = $(id).parents("li");
@@ -10614,11 +10614,11 @@ function AKjs_Loader(setting) {
     $.fn.AKjs_ProductPhoto = function(setting) {
         var option = $.extend({
                 data: [],
-                large_height: "20em",
-                small_size: "5em",
-                btn_width: "3em",
+                large_height: "20rem",
+                small_size: "5rem",
+                btn_width: "3rem",
                 btn_height: "",
-                state: "bor_title",
+                state: "bor_theme",
                 vis: 5,
                 autoPlay: true,
                 playDelay: 3000,
@@ -11312,8 +11312,8 @@ function AKjs_Loader(setting) {
 (function($) {
     $.fn.AKjs_Radio = function(settings) {
         var _defaults = {
-            boxSize: "2.6em",
-            checkedClass: "bor_title border8",
+            boxSize: "2.6rem",
+            checkedClass: "bor_theme border8",
             onChange: function(element) {}
         };
         var options = $.extend(_defaults, settings || {});
@@ -12088,10 +12088,10 @@ function AKjs_Loader(setting) {
             }
             ele.attr("maxlength", option.input_length);
             ele.focus(function() {
-                $(this).addClass("bor_title bg_white")
+                $(this).addClass("bor_theme bg_white")
             });
             ele.blur(function() {
-                $(this).removeClass("bor_title bg_white")
+                $(this).removeClass("bor_theme bg_white")
             });
             $(this).keyup(function(e) {
                 e = window.event || e;
@@ -12322,7 +12322,7 @@ function AKjs_Loader(setting) {
 (function($) {
     $.fn.AKjs_Switch = function(settings) {
         var _defaults = {
-            checkedClass: "bg_title",
+            checkedClass: "bg_theme",
             disabledClass: "dis_opa_05",
             onChange: function(element) {}
         };
@@ -12379,7 +12379,7 @@ function AKjs_Loader(setting) {
             content_dom: "",
             boxheight: false,
             navlength: false,
-            fullclass: "bor_bottom2 bor_title c_title",
+            fullclass: "bor_bottom2 bor_theme c_theme",
             emptyclass: "bor_bottom bor_gray_ddd",
             changeMethod: "default",
             autoPlay: false,
@@ -12530,7 +12530,7 @@ function AKjs_Loader(setting) {
         },
         setData: function() {
             if (this.$tab_list.length == this.opts.navlength) {
-                this.$tab_list.removeClass("pl_1em pr_1em");
+                this.$tab_list.removeClass("pl_1rem pr_1rem");
                 this.$tab_list.parent("ul").removeClass("nav_line").addClass("nav_line_c");
                 this.$tab_list.parent("ul").addClass("length" + this.$tab_list.length)
             }
@@ -13207,9 +13207,9 @@ function AKjs_Loader(setting) {
         if (txt.length > 0) {
             txt.each(function(){
                 $(this).after('<span class="dis_block_im ovh abs center text_al_r text_12px">' +
-                    '<var class="text_08em" style="color: #f16a6a;">0</var>' +
+                    '<var class="text_08rem" style="color: #f16a6a;">0</var>' +
                     '/' +
-                    '<var class="text_08em mr_03em">'+opm.maxlength+'</var>' +
+                    '<var class="text_08rem mr_03rem">'+opm.maxlength+'</var>' +
                     '</span>');
                 $(this).next("span").css({
                     "width": $(this).width(),
@@ -13867,7 +13867,7 @@ function AKjs_Loader(setting) {
         display: "name",
         val: "id",
         custom: "text",
-        boxsize: ["20em","30em"],
+        boxsize: ["20rem","30rem"],
         boxClass: "",
         CallBack: function() {},
         showCallBack: function() {},
@@ -14192,15 +14192,15 @@ function AKjs_Loader(setting) {
         function fnError(ts, va, errDom, empty, error) {
             if (ts.val().length < 1) {
                 if (empty != undefined) {
-                    errDom.removeClass("dis_none_im").addClass('abs ml_05em '+option.VerifyClass).html("* "+empty);
+                    errDom.removeClass("dis_none_im").addClass('abs ml_05rem '+option.VerifyClass).html("* "+empty);
                 } else {
-                    errDom.removeClass("dis_none_im").addClass('abs ml_05em '+option.VerifyClass).html("* "+error);
+                    errDom.removeClass("dis_none_im").addClass('abs ml_05rem '+option.VerifyClass).html("* "+error);
                 }
             } else {
                 if (isDiy) {
                     va.error(ts);
                 } else {
-                    errDom.removeClass("dis_none_im").addClass('abs ml_05em '+option.VerifyClass).html("* "+error);
+                    errDom.removeClass("dis_none_im").addClass('abs ml_05rem '+option.VerifyClass).html("* "+error);
                 }
             }
             return false;
@@ -14210,7 +14210,7 @@ function AKjs_Loader(setting) {
                 va.success(ts);
             } else {
                 setTimeout(function() {
-                    errDom.addClass("dis_none_im").removeClass('abs ml_05em '+option.VerifyClass).html('');
+                    errDom.addClass("dis_none_im").removeClass('abs ml_05rem '+option.VerifyClass).html('');
                 }, 200);
             }
             return true;
@@ -14222,7 +14222,7 @@ function AKjs_Loader(setting) {
                 _ts.parent().children("sub").addClass("dis_none_im");
                 if (typeof str != undefined && str !="" && str !=null) {
                     _ts.parent().append("<text style='white-space: pre;line-height: "+_ts.outerHeight()+"px;' />");
-                    _ts.parent().children("text").addClass('abs ml_05em '+option.VerifyClass).html("* "+str);
+                    _ts.parent().children("text").addClass('abs ml_05rem '+option.VerifyClass).html("* "+str);
                 }
                 _ts.focus();
                 $("button#ak-validateBtn").remove();
@@ -14235,7 +14235,7 @@ function AKjs_Loader(setting) {
                 });
             }
             if (status == false) {
-                _ts.parent().children("text").removeClass('abs ml_05em '+option.VerifyClass).html("").remove();
+                _ts.parent().children("text").removeClass('abs ml_05rem '+option.VerifyClass).html("").remove();
                 form.find(":submit").removeClass("dis_none_im");
                 $("button#ak-validateBtn").remove();
             }
@@ -15098,7 +15098,7 @@ function AKjs_Loader(setting) {
     ak_Viewer.template =
         '<div class="ak-viewer-container">' +
             '<div class="ak-viewer-canvas" data-action="canvas"></div>' +
-            '<div class="ak-viewer-footer animated slideInUp h_10em bg_black07">' +
+            '<div class="ak-viewer-footer animated slideInUp h_10rem bg_black07">' +
                 '<div class="ak-viewer-title"></div>' +
                 '<ul class="ak-viewer-toolbar">' +
                     '<li class="ak-viewer-one-to-one bg_black07" data-action="one-to-one"></li>' +
@@ -15442,7 +15442,7 @@ function AKjs_WebToast() {
 (function($) {
     var defaults = {
         fadeduration: 200,
-        imgclass:"border2 bor_title"
+        imgclass:"border2 bor_theme"
     };
     var $ak_zoomimage;
     var currentzoominfo = {

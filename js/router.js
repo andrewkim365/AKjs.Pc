@@ -40,7 +40,7 @@ $(document).ready(function(){
                 $(".plug_nav li").AKjs_MenuList({ //底部菜单的图标以及文字样式变化设置
                     icon_text: ["dt i","dt span"], //设置需要控制的菜单图标和文字元素
                     btn_color: "hover_gray_222 c_white", //未选中的文字和图标的颜色
-                    active_color: "pointer bg_title02 c_title_sub01", //被选中的文字和图标的颜色
+                    active_color: "pointer bg_theme02 c_theme_sub01", //被选中的文字和图标的颜色
                     Callback: function(ele,index) {
                         console.log(ele, index);
                     }

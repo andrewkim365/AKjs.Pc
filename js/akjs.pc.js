@@ -1,4 +1,4 @@
-/*! jquery.AKjs by Website Plugin v1.0.0 Stable --- Copyright Andrew.Kim | (c) 20170808 ~ 20190121 AKjs license */
+/*! jQuery.AKjs by Website Plugin v1.0.0 Stable --- Copyright Andrew.Kim | (c) 20170808 ~ 20190611 AKjs license */
 /*! Coding by Andrew.Kim (E-mail: andrewkim365@qq.com) https://github.com/andrewkim365/AKjs.Pc */
 
 if ("undefined" == typeof jQuery) throw new Error("AKjs Plugin's JavaScript requires jQuery");
@@ -408,7 +408,7 @@ function AKjs_placeholder() {
                 "width": "100%",
                 "height": place_h,
                 "line-height": place_h+"px",
-                "text-indent": "1em"
+                "text-indent": "1rem"
             });
             $(window).resize(function(){
                 place.parent("label").children("span").css({
@@ -419,7 +419,7 @@ function AKjs_placeholder() {
                     "width": "100%",
                     "height": place_h,
                     "line-height": place_h+"px",
-                    "text-indent": "1em"
+                    "text-indent": "1rem"
                 });
             });
             place.on('focus', function() {
