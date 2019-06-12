@@ -13480,21 +13480,6 @@ filter_gray_0 {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
-
-/*-----------AK Other Style-----------*/
-.new_icon {
-    position: relative;
-}
-.new_icon::after {
-    content: '●';
-    color: red;
-    margin: 0.5rem 0.8rem;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
 .ak-for, .ak-for >*:first-child, ak-header, ak-footer, ak-title, ak-menu-code, ak-page-code, ak-plugin  {
     display: none !important;
 }
