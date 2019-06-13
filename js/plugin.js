@@ -22,45 +22,6 @@ AKjs_Config({ //环境配置管理
 /*-----------------------------------------------AKjs_Plugin 功能插件引入-------------------------------------------*/
 AKjs_Plugin("AKjs_plugin.pc.min","css"); //引入压缩版的全部功能插件
 
-/*-----------------------------------------------AKjs_Loader 使用方法-------------------------------------------*/
-$(function() {
-    AKjs_Loader({
-        ele: $("main").children("#ak-main"), //是否使用局部遮挡层，使用请设置指定的局部元素 （不设置任何参数代表使用全部遮挡层）
-        autoMode: false, //是否开启指定的时间后自动消失功能 (开启 true, 关闭 false）
-        timeToHide: 1000, //毫秒时间设置 (automode必须开启才能有效)
-        iconColor: "#ffffff", //图标颜色设置
-        maskBG: false, //是否开启遮挡背景 (开启 true, 关闭 false）
-        Loader: "load_2", //loading效果选择（load_1~7），在PC端使用时请填写load_0,让IE8也兼容。
-        //text: "内容加载中", //Loading时显示的文字
-        boxsize: "3rem", //Loading框大小设置
-        eleclass: "animated fadeIn zindex_6 c_gray_333", //Loading的ele区域的样式设置
-        callback:function (ele,destroy) { //回调入口 （ele：元素，destroy：摧毁开关控制）
-            console.log(ele);
-            setTimeout(function() { //页面加载完2秒后执行
-                destroy(true); //关闭loading窗 [true:关闭loading效果，false:重新显示或不关闭loading效果]（使用该功能autoMode参数设为false，并且timeToHide参数不需要设置值）
-            },2000);
-            /*if($("#ak-scrollview").css('display') == 'block'){
-                $("#ak-scrollview").animate({scrollTop:0},0); //指定元素区域的滚动条返回到最顶部
-            }*/
-        }
-    });
-});
-
-/*-----------------------------------------------AKjs_ToolTip 使用方法-------------------------------------------*/
-$(function () {
-    $("*[title]").AKjs_ToolTip({
-        mouse: "hover", //鼠标操作类型 (hover,click)
-        boxClass: "border bor_black bg_black05 c_white",  //弹出层样式class设置
-        arrowSize: "10", //箭头大小设置 （单位默认是px）
-        arrowColor:"c_gray_333", //箭头颜色class设置
-        arrowPosition: "top", //弹出层显示位置 (top,bottom)
-        callback: function(self,box,option,setting) { //弹出层显示后的回调（注：元素中有title属性时无需当前回调）
-            box.parent().addClass("line_h_2rem");
-            box.parent().children("i").addClass("minus_mb_08rem");
-            //setting(); //考虑数据加载先后顺序，该方法数据加载完后需要再次执行。
-        }
-    });
-});
 /*
 # 所有功能插件的中文说明：
 

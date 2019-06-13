@@ -168,9 +168,6 @@ function AKjs_Router(setting) {
                     cache: false,
                     success: function () {
                         $("html").attr("data-router","akjs");
-                        if (page == "hashchange") {
-                            option.changePage(document.location.hash.substring(1), true);
-                        }
                         $(document).unbind("contextmenu").unbind("keydown");
                     },
                     error: function () {
@@ -258,6 +255,10 @@ function AKjs_Router(setting) {
 
                 $(function() {
                     Router_Settings();
+                    AKjs_mainHeight();
+                    if (page == "hashchange") {
+                        option.changePage(document.location.hash.substring(1), true);
+                    }
                     setTimeout(function () {
                         if (jsText != undefined) {
                             $("<script id='akjs_script' data-temp='"+new Date().getTime()+"' type=\"text/javascript\">"+jsText+"</script>").appendTo($("html"));
