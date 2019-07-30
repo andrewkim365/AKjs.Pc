@@ -447,8 +447,10 @@ function AKjs_mainHeight() {
     $(function () {
         AKjs_UserAgent();
         $("form").each(function(){
-            if ($(this).attr("data-submit") == "false") {
+            if ($(this).attr("data-submit") == "false" || !$(this).attr("data-submit")) {
                 $(this).attr("onsubmit","return false");
+            } else {
+                $(this).attr("onsubmit","return true");
             }
             $(this).removeAttr("data-submit");
         });
