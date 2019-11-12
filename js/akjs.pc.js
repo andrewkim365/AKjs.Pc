@@ -1,4 +1,4 @@
-/*! jQuery.AKjs by Website Plugin v1.0.0 Stable --- Copyright Andrew.Kim | (c) 20170808 ~ 20190611 AKjs license */
+/*! jQuery.AKjs by Website Plugin v1.0.0 Stable --- Copyright Andrew.Kim | (c) 20170808 ~ 20191112 AKjs license */
 /*! Coding by Andrew.Kim (E-mail: andrewkim365@qq.com) https://github.com/andrewkim365/AKjs.Pc */
 
 if ("undefined" == typeof jQuery) throw new Error("AKjs Plugin's JavaScript requires jQuery");
@@ -10,9 +10,10 @@ function AKjs_Config(setting) {
             Responsive: true,
             ButtonLink: true,
             animation:true,
+            customscroll:false,
             pluginPath: "js/plugin/",
-            pluginClear: {days: 0, hours: 0, minutes: 0, seconds: 0}
-        },
+                pluginClear: {days: 0, hours: 0, minutes: 0, seconds: 0}
+            },
         setting);
     AKjs_UserAgent();
     AKjs_RegsInput();
@@ -47,10 +48,18 @@ function AKjs_Config(setting) {
         $("*").removeAttr("data-animation");
     }
     if (!$("html").attr("data-router")) {
-        AKjs_mainHeight();
+        if(option.customscroll) {
+            $(option.customscroll).attr("id","ak-scrollview").addClass("rel");
+        } else {
+            AKjs_mainHeight();
+        }
     }
     $(window).resize(function(){
-        AKjs_mainHeight();
+        if(option.customscroll) {
+            $(option.customscroll).attr("id","ak-scrollview").addClass("rel");
+        } else {
+            AKjs_mainHeight();
+        }
     });
     if(option.pluginPath) {
         akPath = option.pluginPath.charAt(option.pluginPath.length - 1);
@@ -447,10 +456,8 @@ function AKjs_mainHeight() {
     $(function () {
         AKjs_UserAgent();
         $("form").each(function(){
-            if ($(this).attr("data-submit") == "false" || !$(this).attr("data-submit")) {
+            if ($(this).attr("data-submit") == "false") {
                 $(this).attr("onsubmit","return false");
-            } else {
-                $(this).attr("onsubmit","return true");
             }
             $(this).removeAttr("data-submit");
         });
@@ -742,7 +749,7 @@ function AKjs_HashSharp() {
         var akKey = _HashSharp;
         if ($("#ak-animation").length > 0) {
             $("#ak-animation").attr("data-router","");
-            if (_this.parents("footer")[0] != undefined || _this.attr("data-page") == "none") {
+            if (_this.parents("footer")[0] != undefined) {
                 $("#ak-animation").attr("data-router","");
             } else if (_this.attr("data-back") === "true" || hash_script.test(_this.attr("data-href"))){
                 $("#ak-animation").attr("data-router","slideLeft");

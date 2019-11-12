@@ -5,6 +5,7 @@ AKjs_Config({ //环境配置管理
     ButtonLink: true, //通过元素中加data-href属性的方式跳转界面, 建议开启路由功能后使用。(使用button超链接 true,不使用button超链接 false）
     animation: true, //是否开启元素里加动画参数的功能？（例：data-animation="{name: 'zoomIn', duration:1, delay: 0}"） 动画库：akjs.animate.css
     pluginPath: "./compress/", //功能插件文件所在的目录设置
+    customscroll:false, //自定义整个界面的滚动区域设置 (例：使用为双引号中设置元素的class名或ID名 "#ak-scrollview" ，不使用为false）
     pluginClear: { //定期清理功能插件的缓存 【days=天数, hours=小时, minutes=分钟，seconds=秒数 （当前提供的四个参数中任意抽选一个设置时间清理功能插件的缓存。四个参数不能同时设置）】
         /*使用帮助：项目开发阶段建议使用秒数间隔清理缓存，项目正式上线后不经常改动插件所以建议使用天数间隔清理缓存。*/
         /*注意：清理缓存时按需引入的功能插件将重新网络请求所以会影响到页面加载速度。*/

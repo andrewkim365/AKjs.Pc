@@ -1,4 +1,4 @@
-﻿/*! jQuery.AKjs by Website Plugin v1.0.0 Stable --- Copyright Andrew.Kim | (c) 20170808 ~ 20190611 AKjs license */
+﻿/*! jQuery.AKjs by Website Plugin v1.0.0 Stable --- Copyright Andrew.Kim | (c) 20170808 ~ 20191112 AKjs license */
 /*! Coding by Andrew.Kim (E-mail: andrewkim365@qq.com) https://github.com/andrewkim365/AKjs.Pc */
 
 /*-----------------------------------------------AKjs_Vticker (2019-06-11)--------------------------------------------*/
@@ -3932,11 +3932,7 @@ function AKjs_CountDown(ele,setting) {
             }
             option.butCallback(mbf, false);
             document.activeElement.blur();
-            if (mbf.find(":submit").parents("form").attr("onsubmit") == "return false") {
-                return false;
-            } else {
-                return true;
-            }
+            return false
         });
         mbf.keyup(function(event) {
             event.preventDefault();
@@ -4012,7 +4008,7 @@ function AKjs_CountDown(ele,setting) {
         var btn_delete = mbf.find(option.btn_delete);
         btn_delete.keyup(function() {
             var del_btn = $(this);
-            if ($(this).val().length > 0) {
+            if ($(this).val() > 0) {
                 if ($(this).next("button[type=reset]").length < 1) {
                     $(this).after("<button type=\"reset\" class='press top_0 right_0 abs text_al_r text_18rem c_gray_ccc'></button>");
                     $(this).next("button[type=reset]").css({
@@ -5002,6 +4998,7 @@ function AKjs_GoTop (setting) {
                         $(this).unbind("click");
                         $(this).on("click",
                             function(event) {
+                                var _this = $(this);
                                 $(this).toggleClass("ak-is_active");
                                 if ($(this).hasClass("ak-is_active")) {
                                     if (IsMobile) {
@@ -5031,9 +5028,11 @@ function AKjs_GoTop (setting) {
                                     }
                                     option.showBack(objsub);
                                     $("body").unbind("click");
-                                    $("body").click(function () {
-                                        objsub.slideUp();
-                                        obj.el.removeClass("ak-is_active");
+                                    $(document).on("mousedown", function(e) {
+                                        if ($(e.target).closest(_this).length === 0) {
+                                            objsub.slideUp();
+                                            obj.el.removeClass("ak-is_active");
+                                        }
                                     });
                                     if ($('#ak-scrollview').length > 0) {
                                         var $scrollbar = $("#ak-scrollview");
@@ -9325,10 +9324,10 @@ function AKjs_Loader(setting) {
             this.picker.find(">div").removeClass("dis_block_im").filter("." + DateTimeGlobal.modes[this.viewMode].clsName).addClass("dis_block_im");
             if (this.picker.children(".dis_block_im").find("tfoot button").length > 1) {
                 this.picker.children(".dis_block_im").find("tfoot button").addClass("w_50");
-                this.picker.children(".dis_block_im").find("tfoot button").eq(0).addClass("bor_right")
+                this.picker.children(".dis_block_im").find("tfoot button").eq(0).addClass("bor_right");
             } else {
                 this.picker.children(".dis_block_im").find("tfoot button").removeClass("w_50");
-                this.picker.children(".dis_block_im").find("tfoot button").eq(0).removeClass("bor_right")
+                this.picker.children(".dis_block_im").find("tfoot button").eq(0).removeClass("bor_right");
             }
             this.updateNavArrows()
         },
@@ -12126,25 +12125,24 @@ function AKjs_Loader(setting) {
                         });
                     }
                     if ($(this).hasClass("ak-open")) {
+                        var _this = $(this);
                         $(".ak-SelectOpts").not(select).removeClass("ak-open");
                         $(".ak-SelectList").not(select_list).hide();
                         select_list.slideDown(option.speed);
                         select_list.animate({scrollTop:0},0);
                         $("body").unbind("click");
                         setTimeout(function() {
-                            $("body").click(function () {
-                                $(".ak-SelectList").slideUp(option.speed);
-                                $(".ak-SelectOpts").removeClass("ak-open");
+                            $(document).on("mousedown", function(e) {
+                                if ($(e.target).closest(_this).length === 0) {
+                                    $(".ak-SelectList").slideUp(option.speed);
+                                    $(".ak-SelectOpts").removeClass("ak-open");
+                                }
                             });
                             if ($('#ak-scrollview').length > 0) {
                                 var $scrollbar = $("#ak-scrollview");
                             } else {
                                 var $scrollbar = $("main");
                             }
-                            $scrollbar.scroll(function(){
-                                $(".ak-SelectList").slideUp(option.speed);
-                                $(".ak-SelectOpts").removeClass("ak-open");
-                            });
                         },option.speed);
                     } else {
                         select_list.slideUp(option.speed);
