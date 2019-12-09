@@ -1,4 +1,4 @@
-/*! jQuery.AKjs by Website Plugin v1.0.0 Stable --- Copyright Andrew.Kim | (c) 20170808 ~ 20191118 AKjs license */
+/*! jQuery.AKjs by Website Plugin v1.0.0 Stable --- Copyright Andrew.Kim | (c) 20170808 ~ 20191209 AKjs license */
 /*! Coding by Andrew.Kim (E-mail: andrewkim365@qq.com) https://github.com/andrewkim365/AKjs.Pc */
 
 if ("undefined" == typeof jQuery) throw new Error("AKjs Plugin's JavaScript requires jQuery");
@@ -292,7 +292,7 @@ function AKjs_Router(setting) {
                 if ($(this).attr("data-submit") != "true") {
                     $(this).attr("onsubmit","return false");
                 } else {
-                    $(this).removeAttr("onsubmit");
+                    $(this).attr("onsubmit","return true");
                 }
             });
             if ($("ak-title").length > 0) {
@@ -458,8 +458,15 @@ function AKjs_mainHeight() {
         $("form").each(function(){
             if ($(this).attr("data-submit") == "false") {
                 $(this).attr("onsubmit","return false");
+            } else if (!$(this).attr("data-submit")) {
+                if ($(this).attr("action") && $(this).attr("action")!="#") {
+                    $(this).attr("onsubmit","return true");
+                } else {
+                    $(this).attr("onsubmit","return false");
+                }
+            } else {
+                $(this).attr("onsubmit","return true");
             }
-            $(this).removeAttr("data-submit");
         });
         if ($("main").length === 0) {
             $("body").children().not("header").not("footer").not("aside").wrapAll("<main />");
