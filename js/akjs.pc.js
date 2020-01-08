@@ -1,4 +1,4 @@
-/*! jQuery.AKjs by Website Plugin v1.0.0 Stable --- Copyright Andrew.Kim | (c) 20170808 ~ 20191209 AKjs license */
+/*! jQuery.AKjs by Website Plugin v1.0.0 Stable --- Copyright Andrew.Kim | (c) 20170808 ~ 20200108 AKjs license */
 /*! Coding by Andrew.Kim (E-mail: andrewkim365@qq.com) https://github.com/andrewkim365/AKjs.Pc */
 
 if ("undefined" == typeof jQuery) throw new Error("AKjs Plugin's JavaScript requires jQuery");
@@ -579,6 +579,8 @@ function AKjs_Ajax(setting) {
             async:false,
             cache: false,
             dataType: "",
+            beforeSend:function () {
+            },
             complete:function () {
             },
             success:function () {
@@ -594,14 +596,17 @@ function AKjs_Ajax(setting) {
         async: option.async,
         cache: option.cache,
         dataType: option.dataType,
-        complete: function(response) {
-            option.complete(response);
+        beforeSend: function(beforeSend) {
+            option.beforeSend(beforeSend);
         },
-        success: function (result) {
+        complete: function(complete) {
+            option.complete(complete);
+        },
+        success: function (success) {
             if ($(option.to).length>0) {
                 $(option.to).html(AjaxObj.responseText);
             }
-            option.success(result);
+            option.success(success);
             AKjs_HashSharp();
             AKjs_Animation();
         },
