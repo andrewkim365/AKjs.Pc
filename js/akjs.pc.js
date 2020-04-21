@@ -1,4 +1,4 @@
-/*! jQuery.AKjs by Website Plugin v1.0.0 Stable --- Copyright Andrew.Kim | (c) 20170808 ~ 20200108 AKjs license */
+/*! jQuery.AKjs by Website Plugin v1.0.0 Stable --- Copyright Andrew.Kim | (c) 20170808 ~ 20200421 AKjs license */
 /*! Coding by Andrew.Kim (E-mail: andrewkim365@qq.com) https://github.com/andrewkim365/AKjs.Pc */
 
 if ("undefined" == typeof jQuery) throw new Error("AKjs Plugin's JavaScript requires jQuery");
@@ -575,10 +575,21 @@ function AKjs_Ajax(setting) {
             to: "",
             type: "POST",
             url: "",
+            timeout: "",
             data:{},
             async:false,
             cache: false,
+            global: true,
+            contentType: "",
+            ifModified: false,
+            jsonp: "",
+            username: "",
+            password: "",
+            processData: true,
+            scriptCharset: "",
             dataType: "",
+            dataFilter:function () {
+            },
             beforeSend:function () {
             },
             complete:function () {
@@ -592,26 +603,38 @@ function AKjs_Ajax(setting) {
     AjaxObj = $.ajax({
         type: option.type,
         url: option.url,
+        timeout: option.timeout,
         data: option.data,
         async: option.async,
         cache: option.cache,
+        global: option.global,
+        contentType: option.contentType,
+        ifModified: option.ifModified,
+        jsonp: option.jsonp,
+        username: option.username,
+        password: option.password,
+        processData: option.processData,
+        scriptCharset: option.scriptCharset,
         dataType: option.dataType,
-        beforeSend: function(beforeSend) {
-            option.beforeSend(beforeSend);
+        dataFilter: function(data, type) {
+            option.dataFilter(data, type);
         },
-        complete: function(complete) {
-            option.complete(complete);
+        beforeSend: function(XMLHttpRequest) {
+            option.beforeSend(XMLHttpRequest);
         },
-        success: function (success) {
+        complete: function(XMLHttpRequest, textStatus) {
+            option.complete(XMLHttpRequest, textStatus);
+        },
+        success: function (data, textStatus) {
             if ($(option.to).length>0) {
                 $(option.to).html(AjaxObj.responseText);
             }
-            option.success(success);
+            option.success(data, textStatus);
             AKjs_HashSharp();
             AKjs_Animation();
         },
-        error: function (error) {
-            option.error(error);
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+            option.error(XMLHttpRequest, textStatus, errorThrown);
         }
     });
 }
