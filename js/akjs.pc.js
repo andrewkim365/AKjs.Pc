@@ -1,4 +1,4 @@
-/*! jQuery.AKjs by Website Plugin v1.0.0 Stable --- Copyright Andrew.Kim | (c) 20170808 ~ 20200421 AKjs license */
+/*! jQuery.AKjs by Website Plugin v1.0.0 Stable --- Copyright Andrew.Kim | (c) 20170808 ~ 20201205 AKjs license */
 /*! Coding by Andrew.Kim (E-mail: andrewkim365@qq.com) https://github.com/andrewkim365/AKjs.Pc */
 
 if ("undefined" == typeof jQuery) throw new Error("AKjs Plugin's JavaScript requires jQuery");
@@ -37,7 +37,9 @@ function AKjs_Config(setting) {
     }
     if(option.ButtonLink== true) {
         if (!$("html").attr("data-router")) {
-            AKjs_HashSharp();
+            $(function () {
+                AKjs_HashSharp();
+            });
         }
     } else {
         $("*").removeAttr("data-href");
