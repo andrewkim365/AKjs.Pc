@@ -1,4 +1,4 @@
-﻿/*! jQuery.AKjs by Website Plugin v1.0.0 Stable --- Copyright Andrew.Kim | (c) 20170808 ~ 20200421 AKjs license */
+﻿/*! jQuery.AKjs by Website Plugin v1.0.0 Stable --- Copyright Andrew.Kim | (c) 20170808 ~ 20201205 AKjs license */
 /*! Coding by Andrew.Kim (E-mail: andrewkim365@qq.com) https://github.com/andrewkim365/AKjs.Pc */
 
 /*-----------------------------------------------AKjs_Vticker (2020-04-21)--------------------------------------------*/
@@ -153,10 +153,13 @@
                 var myChart = echarts.init(obj.elem.get(0), opt.theme);
                 var option = opt.option;
                 myChart.setOption(option);
+                console.log("00000000000000000000000000000000000");
                 obj.elem.each(function () {
                     var _this = echarts.init($(this).get(0));
+                    console.log("111111111111111111111111111111");
                     $(window).resize(function() {
                         _this.resize();
+                        console.log("22222222222222222222222222222222222222");
                     });
                 });
                 opt.callback(myChart,option);
