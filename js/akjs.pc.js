@@ -1,4 +1,4 @@
-/*! jQuery.AKjs by Website Plugin v1.0.0 Stable --- Copyright Andrew.Kim | (c) 20170808 ~ 20201205 AKjs license */
+/*! jQuery.AKjs by Website Plugin v1.0.0 Stable --- Copyright Andrew.Kim | (c) 20170808 ~ 20210202 AKjs license */
 /*! Coding by Andrew.Kim (E-mail: andrewkim365@qq.com) https://github.com/andrewkim365/AKjs.Pc */
 
 if ("undefined" == typeof jQuery) throw new Error("AKjs Plugin's JavaScript requires jQuery");
@@ -51,14 +51,14 @@ function AKjs_Config(setting) {
     }
     if (!$("html").attr("data-router")) {
         if(option.customscroll) {
-            $(option.customscroll).attr("id","ak-scrollview").addClass("rel");
+            $(option.customscroll).attr("id","ak-scrollview").addClass("pos_rel");
         } else {
             AKjs_mainHeight();
         }
     }
     $(window).resize(function(){
         if(option.customscroll) {
-            $(option.customscroll).attr("id","ak-scrollview").addClass("rel");
+            $(option.customscroll).attr("id","ak-scrollview").addClass("pos_rel");
         } else {
             AKjs_mainHeight();
         }
@@ -142,9 +142,9 @@ function AKjs_Router(setting) {
                 $("#ak-animation").find("img").hide().show();
                 if (page == "hashchange") {
                     if (option.Animate) {
-                        $("#ak-main").addClass("dis_opa_0").removeClass("animated " + option.Animate);
+                        $("#ak-main").addClass("opa_0").removeClass("animated " + option.Animate);
                         setTimeout(function () {
-                            $("#ak-main").removeClass("dis_opa_0").addClass("animated " + option.Animate);
+                            $("#ak-main").removeClass("opa_0").addClass("animated " + option.Animate);
                         }, 100);
                     }
                     $("#ak-scrollview").animate({scrollTop: 0}, 100);
@@ -409,7 +409,7 @@ function AKjs_placeholder() {
         }
         if (place.attr("placeholder") && place.val()=='') {
             if (place.parent().prop('tagName') != "LABEL") {
-                place.wrap("<label class='dis_block ovh rel h_in c_gray_ccc'></label>");
+                place.wrap("<label class='dis_block ovh pos_rel h_in c_gray_ccc'></label>");
                 place.parent("label").append("<span>" + place.attr('placeholder') + "</span>");
             }
             place.parent("label").children("span").css({
@@ -653,17 +653,17 @@ function AKjs_Animation() {
             if (IsMobile) {
                 var animated_each = _self.eq(i).attr("data-animation");
                 aniJson_each = eval("(" + animated_each + ")");
-                _self.eq(i).removeClass("dis_opa_0");
+                _self.eq(i).removeClass("opa_0");
                 aniAdd(_self.eq(i),aniJson_each);
             } else {
                 arr[i] = _self.eq(i).offset().top + _self.eq(i).outerHeight();
                 if (arr[i] < view_h) {
                     var animated_each = _self.eq(i).attr("data-animation");
                     aniJson_each = eval("(" + animated_each + ")");
-                    _self.eq(i).removeClass("dis_opa_0");
+                    _self.eq(i).removeClass("opa_0");
                     aniAdd(_self.eq(i),aniJson_each);
                 } else if (_self.eq(i).offset().top > view_h) {
-                    _self.eq(i).addClass("dis_opa_0");
+                    _self.eq(i).addClass("opa_0");
                 }
             }
         }
@@ -688,7 +688,7 @@ function AKjs_Animation() {
                     if (arr[i] > view_h) {
                         var animated_each = _self.eq(i).attr("data-animation");
                         aniJson_each = eval("(" + animated_each + ")");
-                        _self.eq(i).removeClass("dis_opa_0");
+                        _self.eq(i).removeClass("opa_0");
                         aniAdd(_self.eq(i),aniJson_each);
                     }
                 } else if (scrollTop < arr[0]) {
@@ -696,12 +696,12 @@ function AKjs_Animation() {
                     aniJson_each = eval("(" + animated_each + ")");
                     var animated_first = _self.eq(0).attr("data-animation");
                     aniJson_first = eval("(" + animated_first + ")");
-                    _self.eq(0).removeClass("dis_opa_0");
+                    _self.eq(0).removeClass("opa_0");
                     if (arr[i] > view_h) {
                         _self.eq(i).removeClass("animated " + aniJson_each.name);
                         aniAdd(_self.eq(0), aniJson_first);
                         if (_self.eq(i).offset().top > view_h) {
-                            _self.eq(i).addClass("dis_opa_0");
+                            _self.eq(i).addClass("opa_0");
                         }
                     }
                 } else {

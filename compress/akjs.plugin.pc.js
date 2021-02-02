@@ -1,4 +1,4 @@
-﻿/*! jQuery.AKjs by Website Plugin v1.0.0 Stable --- Copyright Andrew.Kim | (c) 20170808 ~ 20201205 AKjs license */
+﻿/*! jQuery.AKjs by Website Plugin v1.0.0 Stable --- Copyright Andrew.Kim | (c) 20170808 ~ 20210202 AKjs license */
 /*! Coding by Andrew.Kim (E-mail: andrewkim365@qq.com) https://github.com/andrewkim365/AKjs.Pc */
 
 /*-----------------------------------------------AKjs_Vticker (2020-04-21)--------------------------------------------*/
@@ -729,7 +729,7 @@
         var btn_password = mbf.find(option.btn_password);
         btn_password.each(function() {
             var pass_btn = $(this);
-            pass_btn.parent().append('<button type="button" class="press top_0 right_0 abs text_al_r text_18rem c_gray_ccc"></button>');
+            pass_btn.parent().append('<button type="button" class="press top_0 right_0 pos_abs text_al_r fs_18rem c_gray_ccc"></button>');
             pass_btn.parent().children("button").addClass(option.btn_password_ico_hide);
             pass_btn.parent().children("button").css({
                 "height": pass_btn.outerHeight(),
@@ -756,7 +756,7 @@
             var del_btn = $(this);
             if ($(this).val() > 0) {
                 if ($(this).next("button[type=reset]").length < 1) {
-                    $(this).after("<button type=\"reset\" class='press top_0 right_0 abs text_al_r text_18rem c_gray_ccc'></button>");
+                    $(this).after("<button type=\"reset\" class='press top_0 right_0 pos_abs text_al_r fs_18rem c_gray_ccc'></button>");
                     $(this).next("button[type=reset]").css({
                         "height": del_btn.outerHeight(),
                         "margin-left": del_btn.width() - del_btn.next("button").width()
@@ -798,7 +798,7 @@
             $("input[type=button]").each(function() {
                 var place = $(this);
                 if ($(this).attr("placeholder") && $(this).val() == "") {
-                    $(this).parent().append("<label class='top_0  abs c_gray_ccc'></label>");
+                    $(this).parent().append("<label class='top_0  pos_abs c_gray_ccc'></label>");
                     $(this).next("label").html($(this).attr("placeholder"));
                     place.next("label").css({
                         "width": place.outerWidth(),
@@ -893,7 +893,7 @@
             if (options.mouse == "hover") {
                 elem.hover(function(e) {
                         $(".ak-tooltip").not(tooltip).remove();
-                        tooltip.hide().appendTo('body').html("<i class='"+options.arrowColor+"' style='"+positionClass+"'></i><div class='rel zindex_2 min_w_6rem min_h_2rem "+options.boxClass+"'></div>").hide().addClass("abs zindex_show").show();
+                        tooltip.hide().appendTo('body').html("<i class='"+options.arrowColor+"' style='"+positionClass+"'></i><div class='pos_rel z_index_2 min_w_6rem min_h_2rem "+options.boxClass+"'></div>").hide().addClass("pos_abs z_index_show").show();
                         setting_tooltip();
                         tooltip.css({
                             "top": e.pageY - tooltip.outerHeight() - 10,
@@ -919,7 +919,7 @@
             } else if (options.mouse == "click") {
                 elem.click(function(e) {
                     $(".ak-tooltip").not(tooltip).remove();
-                    tooltip.hide().appendTo('body').html("<i class='"+options.arrowColor+"' style='"+positionClass+"'></i><div class='rel zindex_2 min_w_6rem min_h_2rem "+options.boxClass+"'></div>").hide().addClass("abs zindex_show").show();
+                    tooltip.hide().appendTo('body').html("<i class='"+options.arrowColor+"' style='"+positionClass+"'></i><div class='pos_rel z_index_2 min_w_6rem min_h_2rem "+options.boxClass+"'></div>").hide().addClass("pos_abs z_index_show").show();
                     setting_tooltip();
                     tooltip.css({
                         "top": e.pageY - tooltip.outerHeight() - 10,
@@ -1188,11 +1188,11 @@ function AKjs_Popupwin (setting) {
             },
             setting);
         var step = $(this);
-        step.addClass("rel ovh");
-        step.children().removeClass().addClass("rel ovh length"+step.children().children("li").length);
+        step.addClass("pos_rel ovh");
+        step.children().removeClass().addClass("pos_rel ovh length"+step.children().children("li").length);
         step.children().before("<cite /><cite />");
-        step.children("cite").eq(0).addClass("dis_block rel w_100 "+option.dashed_line);
-        step.children("cite").eq(1).addClass("dis_block rel "+option.progress);
+        step.children("cite").eq(0).addClass("dis_block pos_rel w_100 "+option.dashed_line);
+        step.children("cite").eq(1).addClass("dis_block pos_rel "+option.progress);
         var step_li = step.children().children("li");
         var num_box = step.children().children("li").eq(0).children().eq(0);
         var step_line_h = step.children("cite").eq(0).outerHeight();
@@ -1244,7 +1244,7 @@ function AKjs_Popupwin (setting) {
         });
         option.callback(step,step.find(".ak-is_active").length);
         if (option.clickType) {
-            step_li.addClass("pointer");
+            step_li.addClass("cur_pointer");
             step_li.click(function () {
                 var _self = $(this);
                 var _length = _self.index()+1;
@@ -1312,7 +1312,7 @@ function AKjs_Popupwin (setting) {
                         }
                         if (IsMobile) {
                             setTimeout(function () {
-                                if (view_img.hasClass("dis_none") || view_img.hasClass("dis_none_im") || view_img.hasClass("dis_opa_0")) {
+                                if (view_img.hasClass("dis_none") || view_img.hasClass("dis_none_im") || view_img.hasClass("opa_0")) {
                                     view_img.wrap("<label class='wh_in img_thumb'></label>");
                                     view_img.parent(".img_thumb").css({
                                         "background-image": 'url("' + view_img.attr("src") + '")'
@@ -1337,7 +1337,7 @@ function AKjs_Popupwin (setting) {
                             },500);
                         } else {
                             setTimeout(function () {
-                                if (view_img.hasClass("dis_none") || view_img.hasClass("dis_none_im") || view_img.hasClass("dis_opa_0")) {
+                                if (view_img.hasClass("dis_none") || view_img.hasClass("dis_none_im") || view_img.hasClass("opa_0")) {
                                     view_img.wrap("<label class='wh_in img_thumb'></label>");
                                     view_img.parent(".img_thumb").css({
                                         "background-image": 'url("' + view_img.attr("src") + '")'
@@ -1775,7 +1775,7 @@ function AKjs_Popupwin (setting) {
                 var _self = $(this);
                 if (option.btnIcon) {
                     if (_self.children("i").length < 1) {
-                        _self.append('<i class="c_in abs minus_bottom_03rem minus_right_01rem line_h_no text_18rem icon-im_xuanze_b dis_none_im"></i>');
+                        _self.append('<i class="c_in pos_abs minus_bottom_03rem minus_right_01rem line_h_no fs_18rem icon-im_xuanze_b dis_none_im"></i>');
                         if (_self.attr("data-checked")) {
                             _self.children("i").removeClass("dis_none_im")
                         } else {
@@ -1997,14 +1997,14 @@ function AKjs_Popupwin (setting) {
                 if (ele.data("type") != undefined) {
                     $ele_type = ele.data("type");
                     if ($ele_type == "half") {
-                        section.append('<span class="ak-text-half w_100 abs text_al_c dis_inbl">' + $icon + $ele_text + "</span>");
+                        section.append('<span class="ak-text-half w_100 pos_abs text_al_c dis_inbl">' + $icon + $ele_text + "</span>");
                         css_text_half();
                     } else {
-                        section.append('<span class="ak-text w_100 abs text_al_c dis_inbl">' + $icon + $ele_text + "</span>");
+                        section.append('<span class="ak-text w_100 pos_abs text_al_c dis_inbl">' + $icon + $ele_text + "</span>");
                         css_text();
                     }
                 } else {
-                    section.append('<span class="ak-text w_100 abs text_al_c dis_inbl">' + $icon + $ele_text + "</span>");
+                    section.append('<span class="ak-text w_100 pos_abs text_al_c dis_inbl">' + $icon + $ele_text + "</span>");
                     css_text();
                 }
             }
@@ -2013,12 +2013,12 @@ function AKjs_Popupwin (setting) {
                 if (ele.data("type") != undefined) {
                     $ele_type = ele.data("type");
                     if ($ele_type == "half") {
-                        section.append('<span class="ak-info-half w_100 abs text_al_c dis_inbl">' + $ele_info + "</span>");
+                        section.append('<span class="ak-info-half w_100 pos_abs text_al_c dis_inbl">' + $ele_info + "</span>");
                         css_info_half();
                     } else if ($ele_type == "spacing") {
-                        section.append('<span class="ak-info w_100 abs text_al_c dis_inbl">' + $ele_info + "</span>");
+                        section.append('<span class="ak-info w_100 pos_abs text_al_c dis_inbl">' + $ele_info + "</span>");
                         css_info();
-                        section.append("<div class='top_0 left_0 abs bor_rad_50' />");
+                        section.append("<div class='top_0 left_0 pos_abs bor_rad_50' />");
                         var val = ele.data("width");
                         AKjs_UserAgent();
                         if (IsMobile) {
@@ -2075,11 +2075,11 @@ function AKjs_Popupwin (setting) {
                             });
                         }
                     }else {
-                        section.append('<span class="ak-info w_100 abs text_al_c dis_inbl">' + $ele_info + "</span>");
+                        section.append('<span class="ak-info w_100 pos_abs text_al_c dis_inbl">' + $ele_info + "</span>");
                         css_info();
                     }
                 } else {
-                    section.append('<span class="ak-info w_100 abs text_al_c dis_inbl">' + $ele_info + "</span>");
+                    section.append('<span class="ak-info w_100 pos_abs text_al_c dis_inbl">' + $ele_info + "</span>");
                     css_info();
                 }
             }
@@ -2120,7 +2120,7 @@ function AKjs_Popupwin (setting) {
                 width: $dimension,
                 height: $dimension
             }).appendTo(section).get(0);
-            section.addClass("rel ovh");
+            section.addClass("pos_rel ovh");
             var context = $canvas.getContext("2d");
             var $canvas_width = $canvas.width / 2;
             var $canvas_height = $canvas.height / 2;
@@ -3332,7 +3332,7 @@ function AKjs_CountDown(ele,setting) {
                 str: "+1",
                 icon_defaultClass: "",
                 icon_changeClass: "",
-                textClass: "c_white text_12rem ml_02rem mr_02rem",
+                textClass: "c_white fs_12rem ml_02rem mr_02rem",
                 text_default: "Favorite",
                 text_change: "Cancel",
                 startSize: "12px",
@@ -4827,12 +4827,12 @@ function AKjs_GoTop (setting) {
             },option.end_delay);
         });
         hborder.each(function(){
-            $(this).addClass("rel");
+            $(this).addClass("pos_rel");
             if ($(this).children("span").length < 4) {
-                $(this).append("<span class='abs zindex_4 top_0 left_0'></span>" +
-                    "<span class='abs zindex_4 bottom_0 left_0'></span>" +
-                    "<span class='abs zindex_4 bottom_0 right_0'></span>" +
-                    "<span class='abs zindex_4 top_0 right_0'></span>");
+                $(this).append("<span class='pos_abs z_index_4 top_0 left_0'></span>" +
+                    "<span class='pos_abs z_index_4 bottom_0 left_0'></span>" +
+                    "<span class='pos_abs z_index_4 bottom_0 right_0'></span>" +
+                    "<span class='pos_abs z_index_4 top_0 right_0'></span>");
             }
             $(this).find('.top_0.left_0').css({
                 "border-left": "solid "+option.border,
@@ -5080,7 +5080,7 @@ function AKjs_GoTop (setting) {
                                             "width": option.boxsize[0],
                                             "left": $(this).offset().left
                                         });
-                                        objsub.children("ol").addClass("abs top_0 mt_1rem mr_16rem");
+                                        objsub.children("ol").addClass( "pos_abs top_0 mt_1rem mr_16rem");
                                         datalist.addClass("mt_0 scrollbar").css({
                                             "height": option.boxsize[1]
                                         });
@@ -5147,7 +5147,7 @@ function AKjs_Loader(setting) {
             Loader: "",
             text: "",
             boxsize: "",
-            eleclass: "animated fadeIn fix",
+            eleclass: "animated fadeIn pos_fix",
             callback: function() {}
         },
         setting);
@@ -9692,7 +9692,7 @@ function AKjs_Loader(setting) {
             setTimeout(function() {
                 var $navLi = $navBox.find("li");
                 if ($navBox.children("abbr").length < 1) {
-                    $navBox.children().addClass("rel ovh zindex_3");
+                    $navBox.children().addClass("pos_rel ovh z_index_3");
                     $("<abbr />").appendTo($navBox);
                 }
                 $navLi.each(function() {
@@ -9730,7 +9730,7 @@ function AKjs_Loader(setting) {
 
                 var $boxPadding = option.BoxPadding*2;
 
-                $LiTarget.addClass("rel zindex_2");
+                $LiTarget.addClass("pos_rel z_index_2");
                 $LiCurSlider.addClass(option.LineClass).animate({
                     "left": $LiCurPosition - ($boxPadding/2),
                     "width": $LiCurWidth + $boxPadding
@@ -10613,7 +10613,7 @@ function AKjs_Loader(setting) {
             return null
         }
         function showPrvImg(src, id) {
-            var imgList = "<li class='rel fl mb_5'>" + "<figure class='img_auto " + option.Class + "' style='background-color: #eeeeee !important;'>" + "<img src=" + src + " />" + "</figure>" + "<span class='pointer top_0 abs wh_12rem line_h_12rem text_14rem text_al_c bor_rad_50 c_white " + option.Del_icon + "' style='background-color: rgba(255,0,0,1); z-index: 1'>" + "</span>" + "</li>";
+            var imgList = "<li class='pos_rel fl mb_5'>" + "<figure class='img_auto " + option.Class + "' style='background-color: #eeeeee !important;'>" + "<img src=" + src + " />" + "</figure>" + "<span class='pointer top_0 pos_abs wh_12rem line_h_12rem fs_14rem text_al_c bor_rad_50 c_white " + option.Del_icon + "' style='background-color: rgba(255,0,0,1); z-index: 1'>" + "</span>" + "</li>";
             $(id).parents("li").before(imgList);
             $(option.delbtnClass).show();
             var showPrvImg_li = $(id).parents("li");
@@ -11454,18 +11454,18 @@ function AKjs_Loader(setting) {
             $(element).appendTo(this);
             AKjs_UserAgent();
             if (IsMobile) {
-                $(this).addClass("rel ovh");
-                $("<img src='"+img_url+"' class='dis_block left_0 top_0 zindex_2 abs wh_100' />").appendTo(this);
+                $(this).addClass("pos_rel ovh");
+                $("<img src='"+img_url+"' class='dis_block left_0 top_0 z_index_2 pos_abs wh_100' />").appendTo(this);
             }
             var resize = this;
             $(window).resize(function(){
                 if (IsMobile == null) {
-                    $(resize).removeClass("rel ovh");
+                    $(resize).removeClass("pos_rel ovh");
                     $(resize).find("img").remove();
                 } else {
-                    $(resize).addClass("rel ovh");
+                    $(resize).addClass("pos_rel ovh");
                     if ($(resize).find("img").length < 1) {
-                        $("<img src='"+img_url+"' class='dis_block left_0 top_0 zindex_2 abs wh_100' />").appendTo(resize);
+                        $("<img src='"+img_url+"' class='dis_block left_0 top_0 z_index_2 pos_abs wh_100' />").appendTo(resize);
                     }
                 }
             });
@@ -11496,10 +11496,10 @@ function AKjs_Loader(setting) {
                     "line-height": options.boxSize
                 })
             }
-            radios.addClass("rel text_al_c dis_inbl_im fn");
+            radios.addClass("pos_rel text_al_c dis_inbl_im fn");
         } else {
             radios.addClass("bor_none bor_rad_0");
-            radios.removeClass("rel text_al_c").removeAttr("style")
+            radios.removeClass("pos_rel text_al_c").removeAttr("style")
         }
         $(window).resize(function() {
             if (!IsMobile) {
@@ -11510,10 +11510,10 @@ function AKjs_Loader(setting) {
                         "line-height": options.boxSize
                     })
                 }
-                radios.addClass("rel text_al_c dis_inbl_im fn");
+                radios.addClass("pos_rel text_al_c dis_inbl_im fn");
             } else {
                 radios.addClass("bor_none bor_rad_0");
-                radios.removeClass("rel text_al_c").removeAttr("style")
+                radios.removeClass("pos_rel text_al_c").removeAttr("style")
             }
         });
         radios.attr("data-name", this.attr("name"));
@@ -11640,8 +11640,8 @@ function AKjs_Loader(setting) {
             e.stopPropagation();
             e.preventDefault();
             var pointer = $(e.target);
-            this.pointers.removeClass("zindex_3");
-            pointer.addClass("ak-Focused zindex_3");
+            this.pointers.removeClass("z_index_3");
+            pointer.addClass("ak-Focused z_index_3");
             this[(pointer.hasClass("low") ? "low": "high") + "Label"].addClass("ak-Focused");
             $(document).on("mousemove.ak-RangeSlider touchmove.ak-RangeSlider", $.proxy(this.onDrag, this, pointer));
             $(document).on("mouseup.ak-RangeSlider touchend.ak-RangeSlider touchcancel.ak-RangeSlider", $.proxy(this.onDragEnd, this))
@@ -12487,7 +12487,7 @@ function AKjs_Loader(setting) {
     $.fn.AKjs_Switch = function(settings) {
         var _defaults = {
             checkedClass: "bg_theme",
-            disabledClass: "dis_opa_05",
+            disabledClass: "opa_05",
             onChange: function(element) {}
         };
         var options = $.extend(_defaults, settings || {});
@@ -12878,8 +12878,8 @@ function AKjs_Loader(setting) {
                     break;
                 case "opacity":
                     this.$tab_cont.addClass("animated");
-                    this.$tab_cont.removeClass("rel fadeIn zindex_2").addClass("abs fadeOut");
-                    this.$tab_cont.eq(index).removeClass("abs fadeOut").addClass("rel fadeIn zindex_2");
+                    this.$tab_cont.removeClass("pos_rel fadeIn z_index_2").addClass( "pos_abs fadeOut");
+                    this.$tab_cont.eq(index).removeClass( "pos_abs fadeOut").addClass("pos_rel fadeIn z_index_2");
                     if (this.opts.boxheight) {
                         this.$tabCont_wrap.parent().css({
                             height:
@@ -13370,10 +13370,10 @@ function AKjs_Loader(setting) {
         var txt =$(this);
         if (txt.length > 0) {
             txt.each(function(){
-                $(this).after('<span class="dis_block_im ovh abs center text_al_r text_12px">' +
-                    '<var class="text_08rem" style="color: #f16a6a;">0</var>' +
+                $(this).after('<span class="dis_block_im ovh pos_abs center text_al_r fs_12px">' +
+                    '<var class="fs_08rem" style="color: #f16a6a;">0</var>' +
                     '/' +
-                    '<var class="text_08rem mr_03rem">'+opm.maxlength+'</var>' +
+                    '<var class="fs_08rem mr_03rem">'+opm.maxlength+'</var>' +
                     '</span>');
                 $(this).next("span").css({
                     "width": $(this).width(),
@@ -13696,7 +13696,7 @@ function AKjs_Loader(setting) {
             }
             that.$menu.show();
             if (IsMobile) {
-                that.$element.parent().parent().addClass("ak-is_search w_100 zindex_show fix top_0 left_0");
+                that.$element.parent().parent().addClass("ak-is_search w_100 z_index_show pos_fix top_0 left_0");
                 that.$menu.css({
                     "top": that.$element.parent().parent().outerHeight()-1,
                     "left": "0",
@@ -13706,7 +13706,7 @@ function AKjs_Loader(setting) {
                     "overflow-y": "scroll",
                     "height": $(window).height()
                 });
-                $("header").addClass("dis_opa_0");
+                $("header").addClass("opa_0");
                 $("main").addClass("mt_0");
                 $("#ak-scrollview").removeClass("scrolling_touch").addClass("ovh_im");
             } else {
@@ -13741,7 +13741,7 @@ function AKjs_Loader(setting) {
             }
             $(window).bind("hashchange", function() {
                 that.$menu.remove();
-                $("header").removeClass("dis_opa_0");
+                $("header").removeClass("opa_0");
                 if ($("header").not("aside header").hasClass("dis_none_im") || $("header").not("aside header").length === 0) {
                     $("main").addClass("mt_0");
                 } else {
@@ -13754,8 +13754,8 @@ function AKjs_Loader(setting) {
         },
         hide: function() {
             if (IsMobile) {
-                this.$element.parent().parent().removeClass("ak-is_search w_100 zindex_show fix top_0 left_0");
-                $("header").removeClass("dis_opa_0");
+                this.$element.parent().parent().removeClass("ak-is_search w_100 z_index_show pos_fix top_0 left_0");
+                $("header").removeClass("opa_0");
                 if ($("header").not("aside header").hasClass("dis_none_im") || $("header").not("aside header").length === 0) {
                     $("main").addClass("mt_0");
                 } else {
@@ -14356,15 +14356,15 @@ function AKjs_Loader(setting) {
         function fnError(ts, va, errDom, empty, error) {
             if (ts.val().length < 1) {
                 if (empty != undefined) {
-                    errDom.removeClass("dis_none_im").addClass('abs ml_05rem '+option.VerifyClass).html("* "+empty);
+                    errDom.removeClass("dis_none_im").addClass('pos_abs ml_05rem '+option.VerifyClass).html("* "+empty);
                 } else {
-                    errDom.removeClass("dis_none_im").addClass('abs ml_05rem '+option.VerifyClass).html("* "+error);
+                    errDom.removeClass("dis_none_im").addClass('pos_abs ml_05rem '+option.VerifyClass).html("* "+error);
                 }
             } else {
                 if (isDiy) {
                     va.error(ts);
                 } else {
-                    errDom.removeClass("dis_none_im").addClass('abs ml_05rem '+option.VerifyClass).html("* "+error);
+                    errDom.removeClass("dis_none_im").addClass('pos_abs ml_05rem '+option.VerifyClass).html("* "+error);
                 }
             }
             return false;
@@ -14374,7 +14374,7 @@ function AKjs_Loader(setting) {
                 va.success(ts);
             } else {
                 setTimeout(function() {
-                    errDom.addClass("dis_none_im").removeClass('abs ml_05rem '+option.VerifyClass).html('');
+                    errDom.addClass("dis_none_im").removeClass('pos_abs ml_05rem '+option.VerifyClass).html('');
                 }, 200);
             }
             return true;
@@ -14386,7 +14386,7 @@ function AKjs_Loader(setting) {
                 _ts.parent().children("sub").addClass("dis_none_im");
                 if (typeof str != undefined && str !="" && str !=null) {
                     _ts.parent().append("<text style='white-space: pre;line-height: "+_ts.outerHeight()+"px;' />");
-                    _ts.parent().children("text").addClass('abs ml_05rem '+option.VerifyClass).html("* "+str);
+                    _ts.parent().children("text").addClass('pos_abs ml_05rem '+option.VerifyClass).html("* "+str);
                 }
                 _ts.focus();
                 $("button#ak-validateBtn").remove();
@@ -14399,7 +14399,7 @@ function AKjs_Loader(setting) {
                 });
             }
             if (status == false) {
-                _ts.parent().children("text").removeClass('abs ml_05rem '+option.VerifyClass).html("").remove();
+                _ts.parent().children("text").removeClass('pos_abs ml_05rem '+option.VerifyClass).html("").remove();
                 form.find(":submit").removeClass("dis_none_im");
                 $("button#ak-validateBtn").remove();
             }
@@ -14597,7 +14597,7 @@ function AKjs_Loader(setting) {
         $support_transition = "undefined" != typeof $element_viewer.style.transition,
         round = Math.round,
         sqrt = Math.sqrt,
-        abs = Math.abs,
+        pos_abs = Math.abs,
         min = Math.min,
         max = Math.max,
         num = Number;
@@ -15333,11 +15333,11 @@ function AKjs_Loader(setting) {
         _init: function () {
             var $this = this;
             this.options.Callback(this.$element);
-            this.$element.addClass("dis_opa_0");
+            this.$element.addClass("opa_0");
             setTimeout(function() {
                 $this._positionAll();
-                if (!$this.$element.hasClass("dis_opa_0")) {
-                    $(".ak-waterfall-down").addClass("dis_none").removeClass("abs top_0 w_100").remove();
+                if (!$this.$element.hasClass("opa_0")) {
+                    $(".ak-waterfall-down").addClass("dis_none").removeClass( "pos_abs top_0 w_100").remove();
                 }
             },1000);
             $(window).resize(function(){
@@ -15367,7 +15367,7 @@ function AKjs_Loader(setting) {
                 minHeight,
                 minIndex;
             this.colHeightArray = [];
-            this.$element.addClass("ak-waterfall").removeClass("dis_opa_0");
+            this.$element.addClass("ak-waterfall").removeClass("opa_0");
             this._getColumnCount();
             $item.each(function(index) {
                     if(index < $this.cols) {
